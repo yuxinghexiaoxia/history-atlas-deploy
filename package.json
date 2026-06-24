@@ -1,0 +1,13 @@
+{
+  "name": "history-atlas-build",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "babel . --out-dir dist --extensions '.jsx'"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.25.0",
+    "@babel/core": "^7.25.0",
+    "@babel/preset-react": "^7.24.0"
+  }
+}

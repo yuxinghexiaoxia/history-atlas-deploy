@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>历史星图 History Atlas v2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700&family=Noto+Serif+SC:wght@500;600;700&family=Spectral:wght@500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+<style>
+  html,body{margin:0;background:#0B1020;color:#EAEAEA;font-family:"Noto Sans SC",system-ui,sans-serif;}
+  #boot{position:fixed;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:22px;background:#0B1020;z-index:9999;transition:opacity .4s ease;}
+  #boot .ring{width:46px;height:46px;border-radius:50%;border:2.5px solid rgba(212,175,55,.18);border-top-color:#D4AF37;animation:bootspin .9s linear infinite;}
+  #boot .bt{font-family:"Noto Serif SC",serif;font-size:19px;letter-spacing:3px;color:#EAEAEA;}
+  #boot .bs{font-size:12.5px;letter-spacing:2px;color:#6b7280;}
+  @keyframes bootspin{to{transform:rotate(360deg);}}
+</style>
+</head>
+<body>
+<div id="root">
+  <div id="boot">
+    <div class="ring"></div>
+    <div class="bt">历史星图 · HISTORY ATLAS</div>
+    <div class="bs">正在点亮星空…</div>
+  </div>
+</div>
+<script src="react.production.min.js"></script>
+<script src="react-dom.production.min.js"></script>
+<script src="image-slot.js"></script>
+<script src="data.js"></script>
+<script src="api.js"></script>
+<script src="db-loader.js"></script>
+<script src="export-utils.js"></script>
+<script src="store.js"></script>
+<script src="components.js"></script>
+<script src="graph.js"></script>
+<script src="constellation.js"></script>
+<script src="starmap.js"></script>
+<script src="home.js"></script>
+<script src="person.js"></script>
+<script src="event.js"></script>
+<script src="dynasty.js"></script>
+<script src="search.js"></script>
+<script src="map.js"></script>
+<script src="graphpage.js"></script>
+<script src="timeline.js"></script>
+<script src="ai.js"></script>
+<script src="auth.js"></script>
+<script src="account.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
