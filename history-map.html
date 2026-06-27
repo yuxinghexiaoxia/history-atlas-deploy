@@ -1,0 +1,1779 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./history-map-support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body { font-family: 'Noto Sans SC', 'Inter', system-ui, sans-serif; -webkit-font-smoothing: antialiased; }
+  ::-webkit-scrollbar { width: 8px; height: 8px; }
+  ::-webkit-scrollbar-thumb { background: rgba(148,163,184,0.22); border-radius: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  @keyframes hasPulse { 0% { opacity: .9; } 50% { opacity: .35; } 100% { opacity: .9; } }
+  @keyframes hasFade { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+  @keyframes hasDrawer { from { transform: translateX(24px); opacity: 0; } to { transform: none; opacity: 1; } }
+  @keyframes hasPop { from { opacity: 0; transform: scale(.96) translateY(4px); } to { opacity: 1; transform: none; } }
+  @keyframes hasSpin { to { transform: rotate(360deg); } }
+  @keyframes hasPing { 0% { transform: scale(.45); opacity: .75; } 100% { transform: scale(2.4); opacity: 0; } }
+  @keyframes hasFoePulse { 0%,100% { opacity: .9; } 50% { opacity: .4; } }
+</style>
+</helmet>
+<div style="--map-bg:#070b17;--surface-0:#090e1d;--surface-1:#101827;--surface-2:#162033;--surface-3:#1d2940;--border-subtle:rgba(148,163,184,0.16);--border-strong:rgba(214,179,63,0.38);--text-primary:#eef2f8;--text-secondary:#aeb8c8;--text-muted:#6f7b8f;--gold:#d6b33f;--gold-soft:rgba(214,179,63,0.16);--cyan:#67c7b7;--blue:#5aa2f2;--orange:#e9855b;--red:#e75f5f;--green:#7fc79c; position:absolute; inset:0; display:flex; flex-direction:column; background:var(--map-bg); color:var(--text-primary); overflow:hidden; font-size:14px;">
+
+  <!-- ===== TOP NAV ===== -->
+  <header style="height:54px; flex:none; display:flex; align-items:center; gap:26px; padding:0 20px; background:var(--surface-0); border-bottom:1px solid var(--border-subtle); z-index:40;">
+    <div style="display:flex; align-items:center; gap:10px;">
+      <div style="width:26px; height:26px; border-radius:7px; background:radial-gradient(circle at 30% 30%, #f2d579, #b8902a); display:flex; align-items:center; justify-content:center; box-shadow:0 0 14px rgba(214,179,63,.45);">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M12 2l2.4 6.9H21l-5.3 4 2 6.8L12 15.8 6.3 19.7l2-6.8L3 8.9h6.6z" fill="#1a1407"/></svg>
+      </div>
+      <span style="font-weight:700; font-size:15px; letter-spacing:.5px;">历史星图</span>
+      <span style="font-size:11px; color:var(--text-muted); border:1px solid var(--border-subtle); padding:1px 6px; border-radius:5px;">History Atlas Studio</span>
+    </div>
+    <nav style="display:flex; align-items:center; gap:4px; font-size:13px;">
+      <span onClick="{{ goHomeSec }}" style="{{ navHome }}">首页</span>
+      <span onClick="{{ goTimelineSec }}" style="{{ navTimeline }}">时间线</span>
+      <span onClick="{{ goGraphSec }}" style="{{ navGraph }}">关系图谱</span>
+      <span onClick="{{ goMapSec }}" style="{{ navMap }}">历史地图</span>
+      <span onClick="{{ goAISec }}" style="{{ navAI }}">AI 助手</span>
+    </nav>
+    <div style="flex:1;"></div>
+    <!-- screen switcher -->
+    <sc-if value="{{ isMapSection }}" hint-placeholder-val="{{ true }}">
+    <div style="display:flex; background:var(--surface-2); border:1px solid var(--border-subtle); border-radius:9px; padding:3px;">
+      <button onClick="{{ goViewer }}" style="{{ swViewer }}">前台浏览</button>
+      <button onClick="{{ goStudio }}" style="{{ swStudio }}">Map Studio</button>
+      <button onClick="{{ goRoute }}" style="{{ swRoute }}">Route Studio</button>
+    </div>
+    </sc-if>
+    <div style="position:relative; width:210px;">
+      <div style="display:flex; align-items:center; gap:7px; padding:0 10px; height:34px; background:var(--surface-2); border:1px solid var(--border-subtle); border-radius:9px; color:var(--text-muted);">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4-4"/></svg>
+        <input value="{{ searchVal }}" onInput="{{ onSearch }}" onFocus="{{ onSearchFocus }}" onBlur="{{ onSearchBlur }}" placeholder="搜地名 / 人物 / 年份" style="flex:1; min-width:0; background:transparent; border:none; outline:none; color:var(--text-primary); font-size:12.5px; font-family:inherit;">
+        <sc-if value="{{ searchHasVal }}" hint-placeholder-val="{{ false }}"><span onClick="{{ clearSearch }}" style="cursor:pointer; font-size:16px; line-height:1; color:var(--text-muted);">×</span></sc-if>
+      </div>
+      <sc-if value="{{ searchOpen }}" hint-placeholder-val="{{ false }}">{{ searchEl }}</sc-if>
+    </div>
+  </header>
+
+  <!-- ===== VIEWER SCREEN ===== -->
+  <sc-if value="{{ isViewer }}" hint-placeholder-val="{{ true }}">
+  <div style="flex:1; display:flex; flex-direction:column; min-height:0;">
+    <!-- breadcrumb + title -->
+    <div style="flex:none; padding:13px 22px 12px; border-bottom:1px solid var(--border-subtle); background:linear-gradient(180deg, var(--surface-0), var(--map-bg));">
+      <div style="font-size:12px; color:var(--text-muted); margin-bottom:7px;">首页 / 历史地图 / <span style="color:var(--text-secondary);">{{ themeName }}</span></div>
+      <div style="display:flex; align-items:baseline; gap:16px; flex-wrap:wrap;">
+        <h1 style="margin:0; font-size:27px; font-weight:600; letter-spacing:.5px;">{{ themeName }}</h1>
+        <span style="font-size:13px; color:var(--text-secondary);">时间范围 {{ themePeriod }}</span>
+        <span style="font-size:12px; color:var(--text-muted); border-left:1px solid var(--border-subtle); padding-left:16px;">{{ themeType }}</span>
+        <button onClick="{{ toggleAccuracy }}" style="font-size:12px; color:var(--gold); background:var(--gold-soft); border:1px solid var(--border-strong); border-radius:20px; padding:3px 11px; cursor:pointer; display:flex; align-items:center; gap:5px;">
+          <span style="width:6px;height:6px;border-radius:50%;background:var(--gold);"></span>精度：{{ themeAccuracy }}
+        </button>
+      </div>
+    </div>
+
+    <!-- main 3-column -->
+    <div style="flex:1; display:flex; min-height:0; position:relative;">
+
+      <!-- LEFT PANEL -->
+      <aside style="width:272px; flex:none; background:var(--surface-0); border-right:1px solid var(--border-subtle); overflow-y:auto; display:flex; flex-direction:column;">
+        <!-- theme tabs -->
+        <div style="padding:12px 14px 4px;">
+          <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:8px;">地图专题</div>
+          <div style="display:flex; flex-direction:column; gap:5px;">
+            <sc-for list="{{ themeTabs }}" as="t" hint-placeholder-count="3">
+              <button onClick="{{ t.select }}" style="{{ t.style }}">
+                <span style="display:block; font-weight:600; font-size:13px;">{{ t.name }}</span>
+                <span style="display:block; font-size:11px; color:var(--text-muted); margin-top:2px;">{{ t.period }} · {{ t.count }} 条路线</span>
+              </button>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="height:1px; background:var(--border-subtle); margin:12px 0;"></div>
+
+        <!-- route list -->
+        <div style="padding:0 14px;">
+          <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:9px;">
+            <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px;">路线</div>
+            <button onClick="{{ clearSelection }}" style="font-size:11px; color:var(--text-secondary); background:none; border:none; cursor:pointer;">显示全部</button>
+          </div>
+          <div style="display:flex; flex-direction:column; gap:7px;">
+            <sc-for list="{{ routeItems }}" as="r" hint-placeholder-count="3">
+              <div onClick="{{ r.select }}" style="{{ r.cardStyle }}">
+                <div style="display:flex; align-items:center; gap:9px;">
+                  <span style="width:4px; height:30px; border-radius:3px; flex:none; background:{{ r.color }};"></span>
+                  <div style="flex:1; min-width:0;">
+                    <div style="display:flex; align-items:center; gap:6px;">
+                      <span style="font-weight:600; font-size:13px; color:var(--text-primary);">{{ r.name }}</span>
+                      <span style="{{ r.tagStyle }}">{{ r.tag }}</span>
+                    </div>
+                    <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">{{ r.years }} · {{ r.count }} 点</div>
+                  </div>
+                  <input type="checkbox" checked="{{ r.visible }}" onClick="{{ r.toggle }}" onChange="{{ r.toggle }}" style="width:15px; height:15px; accent-color:#d6b33f; cursor:pointer; flex:none;">
+                </div>
+                <div style="font-size:11px; color:var(--text-secondary); margin-top:6px; padding-left:13px; line-height:1.5; opacity:.85;">{{ r.path }}</div>
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="height:1px; background:var(--border-subtle); margin:14px 0;"></div>
+
+        <!-- layers -->
+        <div style="padding:0 14px;">
+          <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">图层</div>
+          <div style="display:flex; flex-direction:column; gap:11px;">
+            <sc-for list="{{ layerItems }}" as="l" hint-placeholder-count="5">
+              <div style="display:flex; align-items:center; gap:10px;">
+                <div onClick="{{ l.toggle }}" style="{{ l.trackStyle }}"><div style="{{ l.knobStyle }}"></div></div>
+                <span style="flex:1; font-size:12.5px; color:var(--text-secondary);">{{ l.label }}</span>
+                <input type="range" min="0" max="100" value="{{ l.opacity }}" onChange="{{ l.setOpacity }}" onInput="{{ l.setOpacity }}" style="width:62px; accent-color:#67c7b7; cursor:pointer;">
+              </div>
+            </sc-for>
+          </div>
+        </div>
+
+        <div style="height:1px; background:var(--border-subtle); margin:14px 0;"></div>
+
+        <!-- legend -->
+        <div style="padding:0 14px;">
+          <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:10px;">图例</div>
+          <div style="display:grid; grid-template-columns:1fr 1fr; gap:9px 8px; font-size:11.5px; color:var(--text-secondary);">
+            <div style="display:flex; align-items:center; gap:7px;"><svg width="16" height="16"><circle cx="8" cy="8" r="7" fill="rgba(214,179,63,.18)"/><circle cx="8" cy="8" r="3.4" fill="#d6b33f"/></svg>都城</div>
+            <div style="display:flex; align-items:center; gap:7px;"><svg width="16" height="16"><circle cx="8" cy="8" r="3.2" fill="#5aa2f2"/></svg>普通地点</div>
+            <div style="display:flex; align-items:center; gap:7px;"><svg width="16" height="16"><rect x="3.5" y="3.5" width="9" height="9" transform="rotate(45 8 8)" fill="#e9855b"/></svg>战役</div>
+            <div style="display:flex; align-items:center; gap:7px;"><svg width="16" height="16"><rect x="3.5" y="3.5" width="9" height="9" rx="1.5" fill="none" stroke="#67c7b7" stroke-width="2"/></svg>关隘</div>
+            <div style="display:flex; align-items:center; gap:7px;"><svg width="16" height="16"><circle cx="8" cy="8" r="5.4" fill="none" stroke="#5aa2f2" stroke-width="2"/><circle cx="8" cy="8" r="1.6" fill="#5aa2f2"/></svg>港口</div>
+            <div style="display:flex; align-items:center; gap:7px;"><svg width="22" height="16"><line x1="1" y1="8" x2="21" y2="8" stroke="#d6b33f" stroke-width="2.5"/></svg>精确路线</div>
+            <div style="display:flex; align-items:center; gap:7px;"><svg width="22" height="16"><line x1="1" y1="8" x2="21" y2="8" stroke="#d6b33f" stroke-width="2.5" stroke-dasharray="4 3"/></svg>推定路线</div>
+            <div style="display:flex; align-items:center; gap:7px;"><svg width="16" height="16"><circle cx="8" cy="8" r="5" fill="rgba(148,163,184,.3)"/><text x="8" y="11" font-size="9" fill="#aeb8c8" text-anchor="middle">?</text></svg>争议地点</div>
+            <div style="display:flex; align-items:center; gap:7px;"><svg width="22" height="16"><path d="M3 8h13 M13 4 L18 8 L13 12" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>进军方向</div>
+            <div style="display:flex; align-items:center; gap:7px;"><svg width="16" height="16"><circle cx="8" cy="8" r="6" fill="none" stroke="#e75f5f" stroke-width="1.4" stroke-dasharray="2 2.5"/><path d="M8 12 L8 4 L12 5.5 L8 7" fill="#e75f5f"/></svg>敌军据点</div>
+          </div>
+        </div>
+
+        <div style="height:1px; background:var(--border-subtle); margin:14px 0;"></div>
+
+        <!-- sources -->
+        <div style="padding:0 14px 20px;">
+          <div style="font-size:11px; color:var(--text-muted); text-transform:uppercase; letter-spacing:1px; margin-bottom:9px;">数据来源</div>
+          <div style="display:flex; flex-direction:column; gap:6px;">
+            <sc-for list="{{ themeSources }}" as="s" hint-placeholder-count="3">
+              <div style="font-size:11.5px; color:var(--text-secondary); line-height:1.5; display:flex; gap:7px;"><span style="color:var(--gold);">·</span><span>{{ s }}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </aside>
+
+      <!-- MAP CANVAS -->
+      <div style="flex:1; position:relative; min-width:0; overflow:hidden;" id="hasMapWrap">
+        {{ mapEl }}
+
+        <!-- top-left controls -->
+        <div style="position:absolute; top:14px; left:14px; display:flex; flex-direction:column; gap:8px; z-index:10;">
+          <button onClick="{{ resetView }}" title="重置视角" style="width:34px; height:34px; background:rgba(16,24,39,.86); border:1px solid var(--border-subtle); border-radius:8px; color:var(--text-secondary); cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px);">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+          </button>
+          <button onClick="{{ openExport }}" title="导出 / 分享地图" style="width:34px; height:34px; background:rgba(16,24,39,.86); border:1px solid var(--border-subtle); border-radius:8px; color:var(--text-secondary); cursor:pointer; display:flex; align-items:center; justify-content:center; backdrop-filter:blur(6px);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9"><path d="M4 12v7a1 1 0 001 1h14a1 1 0 001-1v-7"/><path d="M12 15V3M8 7l4-4 4 4"/></svg>
+          </button>
+        </div>
+
+        <!-- top-right basemap -->
+        <div style="position:absolute; top:14px; right:14px; z-index:10;">
+          <button onClick="{{ toggleBasemap }}" style="height:34px; padding:0 12px; background:rgba(16,24,39,.86); border:1px solid var(--border-subtle); border-radius:8px; color:var(--text-secondary); cursor:pointer; display:flex; align-items:center; gap:8px; font-size:12.5px; backdrop-filter:blur(6px);">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 2 7l10 5 10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            底图：{{ basemapLabel }}
+          </button>
+          <sc-if value="{{ basemapOpen }}" hint-placeholder-val="{{ false }}">
+            <div style="position:absolute; top:42px; right:0; width:210px; background:var(--surface-1); border:1px solid var(--border-subtle); border-radius:11px; padding:7px; box-shadow:0 14px 40px rgba(0,0,0,.5); animation:hasPop .16s ease; z-index:20;">
+              <sc-for list="{{ basemapOptions }}" as="b" hint-placeholder-count="3">
+                <div onClick="{{ b.select }}" style="{{ b.style }}">
+                  <span style="{{ b.swatch }}"></span>
+                  <div style="flex:1;"><div style="font-size:12.5px; color:var(--text-primary); font-weight:500;">{{ b.label }}</div><div style="font-size:11px; color:var(--text-muted);">{{ b.desc }}</div></div>
+                  <sc-if value="{{ b.active }}" hint-placeholder-val="{{ false }}"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#d6b33f" stroke-width="2.4"><path d="M5 12l5 5 9-10"/></svg></sc-if>
+                </div>
+              </sc-for>
+            </div>
+          </sc-if>
+        </div>
+
+        <!-- right zoom -->
+        <div style="position:absolute; top:60px; right:14px; display:flex; flex-direction:column; background:rgba(16,24,39,.86); border:1px solid var(--border-subtle); border-radius:8px; overflow:hidden; z-index:10; backdrop-filter:blur(6px);">
+          <button onClick="{{ zoomIn }}" style="width:34px; height:33px; background:none; border:none; border-bottom:1px solid var(--border-subtle); color:var(--text-secondary); cursor:pointer; font-size:18px;">+</button>
+          <button onClick="{{ zoomOut }}" style="width:34px; height:33px; background:none; border:none; color:var(--text-secondary); cursor:pointer; font-size:18px;">−</button>
+        </div>
+
+        <!-- accuracy popover -->
+        <sc-if value="{{ accuracyOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="position:absolute; top:14px; left:50%; transform:translateX(-50%); width:340px; background:var(--surface-1); border:1px solid var(--border-strong); border-radius:12px; padding:16px; box-shadow:0 16px 44px rgba(0,0,0,.55); z-index:25; animation:hasPop .16s ease;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:11px;"><b style="font-size:14px;">精度等级说明</b><span onClick="{{ toggleAccuracy }}" style="cursor:pointer; color:var(--text-muted); font-size:18px; line-height:1;">×</span></div>
+            <div style="display:flex; flex-direction:column; gap:10px; font-size:12.5px;">
+              <div style="display:flex; gap:10px;"><span style="flex:none; width:46px; color:var(--green); font-weight:600;">精确</span><span style="color:var(--text-secondary); line-height:1.5;">可定位到城址、关隘、港口，误差小于 5km。实线、普通标记。</span></div>
+              <div style="display:flex; gap:10px;"><span style="flex:none; width:46px; color:var(--warning); font-weight:600;">推定</span><span style="color:var(--text-secondary); line-height:1.5;">史料指向明确但坐标有争议，误差 5–50km。虚线 / 半透明标记。</span></div>
+              <div style="display:flex; gap:10px;"><span style="flex:none; width:46px; color:var(--text-muted); font-weight:600;">示意</span><span style="color:var(--text-secondary); line-height:1.5;">仅表达大致方向或范围，误差可能超过 50km，明确标注"示意"。</span></div>
+            </div>
+          </div>
+        </sc-if>
+
+        <!-- bottom-right scale + source -->
+        <div style="position:absolute; bottom:12px; right:14px; text-align:right; font-size:10.5px; color:var(--text-muted); z-index:8; line-height:1.6; pointer-events:none;">
+          <div style="display:flex; align-items:center; gap:6px; justify-content:flex-end;"><span style="width:40px; height:3px; background:var(--text-muted); display:inline-block;"></span>约 500 km</div>
+          <div>来源：HAS · CHGIS · 投影 Web Mercator</div>
+        </div>
+
+        <!-- hover tooltip -->
+        <sc-if value="{{ hoverOpen }}" hint-placeholder-val="{{ false }}">
+          <div style="{{ hoverStyle }}">
+            <div style="font-weight:600; font-size:12px; color:var(--text-primary);">{{ hoverName }}</div>
+            <div style="font-size:11px; color:var(--text-muted); margin-top:1px;">{{ hoverSub }}</div>
+          </div>
+        </sc-if>
+      </div>
+
+      <!-- RIGHT DRAWER -->
+      <sc-if value="{{ drawerOpen }}" hint-placeholder-val="{{ false }}">
+        <aside style="width:360px; flex:none; background:var(--surface-0); border-left:1px solid var(--border-subtle); overflow-y:auto; animation:hasDrawer .22s cubic-bezier(.2,.8,.2,1); z-index:15;">
+          <div style="padding:16px 18px; border-bottom:1px solid var(--border-subtle); display:flex; align-items:flex-start; justify-content:space-between; gap:12px; position:sticky; top:0; background:var(--surface-0); z-index:2;">
+            <div>
+              <div style="font-size:11px; color:var(--gold); text-transform:uppercase; letter-spacing:1px; margin-bottom:5px;">{{ drawerKind }}</div>
+              <div style="font-size:19px; font-weight:600;">{{ drawerTitle }}</div>
+              <div style="font-size:12px; color:var(--text-muted); margin-top:3px;">{{ drawerSubtitle }}</div>
+            </div>
+            <span onClick="{{ closeDrawer }}" style="cursor:pointer; color:var(--text-muted); font-size:22px; line-height:1; flex:none;">×</span>
+          </div>
+          {{ drawerBody }}
+        </aside>
+      </sc-if>
+    </div>
+
+    <!-- BOTTOM TIMELINE -->
+    <div style="flex:none; height:74px; background:var(--surface-0); border-top:1px solid var(--border-subtle); display:flex; align-items:center; gap:18px; padding:0 22px; z-index:20;">
+      <button onClick="{{ togglePlay }}" style="{{ playBtnStyle }}">
+        {{ playIcon }}
+      </button>
+      <div style="display:flex; flex-direction:column; gap:6px; flex:1; min-width:0;">
+        <div style="display:flex; align-items:center; gap:10px;">
+          <span style="font-size:12px; color:var(--text-muted); font-variant-numeric:tabular-nums; width:42px;">{{ tlStart }}</span>
+          <div onClick="{{ seekTimeline }}" id="hasTimeline" style="flex:1; height:6px; background:var(--surface-2); border-radius:6px; position:relative; cursor:pointer;">
+            <div style="position:absolute; left:0; top:0; bottom:0; border-radius:6px; background:linear-gradient(90deg, var(--gold), #f0cf6a); width:{{ progressPct }};"></div>
+            <div style="position:absolute; top:50%; width:14px; height:14px; border-radius:50%; background:#fff; border:3px solid var(--gold); transform:translate(-50%,-50%); left:{{ progressPct }}; box-shadow:0 2px 8px rgba(0,0,0,.5);"></div>
+            <sc-for list="{{ tlTicks }}" as="tk" hint-placeholder-count="0">
+              <div style="position:absolute; top:-4px; width:1px; height:14px; background:var(--border-subtle); left:{{ tk.pos }};"></div>
+            </sc-for>
+          </div>
+          <span style="font-size:12px; color:var(--text-muted); font-variant-numeric:tabular-nums; width:42px; text-align:right;">{{ tlEnd }}</span>
+        </div>
+        <div style="font-size:12px; color:var(--text-secondary);"><span style="color:var(--gold); font-weight:600; font-variant-numeric:tabular-nums;">{{ tlCurrent }}</span> · {{ tlEvent }}</div>
+      </div>
+      <div style="display:flex; background:var(--surface-2); border:1px solid var(--border-subtle); border-radius:8px; padding:3px; flex:none;">
+        <sc-for list="{{ speedOptions }}" as="sp" hint-placeholder-count="3">
+          <button onClick="{{ sp.select }}" style="{{ sp.style }}">{{ sp.label }}</button>
+        </sc-for>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ===== MAP STUDIO SCREEN ===== -->
+  <sc-if value="{{ isStudio }}" hint-placeholder-val="{{ false }}">
+    {{ studioEl }}
+  </sc-if>
+
+  <!-- ===== ROUTE STUDIO SCREEN ===== -->
+  <sc-if value="{{ isRoute }}" hint-placeholder-val="{{ false }}">
+    {{ routeStudioEl }}
+  </sc-if>
+
+  <!-- ===== HOME SECTION ===== -->
+  <sc-if value="{{ isHome }}" hint-placeholder-val="{{ false }}">
+    {{ homeEl }}
+  </sc-if>
+
+  <!-- ===== TIMELINE SECTION ===== -->
+  <sc-if value="{{ isTimeline }}" hint-placeholder-val="{{ false }}">
+    {{ timelineEl }}
+  </sc-if>
+
+  <!-- ===== GRAPH SECTION ===== -->
+  <sc-if value="{{ isGraph }}" hint-placeholder-val="{{ false }}">
+    {{ graphEl }}
+  </sc-if>
+
+  <!-- ===== AI SECTION ===== -->
+  <sc-if value="{{ isAI }}" hint-placeholder-val="{{ false }}">
+    {{ aiEl }}
+  </sc-if>
+
+  <!-- ===== EXPORT / SHARE MODAL ===== -->
+  {{ exportEl }}
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}">
+class Component extends DCLogic {
+  state = {
+    screen: 'viewer',
+    section: 'map',
+    aiQ: 'q1',
+    search: '',
+    searchOpen: false,
+    graphSel: 'taiping_route',
+    themeId: 'qing',
+    selectedRouteId: null,
+    hidden: {},
+    selectedNode: null,        // {routeId, idx}
+    drawerType: null,          // 'node' | 'route'
+    layers: { routes:true, places:true, rivers:true, territory:false, labels:true, grid:true },
+    layerOpacity: { routes:100, places:100, rivers:60, territory:45, labels:100, grid:35 },
+    basemap: 'dark',
+    basemapOpen: false,
+    accuracyOpen: false,
+    playing: false,
+    playT: 1,
+    speed: 1,
+    zoom: 1,
+    pan: {x:0,y:0},
+    hover: null,               // {x,y,name,sub}
+    // studio
+    studioTab: '地点',
+    studioTool: 'select',
+    studioSel: null,           // node idx in studio route
+    studioSearch: '',
+    studioNodes: null,
+    studioSaved: '14:32',
+    // route studio
+    rsSel: 0,
+    rsChecked: {0:true,1:true,2:true,3:true,4:false,5:true},
+    rsNodes: null,
+    rsGenerated: false,
+    // studio draw tools
+    studioDraft: [],            // in-progress [lng,lat] points for line/poly
+    studioLines: [
+      { id:'ln1', label:'北伐军路线（示意）', color:'#e9855b', pts:[[119.41,32.39],[117.20,34.40],[116.40,37.00],[116.40,39.90]] },
+    ],
+    studioPolys: [
+      { id:'pg1', label:'天京控制区', color:'#d6b33f', pts:[[116.0,31.4],[117.2,30.4],[119.5,31.4],[120.6,32.2],[119.2,33.1],[117.0,32.7]] },
+    ],
+    studioMeasure: [],          // [lng,lat] points of active ruler
+    studioSnap: true,
+    studioSnapPt: null,         // [x,y] screen-local snap indicator
+    studioHover: null,          // [x,y] live cursor in svg coords (for draft preview)
+    studioLayers: {
+      scan:{on:false,opacity:70}, route:{on:true,opacity:100}, point:{on:true,opacity:100},
+      territory:{on:true,opacity:55}, annot:{on:true,opacity:100},
+    },
+    studioAssets: null,
+    studioAssetSel: null,
+    // export / share
+    exportOpen: false,
+    exportTab: 'export',        // export | share
+    exportFmt: 'png',
+    exportScope: 'view',        // view | full
+    exportLegend: true,
+    exportSources: true,
+    exportRes: 2,
+    shareCopied: false,
+    shareScope: 'view',
+  };
+
+  // ---------- GEO ----------
+  BORDER = [[134,48.3],[131,47.7],[130.7,44.0],[128,42.7],[124.4,40.0],[121.6,38.9],[122.1,37.4],[120.3,36.0],[119.2,34.6],[120.9,32.0],[121.9,30.9],[121.6,29.5],[120.7,28.0],[119.3,26.0],[118.1,24.5],[116.7,23.3],[114.2,22.3],[110.4,21.2],[109.5,21.0],[108.0,21.5],[106.7,22.0],[103.9,22.5],[101.8,21.2],[99.2,22.1],[97.5,23.9],[97.7,25.6],[98.7,25.8],[98.0,27.5],[98.7,28.2],[96.4,29.0],[91.7,27.9],[88.8,27.3],[85.2,28.3],[81.4,30.4],[79.0,32.5],[78.2,35.5],[74.9,37.0],[75.0,38.6],[73.5,39.4],[74.9,40.6],[76.5,40.3],[80.2,42.2],[80.3,44.9],[82.6,45.1],[85.0,47.0],[87.3,49.2],[90.0,47.9],[91.0,46.0],[96.4,42.7],[100.0,42.7],[105.0,41.8],[109.5,42.5],[111.5,43.5],[114.5,45.4],[119.9,46.9],[117.8,49.6],[120.0,52.0],[122.4,53.5],[125.3,53.4],[127.5,50.2],[130.7,48.9],[134,48.3]];
+  YANGTZE = [[97,33],[100,29.5],[102,29.2],[104.6,28.8],[106.5,29.6],[108.5,30.7],[111.3,30.7],[114.3,30.6],[116.0,29.7],[117.3,31.3],[118.8,32.06],[120.5,31.9],[121.5,31.4]];
+  YELLOW = [[96,35],[100,36],[103.8,36.06],[106.0,37.5],[106.3,38.8],[107.5,40.3],[109.5,41.2],[111.3,40.5],[111.5,39],[110.6,37.5],[110.5,35.6],[111.2,34.8],[113.6,34.8],[116,35.3],[117,36.6],[118.9,37.8]];
+
+  W = 1000; H = 720; PAD = 50;
+
+  geo() {
+    if (this._g) return this._g;
+    const xs = [], ys = [];
+    for (const [lng,lat] of this.BORDER) { xs.push(lng*Math.PI/180); ys.push(Math.log(Math.tan(Math.PI/4 + lat*Math.PI/360))); }
+    const minx=Math.min(...xs), maxx=Math.max(...xs), miny=Math.min(...ys), maxy=Math.max(...ys);
+    const s = Math.min((this.W-2*this.PAD)/(maxx-minx), (this.H-2*this.PAD)/(maxy-miny));
+    const ox = (this.W-(maxx-minx)*s)/2, oy = (this.H-(maxy-miny)*s)/2;
+    this._g = { minx, maxy, s, ox, oy };
+    return this._g;
+  }
+  proj(lng, lat) {
+    const g = this.geo();
+    const mx = lng*Math.PI/180, my = Math.log(Math.tan(Math.PI/4 + lat*Math.PI/360));
+    return [g.ox + (mx-g.minx)*g.s, g.oy + (g.maxy-my)*g.s];
+  }
+  polyPath(pts) { return 'M' + pts.map(p => { const [x,y]=this.proj(p[0],p[1]); return x.toFixed(1)+','+y.toFixed(1); }).join(' L'); }
+  unproj(x,y){ const g=this.geo(); const mx=(x-g.ox)/g.s + g.minx; const my=g.maxy - (y-g.oy)/g.s; const lng=mx*180/Math.PI; const lat=(2*Math.atan(Math.exp(my))-Math.PI/2)*180/Math.PI; return [lng,lat]; }
+  defaultStudioNodes(){ return JSON.parse(JSON.stringify(this.THEMES()[0].routes[0].nodes)); }
+  studioNodes(){ return this.state.studioNodes || this.defaultStudioNodes(); }
+  setStudioNodes(arr){ this.setState({studioNodes:arr}); }
+  rsNodes(){ return this.state.rsNodes || this.defaultStudioNodes(); }
+  startPan=(e)=>{ this._panning=true; this._px=e.clientX; this._py=e.clientY; const p=this.state.pan||{x:0,y:0}; this._p0x=p.x; this._p0y=p.y; const wrap=document.getElementById('hasMapWrap'); this._panK=wrap?(this.W/wrap.clientWidth):1; window.addEventListener('mousemove',this.movePan); window.addEventListener('mouseup',this.endPan); };
+  movePan=(e)=>{ if(!this._panning)return; const k=this._panK||1; this.setState({pan:{x:this._p0x+(e.clientX-this._px)*k, y:this._p0y+(e.clientY-this._py)*k}}); };
+  endPan=()=>{ this._panning=false; window.removeEventListener('mousemove',this.movePan); window.removeEventListener('mouseup',this.endPan); };
+
+  // ---------- DATA ----------
+  THEMES() {
+    return [
+      { id:'qing', name:'晚清重大历史路线', period:'约 1851–1895', type:'战争推进 / 政治事件', accuracy:'混合', status:'已审核 · 含推定点位',
+        sources:['数据来源：人工整理（HAS）','地名坐标：CHGIS v6','参考：《清史稿》《太平天国史》'],
+        routes:[
+          { id:'taiping', name:'太平军进军', color:'#d6b33f', accuracy:'精确', dist:'约 2300 km', type:'战争推进', year0:1851, year1:1864,
+            summary:'1851 年金田起义，太平军自广西北出，循湘江、长江东下，1853 年定都南京（天京），至 1864 年天京陷落。',
+            nodes:[
+              {name:'金田',modern:'广西桂平',lng:110.08,lat:23.39,year:1851,event:'金田起义',type:'城镇',accuracy:'精确',desc:'洪秀全于金田村起义，建号太平天国。',source:'人工整理 / 待补史料'},
+              {name:'永安',modern:'广西蒙山',lng:110.52,lat:24.20,year:1851,event:'永安建制',type:'城镇',accuracy:'精确',fx:'capture',foe:'清军',desc:'攻占永安，分封诸王，初建制度。',source:'人工整理'},
+              {name:'全州',modern:'广西全州',lng:111.07,lat:25.93,year:1852,event:'全州之战',type:'战役',accuracy:'精确',fx:'attack',desc:'北出广西，南王冯云山于此中炮身亡。',source:'人工整理'},
+              {name:'武昌',modern:'湖北武汉',lng:114.31,lat:30.52,year:1852,event:'攻克武昌',type:'城镇',accuracy:'精确',fx:'capture',foe:'清军',desc:'太平军首克省城武昌，声势大振。',source:'人工整理'},
+              {name:'南京 / 天京',modern:'江苏南京',lng:118.80,lat:32.06,year:1853,event:'定都天京',type:'都城',accuracy:'精确',fx:'capture',foe:'清军',desc:'攻克江宁，改称天京，定为太平天国都城。',source:'人工整理'},
+              {name:'扬州',modern:'江苏扬州',lng:119.41,lat:32.39,year:1853,event:'北伐东征',type:'城镇',accuracy:'推定',desc:'分兵北伐与西征，控扼长江下游。',source:'人工整理 / 待补'},
+              {name:'安庆',modern:'安徽安庆',lng:117.05,lat:30.51,year:1861,event:'安庆失守',type:'战役',accuracy:'精确',fx:'fall',foe:'湘军',desc:'湘军攻陷安庆，天京上游屏障尽失。',source:'人工整理'},
+              {name:'天京陷落',modern:'江苏南京',lng:118.80,lat:32.06,year:1864,event:'天京陷落',type:'战役',accuracy:'精确',fx:'fall',foe:'湘军',desc:'湘军破城，太平天国运动失败。',source:'人工整理'},
+            ]},
+          { id:'zuo', name:'左宗棠西征', color:'#67c7b7', accuracy:'精确', dist:'约 2600 km', type:'战争推进', year0:1875, year1:1878,
+            summary:'1875 年左宗棠任钦差大臣督办新疆军务，以"缓进急战、先北后南"方略，于 1878 年收复除伊犁外的新疆全境。',
+            nodes:[
+              {name:'兰州',modern:'甘肃兰州',lng:103.83,lat:36.06,year:1875,event:'督师西征',type:'都城',accuracy:'精确',desc:'左宗棠驻兰州筹划西征，整军筹饷。',source:'人工整理'},
+              {name:'肃州',modern:'甘肃酒泉',lng:98.49,lat:39.74,year:1876,event:'出嘉峪关',type:'关隘',accuracy:'精确',desc:'大军出关，粮台前移。',source:'人工整理'},
+              {name:'哈密',modern:'新疆哈密',lng:93.51,lat:42.83,year:1876,event:'进兵哈密',type:'城镇',accuracy:'精确',desc:'屯田积谷，作为西进基地。',source:'人工整理'},
+              {name:'迪化',modern:'新疆乌鲁木齐',lng:87.62,lat:43.82,year:1876,event:'收复北疆',type:'战役',accuracy:'精确',fx:'capture',foe:'阿古柏军',desc:'刘锦棠克迪化，北疆底定。',source:'人工整理'},
+              {name:'吐鲁番',modern:'新疆吐鲁番',lng:89.18,lat:42.95,year:1877,event:'南下天山',type:'关隘',accuracy:'精确',desc:'越天山取吐鲁番，打开南疆门户。',source:'人工整理'},
+              {name:'喀什噶尔',modern:'新疆喀什',lng:75.99,lat:39.47,year:1878,event:'收复南疆',type:'都城',accuracy:'精确',fx:'capture',foe:'阿古柏军',desc:'克复喀什噶尔，新疆全境收复。',source:'人工整理'},
+            ]},
+          { id:'yingfa', name:'英法联军北上', color:'#e9855b', accuracy:'推定', dist:'海路 + 陆路', type:'战争推进', year0:1857, year1:1860,
+            summary:'第二次鸦片战争期间，英法联军自香港集结北上，1860 年攻陷大沽、占天津、八里桥败清军后入北京，焚掠圆明园。',
+            nodes:[
+              {name:'香港',modern:'香港',lng:114.17,lat:22.30,year:1857,event:'联军集结',type:'港口',accuracy:'精确',desc:'英法舰队于香港集结，发动战争。',source:'人工整理'},
+              {name:'大沽口',modern:'天津滨海',lng:117.70,lat:38.98,year:1860,event:'大沽口之战',type:'战役',accuracy:'精确',fx:'capture',foe:'清军炮台',desc:'联军炮击大沽炮台，强行登陆。',source:'人工整理'},
+              {name:'天津',modern:'天津',lng:117.20,lat:39.13,year:1860,event:'进占天津',type:'城镇',accuracy:'精确',fx:'capture',foe:'清军',desc:'联军占领天津，谈判破裂。',source:'人工整理'},
+              {name:'通州',modern:'北京通州',lng:116.66,lat:39.91,year:1860,event:'八里桥之战',type:'战役',accuracy:'精确',fx:'capture',foe:'清军',desc:'僧格林沁部于八里桥惨败。',source:'人工整理'},
+              {name:'北京',modern:'北京',lng:116.40,lat:39.90,year:1860,event:'火烧圆明园',type:'都城',accuracy:'精确',fx:'capture',foe:'清廷',desc:'联军入京，焚掠圆明园。',source:'人工整理'},
+            ]},
+        ]},
+      { id:'xuanzang', name:'玄奘西行路线', period:'629–645', type:'人物行迹', accuracy:'推定', status:'已审核 · 推定路线',
+        sources:['数据来源：人工整理（HAS）','史料：《大唐西域记》','地名坐标：CHGIS / 推定'],
+        routes:[
+          { id:'xz', name:'玄奘西行', color:'#d6b33f', accuracy:'推定', dist:'约 5000 km', type:'人物行迹', year0:629, year1:630,
+            summary:'贞观初年玄奘违禁出关西行求法，经河西走廊、伊吾、高昌，越天山凌山至碎叶，再南下中亚、印度，往返十七年。',
+            nodes:[
+              {name:'长安',modern:'陕西西安',lng:108.94,lat:34.34,year:629,event:'西出长安',type:'都城',accuracy:'精确',desc:'玄奘违禁出关，开始西行求法之旅。',source:'《大唐西域记》'},
+              {name:'秦州',modern:'甘肃天水',lng:105.72,lat:34.58,year:629,event:'夜行秦州',type:'城镇',accuracy:'推定',desc:'昼伏夜行，避开关防。',source:'推定'},
+              {name:'凉州',modern:'甘肃武威',lng:102.63,lat:37.93,year:629,event:'凉州讲经',type:'城镇',accuracy:'精确',desc:'于凉州开讲，声名渐起，旋遭驱逐。',source:'《大唐西域记》'},
+              {name:'瓜州',modern:'甘肃瓜州',lng:95.78,lat:40.52,year:629,event:'偷渡玉门',type:'关隘',accuracy:'推定',desc:'夜渡葫芦河，过玉门关，入莫贺延碛。',source:'推定'},
+              {name:'伊吾',modern:'新疆哈密',lng:93.51,lat:42.83,year:630,event:'伊吾停留',type:'城镇',accuracy:'推定',desc:'穿越大沙漠后抵伊吾。',source:'推定'},
+              {name:'高昌',modern:'新疆吐鲁番',lng:89.18,lat:42.95,year:630,event:'结盟高昌',type:'城镇',accuracy:'精确',desc:'高昌王麴文泰结为兄弟，资助西行。',source:'《大唐西域记》'},
+              {name:'焉耆',modern:'新疆焉耆',lng:86.57,lat:42.06,year:630,event:'过焉耆',type:'城镇',accuracy:'推定',desc:'经阿耆尼国。',source:'推定'},
+              {name:'龟兹',modern:'新疆库车',lng:82.96,lat:41.72,year:630,event:'龟兹论辩',type:'城镇',accuracy:'精确',desc:'于龟兹与高僧木叉毱多论辩。',source:'《大唐西域记》'},
+              {name:'凌山',modern:'天山木扎尔特',lng:79.40,lat:42.10,year:630,event:'越凌山',type:'关隘',accuracy:'示意',desc:'翻越天山凌山雪岭，徒侣冻殁十之三四。',source:'示意'},
+              {name:'碎叶城',modern:'今吉尔吉斯',lng:75.20,lat:42.80,year:630,event:'谒可汗',type:'城镇',accuracy:'推定',desc:'于碎叶谒西突厥统叶护可汗。',source:'推定'},
+            ]},
+        ]},
+      { id:'silk', name:'丝绸之路 · 东段', period:'汉 – 唐', type:'商贸交通', accuracy:'示意', status:'草稿 · 示意',
+        sources:['数据来源：人工整理（HAS）','地名坐标：CHGIS','底图：CartoDB（示意）'],
+        routes:[
+          { id:'silk1', name:'丝路东段（南道）', color:'#67c7b7', accuracy:'示意', dist:'约 3500 km', type:'商贸交通', year0:0, year1:0,
+            summary:'自长安出发，沿河西走廊经武威、张掖、酒泉至敦煌，分南北二道；南道经楼兰、于阗、莎车至疏勒出葱岭。',
+            nodes:[
+              {name:'长安',modern:'陕西西安',lng:108.94,lat:34.34,event:'丝路起点',type:'都城',accuracy:'精确',desc:'丝绸之路东端起点。',source:'人工整理'},
+              {name:'武威',modern:'甘肃武威',lng:102.63,lat:37.93,event:'凉州',type:'城镇',accuracy:'精确',desc:'河西重镇。',source:'人工整理'},
+              {name:'张掖',modern:'甘肃张掖',lng:100.45,lat:38.93,event:'甘州',type:'城镇',accuracy:'精确',desc:'河西走廊咽喉。',source:'人工整理'},
+              {name:'酒泉',modern:'甘肃酒泉',lng:98.49,lat:39.74,event:'肃州',type:'城镇',accuracy:'精确',desc:'河西四郡之一。',source:'人工整理'},
+              {name:'敦煌',modern:'甘肃敦煌',lng:94.66,lat:40.14,event:'分道处',type:'关隘',accuracy:'精确',desc:'出阳关、玉门关，分南北二道。',source:'人工整理'},
+              {name:'楼兰',modern:'罗布泊畔',lng:89.80,lat:40.50,event:'楼兰古城',type:'城镇',accuracy:'推定',desc:'罗布泊畔古城，后湮没于流沙。',source:'推定'},
+              {name:'于阗',modern:'新疆和田',lng:79.92,lat:37.11,event:'南道重镇',type:'城镇',accuracy:'精确',desc:'美玉之乡，佛教重镇。',source:'人工整理'},
+              {name:'莎车',modern:'新疆莎车',lng:77.24,lat:38.41,event:'莎车',type:'城镇',accuracy:'精确',desc:'南道西端绿洲。',source:'人工整理'},
+              {name:'疏勒',modern:'新疆喀什',lng:75.99,lat:39.47,event:'出葱岭',type:'关隘',accuracy:'精确',desc:'南北道交汇，西出葱岭。',source:'人工整理'},
+            ]},
+        ]},
+    ];
+  }
+
+  theme() { return this.THEMES().find(t => t.id === this.state.themeId); }
+  routes() { return this.theme().routes; }
+  selRoute() { return this.routes().find(r => r.id === this.state.selectedRouteId); }
+
+  // ---------- COLORS ----------
+  nodeColor(t) { return ({'都城':'#d6b33f','城镇':'#5aa2f2','战役':'#e9855b','关隘':'#67c7b7','港口':'#5aa2f2'})[t] || '#5aa2f2'; }
+
+  // ---------- WAR / NARRATIVE ANIMATION ----------
+  // forward-pointing chevron at fraction t along a->b
+  arrowChevron(a,b,t,size,color,key,op){
+    const h=React.createElement;
+    const px=a[0]+(b[0]-a[0])*t, py=a[1]+(b[1]-a[1])*t;
+    const ang=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;
+    return h('path',{key,transform:'translate('+px.toFixed(1)+','+py.toFixed(1)+') rotate('+ang.toFixed(1)+')',
+      d:'M'+(-size)+','+(-size*0.72)+' L'+(size*0.55)+',0 L'+(-size)+','+(size*0.72),
+      fill:'none',stroke:color,strokeWidth:2.2,strokeLinecap:'round',strokeLinejoin:'round',
+      opacity:op==null?0.92:op,style:{pointerEvents:'none'}});
+  }
+  // enemy garrison waiting to be engaged
+  enemyMarker(x,y,key,op,foe){
+    const h=React.createElement, col='#e75f5f';
+    return h('g',{key,transform:'translate('+x.toFixed(1)+','+y.toFixed(1)+')',opacity:op,style:{pointerEvents:'none'}},
+      h('circle',{r:13,fill:'none',stroke:col,strokeWidth:1.3,strokeDasharray:'3 4',opacity:0.85,style:{transformOrigin:'center',animation:'hasSpin 9s linear infinite'}}),
+      h('g',{transform:'translate(11,-12)',style:{transformOrigin:'center',animation:'hasFoePulse 1.6s ease-in-out infinite'}},
+        h('path',{d:'M0,9 L0,-9 L8,-6 L0,-3',fill:col,stroke:'#070b17',strokeWidth:0.8}),
+        foe?h('text',{x:4,y:20,fontSize:10,fontWeight:700,textAnchor:'middle',fill:col,stroke:'#070b17',strokeWidth:2.6,paintOrder:'stroke'},foe):null));
+  }
+  // resolved marker after a position is taken / lost
+  fallenMarker(x,y,key,kind){
+    const h=React.createElement, col=kind==='fall'?'#e75f5f':'#7f8a9c';
+    return h('g',{key,transform:'translate('+x.toFixed(1)+','+y.toFixed(1)+')',opacity:0.55,style:{pointerEvents:'none'}},
+      h('circle',{r:10,fill:'none',stroke:col,strokeWidth:1,strokeDasharray:'2 3'}),
+      h('path',{d:'M-3.4,-3.4 L3.4,3.4 M3.4,-3.4 L-3.4,3.4',stroke:col,strokeWidth:1.6,strokeLinecap:'round'}));
+  }
+  // clash shock + spark burst, lt in 0..1
+  clashBurst(x,y,key,lt,kind,foe){
+    const h=React.createElement, e=[];
+    const col = kind==='fall' ? '#e75f5f' : (kind==='capture' ? '#f0a23a' : '#f0cf6a');
+    const r1=8+lt*42, r2=8+Math.max(0,lt-0.2)*50;
+    e.push(h('circle',{key:key+'r1',cx:x,cy:y,r:r1,fill:'none',stroke:col,strokeWidth:2.6*(1-lt)+0.4,opacity:(1-lt)*0.9}));
+    if(lt>0.2) e.push(h('circle',{key:key+'r2',cx:x,cy:y,r:r2,fill:'none',stroke:col,strokeWidth:1.8*(1-lt),opacity:(1-lt)*0.5}));
+    const fop=Math.max(0,1-lt*2.1);
+    if(fop>0){
+      e.push(h('circle',{key:key+'fl',cx:x,cy:y,r:6+lt*6,fill:col,opacity:fop*0.5,filter:'url(#glow)'}));
+      const k=9, rr=11+lt*24; let dp='';
+      for(let s=0;s<k;s++){ const ang=(s/k)*Math.PI*2+(kind==='fall'?0:0.35); dp+='M'+(x+Math.cos(ang)*4).toFixed(1)+','+(y+Math.sin(ang)*4).toFixed(1)+' L'+(x+Math.cos(ang)*rr).toFixed(1)+','+(y+Math.sin(ang)*rr).toFixed(1)+' '; }
+      e.push(h('path',{key:key+'sp',d:dp,stroke:col,strokeWidth:1.5*(1-lt)+0.3,opacity:fop*0.75,strokeLinecap:'round'}));
+    }
+    if(foe && lt<0.9){
+      const txt = kind==='fall' ? (foe+' 攻陷') : ('克 '+foe);
+      e.push(h('text',{key:key+'tx',x:x,y:y-r1-7,fontSize:12.5,fontWeight:700,textAnchor:'middle',fill:col,stroke:'#070b17',strokeWidth:3.2,paintOrder:'stroke',opacity:1-lt,style:{pointerEvents:'none'}},txt));
+    }
+    return e;
+  }
+  // build full battle-effects layer for the selected, advancing route
+  battleFx(r, prog){
+    const n=r.nodes.length; if(n<2) return [];
+    const W=0.13, out=[];
+    r.nodes.forEach((nd,idx)=>{
+      if(nd.type!=='战役' && !nd.fx) return;
+      const fx=nd.fx||'attack';
+      const p_i=idx/(n-1);
+      const [x,y]=this.proj(nd.lng,nd.lat);
+      if(prog < p_i-0.0005){
+        if(fx==='capture') out.push(this.enemyMarker(x,y,'em'+idx,1,nd.foe));
+        return;
+      }
+      const lt=(prog-p_i)/W;
+      if(lt<=1){
+        const b=this.clashBurst(x,y,'cb'+idx,Math.max(0,lt),fx,nd.foe); for(const el of b) out.push(el);
+        if(fx==='capture') out.push(this.enemyMarker(x,y,'em'+idx,Math.max(0,1-lt*1.3),nd.foe));
+      } else {
+        if(fx==='capture') out.push(this.fallenMarker(x,y,'fm'+idx,'capture'));
+        else if(fx==='fall') out.push(this.fallenMarker(x,y,'fm'+idx,'fall'));
+      }
+    });
+    return out;
+  }
+
+  // ---------- SEARCH ----------
+  PEOPLE(){ return [
+    {name:'洪秀全',sub:'太平天国 · 金田起义',themeId:'qing',routeId:'taiping',idx:0},
+    {name:'冯云山',sub:'太平天国南王 · 全州',themeId:'qing',routeId:'taiping',idx:2},
+    {name:'左宗棠',sub:'晚清名臣 · 督师西征',themeId:'qing',routeId:'zuo',idx:0},
+    {name:'刘锦棠',sub:'克迪化 · 复南疆',themeId:'qing',routeId:'zuo',idx:3},
+    {name:'僧格林沁',sub:'八里桥之战',themeId:'qing',routeId:'yingfa',idx:3},
+    {name:'玄奘',sub:'西行求法十七年',themeId:'xuanzang',routeId:'xz',idx:0},
+    {name:'麴文泰',sub:'高昌王 · 资助西行',themeId:'xuanzang',routeId:'xz',idx:5},
+  ]; }
+  doSearch(){
+    const q=(this.state.search||'').trim().toLowerCase();
+    const groups=[];
+    const th=this.THEMES().filter(t=>!q||t.name.toLowerCase().includes(q)).slice(0,4)
+      .map(t=>({label:t.name,sub:t.period+' · '+t.type,color:'#67c7b7',kind:'专题',
+        act:()=>this.setState({section:'map',screen:'viewer',themeId:t.id,selectedRouteId:null,selectedNode:null,drawerType:null,hidden:{},playing:false,playT:1})}));
+    if(th.length) groups.push({head:'专题',items:th});
+    const rt=[];
+    this.THEMES().forEach(t=>t.routes.forEach(r=>{ if(!q||r.name.toLowerCase().includes(q)) rt.push(
+      {label:r.name,sub:t.name+(r.year0?(' · '+r.year0+(r.year1&&r.year1!==r.year0?('–'+r.year1):'')):''),color:r.color,kind:'路线',
+       act:()=>this.gotoMapRoute(t.id,r.id)}); }));
+    if(rt.length) groups.push({head:'路线',items:rt.slice(0,5)});
+    const pp=this.PEOPLE().filter(p=>!q||p.name.toLowerCase().includes(q)||p.sub.toLowerCase().includes(q))
+      .map(p=>({label:p.name,sub:p.sub,color:'#d6b33f',kind:'人物',act:()=>this.gotoMapNode(p.themeId,p.routeId,p.idx)}));
+    if(pp.length) groups.push({head:'人物',items:pp.slice(0,6)});
+    const isNum=/^\d{1,4}$/.test(q);
+    const seen={};
+    const pl=this.allEvents().filter(ev=>{
+      if(!q) return false;
+      if(isNum) return ev.year!=null && String(ev.year).includes(q);
+      return ev.name.toLowerCase().includes(q)||(ev.modern||'').toLowerCase().includes(q)||(ev.event||'').toLowerCase().includes(q);
+    }).filter(ev=>{ const k=ev.themeId+ev.routeId+ev.idx; if(seen[k])return false; seen[k]=1; return true; })
+      .map(ev=>({label:ev.name+(ev.year?(' · '+ev.year):''),sub:ev.modern+' · '+ev.event+' — '+ev.routeName,color:this.nodeColor(ev.type),kind:ev.type,
+        act:()=>this.gotoMapNode(ev.themeId,ev.routeId,ev.idx)}));
+    if(pl.length) groups.push({head:isNum?'年份 / 事件':'地名 / 事件',items:pl.slice(0,8)});
+    return groups;
+  }
+  buildSearch(){
+    const h=React.createElement, q=(this.state.search||'').trim();
+    const groups=this.doSearch();
+    const pick=(act)=>{ act(); this.setState({searchOpen:false,search:''}); };
+    const rows=[];
+    groups.forEach((g,gi)=>{
+      rows.push(h('div',{key:'h'+gi,style:{fontSize:10,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1,padding:'9px 13px 4px',fontWeight:600}},g.head));
+      g.items.forEach((it,ii)=>rows.push(h('div',{key:'i'+gi+'_'+ii,onMouseDown:(e)=>{e.preventDefault&&e.preventDefault();pick(it.act);},
+        style:{display:'flex',alignItems:'center',gap:10,padding:'8px 13px',cursor:'pointer',transition:'background .12s'},
+        onMouseEnter:e=>e.currentTarget.style.background='rgba(148,163,184,.08)',onMouseLeave:e=>e.currentTarget.style.background='transparent'},
+        h('span',{style:{width:7,height:7,borderRadius:'50%',flex:'none',background:it.color}}),
+        h('div',{style:{flex:1,minWidth:0}},
+          h('div',{style:{fontSize:13,color:'#eef2f8',fontWeight:500,whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}},it.label),
+          h('div',{style:{fontSize:11,color:'#8794a8',whiteSpace:'nowrap',overflow:'hidden',textOverflow:'ellipsis'}},it.sub)),
+        h('span',{style:{fontSize:10,color:'#6f7b8f',flex:'none',border:'1px solid rgba(148,163,184,0.18)',borderRadius:5,padding:'1px 6px'}},it.kind))));
+    });
+    if(!rows.length) rows.push(h('div',{key:'empty',style:{padding:'18px 14px',fontSize:12.5,color:'#6f7b8f',textAlign:'center'}},q?('未找到与“'+q+'”相关的结果'):'输入地名、人物或年份开始搜索'));
+    return h('div',{style:{position:'absolute',top:42,left:0,width:300,maxHeight:420,overflowY:'auto',background:'#0b1120',border:'1px solid rgba(148,163,184,0.2)',borderRadius:12,boxShadow:'0 18px 50px rgba(0,0,0,.55)',zIndex:60,padding:'4px 0',animation:'hasPop .14s ease'}},
+      q?null:h('div',{style:{padding:'9px 13px 4px',fontSize:11,color:'#8794a8'}},'快速浏览 · 也可直接输入年份（如 1853）'),
+      rows);
+  }
+
+  // ---------- PLAY ----------
+  reachedIdx(route, t) { const n = route.nodes.length; return Math.min(Math.round(t*(n-1)), n-1); }
+  componentWillUnmount() { this._mounted=false; if (this._raf) cancelAnimationFrame(this._raf); }
+  tick = () => {
+    const dur = 6500 / this.state.speed;
+    const now = performance.now();
+    let t = this._t0 + (now - this._start) / dur;
+    if (t >= 1) { t = 1; this.setState({ playT:1, playing:false }); this._raf=null; return; }
+    this.setState({ playT: t });
+    this._raf = requestAnimationFrame(this.tick);
+  };
+  togglePlay = () => {
+    const r = this.selRoute();
+    if (!r) { return; }
+    if (this.state.playing) { if (this._raf) cancelAnimationFrame(this._raf); this._raf=null; this.setState({ playing:false }); return; }
+    let t = this.state.playT; if (t >= 1) t = 0;
+    this._t0 = t; this._start = performance.now();
+    this.setState({ playing:true, playT:t, selectedNode:null, drawerType:null });
+    this._raf = requestAnimationFrame(this.tick);
+  };
+  seekTimeline = (e) => {
+    const r = this.selRoute(); if (!r) return;
+    const el = document.getElementById('hasTimeline'); if (!el) return;
+    const rect = el.getBoundingClientRect();
+    let t = (e.clientX - rect.left) / rect.width; t = Math.max(0, Math.min(1, t));
+    if (this._raf) cancelAnimationFrame(this._raf); this._raf=null;
+    this.setState({ playT:t, playing:false });
+  };
+
+  // ---------- SELECTION ----------
+  selectRoute(id) {
+    if (this._raf) cancelAnimationFrame(this._raf); this._raf=null;
+    const same = this.state.selectedRouteId === id;
+    const r = this.routes().find(x=>x.id===id);
+    this.setState({ selectedRouteId: same?null:id, playT:1, playing:false,
+      drawerType: same?null:'route', selectedNode:null });
+  }
+  clearSelection = () => { if (this._raf) cancelAnimationFrame(this._raf); this._raf=null;
+    this.setState({ selectedRouteId:null, drawerType:null, selectedNode:null, playing:false, playT:1 }); };
+  selectNode(routeId, idx) {
+    this.setState({ selectedRouteId: routeId, selectedNode:{routeId, idx}, drawerType:'node', playT:1, playing:false });
+  }
+  closeDrawer = () => this.setState({ drawerType:null, selectedNode:null });
+
+  // ---------- MAP RENDER ----------
+  buildMap(opts) {
+    opts = opts || {};
+    const h = React.createElement;
+    const S = this.state;
+    const g = this.geo();
+    const sel = this.selRoute();
+    const playProg = S.playT;
+    const els = [];
+
+    // defs
+    els.push(h('defs', { key:'defs' },
+      h('filter', { id:'glow', x:'-60%', y:'-60%', width:'220%', height:'220%' },
+        h('feGaussianBlur', { stdDeviation:'3.4', result:'b' }),
+        h('feMerge', null, h('feMergeNode',{in:'b'}), h('feMergeNode',{in:'SourceGraphic'}))),
+      h('radialGradient', { id:'seaGrad', cx:'45%', cy:'38%', r:'75%' },
+        h('stop',{offset:'0%',stopColor:'#0c1428'}), h('stop',{offset:'100%',stopColor:'#070b17'})),
+      h('radialGradient', { id:'landGrad', cx:'42%', cy:'40%', r:'70%' },
+        h('stop',{offset:'0%',stopColor:'#16213a'}), h('stop',{offset:'100%',stopColor:'#0f1729'})),
+      h('radialGradient', { id:'scanGrad', cx:'45%', cy:'40%', r:'75%' },
+        h('stop',{offset:'0%',stopColor:'#3a3424'}), h('stop',{offset:'100%',stopColor:'#241f15'}))
+    ));
+
+    const bm = S.basemap;
+    const seaFill = bm==='scan' ? 'url(#scanGrad)' : (bm==='none' ? '#070b17' : 'url(#seaGrad)');
+    els.push(h('rect', { key:'sea', x:0, y:0, width:this.W, height:this.H, fill:seaFill }));
+
+    // graticule
+    if (S.layers.grid && bm!=='none') {
+      const grid = [];
+      for (let lng=75; lng<=135; lng+=10){ const a=this.proj(lng,15), b=this.proj(lng,55); grid.push(h('line',{key:'gx'+lng,x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'rgba(148,163,184,1)',strokeWidth:0.5})); }
+      for (let lat=20; lat<=55; lat+=10){ const a=this.proj(70,lat), b=this.proj(138,lat); grid.push(h('line',{key:'gy'+lat,x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'rgba(148,163,184,1)',strokeWidth:0.5})); }
+      els.push(h('g',{key:'grid',opacity:(S.layerOpacity.grid/100)*(bm==='scan'?0.5:0.5)},grid));
+    }
+
+    // land
+    const landStroke = bm==='scan' ? '#7a6a3e' : 'rgba(120,140,170,0.55)';
+    const landFill = bm==='scan' ? '#2b2517' : (bm==='none' ? '#0c1322' : 'url(#landGrad)');
+    els.push(h('path',{key:'land',d:this.polyPath(this.BORDER)+'Z',fill:landFill,stroke:landStroke,strokeWidth:1.4,strokeLinejoin:'round'}));
+
+    // rivers
+    if (S.layers.rivers) {
+      const rc = bm==='scan' ? '#6f86a0' : '#3d5f86';
+      els.push(h('g',{key:'rivers',opacity:S.layerOpacity.rivers/100,fill:'none',stroke:rc,strokeWidth:1.6,strokeLinejoin:'round',strokeLinecap:'round'},
+        h('path',{d:this.polyPath(this.YANGTZE)}),
+        h('path',{d:this.polyPath(this.YELLOW)})));
+    }
+
+    // routes
+    const list = this.routes();
+    if (S.layers.routes) {
+      const rgs = [];
+      for (const r of list) {
+        if (S.hidden[r.id]) continue;
+        const isSel = sel && sel.id===r.id;
+        const dim = sel && !isSel;
+        const dash = (r.accuracy==='推定'||r.accuracy==='示意');
+        let d, opacity;
+        if (isSel && (S.playing || playProg<1)) {
+          // progressive
+          const n=r.nodes.length, segc=n-1, ex=playProg*segc;
+          let seg=Math.min(Math.floor(ex),segc-1); if(seg<0)seg=0; const frac=ex-seg;
+          const pts=r.nodes.slice(0,seg+1).map(nd=>this.proj(nd.lng,nd.lat));
+          const a=this.proj(r.nodes[seg].lng,r.nodes[seg].lat), b=this.proj(r.nodes[seg+1].lng,r.nodes[seg+1].lat);
+          const hx=a[0]+(b[0]-a[0])*frac, hy=a[1]+(b[1]-a[1])*frac; pts.push([hx,hy]);
+          d='M'+pts.map(p=>p[0].toFixed(1)+','+p[1].toFixed(1)).join(' L'); opacity=1;
+          const hang=Math.atan2(b[1]-a[1],b[0]-a[0])*180/Math.PI;
+          rgs.push(h('g',{key:'hd'+r.id,transform:'translate('+hx.toFixed(1)+','+hy.toFixed(1)+')'},
+            h('circle',{r:6,fill:'none',stroke:'#fff',strokeWidth:1.5,opacity:0.6,style:{transformOrigin:'center',animation:'hasPing 1.3s ease-out infinite'}}),
+            h('g',{transform:'rotate('+hang.toFixed(1)+')'},
+              h('circle',{r:5,fill:'#fff',filter:'url(#glow)'}),
+              h('path',{d:'M-1,-3.6 L6.5,0 L-1,3.6 Z',fill:r.color,stroke:'#fff',strokeWidth:1}))));
+        } else {
+          d=this.polyPath(r.nodes.map(nd=>[nd.lng,nd.lat])); opacity=dim?0.22:1;
+        }
+        rgs.push(h('path',{key:'rt'+r.id,d,fill:'none',stroke:r.color,strokeWidth:isSel?3.6:2.4,
+          strokeLinejoin:'round',strokeLinecap:'round',opacity:opacity*(S.layerOpacity.routes/100),
+          strokeDasharray:dash?'7 5':'none',filter:isSel?'url(#glow)':'none',
+          style:{cursor:'pointer',transition:'opacity .25s'},onClick:()=>this.selectRoute(r.id)}));
+        if(isSel){
+          const segc=r.nodes.length-1, animating=(S.playing||playProg<1);
+          let dSeg=segc, dFrac=1;
+          if(animating){ const ex=playProg*segc; dSeg=Math.floor(ex); dFrac=ex-dSeg; }
+          for(let i=0;i<segc;i++){
+            let show=true;
+            if(animating){ if(i<dSeg) show=true; else if(i===dSeg) show=dFrac>0.5; else show=false; }
+            if(!show) continue;
+            const a=this.proj(r.nodes[i].lng,r.nodes[i].lat), b=this.proj(r.nodes[i+1].lng,r.nodes[i+1].lat);
+            rgs.push(this.arrowChevron(a,b,0.55,5,'#fff','av'+r.id+i,0.9));
+          }
+        }
+      }
+      els.push(h('g',{key:'routes'},rgs));
+    }
+
+    // nodes
+    if (S.layers.places) {
+      const ng=[];
+      for (const r of list) {
+        if (S.hidden[r.id]) continue;
+        const isSel = sel && sel.id===r.id;
+        const dim = sel && !isSel;
+        const reached = (isSel && (S.playing||playProg<1)) ? this.reachedIdx(r, playProg) : r.nodes.length-1;
+        r.nodes.forEach((nd,idx)=>{
+          const [x,y]=this.proj(nd.lng,nd.lat);
+          const future = isSel && idx>reached;
+          const col = this.nodeColor(nd.type);
+          const isHovKey = r.id+':'+idx;
+          const selected = S.selectedNode && S.selectedNode.routeId===r.id && S.selectedNode.idx===idx;
+          let baseOp = dim?0.3:(future?0.32:1);
+          const sym=[];
+          if (nd.type==='都城') {
+            sym.push(h('circle',{key:'halo',r:12,fill:col,opacity:0.16}));
+            sym.push(h('circle',{key:'ring',r:7,fill:'none',stroke:col,strokeWidth:1.6}));
+            sym.push(h('circle',{key:'c',r:4,fill:col}));
+          } else if (nd.type==='战役') {
+            sym.push(h('rect',{key:'d',x:-5,y:-5,width:10,height:10,fill:col,transform:'rotate(45)'}));
+          } else if (nd.type==='港口') {
+            sym.push(h('circle',{key:'r',r:6,fill:'none',stroke:col,strokeWidth:2}));
+            sym.push(h('circle',{key:'c',r:2,fill:col}));
+          } else if (nd.type==='关隘') {
+            sym.push(h('rect',{key:'r',x:-5,y:-5,width:10,height:10,rx:1.5,fill:'none',stroke:col,strokeWidth:2}));
+          } else {
+            sym.push(h('circle',{key:'c',r:4,fill:col}));
+          }
+          if (nd.accuracy==='推定'||nd.accuracy==='示意') sym.push(h('circle',{key:'q',r:9,fill:'none',stroke:col,strokeWidth:1,strokeDasharray:'2 2',opacity:0.7}));
+          if (selected) sym.push(h('circle',{key:'sel',r:13,fill:'none',stroke:'#fff',strokeWidth:1.6,opacity:0.9}));
+          const grp=h('g',{transform:'translate('+x+','+y+')',opacity:baseOp,style:{cursor:'pointer',transition:'opacity .2s'},
+            onClick:(e)=>{e.stopPropagation&&e.stopPropagation(); this.selectNode(r.id,idx);},
+            onMouseEnter:()=>this.setState({hover:{x,y,name:nd.name,sub:(nd.modern||'')+(nd.year?(' · '+nd.year):'')}}),
+            onMouseLeave:()=>this.setState({hover:null})},
+            ...sym,
+            (S.layers.labels && !dim)?h('text',{key:'t',x:9,y:4,fontSize:12,fontWeight:600,fill:'#eef2f8',stroke:'#070b17',strokeWidth:3,paintOrder:'stroke',style:{pointerEvents:'none'}},nd.name):null);
+          ng.push(h('g',{key:'n'+r.id+idx},grp));
+        });
+      }
+      els.push(h('g',{key:'nodes',opacity:S.layerOpacity.places/100},ng));
+    }
+
+    // battle / attack / elimination effects (selected advancing route)
+    if (sel && S.layers.routes && (S.playing || playProg<1)) {
+      const bfx=this.battleFx(sel, playProg);
+      if(bfx.length) els.push(h('g',{key:'battlefx'},bfx));
+    }
+
+    const scale = opts.zoom!=null?opts.zoom:S.zoom;
+    const cx=this.W/2, cy=this.H/2;
+    const pan=S.pan||{x:0,y:0};
+    return h('svg',{viewBox:'0 0 '+this.W+' '+this.H, width:'100%', height:'100%',
+      style:{display:'block', position:'absolute', inset:0, cursor:this._panning?'grabbing':'grab'},
+      onMouseDown:this.startPan,
+      onClick:()=>{ if(S.basemapOpen)this.setState({basemapOpen:false}); }},
+      h('g',{transform:'translate('+pan.x+','+pan.y+') translate('+cx+','+cy+') scale('+scale+') translate('+(-cx)+','+(-cy)+')'},els));
+  }
+
+  // ---------- DRAWER BODY ----------
+  buildDrawer() {
+    const h=React.createElement, S=this.state;
+    const row=(label,val,vc)=>h('div',{style:{display:'flex',gap:12,padding:'9px 0',borderBottom:'1px solid rgba(148,163,184,0.1)'}},
+      h('span',{style:{flex:'none',width:64,fontSize:12,color:'#6f7b8f'}},label),
+      h('span',{style:{flex:1,fontSize:13,color:vc||'#eef2f8',lineHeight:1.5}},val));
+    const accColor={'精确':'#7fc79c','推定':'#f2c94c','示意':'#9aa6b8'};
+    const accBg={'精确':'rgba(127,199,156,.14)','推定':'rgba(242,201,76,.14)','示意':'rgba(148,163,184,.14)'};
+    const badge=(txt,c,bg)=>h('span',{style:{fontSize:11,fontWeight:600,color:c,background:bg,padding:'2px 9px',borderRadius:20}},txt);
+
+    if (S.drawerType==='node' && S.selectedNode) {
+      const r=this.routes().find(x=>x.id===S.selectedNode.routeId);
+      const nd=r.nodes[S.selectedNode.idx];
+      return h('div',{style:{padding:'16px 18px 28px'}},
+        h('div',{style:{display:'flex',gap:8,marginBottom:14}},
+          badge(nd.type,'#d6b33f','rgba(214,179,63,.14)'),
+          badge('精度：'+nd.accuracy,accColor[nd.accuracy],accBg[nd.accuracy])),
+        row('现代位置',nd.modern),
+        nd.year?row('时间',String(nd.year)+' 年'):null,
+        row('类型',nd.type),
+        row('所属路线',h('span',{style:{color:r.color,fontWeight:600,cursor:'pointer'},onClick:()=>this.selectRoute(r.id)},r.name)),
+        h('div',{style:{margin:'16px 0 8px',fontSize:12,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1}},'事件说明'),
+        h('div',{style:{fontSize:13.5,lineHeight:1.7,color:'#d7deea'}},nd.desc||nd.event),
+        h('div',{style:{margin:'18px 0 8px',fontSize:12,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1}},'来源'),
+        h('div',{style:{fontSize:12.5,color:'#aeb8c8',display:'flex',gap:8,alignItems:'flex-start'}},h('span',{style:{color:'#d6b33f'}},'1.'),nd.source),
+        h('div',{style:{display:'flex',gap:8,marginTop:20,flexWrap:'wrap'}},
+          this.drawerBtn('复制地点链接','link'),
+          this.drawerBtn('在时间线中定位','clock'),
+          this.drawerBtn('相关人物 / 事件','users'),
+          this.drawerBtn('报错 / 反馈','flag')));
+    }
+    if (S.drawerType==='route') {
+      const r=this.selRoute(); if(!r) return null;
+      return h('div',{style:{padding:'16px 18px 28px'}},
+        h('div',{style:{display:'flex',gap:8,marginBottom:14}},
+          badge(r.type,'#d6b33f','rgba(214,179,63,.14)'),
+          badge('精度：'+r.accuracy,accColor[r.accuracy],accBg[r.accuracy])),
+        row('起止年份',(r.year0||'—')+' – '+(r.year1||'—')),
+        row('节点数',r.nodes.length+' 个'),
+        row('估算距离',r.dist),
+        h('div',{style:{margin:'16px 0 8px',fontSize:12,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1}},'路线说明'),
+        h('div',{style:{fontSize:13.5,lineHeight:1.7,color:'#d7deea'}},r.summary),
+        h('div',{style:{margin:'18px 0 10px',fontSize:12,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1}},'节点列表'),
+        h('div',{style:{display:'flex',flexDirection:'column',gap:2}},
+          r.nodes.map((nd,idx)=>h('div',{key:idx,onClick:()=>this.selectNode(r.id,idx),
+            style:{display:'flex',alignItems:'center',gap:10,padding:'8px 9px',borderRadius:8,cursor:'pointer',transition:'background .15s'},
+            onMouseEnter:e=>e.currentTarget.style.background='rgba(148,163,184,.08)',
+            onMouseLeave:e=>e.currentTarget.style.background='transparent'},
+            h('span',{style:{flex:'none',width:22,height:22,borderRadius:6,background:'rgba(214,179,63,.14)',color:'#d6b33f',fontSize:11,fontWeight:700,display:'flex',alignItems:'center',justifyContent:'center'}},String(idx+1).padStart(2,'0')),
+            h('div',{style:{flex:1,minWidth:0}},
+              h('div',{style:{fontSize:13,color:'#eef2f8',fontWeight:500}},nd.name),
+              h('div',{style:{fontSize:11,color:'#6f7b8f'}},nd.modern+(nd.year?(' · '+nd.year):''))),
+            h('span',{style:{fontSize:11,color:accColor[nd.accuracy]}},nd.accuracy)))));
+    }
+    return null;
+  }
+  drawerBtn(label,icon){
+    const h=React.createElement;
+    return h('button',{style:{display:'flex',alignItems:'center',gap:6,fontSize:12,color:'#aeb8c8',background:'#162033',border:'1px solid rgba(148,163,184,0.16)',borderRadius:8,padding:'7px 11px',cursor:'pointer'},
+      onClick:()=>{ if(icon==='clock'){ this.selectRoute(this.state.selectedNode.routeId); } }},label);
+  }
+
+  // ---------- VIEWER renderVals helpers ----------
+  segBtn(active){ return 'padding:6px 12px; font-size:12.5px; border:none; border-radius:6px; cursor:pointer; transition:all .15s; font-weight:'+(active?'600':'500')+'; background:'+(active?'var(--surface-3)':'transparent')+'; color:'+(active?'var(--text-primary)':'var(--text-muted)')+';'; }
+  navStyle(active){ return 'padding:6px 11px; border-radius:7px; cursor:pointer; transition:all .15s; font-weight:'+(active?'600':'400')+'; color:'+(active?'var(--gold)':'var(--text-secondary)')+'; background:'+(active?'var(--gold-soft)':'transparent')+';'; }
+
+  goSection(sec){ if(this._raf)cancelAnimationFrame(this._raf); this._raf=null; this.setState({section:sec, playing:false}); }
+  gotoMapNode(themeId,routeId,idx){ if(this._raf)cancelAnimationFrame(this._raf); this._raf=null;
+    this.setState({section:'map',screen:'viewer',themeId,selectedRouteId:routeId,selectedNode:{routeId,idx},drawerType:'node',playing:false,playT:1,hidden:{}}); }
+  gotoMapRoute(themeId,routeId){ if(this._raf)cancelAnimationFrame(this._raf); this._raf=null;
+    this.setState({section:'map',screen:'viewer',themeId,selectedRouteId:routeId,selectedNode:null,drawerType:'route',playing:false,playT:1,hidden:{}}); }
+  allEvents(){ const out=[]; this.THEMES().forEach(th=>{ th.routes.forEach(r=>{ r.nodes.forEach((nd,idx)=>{
+    out.push({year:nd.year||null,name:nd.name,modern:nd.modern,event:nd.event,type:nd.type,accuracy:nd.accuracy,desc:nd.desc,
+      themeId:th.id,themeName:th.name,routeId:r.id,routeName:r.name,color:r.color,idx}); }); }); }); return out; }
+
+  renderVals() {
+    const S=this.state, th=this.theme();
+    const routes=this.routes(), sel=this.selRoute();
+
+    // theme tabs
+    const themeTabs=this.THEMES().map(t=>({ id:t.id, name:t.name, period:t.period, count:t.routes.length,
+      style:'text-align:left; padding:9px 11px; border-radius:9px; cursor:pointer; transition:all .15s; border:1px solid '+(t.id===S.themeId?'var(--border-strong)':'transparent')+'; background:'+(t.id===S.themeId?'var(--gold-soft)':'var(--surface-1)')+';',
+      select:()=>{ if(this._raf)cancelAnimationFrame(this._raf); this._raf=null; this.setState({themeId:t.id,selectedRouteId:null,selectedNode:null,drawerType:null,hidden:{},playing:false,playT:1}); } }));
+
+    // route items
+    const accColor={'精确':'#7fc79c','推定':'#f2c94c','示意':'#9aa6b8'};
+    const accBg={'精确':'rgba(127,199,156,.14)','推定':'rgba(242,201,76,.14)','示意':'rgba(148,163,184,.14)'};
+    const routeItems=routes.map(r=>{
+      const isSel=S.selectedRouteId===r.id;
+      const showTag=r.accuracy==='推定'||r.accuracy==='示意';
+      return { id:r.id, name:r.name, color:r.color, years:(r.year0?(r.year0+(r.year1&&r.year1!==r.year0?('–'+r.year1):'')):'商贸路线'), count:r.nodes.length,
+        path:r.nodes.map(n=>n.name).slice(0,5).join(' → ')+(r.nodes.length>5?' …':''),
+        visible:!S.hidden[r.id],
+        tag:showTag?r.accuracy:'', tagStyle:showTag?('font-size:10px; font-weight:600; padding:1px 6px; border-radius:10px; color:'+accColor[r.accuracy]+'; background:'+accBg[r.accuracy]+';'):'display:none;',
+        cardStyle:'padding:10px 11px; border-radius:11px; cursor:pointer; transition:all .15s; border:1px solid '+(isSel?'var(--border-strong)':'var(--border-subtle)')+'; background:'+(isSel?'var(--gold-soft)':'var(--surface-1)')+';',
+        select:()=>this.selectRoute(r.id),
+        toggle:(e)=>{ e.stopPropagation&&e.stopPropagation(); const hd={...S.hidden}; hd[r.id]=!hd[r.id]; this.setState({hidden:hd}); } };
+    });
+
+    // layers
+    const layerDefs=[['routes','路线'],['places','地点'],['rivers','水系'],['territory','疆域'],['labels','史料标注'],['grid','经纬网']];
+    const layerItems=layerDefs.map(([k,label])=>{
+      const on=S.layers[k];
+      return { key:k, label, opacity:S.layerOpacity[k], on,
+        trackStyle:'width:34px; height:19px; border-radius:12px; flex:none; cursor:pointer; transition:background .15s; position:relative; background:'+(on?'var(--gold)':'var(--surface-3)')+';',
+        knobStyle:'position:absolute; top:2px; width:15px; height:15px; border-radius:50%; background:#fff; transition:left .15s; left:'+(on?'17px':'2px')+';',
+        toggle:()=>{ const ly={...S.layers}; ly[k]=!ly[k]; this.setState({layers:ly}); },
+        setOpacity:(e)=>{ const lo={...S.layerOpacity}; lo[k]=+e.target.value; this.setState({layerOpacity:lo}); } };
+    });
+
+    // basemap
+    const bmDefs=[['dark','深色现代底图','CartoDB Dark · 默认','#0f1729'],['scan','晚清扫描底图','David Rumsey · 配准','#2b2517'],['none','无底图示意','纯路线叙事模式','#070b17']];
+    const bmLabels={dark:'深色',scan:'历史扫描',none:'无底图'};
+    const basemapOptions=bmDefs.map(([k,label,desc,sw])=>({ key:k,label,desc,active:S.basemap===k,
+      swatch:'width:26px; height:26px; border-radius:7px; flex:none; border:1px solid var(--border-subtle); background:'+sw+';',
+      style:'display:flex; align-items:center; gap:10px; padding:8px 9px; border-radius:9px; cursor:pointer; transition:background .15s; background:'+(S.basemap===k?'var(--surface-2)':'transparent')+';',
+      select:()=>this.setState({basemap:k,basemapOpen:false}) }));
+
+    // speed
+    const speedOptions=[1,2,5].map(sp=>({ label:sp+'x', select:()=>this.setState({speed:sp}),
+      style:'padding:4px 10px; font-size:12px; font-weight:'+(S.speed===sp?'600':'500')+'; border:none; border-radius:6px; cursor:pointer; background:'+(S.speed===sp?'var(--surface-3)':'transparent')+'; color:'+(S.speed===sp?'var(--gold)':'var(--text-muted)')+';' }));
+
+    // timeline
+    let tlStart='—',tlEnd='—',tlCurrent='—',tlEvent='选择一条路线后即可播放',tlTicks=[],progressPct='0%';
+    if (sel) {
+      const n=sel.nodes.length; const idx=this.reachedIdx(sel,S.playT);
+      tlStart=sel.year0?String(sel.year0):'起'; tlEnd=sel.year1?String(sel.year1):'止';
+      const cn=sel.nodes[idx];
+      tlCurrent=cn.year?String(cn.year):('第 '+(idx+1)+' 站');
+      tlEvent=cn.name+' · '+cn.event;
+      progressPct=(S.playT*100).toFixed(1)+'%';
+      tlTicks=sel.nodes.map((nd,i)=>({pos:(n>1?(i/(n-1)*100):0).toFixed(1)+'%'}));
+    }
+
+    // hover
+    let hoverOpen=false,hoverStyle='',hoverName='',hoverSub='';
+    if (S.hover) {
+      hoverOpen=true; hoverName=S.hover.name; hoverSub=S.hover.sub;
+      const px=(S.hover.x/this.W*100), py=(S.hover.y/this.H*100);
+      hoverStyle='position:absolute; left:'+px+'%; top:'+py+'%; transform:translate(-50%,-130%); background:rgba(9,14,29,.95); border:1px solid var(--border-subtle); border-radius:8px; padding:6px 10px; pointer-events:none; z-index:30; white-space:nowrap; box-shadow:0 6px 20px rgba(0,0,0,.5);';
+    }
+
+    return {
+      // nav
+      isViewer:S.section==='map'&&S.screen==='viewer', isStudio:S.section==='map'&&S.screen==='studio', isRoute:S.section==='map'&&S.screen==='route',
+      isMapSection:S.section==='map', isHome:S.section==='home', isTimeline:S.section==='timeline', isGraph:S.section==='graph', isAI:S.section==='ai',
+      goHomeSec:()=>this.goSection('home'), goTimelineSec:()=>this.goSection('timeline'), goGraphSec:()=>this.goSection('graph'), goMapSec:()=>this.goSection('map'), goAISec:()=>this.goSection('ai'),
+      navHome:this.navStyle(S.section==='home'), navTimeline:this.navStyle(S.section==='timeline'), navGraph:this.navStyle(S.section==='graph'), navMap:this.navStyle(S.section==='map'), navAI:this.navStyle(S.section==='ai'),
+      goViewer:()=>this.setState({screen:'viewer'}), goStudio:()=>this.setState({screen:'studio'}), goRoute:()=>this.setState({screen:'route'}),
+      swViewer:this.segBtn(S.screen==='viewer'), swStudio:this.segBtn(S.screen==='studio'), swRoute:this.segBtn(S.screen==='route'),
+      // theme header
+      themeName:th.name, themePeriod:th.period, themeType:th.type, themeAccuracy:th.accuracy, themeSources:th.sources,
+      toggleAccuracy:()=>this.setState({accuracyOpen:!S.accuracyOpen}), accuracyOpen:S.accuracyOpen,
+      themeTabs, routeItems, layerItems, clearSelection:this.clearSelection,
+      // search
+      searchVal:S.search, searchHasVal:!!S.search, searchOpen:S.searchOpen, searchEl:S.searchOpen?this.buildSearch():null,
+      onSearch:(e)=>this.setState({search:e.target.value,searchOpen:true}),
+      onSearchFocus:()=>this.setState({searchOpen:true}),
+      onSearchBlur:()=>{ setTimeout(()=>{ if(this._mounted!==false) this.setState({searchOpen:false}); },150); },
+      clearSearch:()=>this.setState({search:'',searchOpen:true}),
+      // map
+      mapEl:this.buildMap(),
+      resetView:()=>this.setState({zoom:1,pan:{x:0,y:0}}), zoomIn:()=>this.setState({zoom:Math.min(2.4,S.zoom*1.2)}), zoomOut:()=>this.setState({zoom:Math.max(0.6,S.zoom/1.2)}),
+      toggleBasemap:()=>this.setState({basemapOpen:!S.basemapOpen}), basemapOpen:S.basemapOpen, basemapLabel:bmLabels[S.basemap], basemapOptions,
+      hoverOpen, hoverStyle, hoverName, hoverSub,
+      // drawer
+      drawerOpen:!!S.drawerType, drawerBody:this.buildDrawer(), closeDrawer:this.closeDrawer,
+      drawerKind:S.drawerType==='node'?'节点详情':'路线详情',
+      drawerTitle:S.drawerType==='node'&&S.selectedNode?this.routes().find(x=>x.id===S.selectedNode.routeId).nodes[S.selectedNode.idx].name:(sel?sel.name:''),
+      drawerSubtitle:S.drawerType==='node'&&S.selectedNode?this.routes().find(x=>x.id===S.selectedNode.routeId).name:(sel?(sel.year0+' – '+sel.year1):''),
+      // timeline
+      togglePlay:this.togglePlay, playing:S.playing,
+      playBtnStyle:'width:44px; height:44px; flex:none; border-radius:50%; border:none; cursor:'+(sel?'pointer':'not-allowed')+'; display:flex; align-items:center; justify-content:center; background:'+(sel?'var(--gold)':'var(--surface-2)')+'; color:'+(sel?'#1a1407':'var(--text-muted)')+'; box-shadow:'+(sel?'0 0 18px rgba(214,179,63,.4)':'none')+';',
+      playIcon:S.playing?React.createElement('svg',{width:16,height:16,viewBox:'0 0 24 24',fill:'currentColor'},React.createElement('rect',{x:6,y:5,width:4,height:14,rx:1}),React.createElement('rect',{x:14,y:5,width:4,height:14,rx:1})):React.createElement('svg',{width:17,height:17,viewBox:'0 0 24 24',fill:'currentColor'},React.createElement('path',{d:'M7 5l12 7-12 7z'})),
+      seekTimeline:this.seekTimeline, tlStart, tlEnd, tlCurrent, tlEvent, tlTicks, progressPct, speedOptions,
+      // studio / route screens (built only when active)
+      studioEl:(S.section==='map'&&S.screen==='studio')?this.buildStudio():null, routeStudioEl:(S.section==='map'&&S.screen==='route')?this.buildRouteStudio():null,
+      // other top-nav sections
+      homeEl:S.section==='home'?this.buildHome():null, timelineEl:S.section==='timeline'?this.buildTimeline():null,
+      graphEl:S.section==='graph'?this.buildGraph():null, aiEl:S.section==='ai'?this.buildAI():null,
+      // export / share
+      openExport:this.openExport, exportEl:S.exportOpen?this.buildExport():null,
+    };
+  }
+  componentDidMount(){ this._mounted=true; }
+
+  // ---------- geo / studio helpers ----------
+  hav(a,b){ const R=6371,r=Math.PI/180; const dLa=(b[1]-a[1])*r, dLo=(b[0]-a[0])*r; const s=Math.sin(dLa/2)**2+Math.cos(a[1]*r)*Math.cos(b[1]*r)*Math.sin(dLo/2)**2; return 2*R*Math.asin(Math.min(1,Math.sqrt(s))); }
+  pathKm(pts){ let d=0; for(let i=1;i<pts.length;i++) d+=this.hav(pts[i-1],pts[i]); return d; }
+  fmtKm(km){ return km>=10?Math.round(km)+' km':km.toFixed(1)+' km'; }
+  applySnap(x,y,nodes){
+    const S=this.state;
+    if(!S.studioSnap){ this.setState({studioSnapPt:null}); return this.unproj(x,y); }
+    let best=null,bd=18;
+    (nodes||[]).forEach(nd=>{ const p=this.proj(nd.lng,nd.lat); const dd=Math.hypot(p[0]-x,p[1]-y); if(dd<bd){bd=dd;best={p,ll:[nd.lng,nd.lat]};} });
+    [].concat(...(S.studioLines||[]).map(l=>l.pts), ...(S.studioPolys||[]).map(p=>p.pts)).forEach(ll=>{ const p=this.proj(ll[0],ll[1]); const dd=Math.hypot(p[0]-x,p[1]-y); if(dd<bd){bd=dd;best={p,ll:[ll[0],ll[1]]};} });
+    if(best){ this.setState({studioSnapPt:best.p}); return best.ll; }
+    this.setState({studioSnapPt:null}); return this.unproj(x,y);
+  }
+  studioAssetData(){
+    if(this.state.studioAssets) return this.state.studioAssets;
+    return [
+      {id:'a1',name:'晚清中国全图',source:'David Rumsey',year:1890,license:'B',georef:'已配准',res:'8200×6400',type:'扫描图',sw:['#2b2517','#1a160d'],added:true},
+      {id:'a2',name:'大清万年一统地理全图',source:'Wikimedia Commons',year:1811,license:'A',georef:'需复核',res:'6000×4200',type:'扫描图',sw:['#2a2a1a','#15140c'],added:false},
+      {id:'a3',name:'京杭运河水系图',source:'CHGIS v6',year:0,license:'A',georef:'矢量',res:'矢量',type:'矢量',sw:['#15233a','#0c1626'],added:false},
+      {id:'a4',name:'江南省舆图',source:'国家图书馆',year:1820,license:'C',georef:'未配准',res:'5400×3800',type:'扫描图',sw:['#2b2113','#171008'],added:false},
+      {id:'a5',name:'两广沿海防图',source:'David Rumsey',year:1866,license:'B',georef:'已配准',res:'7000×3000',type:'扫描图',sw:['#1f2718','#10130b'],added:false},
+      {id:'a6',name:'清末铁路规划图',source:'交通史料汇编',year:1903,license:'A',georef:'需复核',res:'4800×3600',type:'扫描图',sw:['#241a22','#130d12'],added:false},
+    ];
+  }
+  toggleAsset(id){
+    const arr=this.studioAssetData().map(a=>a.id===id?Object.assign({},a,{added:!a.added}):a);
+    this.setState({studioAssets:arr});
+    if(id==='a1'){ const ly={...this.state.studioLayers}; ly.scan={...ly.scan,on:arr.find(a=>a.id==='a1').added}; this.setState({studioLayers:ly}); }
+  }
+  studioLayerToggle(k){ const ly={...this.state.studioLayers}; ly[k]={...ly[k],on:!ly[k].on}; this.setState({studioLayers:ly}); }
+  studioLayerOpacity(k,v){ const ly={...this.state.studioLayers}; ly[k]={...ly[k],opacity:+v}; this.setState({studioLayers:ly}); }
+  studioLayerCounts(){
+    const S=this.state, r=this.studioNodes();
+    return { route:1, point:r.length, territory:(S.studioPolys||[]).length, annot:(S.studioLines||[]).length };
+  }
+
+  // ---------- STUDIO draw interactions ----------
+  studioCanvasClick(x,y,nodes){
+    const S=this.state, t=S.studioTool, ll=this.applySnap(x,y,nodes);
+    if(t==='point'){ const nn={name:'新地点',modern:'',type:'城镇',accuracy:'推定',source:'待补',lng:+ll[0].toFixed(3),lat:+ll[1].toFixed(3),year:null,event:'新增节点',desc:''}; const arr=nodes.concat([nn]); this.setStudioNodes(arr); this.setState({studioSel:arr.length-1,studioTool:'select',studioSnapPt:null}); }
+    else if(t==='line'||t==='poly'){ this.setState({studioDraft:(S.studioDraft||[]).concat([[+ll[0].toFixed(3),+ll[1].toFixed(3)]])}); }
+    else if(t==='ruler'){ this.setState({studioMeasure:(S.studioMeasure||[]).concat([[+ll[0].toFixed(3),+ll[1].toFixed(3)]])}); }
+  }
+  studioMove(x,y,nodes){
+    const t=this.state.studioTool;
+    if(x==null){ if(this.state.studioHover||this.state.studioSnapPt) this.setState({studioHover:null,studioSnapPt:null}); return; }
+    if(t==='line'||t==='poly'||t==='ruler'||t==='point'){ const ll=this.applySnap(x,y,nodes); this.setState({studioHover:ll}); }
+    else if(this.state.studioHover||this.state.studioSnapPt){ this.setState({studioHover:null,studioSnapPt:null}); }
+  }
+  studioFinishDraft(){
+    const S=this.state, t=S.studioTool, d=S.studioDraft||[];
+    if(t==='poly'&&d.length>=3){ const pg={id:'pg'+Date.now(),label:'新增面 '+((S.studioPolys||[]).length+1),color:'#d6b33f',pts:d.slice()}; this.setState({studioPolys:(S.studioPolys||[]).concat([pg]),studioDraft:[],studioHover:null}); }
+    else if(t==='line'&&d.length>=2){ const ln={id:'ln'+Date.now(),label:'新增线 '+((S.studioLines||[]).length+1),color:'#e9855b',pts:d.slice()}; this.setState({studioLines:(S.studioLines||[]).concat([ln]),studioDraft:[],studioHover:null}); }
+  }
+  studioDraftUndo(){ const d=(this.state.studioDraft||[]).slice(); d.pop(); this.setState({studioDraft:d}); }
+  studioMeasureUndo(){ const m=(this.state.studioMeasure||[]).slice(); m.pop(); this.setState({studioMeasure:m}); }
+  studioDraftBar(){
+    const h=React.createElement, S=this.state, t=S.studioTool;
+    const wrap=(children)=>h('div',{style:{position:'absolute',bottom:46,left:'50%',transform:'translateX(-50%)',display:'flex',alignItems:'center',gap:7,background:'rgba(13,20,36,.96)',border:'1px solid rgba(214,179,63,.3)',borderRadius:11,padding:'7px 9px 7px 13px',backdropFilter:'blur(6px)',boxShadow:'0 10px 30px rgba(0,0,0,.45)'}},children);
+    const mini=(label,onClick,opt)=>{opt=opt||{};return h('button',{onClick,disabled:opt.disabled,style:{fontSize:12,fontWeight:opt.primary?600:500,color:opt.disabled?'#4a5568':(opt.primary?'#1a1407':(opt.danger?'#e75f5f':'#aeb8c8')),background:opt.primary?(opt.disabled?'#3a3424':'#d6b33f'):'transparent',border:opt.primary?'none':'1px solid rgba(148,163,184,0.2)',borderRadius:7,padding:'5px 11px',cursor:opt.disabled?'not-allowed':'pointer'}},label);};
+    if((t==='line'||t==='poly')&&(S.studioDraft||[]).length>0){
+      const d=S.studioDraft, km=d.length>=2?this.pathKm(d):0, need=t==='poly'?3:2;
+      return wrap([
+        h('span',{key:'i',style:{fontSize:11.5,color:'#eef2f8',fontWeight:600}},(t==='poly'?'画面':'画线')+' · '+d.length+' 点'),
+        d.length>=2?h('span',{key:'k',style:{fontSize:11,color:'#67c7b7'}},this.fmtKm(km)):null,
+        h('span',{key:'sp',style:{width:1,height:16,background:'rgba(148,163,184,0.2)'}}),
+        mini('撤销',()=>this.studioDraftUndo(),{disabled:d.length===0}),
+        mini('取消',()=>this.setState({studioDraft:[],studioHover:null}),{danger:true}),
+        mini('完成',()=>this.studioFinishDraft(),{primary:true,disabled:d.length<need})]);
+    }
+    if(t==='ruler'&&(S.studioMeasure||[]).length>0){
+      const m=S.studioMeasure;
+      return wrap([
+        h('span',{key:'i',style:{fontSize:11.5,color:'#eef2f8',fontWeight:600,display:'flex',alignItems:'center',gap:6}},this.ui.icon('M3 8l5-5 13 13-5 5z',13),'测距'),
+        h('span',{key:'k',style:{fontSize:12.5,color:'#67c7b7',fontWeight:700}},'Σ '+this.fmtKm(this.pathKm(m))),
+        h('span',{key:'n',style:{fontSize:11,color:'#6f7b8f'}},m.length+' 点'),
+        h('span',{key:'sp',style:{width:1,height:16,background:'rgba(148,163,184,0.2)'}}),
+        mini('撤销',()=>this.studioMeasureUndo(),{disabled:m.length===0}),
+        mini('清除',()=>this.setState({studioMeasure:[],studioHover:null}),{danger:true})]);
+    }
+    return null;
+  }
+
+  // ---------- EXPORT / SHARE ----------
+  downloadBlob(name,mime,data){ try{ const b=new Blob([data],{type:mime}); const u=URL.createObjectURL(b); const a=document.createElement('a'); a.href=u; a.download=name; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(u),1500); }catch(e){} }
+  buildGeoJSON(){
+    const th=this.theme(); const feats=[];
+    this.routes().forEach(r=>{
+      if(this.state.hidden[r.id])return;
+      feats.push({type:'Feature',geometry:{type:'LineString',coordinates:r.nodes.map(n=>[n.lng,n.lat])},properties:{kind:'route',id:r.id,name:r.name,accuracy:r.accuracy,year0:r.year0,year1:r.year1}});
+      r.nodes.forEach((n,i)=>feats.push({type:'Feature',geometry:{type:'Point',coordinates:[n.lng,n.lat]},properties:{kind:'node',route:r.id,seq:i+1,name:n.name,modern:n.modern,type:n.type,year:n.year||null,accuracy:n.accuracy,event:n.event,source:n.source}}));
+    });
+    return JSON.stringify({type:'FeatureCollection',name:th.name,crs:{type:'name',properties:{name:'urn:ogc:def:crs:OGC:1.3:CRS84'}},features:feats},null,2);
+  }
+  liveMapSvg(){ const wrap=document.getElementById('hasMapWrap')||document.getElementById('hasStudioMap'); return wrap?wrap.querySelector('svg'):null; }
+  serializeMapSvg(){
+    const svg=this.liveMapSvg(); if(!svg) return null;
+    const clone=svg.cloneNode(true);
+    clone.setAttribute('xmlns','http://www.w3.org/2000/svg');
+    clone.setAttribute('width',this.W); clone.setAttribute('height',this.H);
+    // overlays: legend / sources
+    const S=this.state; const NS='http://www.w3.org/2000/svg';
+    if(S.exportSources){ const t=document.createElementNS(NS,'text'); t.setAttribute('x',this.W-12); t.setAttribute('y',this.H-12); t.setAttribute('text-anchor','end'); t.setAttribute('font-size','13'); t.setAttribute('fill','#8794a8'); t.setAttribute('font-family','sans-serif'); t.textContent='来源 HAS · CHGIS · '+this.theme().name; clone.appendChild(t); }
+    if(S.exportLegend){
+      const sel=this.selRoute(); const items=(sel?[sel]:this.routes()).slice(0,5);
+      const g=document.createElementNS(NS,'g'); g.setAttribute('transform','translate(16,16)');
+      const bg=document.createElementNS(NS,'rect'); bg.setAttribute('x',-6); bg.setAttribute('y',-6); bg.setAttribute('width',180); bg.setAttribute('height',items.length*22+14); bg.setAttribute('rx',8); bg.setAttribute('fill','rgba(9,14,29,0.78)'); bg.setAttribute('stroke','rgba(148,163,184,0.25)'); g.appendChild(bg);
+      items.forEach((r,i)=>{ const ln=document.createElementNS(NS,'rect'); ln.setAttribute('x',2); ln.setAttribute('y',i*22+4); ln.setAttribute('width',18); ln.setAttribute('height',4); ln.setAttribute('rx',2); ln.setAttribute('fill',r.color); g.appendChild(ln); const tx=document.createElementNS(NS,'text'); tx.setAttribute('x',28); tx.setAttribute('y',i*22+10); tx.setAttribute('font-size','13'); tx.setAttribute('fill','#eef2f8'); tx.setAttribute('font-family','sans-serif'); tx.textContent=r.name; g.appendChild(tx); });
+      clone.appendChild(g);
+    }
+    return new XMLSerializer().serializeToString(clone);
+  }
+  doExport(){
+    const S=this.state, base=this.theme().name.replace(/[\s\/]+/g,'_');
+    if(S.exportFmt==='geojson'){ this.downloadBlob(base+'.geojson','application/geo+json',this.buildGeoJSON()); this.closeExport(); return; }
+    const svgStr=this.serializeMapSvg();
+    if(!svgStr){ this.closeExport(); return; }
+    if(S.exportFmt==='svg'){ this.downloadBlob(base+'.svg','image/svg+xml','<?xml version="1.0" encoding="UTF-8"?>\n'+svgStr); this.closeExport(); return; }
+    // PNG — load via Blob URL (reliable in sandboxed iframes)
+    const scale=S.exportRes||2; const w=this.W*scale, hgt=this.H*scale;
+    const svgBlob=new Blob(['<?xml version="1.0" encoding="UTF-8"?>\n'+svgStr],{type:'image/svg+xml;charset=utf-8'});
+    const svgUrl=URL.createObjectURL(svgBlob);
+    const img=new Image();
+    img.onload=()=>{ try{ const c=document.createElement('canvas'); c.width=w; c.height=hgt; const ctx=c.getContext('2d'); ctx.fillStyle='#070b17'; ctx.fillRect(0,0,w,hgt); ctx.drawImage(img,0,0,w,hgt); c.toBlob(b=>{ URL.revokeObjectURL(svgUrl); if(b){ const u=URL.createObjectURL(b); const a=document.createElement('a'); a.href=u; a.download=base+'@'+scale+'x.png'; document.body.appendChild(a); a.click(); a.remove(); setTimeout(()=>URL.revokeObjectURL(u),1500);} this.closeExport(); },'image/png'); }catch(e){ URL.revokeObjectURL(svgUrl); this.closeExport(); } };
+    img.onerror=()=>{ URL.revokeObjectURL(svgUrl); this.closeExport(); };
+    img.src=svgUrl;
+  }
+  openExport=()=>this.setState({exportOpen:true,exportTab:'export',shareCopied:false});
+  closeExport=()=>this.setState({exportOpen:false});
+  shareUrl(){ const S=this.state; const sel=this.selRoute(); const q=['theme='+this.state.themeId]; if(sel)q.push('route='+sel.id); q.push('view='+(S.shareScope==='view'?(this.state.zoom.toFixed(2)+','+Math.round(this.state.pan.x)+','+Math.round(this.state.pan.y)):'full')); return 'https://atlas.has.org/m?'+q.join('&'); }
+  copyShare(){ const url=this.shareUrl(); try{ navigator.clipboard&&navigator.clipboard.writeText(url); }catch(e){} this.setState({shareCopied:true}); setTimeout(()=>{ if(this._mounted!==false) this.setState({shareCopied:false}); },1800); }
+
+  buildExport(){
+    const h=React.createElement, S=this.state;
+    const fmts=[
+      ['png','PNG 图片','当前视图位图，适合插图 / 演示','M4 16l4-5 3 4 4-6 5 7M3 5h18v14H3z'],
+      ['svg','SVG 矢量','可缩放矢量，便于二次编辑','M12 2l9 5v10l-9 5-9-5V7z M12 12l9-5 M12 12v10 M12 12L3 7'],
+      ['geojson','GeoJSON 数据','路线与节点坐标，供 GIS 使用','M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z M12 9h.01'],
+    ];
+    const scopeBtn=(k,label)=>h('button',{key:k,onClick:()=>this.setState({exportScope:k}),style:{flex:1,padding:'8px 0',fontSize:12.5,fontWeight:S.exportScope===k?600:500,color:S.exportScope===k?'#1a1407':'#aeb8c8',background:S.exportScope===k?'#d6b33f':'transparent',border:'none',borderRadius:7,cursor:'pointer'}},label);
+    const chk=(on,onClick,label)=>h('div',{onClick,style:{display:'flex',alignItems:'center',gap:9,padding:'8px 0',cursor:'pointer'}},
+      h('div',{style:{width:18,height:18,borderRadius:5,flex:'none',border:'1.5px solid '+(on?'#d6b33f':'#6f7b8f'),background:on?'#d6b33f':'transparent',display:'flex',alignItems:'center',justifyContent:'center'}},on?this.ui.icon('M5 12l5 5 9-10',12):null),
+      h('span',{style:{fontSize:13,color:'#d7deea'}},label));
+    const tabBtn=(k,label)=>h('button',{key:k,onClick:()=>this.setState({exportTab:k}),style:{padding:'8px 16px',fontSize:13,fontWeight:S.exportTab===k?600:500,color:S.exportTab===k?'#d6b33f':'#8794a8',background:'transparent',border:'none',borderBottom:'2px solid '+(S.exportTab===k?'#d6b33f':'transparent'),cursor:'pointer'}},label);
+
+    const panel = S.exportTab==='export'
+      ? h('div',{style:{padding:'18px 22px 22px'}},
+          h('div',{style:{fontSize:11,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1,marginBottom:10}},'格式'),
+          h('div',{style:{display:'flex',flexDirection:'column',gap:8,marginBottom:20}},fmts.map(([k,t,d,ic])=>
+            h('div',{key:k,onClick:()=>this.setState({exportFmt:k}),style:{display:'flex',alignItems:'center',gap:13,padding:'12px 14px',borderRadius:11,cursor:'pointer',background:S.exportFmt===k?'rgba(214,179,63,.1)':'#101827',border:'1px solid '+(S.exportFmt===k?'rgba(214,179,63,.4)':'rgba(148,163,184,0.14)')}},
+              h('div',{style:{width:38,height:38,flex:'none',borderRadius:9,display:'flex',alignItems:'center',justifyContent:'center',background:S.exportFmt===k?'rgba(214,179,63,.18)':'#0c1322',color:S.exportFmt===k?'#d6b33f':'#8794a8'}},this.ui.icon(ic,19)),
+              h('div',{style:{flex:1}},h('div',{style:{fontSize:13.5,fontWeight:600,color:'#eef2f8'}},t),h('div',{style:{fontSize:11.5,color:'#8794a8',marginTop:2}},d)),
+              h('div',{style:{width:18,height:18,borderRadius:'50%',border:'2px solid '+(S.exportFmt===k?'#d6b33f':'#3a465c'),flex:'none',display:'flex',alignItems:'center',justifyContent:'center'}},S.exportFmt===k?h('div',{style:{width:8,height:8,borderRadius:'50%',background:'#d6b33f'}}):null))) ),
+          S.exportFmt==='png'?h('div',{style:{marginBottom:16}},
+            h('div',{style:{fontSize:11,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1,marginBottom:9}},'分辨率'),
+            h('div',{style:{display:'flex',gap:8}},[[1,'1×',this.W+'×'+this.H],[2,'2×',(this.W*2)+'×'+(this.H*2)],[3,'3×',(this.W*3)+'×'+(this.H*3)]].map(([v,l,dim])=>
+              h('button',{key:v,onClick:()=>this.setState({exportRes:v}),style:{flex:1,padding:'9px 0',borderRadius:9,cursor:'pointer',border:'1px solid '+(S.exportRes===v?'rgba(214,179,63,.4)':'rgba(148,163,184,0.16)'),background:S.exportRes===v?'rgba(214,179,63,.1)':'transparent',color:S.exportRes===v?'#d6b33f':'#aeb8c8'}},
+                h('div',{style:{fontSize:13,fontWeight:600}},l),h('div',{style:{fontSize:10,color:'#6f7b8f',marginTop:2}},dim))))):null,
+          S.exportFmt!=='geojson'?h('div',{style:{borderTop:'1px solid rgba(148,163,184,0.12)',paddingTop:6,marginBottom:14}},
+            chk(S.exportLegend,()=>this.setState({exportLegend:!S.exportLegend}),'包含图例'),
+            chk(S.exportSources,()=>this.setState({exportSources:!S.exportSources}),'包含来源水印')):
+            h('div',{style:{fontSize:12,color:'#8794a8',lineHeight:1.6,background:'#0c1322',border:'1px solid rgba(148,163,184,0.14)',borderRadius:9,padding:'11px 13px',marginBottom:14}},'将导出当前专题全部可见路线与节点的坐标（WGS84）。'),
+          h('button',{onClick:()=>this.doExport(),style:{width:'100%',padding:'12px 0',fontSize:14,fontWeight:600,color:'#1a1407',background:'#d6b33f',border:'none',borderRadius:10,cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',gap:8}},this.ui.icon('M12 15V3M7 8l5-5 5 5M5 21h14',16),'下载 '+S.exportFmt.toUpperCase()))
+      : h('div',{style:{padding:'18px 22px 22px'}},
+          h('div',{style:{fontSize:11,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1,marginBottom:9}},'分享范围'),
+          h('div',{style:{display:'flex',background:'#0c1322',border:'1px solid rgba(148,163,184,0.16)',borderRadius:9,padding:3,marginBottom:16}},
+            ['view','full'].map(k=>h('button',{key:k,onClick:()=>this.setState({shareScope:k}),style:{flex:1,padding:'8px 0',fontSize:12.5,fontWeight:S.shareScope===k?600:500,color:S.shareScope===k?'#1a1407':'#aeb8c8',background:S.shareScope===k?'#d6b33f':'transparent',border:'none',borderRadius:7,cursor:'pointer'}},k==='view'?'当前视角':'完整范围'))),
+          h('div',{style:{fontSize:11,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1,marginBottom:9}},'只读链接'),
+          h('div',{style:{display:'flex',gap:8,marginBottom:18}},
+            h('div',{style:{flex:1,minWidth:0,fontSize:12.5,color:'#aeb8c8',background:'#0c1322',border:'1px solid rgba(148,163,184,0.16)',borderRadius:9,padding:'10px 12px',overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}},this.shareUrl()),
+            h('button',{onClick:()=>this.copyShare(),style:{flex:'none',padding:'0 16px',fontSize:13,fontWeight:600,color:S.shareCopied?'#7fc79c':'#1a1407',background:S.shareCopied?'rgba(127,199,156,.16)':'#d6b33f',border:S.shareCopied?'1px solid rgba(127,199,156,.4)':'none',borderRadius:9,cursor:'pointer',whiteSpace:'nowrap'}},S.shareCopied?'已复制':'复制')),
+          h('div',{style:{fontSize:11,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1,marginBottom:9}},'嵌入网页'),
+          h('div',{style:{fontSize:11.5,color:'#aeb8c8',fontFamily:'monospace',background:'#0c1322',border:'1px solid rgba(148,163,184,0.16)',borderRadius:9,padding:'11px 13px',lineHeight:1.6,wordBreak:'break-all',marginBottom:18}},
+            '<iframe src="'+this.shareUrl()+'&embed=1" width="800" height="560" style="border:0"></iframe>'),
+          h('div',{style:{display:'flex',gap:10}},[['微博','M5 19a4 4 0 100-8 4 4 0 000 8z M19 9a2 2 0 100-4 2 2 0 000 4z'],['微信','M8 11a5 5 0 100-2 M16 15a4 4 0 100-2'],['复制卡片','M9 9h10v10H9z M5 15V5h10']].map((b,i)=>
+            h('button',{key:i,onClick:()=>this.copyShare(),style:{flex:1,display:'flex',alignItems:'center',justifyContent:'center',gap:7,padding:'10px 0',fontSize:12.5,color:'#aeb8c8',background:'#101827',border:'1px solid rgba(148,163,184,0.16)',borderRadius:9,cursor:'pointer'}},this.ui.icon(b[1],15),b[0]))) );
+
+    return h('div',{onClick:this.closeExport,style:{position:'absolute',inset:0,zIndex:60,background:'rgba(5,8,16,.62)',display:'flex',alignItems:'center',justifyContent:'center',animation:'hasFade .16s ease',backdropFilter:'blur(3px)'}},
+      h('div',{onClick:e=>e.stopPropagation(),style:{width:460,maxWidth:'92%',background:'#0b1120',border:'1px solid rgba(148,163,184,0.18)',borderRadius:16,boxShadow:'0 24px 70px rgba(0,0,0,.6)',overflow:'hidden',animation:'hasPop .18s ease'}},
+        h('div',{style:{display:'flex',alignItems:'center',padding:'15px 20px 0',borderBottom:'1px solid rgba(148,163,184,0.12)'}},
+          h('div',{style:{display:'flex',gap:4,flex:1}},tabBtn('export','导出'),tabBtn('share','分享')),
+          h('span',{onClick:this.closeExport,style:{cursor:'pointer',color:'#6f7b8f',fontSize:22,lineHeight:1,padding:'0 0 8px'}},'×')),
+        panel));
+  }
+
+  // ---------- STUDIO layers panel ----------
+  studioLayersPanel(){
+    const h=React.createElement, S=this.state, ly=S.studioLayers, cnt=this.studioLayerCounts();
+    const assets=this.studioAssetData().filter(a=>a.added);
+    const eye=(on)=>this.ui.icon(on?'M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z M12 9a3 3 0 100 6 3 3 0 000-6z':'M3 3l18 18 M10.6 10.6a3 3 0 004 4 M9.9 4.2A10 10 0 0112 4c6 0 10 7 10 7a17 17 0 01-3 3.6 M6.1 6.1A17 17 0 002 11s4 7 10 7a10 10 0 003-.5',14);
+    const head=(t)=>h('div',{key:'h'+t,style:{fontSize:10.5,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1,fontWeight:600,margin:'4px 0 2px'}},t);
+    const row=(k,label,sub,col)=>h('div',{key:k,style:{display:'flex',alignItems:'center',gap:9,padding:'8px 9px',borderRadius:8,background:ly[k].on?'rgba(148,163,184,.05)':'transparent',opacity:ly[k].on?1:0.55}},
+      h('span',{onClick:()=>this.studioLayerToggle(k),style:{flex:'none',width:22,height:22,borderRadius:6,display:'flex',alignItems:'center',justifyContent:'center',cursor:'pointer',color:ly[k].on?'#d6b33f':'#6f7b8f',background:ly[k].on?'rgba(214,179,63,.12)':'transparent'}},eye(ly[k].on)),
+      col?h('span',{style:{width:10,height:10,borderRadius:3,flex:'none',background:col}}):null,
+      h('div',{style:{flex:1,minWidth:0}},h('div',{style:{fontSize:12.5,color:'#d7deea',fontWeight:500}},label),sub?h('div',{style:{fontSize:10.5,color:'#6f7b8f'}},sub):null),
+      h('input',{type:'range',min:0,max:100,value:ly[k].opacity,onChange:e=>this.studioLayerOpacity(k,e.target.value),style:{width:54,accentColor:'#67c7b7',cursor:'pointer'}}),
+      h('span',{style:{width:30,textAlign:'right',fontSize:10.5,color:'#6f7b8f',fontVariantNumeric:'tabular-nums'}},ly[k].opacity+'%'));
+    return h('div',{style:{display:'flex',flexDirection:'column',gap:3}},
+      head('底图'),
+      h('div',{style:{display:'flex',alignItems:'center',gap:9,padding:'8px 9px',borderRadius:8,background:'rgba(148,163,184,.05)'}},
+        h('span',{style:{flex:'none',width:22,height:22,borderRadius:6,display:'flex',alignItems:'center',justifyContent:'center',color:'#d6b33f',background:'rgba(214,179,63,.12)'}},eye(true)),
+        h('div',{style:{flex:1}},h('div',{style:{fontSize:12.5,color:'#d7deea',fontWeight:500}},'CartoDB Dark'),h('div',{style:{fontSize:10.5,color:'#6f7b8f'}},'默认深色矢量底图')),
+        h('span',{style:{fontSize:10,color:'#67c7b7',background:'rgba(103,199,183,.12)',padding:'1px 7px',borderRadius:10}},'基准')),
+      row('scan','晚清扫描地图',assets.length?('David Rumsey · '+assets.length+' 张已配准'):'未叠加扫描图','#e9855b'),
+      h('div',{style:{height:1,background:'rgba(148,163,184,0.1)',margin:'7px 0'}}),
+      head('数据图层'),
+      row('route','路线','太平军进军 · 1 条','#d6b33f'),
+      row('point','地点',cnt.point+' 个节点','#5aa2f2'),
+      row('territory','疆域 / 面',cnt.territory+' 个面要素','#d6b33f'),
+      row('annot','注释 / 线',cnt.annot+' 条标注线','#e9855b'),
+      h('div',{style:{marginTop:10,fontSize:11,color:'#6f7b8f',lineHeight:1.6,background:'#0c1322',border:'1px solid rgba(148,163,184,0.12)',borderRadius:8,padding:'9px 11px'}},
+        '用左侧工具栏的「画线 / 画面」可向「注释」「疆域」图层添加要素；眼睛图标控制显隐，滑块控制不透明度。'));
+  }
+
+  // ---------- STUDIO assets panel ----------
+  studioAssetsPanel(){
+    const h=React.createElement, S=this.state, assets=this.studioAssetData();
+    const licCol={A:'#7fc79c',B:'#f2c94c',C:'#e9855b'};
+    const geoCol={'已配准':'#67c7b7','矢量':'#67c7b7','需复核':'#f2c94c','未配准':'#e9855b'};
+    return h('div',{style:{display:'flex',flexDirection:'column',gap:11}},
+      h('div',{style:{display:'flex',alignItems:'center',justifyContent:'space-between',fontSize:11,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1}},
+        h('span',null,'底图资产 · '+assets.length),
+        h('span',{style:{color:'#d6b33f',cursor:'pointer',textTransform:'none',letterSpacing:0}},'+ 上传扫描图')),
+      assets.map((a,i)=>h('div',{key:a.id,onClick:()=>this.setState({studioAssetSel:a.id}),style:{background:'#101827',border:'1px solid '+(S.studioAssetSel===a.id?'rgba(214,179,63,.4)':(a.added?'rgba(103,199,183,.32)':'rgba(148,163,184,0.16)')),borderRadius:10,padding:11,cursor:'pointer'}},
+        h('div',{style:{height:60,borderRadius:7,background:'linear-gradient(135deg,'+a.sw[0]+','+a.sw[1]+')',marginBottom:9,border:'1px solid rgba(214,179,63,.15)',position:'relative',overflow:'hidden'}},
+          h('div',{style:{position:'absolute',inset:0,backgroundImage:'repeating-linear-gradient(0deg,rgba(214,179,63,.07) 0 1px,transparent 1px 10px),repeating-linear-gradient(90deg,rgba(214,179,63,.07) 0 1px,transparent 1px 10px)'}}),
+          a.added?h('span',{style:{position:'absolute',top:6,right:6,fontSize:9.5,fontWeight:600,color:'#08221d',background:'#67c7b7',padding:'2px 7px',borderRadius:10,display:'flex',alignItems:'center',gap:3}},this.ui.icon('M5 12l5 5 9-10',10),'已叠加'):null),
+        h('div',{style:{display:'flex',alignItems:'baseline',gap:6}},
+          h('div',{style:{fontSize:12.5,fontWeight:600,color:'#eef2f8',flex:1,minWidth:0,overflow:'hidden',textOverflow:'ellipsis',whiteSpace:'nowrap'}},a.name),
+          h('span',{style:{fontSize:10.5,color:'#6f7b8f'}},a.year?a.year:'—')),
+        h('div',{style:{fontSize:11,color:'#6f7b8f',margin:'3px 0 8px'}},a.source+' · '+a.type+' · '+a.res),
+        h('div',{style:{display:'flex',alignItems:'center',gap:6,flexWrap:'wrap'}},
+          h('span',{style:{fontSize:10,color:licCol[a.license],background:licCol[a.license]+'22',padding:'1px 7px',borderRadius:10}},'授权 '+a.license),
+          h('span',{style:{fontSize:10,color:geoCol[a.georef],background:geoCol[a.georef]+'22',padding:'1px 7px',borderRadius:10}},a.georef),
+          h('div',{style:{flex:1}}),
+          h('button',{onClick:(e)=>{e.stopPropagation();this.toggleAsset(a.id);},style:{fontSize:11,fontWeight:600,color:a.added?'#e75f5f':'#d6b33f',background:a.added?'transparent':'rgba(214,179,63,.12)',border:'1px solid '+(a.added?'rgba(231,95,95,.3)':'rgba(214,179,63,.3)'),borderRadius:7,padding:'4px 10px',cursor:'pointer'}},a.added?'移除':'加入底图'))) ));
+  }
+
+  // ---------- shared editor mini-map ----------
+  editorMap(route, selIdx, onPick, onCanvasClick, opts) {
+    const h=React.createElement, S=this.state;
+    opts=opts||{}; const L=opts.layers; const ov=opts.overlay||{};
+    const lOn=(k)=>!L||!L[k]||L[k].on; const lOp=(k)=>(L&&L[k]?L[k].opacity:100)/100;
+    const els=[];
+    els.push(h('defs',{key:'d'},
+      h('filter',{id:'eglow',x:'-60%',y:'-60%',width:'220%',height:'220%'},
+        h('feGaussianBlur',{stdDeviation:'3',result:'b'}),
+        h('feMerge',null,h('feMergeNode',{in:'b'}),h('feMergeNode',{in:'SourceGraphic'}))),
+      h('radialGradient',{id:'eland',cx:'42%',cy:'40%',r:'70%'},
+        h('stop',{offset:'0%',stopColor:'#16213a'}),h('stop',{offset:'100%',stopColor:'#0f1729'})),
+      h('radialGradient',{id:'escan',cx:'45%',cy:'40%',r:'75%'},
+        h('stop',{offset:'0%',stopColor:'#3a3424'}),h('stop',{offset:'100%',stopColor:'#241f15'}))));
+    const scan=lOn('scan')&&L&&L.scan;
+    els.push(h('rect',{key:'bg',x:0,y:0,width:this.W,height:this.H,fill:scan?'url(#escan)':'#070b17'}));
+    // grid
+    const grid=[];
+    for(let lng=75;lng<=135;lng+=10){const a=this.proj(lng,15),b=this.proj(lng,55);grid.push(h('line',{key:'x'+lng,x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'rgba(148,163,184,1)',strokeWidth:0.5}));}
+    for(let lat=20;lat<=55;lat+=10){const a=this.proj(70,lat),b=this.proj(138,lat);grid.push(h('line',{key:'y'+lat,x1:a[0],y1:a[1],x2:b[0],y2:b[1],stroke:'rgba(148,163,184,1)',strokeWidth:0.5}));}
+    els.push(h('g',{key:'grid',opacity:0.4},grid));
+    els.push(h('path',{key:'land',d:this.polyPath(this.BORDER)+'Z',fill:scan?'#2b2517':'url(#eland)',stroke:scan?'#7a6a3e':'rgba(120,140,170,0.5)',strokeWidth:1.4,strokeLinejoin:'round'}));
+    if(scan&&L.scan.opacity<100){ els.push(h('path',{key:'landov',d:this.polyPath(this.BORDER)+'Z',fill:'#0f1729',opacity:1-L.scan.opacity/100})); }
+    els.push(h('g',{key:'riv',fill:'none',stroke:scan?'#6f86a0':'#3d5f86',strokeWidth:1.4,opacity:0.5},h('path',{d:this.polyPath(this.YANGTZE)}),h('path',{d:this.polyPath(this.YELLOW)})));
+    // territory polygons (画面)
+    if(lOn('territory')&&ov.polys){ ov.polys.forEach((pg,pi)=>{ const sl=ov.selPoly===pg.id; els.push(h('path',{key:'pg'+pi,d:this.polyPath(pg.pts)+'Z',fill:pg.color,fillOpacity:0.16*lOp('territory'),stroke:pg.color,strokeWidth:sl?2.4:1.6,strokeDasharray:'6 4',opacity:lOp('territory'),style:ov.onPickPoly?{cursor:'pointer'}:null,onClick:ov.onPickPoly?(e)=>{e.stopPropagation&&e.stopPropagation();ov.onPickPoly(pg.id);}:null})); }); }
+    // annotation lines (画线)
+    if(lOn('annot')&&ov.lines){ ov.lines.forEach((ln,li)=>{ const sl=ov.selLine===ln.id; els.push(h('path',{key:'ln'+li,d:this.polyPath(ln.pts),fill:'none',stroke:ln.color,strokeWidth:sl?3.4:2.4,strokeLinejoin:'round',strokeLinecap:'round',strokeDasharray:'2 6',opacity:lOp('annot'),style:ov.onPickLine?{cursor:'pointer'}:null,onClick:ov.onPickLine?(e)=>{e.stopPropagation&&e.stopPropagation();ov.onPickLine(ln.id);}:null})); ln.pts.forEach((p,pi)=>{const xy=this.proj(p[0],p[1]);els.push(h('circle',{key:'lp'+li+pi,cx:xy[0],cy:xy[1],r:2.6,fill:ln.color,opacity:lOp('annot')}));}); }); }
+    // route line
+    if(lOn('route')) els.push(h('path',{key:'rt',d:this.polyPath(route.nodes.map(n=>[n.lng,n.lat])),fill:'none',stroke:route.color,strokeWidth:3,strokeLinejoin:'round',strokeLinecap:'round',opacity:lOp('route'),filter:'url(#eglow)'}));
+    // draft (in-progress line/poly)
+    if(ov.draft&&ov.draft.length){
+      const pts=ov.draft.slice(); const live=ov.hover?ov.draft.concat([ov.hover]):ov.draft;
+      const dd=ov.draftMode==='poly'?(this.polyPath(live)+(live.length>2?'Z':'')):this.polyPath(live);
+      if(ov.draftMode==='poly') els.push(h('path',{key:'drf',d:this.polyPath(live)+'Z',fill:'#d6b33f',fillOpacity:0.1,stroke:'none'}));
+      els.push(h('path',{key:'drl',d:this.polyPath(live),fill:'none',stroke:'#f0cf6a',strokeWidth:2.2,strokeDasharray:'5 4',strokeLinejoin:'round'}));
+      pts.forEach((p,pi)=>{const xy=this.proj(p[0],p[1]);els.push(h('circle',{key:'dp'+pi,cx:xy[0],cy:xy[1],r:pi===0?5:3.6,fill:pi===0?'#d6b33f':'#f0cf6a',stroke:'#070b17',strokeWidth:1.4}));});
+    }
+    // measure (测距)
+    if(ov.measure&&ov.measure.length){
+      const live=ov.hover&&ov.measureLive?ov.measure.concat([ov.hover]):ov.measure;
+      els.push(h('path',{key:'ms',d:this.polyPath(live),fill:'none',stroke:'#67c7b7',strokeWidth:2.2,strokeDasharray:'7 4',strokeLinecap:'round'}));
+      live.forEach((p,pi)=>{const xy=this.proj(p[0],p[1]);els.push(h('circle',{key:'mp'+pi,cx:xy[0],cy:xy[1],r:3.4,fill:'#67c7b7',stroke:'#070b17',strokeWidth:1.4}));
+        if(pi>0){const mid=[(this.proj(live[pi-1][0],live[pi-1][1])[0]+xy[0])/2,(this.proj(live[pi-1][0],live[pi-1][1])[1]+xy[1])/2];const seg=this.hav(live[pi-1],live[pi]);els.push(h('text',{key:'mt'+pi,x:mid[0],y:mid[1]-5,fontSize:11,fontWeight:600,fill:'#67c7b7',stroke:'#070b17',strokeWidth:3,paintOrder:'stroke',textAnchor:'middle'},this.fmtKm(seg)));}});
+      if(live.length>=2){const last=this.proj(live[live.length-1][0],live[live.length-1][1]);els.push(h('g',{key:'mtot',transform:'translate('+last[0]+','+(last[1]+16)+')'},h('rect',{x:-34,y:-11,width:68,height:20,rx:5,fill:'#67c7b7'}),h('text',{x:0,y:3,fontSize:11.5,fontWeight:700,fill:'#08221d',textAnchor:'middle'},'Σ '+this.fmtKm(this.pathKm(live)))));}
+    }
+    // nodes
+    if(lOn('point')) route.nodes.forEach((nd,idx)=>{
+      const [x,y]=this.proj(nd.lng,nd.lat);
+      const col=this.nodeColor(nd.type);
+      const sel=idx===selIdx;
+      els.push(h('g',{key:'n'+idx,transform:'translate('+x+','+y+')',opacity:lOp('point'),style:{cursor:'pointer'},onClick:(e)=>{e.stopPropagation&&e.stopPropagation(); onPick&&onPick(idx);}},
+        sel?h('circle',{r:13,fill:'none',stroke:'#fff',strokeWidth:1.8,opacity:0.9}):null,
+        h('circle',{r:sel?6:4.5,fill:col,stroke:'#070b17',strokeWidth:1.5}),
+        h('text',{x:9,y:4,fontSize:12,fontWeight:600,fill:'#eef2f8',stroke:'#070b17',strokeWidth:3,paintOrder:'stroke',style:{pointerEvents:'none'}},nd.name)));
+    });
+    // snap indicator
+    if(ov.snapPt) els.push(h('g',{key:'snap',transform:'translate('+ov.snapPt[0]+','+ov.snapPt[1]+')',style:{pointerEvents:'none'}},h('circle',{r:9,fill:'none',stroke:'#67c7b7',strokeWidth:1.6,opacity:0.95}),h('circle',{r:2,fill:'#67c7b7'})));
+    const toLoc=(e)=>{ const svg=e.currentTarget; const mtx=svg.getScreenCTM(); if(!mtx)return null; const pt=svg.createSVGPoint(); pt.x=e.clientX; pt.y=e.clientY; const loc=pt.matrixTransform(mtx.inverse()); return [loc.x,loc.y]; };
+    return h('svg',{viewBox:'0 0 '+this.W+' '+this.H,width:'100%',height:'100%',style:{display:'block',position:'absolute',inset:0,cursor:onCanvasClick?'crosshair':'default'},
+      onClick:onCanvasClick?(e)=>{ const l=toLoc(e); if(l)onCanvasClick(l[0],l[1]); }:undefined,
+      onDoubleClick:opts.onDbl?(e)=>{ e.preventDefault&&e.preventDefault(); opts.onDbl(); }:undefined,
+      onMouseMove:opts.onMove?(e)=>{ const l=toLoc(e); if(l)opts.onMove(l[0],l[1]); }:undefined,
+      onMouseLeave:opts.onMove?()=>opts.onMove(null,null):undefined},els);
+  }
+
+  ui = {
+    icon:(p,sw)=>React.createElement('svg',{width:sw||17,height:sw||17,viewBox:'0 0 24 24',fill:'none',stroke:'currentColor',strokeWidth:1.8,strokeLinecap:'round',strokeLinejoin:'round'},React.createElement('path',{d:p})),
+  };
+  tbBtn(label,opts){const h=React.createElement;opts=opts||{};return h('button',{onClick:opts.onClick,style:{display:'flex',alignItems:'center',gap:6,height:32,padding:'0 11px',fontSize:12.5,color:opts.primary?'#1a1407':'#aeb8c8',background:opts.primary?'#d6b33f':(opts.solid?'#162033':'transparent'),border:opts.primary?'none':'1px solid rgba(148,163,184,0.16)',borderRadius:8,cursor:'pointer',fontWeight:opts.primary?600:500,whiteSpace:'nowrap'}},opts.ic?this.ui.icon(opts.ic,15):null,label);}
+
+  // ---------- MAP STUDIO ----------
+  buildStudio() {
+    const h=React.createElement, S=this.state;
+    const baseRoute=this.THEMES()[0].routes[0]; // 太平军进军 working draft
+    const nodes=this.studioNodes();
+    const route={nodes, color:baseRoute.color, name:baseRoute.name};
+    const upd=(patch)=>this.setStudioNodes(nodes.map((n,i)=>i===S.studioSel?Object.assign({},n,patch):n));
+    const inputCss={width:'100%',boxSizing:'border-box',fontSize:13,color:'#eef2f8',background:'#0c1322',border:'1px solid rgba(148,163,184,0.16)',borderRadius:8,padding:'8px 10px',outline:'none'};
+    const ef=(label,val,oninput,opt)=>{ opt=opt||{}; return h('div',{style:{marginBottom:11}},
+      h('div',{style:{fontSize:11,color:opt.bad?'#f2c94c':'#6f7b8f',marginBottom:4,display:'flex',gap:5,alignItems:'center'}},label,opt.req?h('span',{style:{color:'#e75f5f'}},'*'):null,opt.bad?h('span',{style:{marginLeft:'auto',fontSize:10,color:'#f2c94c'}},'缺失'):null),
+      opt.options?h('select',{value:val,onChange:e=>oninput(e.target.value),style:Object.assign({},inputCss,{cursor:'pointer'})},opt.options.map(o=>h('option',{key:o,value:o},o)))
+        :h('input',{value:val==null?'':val,type:opt.type||'text',placeholder:opt.ph||'',onChange:e=>oninput(opt.type==='number'?(e.target.value===''?null:+e.target.value):e.target.value),style:Object.assign({},inputCss,{borderColor:opt.bad?'rgba(242,201,76,.4)':'rgba(148,163,184,0.16)'})})); };
+    const accColor={'精确':'#7fc79c','推定':'#f2c94c','示意':'#9aa6b8'};
+
+    // geoname candidates
+    const allCands=[
+      {anc:'江宁 / 金陵',era:'六朝 · 建康',mod:'今江苏南京',acc:'精确',src:'CHGIS'},
+      {anc:'武昌',era:'三国吴 · 江夏',mod:'今湖北武汉',acc:'精确',src:'CHGIS'},
+      {anc:'长安',era:'唐 · 京兆府',mod:'今陕西西安',acc:'精确',src:'CHGIS'},
+      {anc:'永安州',era:'清 · 平乐府',mod:'今广西蒙山',acc:'精确',src:'CHGIS'},
+      {anc:'庐州',era:'清 · 庐州府',mod:'今安徽合肥',acc:'推定',src:'WHG'},
+    ];
+    const q=S.studioSearch.trim();
+    const cands=q?allCands.filter(c=>c.anc.includes(q)||c.mod.includes(q)):allCands;
+
+    const tabs=['地点','路线','图层','资产'];
+    const tools=[['select','选择','M3 3l7 17 2.5-7L20 10z'],['point','加点','M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z'],['line','画线','M5 19l14-14M5 5h.01M19 19h.01'],['poly','画面','M12 3l8 6-3 9H7L4 9z'],['delete','删除','M4 7h16M9 7V5h6v2M6 7l1 13h10l1-13'],['ruler','测距','M3 8l5-5 13 13-5 5z'],['snap','吸附','M6 4v7a6 6 0 0012 0V4M6 4H3M6 4h3M18 4h-3M18 4h3']];
+
+    const fieldRow=(label,val,req,bad)=>h('div',{style:{marginBottom:11}},
+      h('div',{style:{fontSize:11,color:bad?'#f2c94c':'#6f7b8f',marginBottom:4,display:'flex',gap:5,alignItems:'center'}},label,req?h('span',{style:{color:'#e75f5f'}},'*'):null,bad?h('span',{style:{marginLeft:'auto',fontSize:10,color:'#f2c94c'}},'缺失'):null),
+      h('div',{style:{fontSize:13,color:val?'#eef2f8':'#6f7b8f',background:'#0c1322',border:'1px solid '+(bad?'rgba(242,201,76,.4)':'rgba(148,163,184,0.16)'),borderRadius:8,padding:'8px 10px'}},val||'—'));
+
+    const selNode=S.studioSel!=null?route.nodes[S.studioSel]:null;
+
+    return h('div',{style:{flex:1,display:'flex',flexDirection:'column',minHeight:0}},
+      // toolbar
+      h('div',{style:{height:50,flex:'none',display:'flex',alignItems:'center',gap:9,padding:'0 16px',background:'#090e1d',borderBottom:'1px solid rgba(148,163,184,0.16)'}},
+        this.tbBtn('返回',{ic:'M15 19l-7-7 7-7',onClick:()=>this.setState({screen:'viewer'})}),
+        h('div',{style:{width:1,height:22,background:'rgba(148,163,184,0.16)'}}),
+        h('input',{defaultValue:'太平军进军 · 晚清',style:{background:'transparent',border:'none',color:'#eef2f8',fontSize:14,fontWeight:600,width:180,outline:'none'}}),
+        h('span',{style:{fontSize:11.5,color:'#7fc79c',display:'flex',alignItems:'center',gap:5}},h('span',{style:{width:6,height:6,borderRadius:'50%',background:'#7fc79c'}}),'已保存于 '+(S.studioSaved||'14:32')),
+        h('div',{style:{flex:1}}),
+        this.tbBtn('',{ic:'M9 14l-4-4 4-4M5 10h11a4 4 0 010 8h-1',solid:true}),
+        this.tbBtn('',{ic:'M15 14l4-4-4-4M19 10H8a4 4 0 000 8h1',solid:true}),
+        h('div',{style:{width:1,height:22,background:'rgba(148,163,184,0.16)'}}),
+        this.tbBtn('导入',{ic:'M12 3v12M7 10l5 5 5-5M5 21h14'}),
+        this.tbBtn('导出 / 分享',{ic:'M12 15V3M7 8l5-5 5 5M5 21h14',onClick:this.openExport}),
+        this.tbBtn('预览',{ic:'M2 12s4-7 10-7 10 7 10 7-4 7-10 7S2 12 2 12z',onClick:()=>this.setState({screen:'viewer'})}),
+        this.tbBtn('提交审核',{primary:true,ic:'M5 12l5 5 9-10'})),
+
+      h('div',{style:{flex:1,display:'flex',minHeight:0}},
+        // LEFT resource
+        h('div',{style:{width:300,flex:'none',background:'#090e1d',borderRight:'1px solid rgba(148,163,184,0.16)',display:'flex',flexDirection:'column'}},
+          h('div',{style:{display:'flex',padding:'10px 12px 0',gap:4}},tabs.map(t=>h('button',{key:t,onClick:()=>this.setState({studioTab:t}),style:{flex:1,padding:'7px 0',fontSize:12.5,fontWeight:S.studioTab===t?600:500,color:S.studioTab===t?'#d6b33f':'#6f7b8f',background:'transparent',border:'none',borderBottom:'2px solid '+(S.studioTab===t?'#d6b33f':'transparent'),cursor:'pointer'}},t))),
+          h('div',{style:{flex:1,overflowY:'auto',padding:14}},
+            S.studioTab==='地点'?h('div',null,
+              h('div',{style:{display:'flex',alignItems:'center',gap:8,background:'#0c1322',border:'1px solid rgba(148,163,184,0.16)',borderRadius:9,padding:'8px 11px',marginBottom:14}},
+                this.ui.icon('M21 21l-4-4M3 11a8 8 0 1016 0 8 8 0 00-16 0z',15),
+                h('input',{value:S.studioSearch,onChange:e=>this.setState({studioSearch:e.target.value}),placeholder:'搜索历史地名…',style:{flex:1,background:'transparent',border:'none',color:'#eef2f8',fontSize:13,outline:'none'}})),
+              h('div',{style:{fontSize:11,color:'#6f7b8f',marginBottom:9,textTransform:'uppercase',letterSpacing:1}},'候选结果 · '+cands.length),
+              h('div',{style:{display:'flex',flexDirection:'column',gap:8}},cands.map((c,i)=>h('div',{key:i,style:{background:'#101827',border:'1px solid rgba(148,163,184,0.16)',borderRadius:10,padding:'10px 11px'}},
+                h('div',{style:{fontSize:13.5,fontWeight:600,color:'#eef2f8'}},c.anc),
+                h('div',{style:{fontSize:11.5,color:'#aeb8c8',margin:'2px 0 7px'}},c.era+' · '+c.mod),
+                h('div',{style:{display:'flex',alignItems:'center',gap:8}},
+                  h('span',{style:{fontSize:10.5,color:accColor[c.acc],background:c.acc==='精确'?'rgba(127,199,156,.14)':'rgba(242,201,76,.14)',padding:'1px 7px',borderRadius:10}},'精度：'+c.acc),
+                  h('span',{style:{fontSize:11,color:'#6f7b8f'}},'来源：'+c.src),
+                  h('div',{style:{flex:1}}),
+                  h('button',{onClick:()=>{ const nn={name:c.anc.split(' / ')[0],modern:(c.mod||'').replace('今',''),type:'城镇',accuracy:c.acc,source:c.src,lng:113,lat:32,year:null,event:'',desc:c.era}; const arr=nodes.concat([nn]); this.setStudioNodes(arr); this.setState({studioSel:arr.length-1,studioTab:'路线'}); },style:{fontSize:11.5,color:'#d6b33f',background:'rgba(214,179,63,.12)',border:'1px solid rgba(214,179,63,.3)',borderRadius:7,padding:'4px 9px',cursor:'pointer',fontWeight:600}},'添加为节点'))))))
+            :S.studioTab==='路线'?h('div',null,
+              h('div',{style:{fontSize:13,fontWeight:600,color:'#eef2f8',marginBottom:10,display:'flex',alignItems:'center',gap:7}},h('span',{style:{width:4,height:14,background:route.color,borderRadius:2}}),route.name),
+              h('div',{style:{display:'flex',flexDirection:'column'}},route.nodes.map((nd,idx)=>{
+                const miss=(nd.source||'').includes('待补');
+                return h('div',{key:idx,onClick:()=>this.setState({studioSel:idx}),style:{display:'flex',alignItems:'center',gap:9,padding:'8px 9px',borderRadius:8,cursor:'pointer',background:S.studioSel===idx?'rgba(214,179,63,.1)':'transparent',border:'1px solid '+(S.studioSel===idx?'rgba(214,179,63,.3)':'transparent')}},
+                  h('span',{style:{width:20,fontSize:11,color:'#6f7b8f',fontWeight:600}},String(idx+1).padStart(2,'0')),
+                  h('span',{style:{flex:1,fontSize:13,color:'#eef2f8'}},nd.name),
+                  h('span',{style:{fontSize:11,color:'#6f7b8f'}},nd.year),
+                  miss?h('span',{style:{width:7,height:7,borderRadius:'50%',background:'#f2c94c'},title:'缺少来源'}):null);
+              })))
+            :S.studioTab==='图层'?this.studioLayersPanel()
+            :this.studioAssetsPanel())),
+
+        // CENTER map
+        h('div',{id:'hasStudioMap',style:{flex:1,position:'relative',minWidth:0}},
+          this.editorMap(route,S.studioSel,
+            (idx)=>{ if(S.studioTool==='delete'){ this.setStudioNodes(nodes.filter((n,i)=>i!==idx)); this.setState({studioSel:null}); } else { this.setState({studioSel:idx}); } },
+            (x,y)=>this.studioCanvasClick(x,y,nodes),
+            { layers:S.studioLayers, onMove:(x,y)=>this.studioMove(x,y,nodes), onDbl:()=>this.studioFinishDraft(),
+              overlay:{ lines:S.studioLines, polys:S.studioPolys, selLine:null, selPoly:null,
+                draft:(S.studioTool==='line'||S.studioTool==='poly')?S.studioDraft:null, draftMode:S.studioTool==='poly'?'poly':'line',
+                measure:S.studioTool==='ruler'?S.studioMeasure:null, measureLive:true,
+                hover:S.studioHover, snapPt:S.studioSnapPt } }),
+          // draw toolbar
+          h('div',{style:{position:'absolute',top:14,left:14,display:'flex',flexDirection:'column',gap:4,background:'rgba(16,24,39,.9)',border:'1px solid rgba(148,163,184,0.16)',borderRadius:10,padding:5,backdropFilter:'blur(6px)'}},
+            tools.filter(t=>t[0]!=='snap').map(([k,label,d])=>h('button',{key:k,title:label,onClick:()=>this.setState({studioTool:k,studioDraft:[],studioHover:null,studioMeasure:k==='ruler'?S.studioMeasure:[]}),style:{width:34,height:34,borderRadius:8,border:'none',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',background:S.studioTool===k?'#d6b33f':'transparent',color:S.studioTool===k?'#1a1407':'#aeb8c8'}},this.ui.icon(d,17))),
+            h('div',{style:{height:1,background:'rgba(148,163,184,0.16)',margin:'2px 3px'}}),
+            h('button',{title:'吸附到已有点'+(S.studioSnap?'（开）':'（关）'),onClick:()=>this.setState({studioSnap:!S.studioSnap,studioSnapPt:null}),style:{width:34,height:34,borderRadius:8,border:'none',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center',background:S.studioSnap?'#67c7b7':'transparent',color:S.studioSnap?'#08221d':'#aeb8c8'}},this.ui.icon('M6 4v7a6 6 0 0012 0V4M6 4H3M6 4h3M18 4h-3M18 4h3',17))),
+          // draft / measure action bar
+          this.studioDraftBar(),
+          // status
+          h('div',{style:{position:'absolute',bottom:12,left:14,fontSize:11,color:'#6f7b8f',background:'rgba(9,14,29,.8)',padding:'4px 9px',borderRadius:6,display:'flex',alignItems:'center',gap:8}},
+            h('span',null,'工具：'+(tools.find(t=>t[0]===S.studioTool)||[])[1]+' · '+({select:'点击节点选中并编辑',point:'点击地图空白处添加节点',line:'点击落点，双击或「完成」结束',poly:'点击围合区域，双击闭合',delete:'点击节点以删除',ruler:'依次点击量测距离，双击结束'}[S.studioTool]||'')),
+            h('span',{style:{color:S.studioSnap?'#67c7b7':'#6f7b8f',display:'flex',alignItems:'center',gap:4}},h('span',{style:{width:5,height:5,borderRadius:'50%',background:S.studioSnap?'#67c7b7':'#3a465c'}}),'吸附'+(S.studioSnap?'开':'关'))),
+        // RIGHT property
+
+        h('div',{style:{width:344,flex:'none',background:'#090e1d',borderLeft:'1px solid rgba(148,163,184,0.16)',overflowY:'auto'}},
+          h('div',{style:{padding:'14px 16px',borderBottom:'1px solid rgba(148,163,184,0.16)',fontSize:13,fontWeight:600}},selNode?'地点属性':'属性面板'),
+          selNode?h('div',{style:{padding:16}},
+            ef('古名',selNode.name,v=>upd({name:v}),{req:true}),
+            ef('现代名',selNode.modern,v=>upd({modern:v}),{req:true,ph:'今地名'}),
+            ef('类型',selNode.type,v=>upd({type:v}),{req:true,options:['都城','城镇','战役','关隘','港口']}),
+            ef('时间（年）',selNode.year,v=>upd({year:v}),{type:'number',ph:'如 1853'}),
+            h('div',{style:{display:'flex',gap:10}},h('div',{style:{flex:1}},ef('经度',selNode.lng,v=>upd({lng:+v}),{type:'number',req:true})),h('div',{style:{flex:1}},ef('纬度',selNode.lat,v=>upd({lat:+v}),{type:'number',req:true}))),
+            ef('精度等级',selNode.accuracy,v=>upd({accuracy:v}),{req:true,options:['精确','推定','示意']}),
+            ef('来源',selNode.source,v=>upd({source:v}),{req:true,bad:(selNode.source||'').includes('待补')}),
+            ef('说明',selNode.desc,v=>upd({desc:v}),{}),
+            h('div',{style:{display:'flex',gap:8,marginTop:6}},
+              h('button',{onClick:()=>{const d=new Date();this.setState({studioSaved:String(d.getHours()).padStart(2,'0')+':'+String(d.getMinutes()).padStart(2,'0')});},style:{flex:1,padding:'9px 0',fontSize:12.5,fontWeight:600,color:'#1a1407',background:'#d6b33f',border:'none',borderRadius:8,cursor:'pointer'}},'保存修改'),
+              h('button',{onClick:()=>{ this.setStudioNodes(nodes.filter((n,i)=>i!==S.studioSel)); this.setState({studioSel:null}); },style:{padding:'9px 14px',fontSize:12.5,color:'#e75f5f',background:'transparent',border:'1px solid rgba(231,95,95,.35)',borderRadius:8,cursor:'pointer'}},'删除')))
+          :h('div',{style:{padding:'40px 24px',textAlign:'center',color:'#6f7b8f',fontSize:13,lineHeight:1.7}},
+            this.ui.icon('M12 2a7 7 0 00-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 00-7-7z',30),
+            h('div',{style:{marginTop:12}},'在地图或左侧列表中'),h('div',null,'选择一个节点以编辑属性'))))),
+
+      // BOTTOM sequence
+      h('div',{style:{height:62,flex:'none',background:'#090e1d',borderTop:'1px solid rgba(148,163,184,0.16)',display:'flex',alignItems:'center',gap:0,padding:'0 18px',overflowX:'auto'}},
+        h('span',{style:{fontSize:11,color:'#6f7b8f',marginRight:14,flex:'none',textTransform:'uppercase',letterSpacing:1}},'节点序列'),
+        route.nodes.map((nd,idx)=>h('div',{key:idx,style:{display:'flex',alignItems:'center',flex:'none'}},
+          idx>0?h('div',{style:{width:26,height:1,background:'rgba(148,163,184,0.25)'}}):null,
+          h('div',{onClick:()=>this.setState({studioSel:idx}),style:{display:'flex',flexDirection:'column',alignItems:'center',gap:3,cursor:'pointer',padding:'4px 6px',borderRadius:8,background:S.studioSel===idx?'rgba(214,179,63,.1)':'transparent'}},
+            h('span',{style:{fontSize:11,color:'#6f7b8f'}},nd.year),
+            h('span',{style:{fontSize:12.5,fontWeight:S.studioSel===idx?600:500,color:S.studioSel===idx?'#d6b33f':'#aeb8c8',whiteSpace:'nowrap'}},nd.name))))));
+  }
+
+  // ---------- ROUTE STUDIO ----------
+  buildRouteStudio() {
+    const h=React.createElement, S=this.state;
+    const baseRoute=this.THEMES()[0].routes[0]; // 太平军进军
+    const nodes=this.rsNodes();
+    const route={nodes, color:baseRoute.color, name:baseRoute.name};
+    const rupd=(idx,patch)=>this.setState({rsNodes:nodes.map((n,i)=>i===idx?Object.assign({},n,patch):n)});
+    const rdel=(idx)=>{ const arr=nodes.filter((n,i)=>i!==idx); this.setState({rsNodes:arr,rsSel:Math.max(0,Math.min(S.rsSel,arr.length-1))}); };
+    const radd=()=>{ const arr=nodes.concat([{name:'新节点',modern:'',type:'城镇',accuracy:'推定',source:'待补',lng:110,lat:32,year:null,event:'',desc:''}]); this.setState({rsNodes:arr,rsSel:arr.length-1}); };
+    const tdCss={width:'100%',boxSizing:'border-box',fontSize:12.5,color:'#eef2f8',background:'transparent',border:'1px solid transparent',borderRadius:6,padding:'4px 6px',outline:'none'};
+    const accColor={'精确':'#7fc79c','推定':'#f2c94c','示意':'#9aa6b8'};
+    const accBg={'精确':'rgba(127,199,156,.14)','推定':'rgba(242,201,76,.14)','示意':'rgba(148,163,184,.14)'};
+
+    const aiPlaces=[
+      {name:'金田村',conf:0.96,note:'起义地点',canon:'金田'},
+      {name:'永安州',conf:0.91,note:'建制封王',canon:'永安'},
+      {name:'全州',conf:0.88,note:'冯云山阵亡',canon:'全州'},
+      {name:'武昌',conf:0.95,note:'首克省城',canon:'武昌'},
+      {name:'江宁',conf:0.97,note:'即南京 / 天京',canon:'南京 / 天京'},
+      {name:'庐州',conf:0.52,note:'同名异地待定',canon:null},
+    ];
+    const gen=()=>{ const canon=this.defaultStudioNodes(); const arr=aiPlaces.filter((p,i)=>S.rsChecked[i]).map(p=>{ const c=p.canon?canon.find(n=>n.name===p.canon):null; return c?Object.assign({},c):{name:p.name,modern:'',type:'城镇',accuracy:'示意',source:'待补',lng:113,lat:30,year:null,event:p.note,desc:p.note}; }); this.setState({rsNodes:arr,rsGenerated:true,rsSel:0}); };
+
+    return h('div',{style:{flex:1,display:'flex',flexDirection:'column',minHeight:0}},
+      // toolbar
+      h('div',{style:{height:50,flex:'none',display:'flex',alignItems:'center',gap:9,padding:'0 16px',background:'#090e1d',borderBottom:'1px solid rgba(148,163,184,0.16)'}},
+        this.tbBtn('返回',{ic:'M15 19l-7-7 7-7',onClick:()=>this.setState({screen:'viewer'})}),
+        h('div',{style:{width:1,height:22,background:'rgba(148,163,184,0.16)'}}),
+        h('span',{style:{fontSize:14,fontWeight:600}},'Route Studio · 太平军进军'),
+        h('span',{style:{fontSize:11,color:'#6f7b8f',border:'1px solid rgba(148,163,184,0.16)',padding:'2px 8px',borderRadius:6}},'从史料整理路线'),
+        h('div',{style:{flex:1}}),
+        this.tbBtn('添加节点',{ic:'M12 5v14M5 12h14',solid:true,onClick:radd}),
+        this.tbBtn('里程估算',{ic:'M3 8l5-5 13 13-5 5z',solid:true}),
+        this.tbBtn('提交审核',{primary:true,ic:'M5 12l5 5 9-10'})),
+
+      h('div',{style:{flex:1,display:'flex',minHeight:0}},
+        // LEFT AI extraction
+        h('div',{style:{width:296,flex:'none',background:'#090e1d',borderRight:'1px solid rgba(148,163,184,0.16)',overflowY:'auto',padding:14}},
+          h('div',{style:{fontSize:11,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1,marginBottom:9}},'史料 / AI 抽取'),
+          h('div',{style:{background:'#0c1322',border:'1px solid rgba(148,163,184,0.16)',borderRadius:10,padding:'11px 12px',fontSize:12.5,color:'#aeb8c8',lineHeight:1.7,marginBottom:14}},
+            '咸丰元年，洪秀全起事于',h('mark',{style:{background:'rgba(214,179,63,.22)',color:'#f0cf6a',borderRadius:3,padding:'0 2px'}},'金田'),'，旋克',h('mark',{style:{background:'rgba(214,179,63,.22)',color:'#f0cf6a',borderRadius:3,padding:'0 2px'}},'永安'),'，分封诸王。其后出',h('mark',{style:{background:'rgba(214,179,63,.22)',color:'#f0cf6a',borderRadius:3,padding:'0 2px'}},'全州'),'，下',h('mark',{style:{background:'rgba(214,179,63,.22)',color:'#f0cf6a',borderRadius:3,padding:'0 2px'}},'武昌'),'，沿江东进，遂定',h('mark',{style:{background:'rgba(214,179,63,.22)',color:'#f0cf6a',borderRadius:3,padding:'0 2px'}},'江宁'),'为天京。'),
+          h('div',{style:{fontSize:11,color:'#6f7b8f',marginBottom:9,display:'flex',justifyContent:'space-between'}},h('span',null,'抽取地点 · '+aiPlaces.length),h('span',{style:{color:'#67c7b7',cursor:'pointer'}},'合并重复')),
+          h('div',{style:{display:'flex',flexDirection:'column',gap:7}},aiPlaces.map((p,i)=>{
+            const low=p.conf<0.6;const on=S.rsChecked[i];
+            return h('div',{key:i,onClick:()=>{const c={...S.rsChecked};c[i]=!c[i];this.setState({rsChecked:c});},style:{display:'flex',alignItems:'center',gap:10,padding:'9px 10px',borderRadius:9,cursor:'pointer',background:'#101827',border:'1px solid '+(low?'rgba(242,201,76,.3)':'rgba(148,163,184,0.16)')}},
+              h('div',{style:{width:16,height:16,borderRadius:5,flex:'none',border:'1.5px solid '+(on?'#d6b33f':'#6f7b8f'),background:on?'#d6b33f':'transparent',display:'flex',alignItems:'center',justifyContent:'center'}},on?this.ui.icon('M5 12l5 5 9-10',11):null),
+              h('div',{style:{flex:1,minWidth:0}},
+                h('div',{style:{fontSize:13,color:'#eef2f8',fontWeight:500}},p.name),
+                h('div',{style:{fontSize:11,color:low?'#f2c94c':'#6f7b8f'}},low?'⚠ 低置信 · '+p.note:p.note)),
+              h('div',{style:{display:'flex',flexDirection:'column',alignItems:'flex-end',gap:3}},
+                h('span',{style:{fontSize:11,fontWeight:600,color:low?'#f2c94c':'#7fc79c'}},Math.round(p.conf*100)+'%'),
+                h('div',{style:{width:38,height:3,borderRadius:2,background:'#1d2940',overflow:'hidden'}},h('div',{style:{width:(p.conf*100)+'%',height:'100%',background:low?'#f2c94c':'#7fc79c'}}))));
+          })),
+          h('button',{onClick:gen,style:{width:'100%',marginTop:14,padding:'10px 0',fontSize:12.5,fontWeight:600,color:'#1a1407',background:'#d6b33f',border:'none',borderRadius:9,cursor:'pointer'}},S.rsGenerated?'重新生成路线草稿':'生成路线草稿')),
+
+        // CENTER node table
+        h('div',{style:{flex:1,minWidth:0,display:'flex',flexDirection:'column',background:'#070b17'}},
+          h('div',{style:{padding:'12px 18px',borderBottom:'1px solid rgba(148,163,184,0.16)',display:'flex',alignItems:'center',gap:12}},
+            h('span',{style:{fontSize:13,fontWeight:600}},'路线节点表'),
+            h('span',{style:{fontSize:11.5,color:'#6f7b8f'}},route.nodes.length+' 个节点'),
+            h('div',{style:{flex:1}}),
+            h('span',{style:{fontSize:11,color:'#f2c94c',display:'flex',alignItems:'center',gap:5}},h('span',{style:{width:6,height:6,borderRadius:'50%',background:'#f2c94c'}}),nodes.filter(n=>(n.source||'').includes('待补')).length+' 项缺来源')),
+          h('div',{style:{flex:1,overflowY:'auto'}},
+            h('div',{style:{display:'grid',gridTemplateColumns:'34px 1.3fr 60px 1.2fr 56px 76px 1fr 30px',gap:6,padding:'9px 14px',fontSize:11,color:'#6f7b8f',borderBottom:'1px solid rgba(148,163,184,0.12)',position:'sticky',top:0,background:'#090e1d',textTransform:'uppercase',letterSpacing:.5}},
+              ['顺序','地点','时间','事件','坐标','精度','来源',''].map((c,i)=>h('span',{key:i},c))),
+            route.nodes.map((nd,idx)=>{
+              const miss=(nd.source||'').includes('待补');const sel=S.rsSel===idx;
+              return h('div',{key:idx,onClick:()=>this.setState({rsSel:idx}),style:{display:'grid',gridTemplateColumns:'34px 1.3fr 60px 1.2fr 56px 76px 1fr 30px',gap:6,padding:'7px 14px',fontSize:12.5,alignItems:'center',cursor:'pointer',borderBottom:'1px solid rgba(148,163,184,0.07)',background:sel?'rgba(214,179,63,.08)':'transparent',borderLeft:'2px solid '+(sel?'#d6b33f':'transparent')}},
+                h('span',{style:{display:'flex',alignItems:'center',gap:5,color:'#6f7b8f'}},this.ui.icon('M8 6h8M8 12h8M8 18h8',12),String(idx+1).padStart(2,'0')),
+                h('input',{value:nd.name||'',onClick:e=>e.stopPropagation(),onChange:e=>rupd(idx,{name:e.target.value}),style:Object.assign({},tdCss,{fontWeight:500})}),
+                h('input',{value:nd.year==null?'':nd.year,type:'number',onClick:e=>e.stopPropagation(),onChange:e=>rupd(idx,{year:e.target.value===''?null:+e.target.value}),style:tdCss}),
+                h('input',{value:nd.event||'',onClick:e=>e.stopPropagation(),onChange:e=>rupd(idx,{event:e.target.value}),style:tdCss}),
+                h('span',{style:{color:'#7fc79c',fontSize:11,display:'flex',alignItems:'center',gap:4}},this.ui.icon('M5 12l5 5 9-10',11),'已绑'),
+                h('select',{value:nd.accuracy,onClick:e=>e.stopPropagation(),onChange:e=>rupd(idx,{accuracy:e.target.value}),style:Object.assign({},tdCss,{color:accColor[nd.accuracy],fontWeight:600,cursor:'pointer'})},['精确','推定','示意'].map(o=>h('option',{key:o,value:o,style:{color:'#1a1407'}},o))),
+                h('input',{value:nd.source||'',placeholder:'来源…',onClick:e=>e.stopPropagation(),onChange:e=>rupd(idx,{source:e.target.value}),style:Object.assign({},tdCss,{color:miss?'#f2c94c':'#aeb8c8'})}),
+                h('button',{onClick:e=>{e.stopPropagation();rdel(idx);},title:'删除',style:{width:24,height:24,borderRadius:6,border:'none',background:'transparent',color:'#6f7b8f',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center'}},this.ui.icon('M6 7h12M9 7V5h6v2M7 7l1 12h8l1-12',13)));
+            }))),
+
+        // RIGHT map preview
+        h('div',{style:{width:380,flex:'none',background:'#090e1d',borderLeft:'1px solid rgba(148,163,184,0.16)',display:'flex',flexDirection:'column'}},
+          h('div',{style:{padding:'12px 16px',borderBottom:'1px solid rgba(148,163,184,0.16)',fontSize:13,fontWeight:600,display:'flex',alignItems:'center',gap:8}},'地图预览',h('span',{style:{fontSize:11,color:'#6f7b8f',fontWeight:400}},'选中行实时高亮')),
+          h('div',{style:{flex:1,position:'relative'}},this.editorMap(route,S.rsSel,(idx)=>this.setState({rsSel:idx}))),
+          h('div',{style:{padding:'12px 16px',borderTop:'1px solid rgba(148,163,184,0.16)',fontSize:12,color:'#aeb8c8'}},
+            h('div',{style:{display:'flex',justifyContent:'space-between',marginBottom:5}},h('span',{style:{color:'#6f7b8f'}},'当前节点'),h('b',{style:{color:'#eef2f8'}},(route.nodes[S.rsSel]||{}).name||'—')),
+            h('div',{style:{display:'flex',justifyContent:'space-between'}},h('span',{style:{color:'#6f7b8f'}},'估算总里程'),h('b',{style:{color:'#d6b33f'}},'约 2300 km'))))));
+  }
+
+  // ---------- thumbnails ----------
+  themeThumb(t){
+    const h=React.createElement;
+    const els=[h('path',{key:'b',d:this.polyPath(this.BORDER)+'Z',fill:'rgba(120,140,170,0.06)',stroke:'rgba(120,140,170,0.22)',strokeWidth:1.2})];
+    t.routes.forEach((r,ri)=>{
+      els.push(h('path',{key:'r'+ri,d:this.polyPath(r.nodes.map(n=>[n.lng,n.lat])),fill:'none',stroke:r.color,strokeWidth:2.4,strokeLinejoin:'round',strokeLinecap:'round'}));
+      r.nodes.forEach((n,ni)=>{const p=this.proj(n.lng,n.lat);els.push(h('circle',{key:'c'+ri+ni,cx:p[0],cy:p[1],r:3,fill:r.color}));});
+    });
+    return h('svg',{viewBox:'0 0 '+this.W+' '+this.H,width:'100%',height:'100%',preserveAspectRatio:'xMidYMid slice',style:{position:'absolute',inset:0}},els);
+  }
+  routeThumb(themeId,routeId){
+    const h=React.createElement;
+    const th=this.THEMES().find(t=>t.id===themeId); const r=th.routes.find(x=>x.id===routeId);
+    const els=[h('path',{key:'b',d:this.polyPath(this.BORDER)+'Z',fill:'rgba(120,140,170,0.06)',stroke:'rgba(120,140,170,0.2)',strokeWidth:1.6}),
+      h('path',{key:'r',d:this.polyPath(r.nodes.map(n=>[n.lng,n.lat])),fill:'none',stroke:r.color,strokeWidth:4,strokeLinejoin:'round',strokeLinecap:'round'})];
+    return h('svg',{viewBox:'0 0 '+this.W+' '+this.H,width:'100%',height:'100%',preserveAspectRatio:'xMidYMid slice',style:{position:'absolute',inset:0}},els);
+  }
+
+  // ---------- HOME ----------
+  buildHome(){
+    const h=React.createElement;
+    const themes=this.THEMES();
+    const totalRoutes=themes.reduce((a,t)=>a+t.routes.length,0);
+    const totalNodes=themes.reduce((a,t)=>a+t.routes.reduce((b,r)=>b+r.nodes.length,0),0);
+    const features=[
+      {key:'map',label:'历史地图',desc:'多专题底图叠加，路线与地点可视化，支持精度分级与时间播放。',icon:'M12 2 2 7l10 5 10-5z M2 17l10 5 10-5 M2 12l10 5 10-5',color:'#d6b33f',go:()=>this.goSection('map')},
+      {key:'timeline',label:'时间线',desc:'按朝代与纪年梳理重大事件，点击事件即可在地图中定位。',icon:'M12 8v4l3 3 M12 22a10 10 0 100-20 10 10 0 000 20z',color:'#67c7b7',go:()=>this.goSection('timeline')},
+      {key:'graph',label:'关系图谱',desc:'人物·事件·地点·著作之间的关联网络，发现历史脉络。',icon:'M5 19a3 3 0 100-6 3 3 0 000 6z M19 19a3 3 0 100-6 3 3 0 000 6z M12 7a3 3 0 100-6 3 3 0 000 6z M9.5 8.5l-3 4 M14.5 8.5l3 4',color:'#5aa2f2',go:()=>this.goSection('graph')},
+      {key:'ai',label:'AI 助手',desc:'用自然语言提问历史地理，获得带地图与史料引用的回答。',icon:'M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z',color:'#e9855b',go:()=>this.goSection('ai')},
+    ];
+    const sil=h('svg',{viewBox:'0 0 '+this.W+' '+this.H,width:'100%',height:'100%',preserveAspectRatio:'xMidYMid slice',style:{position:'absolute',inset:0,opacity:0.1}},
+      h('path',{d:this.polyPath(this.BORDER)+'Z',fill:'none',stroke:'#d6b33f',strokeWidth:1.5}),
+      h('path',{d:this.polyPath(this.YANGTZE),fill:'none',stroke:'#5aa2f2',strokeWidth:1.2}),
+      h('path',{d:this.polyPath(this.YELLOW),fill:'none',stroke:'#5aa2f2',strokeWidth:1.2}));
+    return h('div',{style:{flex:1,overflowY:'auto',background:'#070b17'}},
+      h('div',{style:{position:'relative',padding:'64px 56px 52px',overflow:'hidden',borderBottom:'1px solid rgba(148,163,184,0.12)',background:'radial-gradient(120% 140% at 70% 0%, rgba(214,179,63,.1), transparent 60%)'}},
+        sil,
+        h('div',{style:{position:'relative',maxWidth:720}},
+          h('div',{style:{display:'inline-flex',alignItems:'center',gap:7,fontSize:12,color:'#d6b33f',background:'rgba(214,179,63,.1)',border:'1px solid rgba(214,179,63,.3)',borderRadius:20,padding:'4px 12px',marginBottom:20}},h('span',{style:{width:6,height:6,borderRadius:'50%',background:'#d6b33f'}}),'History Atlas Studio · 历史地理可视化平台'),
+          h('h1',{style:{margin:'0 0 16px',fontSize:46,fontWeight:700,letterSpacing:1,lineHeight:1.2,color:'#eef2f8'}},'让历史在地图上重新展开'),
+          h('p',{style:{margin:'0 0 28px',fontSize:16,lineHeight:1.8,color:'#aeb8c8',maxWidth:560}},'以严谨的史料与地名考证为基础，将战争、人物行迹与商贸交通绘制为可交互的历史地图。每一条路线、每一个地点都标注精度等级与来源。'),
+          h('div',{style:{display:'flex',gap:12,alignItems:'center',flexWrap:'wrap'}},
+            h('button',{onClick:()=>this.goSection('map'),style:{display:'flex',alignItems:'center',gap:8,padding:'12px 22px',fontSize:14,fontWeight:600,color:'#1a1407',background:'#d6b33f',border:'none',borderRadius:10,cursor:'pointer',boxShadow:'0 0 24px rgba(214,179,63,.35)'}},'开始探索历史地图',this.ui.icon('M5 12h14M13 6l6 6-6 6',16)),
+            h('button',{onClick:()=>this.goSection('ai'),style:{display:'flex',alignItems:'center',gap:8,padding:'12px 22px',fontSize:14,fontWeight:500,color:'#eef2f8',background:'transparent',border:'1px solid rgba(148,163,184,0.3)',borderRadius:10,cursor:'pointer'}},'向 AI 提问')))),
+      h('div',{style:{padding:'44px 56px 8px'}},
+        h('div',{style:{fontSize:12,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1.5,marginBottom:18}},'四大功能'),
+        h('div',{style:{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:16}},features.map(f=>
+          h('div',{key:f.key,onClick:f.go,style:{background:'#0d1424',border:'1px solid rgba(148,163,184,0.14)',borderRadius:14,padding:'22px 20px',cursor:'pointer',transition:'all .15s'},
+            onMouseEnter:e=>{e.currentTarget.style.borderColor='rgba(214,179,63,.4)';e.currentTarget.style.background='#101a2e';},
+            onMouseLeave:e=>{e.currentTarget.style.borderColor='rgba(148,163,184,0.14)';e.currentTarget.style.background='#0d1424';}},
+            h('div',{style:{width:42,height:42,borderRadius:11,display:'flex',alignItems:'center',justifyContent:'center',background:f.color+'22',color:f.color,marginBottom:16}},this.ui.icon(f.icon,21)),
+            h('div',{style:{fontSize:16,fontWeight:600,color:'#eef2f8',marginBottom:7}},f.label),
+            h('div',{style:{fontSize:12.5,lineHeight:1.65,color:'#8794a8'}},f.desc)))) ),
+      h('div',{style:{padding:'40px 56px 12px'}},
+        h('div',{style:{display:'flex',alignItems:'baseline',justifyContent:'space-between',marginBottom:18}},
+          h('div',{style:{fontSize:12,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1.5}},'精选专题'),
+          h('span',{onClick:()=>this.goSection('map'),style:{fontSize:12.5,color:'#d6b33f',cursor:'pointer'}},'查看全部 →')),
+        h('div',{style:{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:16}},themes.map(t=>{
+          const r0=t.routes[0];
+          return h('div',{key:t.id,onClick:()=>this.gotoMapRoute(t.id,r0.id),style:{background:'#0d1424',border:'1px solid rgba(148,163,184,0.14)',borderRadius:14,overflow:'hidden',cursor:'pointer'},
+            onMouseEnter:e=>e.currentTarget.style.borderColor='rgba(214,179,63,.4)',
+            onMouseLeave:e=>e.currentTarget.style.borderColor='rgba(148,163,184,0.14)'},
+            h('div',{style:{height:128,position:'relative',background:'linear-gradient(160deg,#101a2e,#0a1120)',borderBottom:'1px solid rgba(148,163,184,0.1)'}},this.themeThumb(t)),
+            h('div',{style:{padding:'15px 17px 18px'}},
+              h('div',{style:{fontSize:15,fontWeight:600,color:'#eef2f8',marginBottom:6}},t.name),
+              h('div',{style:{display:'flex',gap:10,fontSize:11.5,color:'#6f7b8f',marginBottom:10}},h('span',null,t.period),h('span',null,'·'),h('span',null,t.routes.length+' 条路线')),
+              h('span',{style:{fontSize:10.5,color:'#d6b33f',background:'rgba(214,179,63,.12)',padding:'2px 9px',borderRadius:10}},'精度：'+t.accuracy)));
+        }))),
+      h('div',{style:{padding:'34px 56px 56px'}},
+        h('div',{style:{display:'grid',gridTemplateColumns:'repeat(4,1fr)',gap:0,padding:'26px 28px',background:'#0a1120',border:'1px solid rgba(148,163,184,0.12)',borderRadius:14}},
+          [[String(themes.length),'历史专题'],[String(totalRoutes),'条历史路线'],[String(totalNodes),'个地点节点'],['CHGIS','地名坐标库']].map((s,i)=>
+            h('div',{key:i,style:{textAlign:'center',borderRight:i<3?'1px solid rgba(148,163,184,0.12)':'none'}},
+              h('div',{style:{fontSize:30,fontWeight:700,color:'#d6b33f',letterSpacing:1}},s[0]),
+              h('div',{style:{fontSize:12.5,color:'#8794a8',marginTop:5}},s[1]))))));
+  }
+
+  // ---------- TIMELINE ----------
+  buildTimeline(){
+    const h=React.createElement;
+    const groups=[
+      {era:'唐 · 贞观',period:'629 – 645',themeId:'xuanzang'},
+      {era:'汉 – 唐',period:'丝绸之路通行期',themeId:'silk'},
+      {era:'清 · 晚清',period:'1851 – 1895',themeId:'qing'},
+    ];
+    const evs=this.allEvents();
+    const tc=t=>this.nodeColor(t);
+    return h('div',{style:{flex:1,display:'flex',minHeight:0}},
+      h('div',{style:{width:230,flex:'none',background:'#090e1d',borderRight:'1px solid rgba(148,163,184,0.16)',padding:'20px 18px',overflowY:'auto'}},
+        h('div',{style:{fontSize:18,fontWeight:600,color:'#eef2f8',marginBottom:6}},'历史时间线'),
+        h('div',{style:{fontSize:12.5,color:'#8794a8',lineHeight:1.6,marginBottom:22}},'按朝代纪年排布的重大事件，点击任一事件可在地图中定位。'),
+        h('div',{style:{fontSize:11,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1,marginBottom:11}},'年代'),
+        groups.map((g,i)=>h('div',{key:i,style:{display:'flex',alignItems:'center',gap:10,padding:'9px 0',borderBottom:i<2?'1px solid rgba(148,163,184,0.1)':'none'}},
+          h('span',{style:{width:3,height:26,borderRadius:2,background:'#d6b33f'}}),
+          h('div',null,h('div',{style:{fontSize:13.5,color:'#eef2f8',fontWeight:500}},g.era),h('div',{style:{fontSize:11,color:'#6f7b8f'}},g.period)))),
+        h('div',{style:{fontSize:11,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1,margin:'22px 0 11px'}},'事件类型'),
+        [['都城','#d6b33f'],['城镇','#5aa2f2'],['战役','#e9855b'],['关隘','#67c7b7'],['港口','#5aa2f2']].map((c,i)=>
+          h('div',{key:i,style:{display:'flex',alignItems:'center',gap:9,padding:'5px 0',fontSize:12.5,color:'#aeb8c8'}},h('span',{style:{width:9,height:9,borderRadius:'50%',background:c[1]}}),c[0]))),
+      h('div',{style:{flex:1,minWidth:0,overflowY:'auto',padding:'30px 44px 60px',background:'#070b17'}},
+        groups.map((g,gi)=>{
+          const list=evs.filter(e=>e.themeId===g.themeId).sort((a,b)=>(a.year||0)-(b.year||0));
+          return h('div',{key:gi,style:{marginBottom:42}},
+            h('div',{style:{display:'flex',alignItems:'baseline',gap:14,marginBottom:18,paddingBottom:12,borderBottom:'1px solid rgba(148,163,184,0.14)'}},
+              h('span',{style:{fontSize:22,fontWeight:700,color:'#eef2f8'}},g.era),
+              h('span',{style:{fontSize:13,color:'#d6b33f'}},g.period),
+              h('span',{style:{fontSize:12,color:'#6f7b8f',marginLeft:'auto'}},list.length+' 个事件')),
+            h('div',{style:{position:'relative',paddingLeft:30}},
+              h('div',{style:{position:'absolute',left:7,top:6,bottom:6,width:2,background:'linear-gradient(180deg,rgba(214,179,63,.5),rgba(148,163,184,.12))'}}),
+              list.map((e,ei)=>h('div',{key:ei,style:{position:'relative',marginBottom:14}},
+                h('span',{style:{position:'absolute',left:-30,top:16,width:14,height:14,borderRadius:'50%',background:'#070b17',border:'2px solid '+tc(e.type)}}),
+                h('div',{onClick:()=>this.gotoMapNode(e.themeId,e.routeId,e.idx),style:{background:'#0d1424',border:'1px solid rgba(148,163,184,0.14)',borderRadius:12,padding:'13px 16px',cursor:'pointer',transition:'all .15s'},
+                  onMouseEnter:el=>el.currentTarget.style.borderColor='rgba(214,179,63,.4)',
+                  onMouseLeave:el=>el.currentTarget.style.borderColor='rgba(148,163,184,0.14)'},
+                  h('div',{style:{display:'flex',alignItems:'center',gap:10,marginBottom:5}},
+                    h('span',{style:{fontSize:14,fontWeight:600,color:'#d6b33f',fontVariantNumeric:'tabular-nums'}},e.year?e.year+' 年':'—'),
+                    h('span',{style:{fontSize:14.5,fontWeight:600,color:'#eef2f8'}},e.event),
+                    h('span',{style:{fontSize:10.5,color:tc(e.type),background:tc(e.type)+'22',padding:'1px 8px',borderRadius:10,marginLeft:'auto'}},e.type)),
+                  h('div',{style:{fontSize:12.5,color:'#8794a8',lineHeight:1.6}},e.desc),
+                  h('div',{style:{display:'flex',alignItems:'center',gap:7,marginTop:9,fontSize:11.5,color:'#6f7b8f'}},
+                    h('span',{style:{width:3,height:11,borderRadius:2,background:e.color}}),e.routeName,h('span',null,'·'),e.name+' / '+e.modern))))));
+        })));
+  }
+
+  // ---------- GRAPH ----------
+  buildGraph(){
+    const h=React.createElement, S=this.state;
+    const cat={person:{c:'#d6b33f',label:'人物'},event:{c:'#e9855b',label:'事件'},place:{c:'#5aa2f2',label:'地点'},route:{c:'#67c7b7',label:'路线'},work:{c:'#b388e0',label:'著作'},era:{c:'#aeb8c8',label:'时代'}};
+    const N={
+      qing_era:{id:'qing_era',label:'晚清',type:'era',x:430,y:150,desc:'1840 年后内忧外患交织的时期，太平天国运动与左宗棠西征均发生于此。'},
+      taiping_route:{id:'taiping_route',label:'太平军进军',type:'route',x:250,y:260,themeId:'qing',routeId:'taiping',desc:'1851 年金田起义至 1864 年天京陷落的进军路线。'},
+      hong:{id:'hong',label:'洪秀全',type:'person',x:140,y:150,desc:'太平天国创建者，金田起义领袖，定都天京。'},
+      feng:{id:'feng',label:'冯云山',type:'person',x:110,y:350,desc:'南王，太平天国早期组织者，于全州中炮身亡。'},
+      jintian:{id:'jintian',label:'金田起义',type:'event',x:250,y:420,themeId:'qing',routeId:'taiping',idx:0,desc:'1851 年洪秀全于金田村起义，建号太平天国。'},
+      tianjing:{id:'tianjing',label:'天京',type:'place',x:400,y:360,themeId:'qing',routeId:'taiping',idx:4,desc:'即南京，1853 年太平天国定都于此。'},
+      zuo_route:{id:'zuo_route',label:'左宗棠西征',type:'route',x:560,y:310,themeId:'qing',routeId:'zuo',desc:'1875–1878 年收复新疆的军事行动。'},
+      zuo:{id:'zuo',label:'左宗棠',type:'person',x:560,y:160,desc:'晚清重臣，督办新疆军务，收复除伊犁外新疆全境。'},
+      liu:{id:'liu',label:'刘锦棠',type:'person',x:710,y:240,desc:'左宗棠麾下大将，克迪化、复南疆。'},
+      kashi:{id:'kashi',label:'喀什噶尔',type:'place',x:560,y:470,themeId:'qing',routeId:'zuo',idx:5,desc:'1878 年克复，标志新疆全境收复。'},
+      xz_route:{id:'xz_route',label:'玄奘西行',type:'route',x:860,y:310,themeId:'xuanzang',routeId:'xz',desc:'629–645 年玄奘西行求法的往返路线。'},
+      xz:{id:'xz',label:'玄奘',type:'person',x:860,y:160,desc:'唐代高僧，西行十七年取经，著《大唐西域记》。'},
+      book:{id:'book',label:'大唐西域记',type:'work',x:1000,y:240,desc:'玄奘口述、辩机辑录的西域见闻，重要地理史料。'},
+      changan:{id:'changan',label:'长安',type:'place',x:860,y:470,themeId:'xuanzang',routeId:'xz',idx:0,desc:'唐都，玄奘西行起点，亦为丝路东端。'},
+      gaochang:{id:'gaochang',label:'高昌',type:'place',x:1000,y:410,themeId:'xuanzang',routeId:'xz',idx:5,desc:'玄奘与高昌王麴文泰结为兄弟，获资助西行。'},
+    };
+    const Edg=[
+      ['hong','taiping_route'],['feng','taiping_route'],['hong','jintian'],['taiping_route','jintian'],['taiping_route','tianjing'],
+      ['qing_era','taiping_route'],['qing_era','zuo_route'],
+      ['zuo','zuo_route'],['liu','zuo_route'],['zuo_route','kashi'],
+      ['xz','xz_route'],['xz','book'],['xz_route','changan'],['xz_route','gaochang'],
+    ];
+    const sel=N[S.graphSel]||N.taiping_route;
+    const svgEls=[];
+    Edg.forEach((e,i)=>{const a=N[e[0]],b=N[e[1]];const on=e[0]===sel.id||e[1]===sel.id;
+      svgEls.push(h('line',{key:'e'+i,x1:a.x,y1:a.y,x2:b.x,y2:b.y,stroke:on?'rgba(214,179,63,.6)':'rgba(148,163,184,.2)',strokeWidth:on?2:1.2}));});
+    Object.keys(N).forEach(k=>{const n=N[k];const c=cat[n.type].c;const isSel=n.id===sel.id;
+      svgEls.push(h('g',{key:n.id,transform:'translate('+n.x+','+n.y+')',style:{cursor:'pointer'},onClick:()=>this.setState({graphSel:n.id})},
+        isSel?h('circle',{r:30,fill:'none',stroke:c,strokeWidth:1.5,opacity:0.5}):null,
+        h('circle',{r:n.type==='route'?20:16,fill:isSel?c:'#0d1424',stroke:c,strokeWidth:2}),
+        h('text',{y:n.type==='route'?40:34,textAnchor:'middle',fontSize:13,fontWeight:600,fill:'#eef2f8',stroke:'#070b17',strokeWidth:3,paintOrder:'stroke'},n.label)));});
+    return h('div',{style:{flex:1,display:'flex',minHeight:0}},
+      h('div',{style:{flex:1,minWidth:0,position:'relative',background:'radial-gradient(circle at 50% 40%, #0c1322, #070b17)'}},
+        h('div',{style:{position:'absolute',top:20,left:24,zIndex:2}},
+          h('div',{style:{fontSize:18,fontWeight:600,color:'#eef2f8'}},'历史关系图谱'),
+          h('div',{style:{fontSize:12.5,color:'#8794a8',marginTop:4}},'人物 · 事件 · 地点 · 路线 · 著作的关联网络')),
+        h('div',{style:{position:'absolute',bottom:18,left:24,display:'flex',gap:14,flexWrap:'wrap',zIndex:2}},
+          Object.keys(cat).map(k=>h('div',{key:k,style:{display:'flex',alignItems:'center',gap:7,fontSize:12,color:'#aeb8c8'}},h('span',{style:{width:11,height:11,borderRadius:'50%',background:cat[k].c}}),cat[k].label))),
+        h('svg',{viewBox:'0 0 1120 600',width:'100%',height:'100%',preserveAspectRatio:'xMidYMid meet',style:{position:'absolute',inset:0}},svgEls)),
+      h('div',{style:{width:340,flex:'none',background:'#090e1d',borderLeft:'1px solid rgba(148,163,184,0.16)',padding:'22px',overflowY:'auto'}},
+        h('div',{style:{display:'inline-flex',alignItems:'center',gap:7,fontSize:11.5,fontWeight:600,color:cat[sel.type].c,background:cat[sel.type].c+'22',padding:'3px 11px',borderRadius:20,marginBottom:14}},h('span',{style:{width:7,height:7,borderRadius:'50%',background:cat[sel.type].c}}),cat[sel.type].label),
+        h('div',{style:{fontSize:24,fontWeight:700,color:'#eef2f8',marginBottom:12}},sel.label),
+        h('div',{style:{fontSize:13.5,lineHeight:1.75,color:'#c7d0de',marginBottom:18}},sel.desc),
+        h('div',{style:{fontSize:11,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1,marginBottom:10}},'关联节点'),
+        h('div',{style:{display:'flex',flexWrap:'wrap',gap:8,marginBottom:20}},
+          Edg.filter(e=>e[0]===sel.id||e[1]===sel.id).map((e,i)=>{const oid=e[0]===sel.id?e[1]:e[0];const o=N[oid];
+            return h('span',{key:i,onClick:()=>this.setState({graphSel:oid}),style:{display:'inline-flex',alignItems:'center',gap:6,fontSize:12.5,color:'#eef2f8',background:'#101827',border:'1px solid rgba(148,163,184,0.18)',borderRadius:8,padding:'6px 11px',cursor:'pointer'}},h('span',{style:{width:8,height:8,borderRadius:'50%',background:cat[o.type].c}}),o.label);})),
+        sel.routeId?h('button',{onClick:()=>{ if(sel.idx!=null)this.gotoMapNode(sel.themeId,sel.routeId,sel.idx); else this.gotoMapRoute(sel.themeId,sel.routeId); },style:{display:'flex',alignItems:'center',gap:8,width:'100%',justifyContent:'center',padding:'11px 0',fontSize:13,fontWeight:600,color:'#1a1407',background:'#d6b33f',border:'none',borderRadius:10,cursor:'pointer'}},'在历史地图中查看',this.ui.icon('M5 12h14M13 6l6 6-6 6',15)):null));
+  }
+
+  // ---------- AI ----------
+  buildAI(){
+    const h=React.createElement, S=this.state;
+    const QA={
+      q1:{q:'太平军是怎么从金田一路打到南京的?',
+        a:'太平军的进军大致经历几个阶段：1851 年于广西金田起义，旋克永安并分封诸王；其后北出广西、攻克武昌，沿长江东下；1853 年攻占江宁，改称天京并定都于此，至 1864 年天京陷落。',
+        route:{themeId:'qing',routeId:'taiping',label:'太平军进军 · 1851–1864'},
+        cites:['《清史稿》','《太平天国史》','CHGIS v6 地名坐标']},
+      q2:{q:'左宗棠收复新疆走的是哪条路线?',
+        a:'左宗棠以"缓进急战、先北后南"为方略：自兰州督师西征，出嘉峪关经肃州、哈密屯田积谷，先取北疆迪化，再越天山下吐鲁番，最终于 1878 年克复喀什噶尔，收复除伊犁外的新疆全境。',
+        route:{themeId:'qing',routeId:'zuo',label:'左宗棠西征 · 1875–1878'},
+        cites:['《左文襄公全集》','CHGIS v6 地名坐标']},
+      q3:{q:'玄奘西行经过了哪些重要地点?',
+        a:'玄奘于贞观初年违禁出关，经秦州、凉州、瓜州偷渡玉门关，穿越莫贺延碛抵伊吾、高昌；其后过焉耆、龟兹，翻越天山凌山雪岭至碎叶，再南下中亚与印度，往返历时十七年。',
+        route:{themeId:'xuanzang',routeId:'xz',label:'玄奘西行 · 629–645'},
+        cites:['《大唐西域记》','CHGIS / 推定坐标']},
+    };
+    const cur=QA[S.aiQ]||QA.q1;
+    const suggestions=Object.keys(QA).map(k=>({k,q:QA[k].q}));
+    const botIcon='M12 2a4 4 0 014 4 4 4 0 01-1 6 4 4 0 011 6 4 4 0 01-4 4 4 4 0 01-4-4 4 4 0 011-6 4 4 0 01-1-6 4 4 0 014-4z';
+    return h('div',{style:{flex:1,display:'flex',minHeight:0}},
+      h('div',{style:{width:264,flex:'none',background:'#090e1d',borderRight:'1px solid rgba(148,163,184,0.16)',padding:'20px 16px',display:'flex',flexDirection:'column'}},
+        h('div',{style:{display:'flex',alignItems:'center',gap:9,marginBottom:18}},
+          h('div',{style:{width:30,height:30,borderRadius:9,background:'linear-gradient(135deg,#e9855b,#d6b33f)',display:'flex',alignItems:'center',justifyContent:'center'}},this.ui.icon(botIcon,16)),
+          h('div',null,h('div',{style:{fontSize:14,fontWeight:600,color:'#eef2f8'}},'历史地理助手'),h('div',{style:{fontSize:11,color:'#67c7b7'}},'在线 · 引用 CHGIS'))),
+        h('button',{style:{display:'flex',alignItems:'center',gap:8,width:'100%',justifyContent:'center',padding:'10px 0',fontSize:13,fontWeight:600,color:'#1a1407',background:'#d6b33f',border:'none',borderRadius:9,cursor:'pointer',marginBottom:20}},this.ui.icon('M12 5v14M5 12h14',15),'新建对话'),
+        h('div',{style:{fontSize:11,color:'#6f7b8f',textTransform:'uppercase',letterSpacing:1,marginBottom:10}},'推荐问题'),
+        h('div',{style:{display:'flex',flexDirection:'column',gap:7}},suggestions.map(s=>
+          h('div',{key:s.k,onClick:()=>this.setState({aiQ:s.k}),style:{fontSize:12.5,lineHeight:1.5,color:S.aiQ===s.k?'#eef2f8':'#aeb8c8',background:S.aiQ===s.k?'rgba(214,179,63,.1)':'#101827',border:'1px solid '+(S.aiQ===s.k?'rgba(214,179,63,.3)':'rgba(148,163,184,0.14)'),borderRadius:9,padding:'10px 12px',cursor:'pointer'}},s.q)))),
+      h('div',{style:{flex:1,minWidth:0,display:'flex',flexDirection:'column',background:'#070b17'}},
+        h('div',{style:{flex:1,overflowY:'auto',padding:'28px 0'}},
+          h('div',{style:{maxWidth:720,margin:'0 auto',padding:'0 32px'}},
+            h('div',{style:{display:'flex',justifyContent:'flex-end',marginBottom:22}},
+              h('div',{style:{maxWidth:'78%',background:'#1a2740',color:'#eef2f8',fontSize:14,lineHeight:1.6,padding:'12px 16px',borderRadius:'14px 14px 4px 14px'}},cur.q)),
+            h('div',{style:{display:'flex',gap:12,marginBottom:22}},
+              h('div',{style:{width:30,height:30,flex:'none',borderRadius:9,background:'linear-gradient(135deg,#e9855b,#d6b33f)',display:'flex',alignItems:'center',justifyContent:'center'}},this.ui.icon(botIcon,15)),
+              h('div',{style:{flex:1,minWidth:0}},
+                h('div',{style:{background:'#0d1424',border:'1px solid rgba(148,163,184,0.14)',borderRadius:'14px 14px 14px 4px',padding:'15px 18px'}},
+                  h('div',{style:{fontSize:14,lineHeight:1.75,color:'#e6ebf2',marginBottom:14}},cur.a),
+                  h('div',{onClick:()=>this.gotoMapRoute(cur.route.themeId,cur.route.routeId),style:{display:'flex',alignItems:'center',gap:13,background:'#0a1120',border:'1px solid rgba(214,179,63,.25)',borderRadius:11,padding:'11px 13px',cursor:'pointer'}},
+                    h('div',{style:{width:64,height:48,flex:'none',borderRadius:8,overflow:'hidden',position:'relative',background:'#0a1120',border:'1px solid rgba(148,163,184,0.14)'}},this.routeThumb(cur.route.themeId,cur.route.routeId)),
+                    h('div',{style:{flex:1,minWidth:0}},h('div',{style:{fontSize:13,fontWeight:600,color:'#eef2f8'}},cur.route.label),h('div',{style:{fontSize:11.5,color:'#8794a8',marginTop:2}},'点击在历史地图中打开此路线')),
+                    this.ui.icon('M9 6l6 6-6 6',17))),
+                h('div',{style:{display:'flex',alignItems:'center',gap:8,marginTop:10,flexWrap:'wrap'}},
+                  h('span',{style:{fontSize:11,color:'#6f7b8f'}},'参考来源：'),
+                  cur.cites.map((c,i)=>h('span',{key:i,style:{fontSize:11,color:'#aeb8c8',background:'#101827',border:'1px solid rgba(148,163,184,0.14)',borderRadius:7,padding:'3px 9px'}},c)))) ))),
+        h('div',{style:{flex:'none',borderTop:'1px solid rgba(148,163,184,0.16)',padding:'16px 32px',background:'#090e1d'}},
+          h('div',{style:{maxWidth:720,margin:'0 auto',display:'flex',alignItems:'center',gap:10,background:'#101827',border:'1px solid rgba(148,163,184,0.2)',borderRadius:12,padding:'8px 8px 8px 16px'}},
+            h('input',{placeholder:'输入你的历史地理问题…',style:{flex:1,background:'transparent',border:'none',color:'#eef2f8',fontSize:14,outline:'none'}}),
+            h('button',{style:{width:38,height:38,flex:'none',borderRadius:9,border:'none',background:'#d6b33f',color:'#1a1407',cursor:'pointer',display:'flex',alignItems:'center',justifyContent:'center'}},this.ui.icon('M5 12h14M13 6l6 6-6 6',17)))) ));
+  }
+}
+</script>
+</body>
+</html>
