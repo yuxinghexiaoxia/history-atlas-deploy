@@ -4514,5 +4514,15 @@ const dynastyInfo = {
   }
 };
 
-return { persons, events, locations, dynasties, timeline, hotPersons, hotEvents, relMeta, dynastyInfo };
+return { persons, events, locations, dynasties, timeline, hotPersons, hotEvents, relMeta, dynastyInfo,
+    get: (type, id) => {
+      if (type === 'person') return persons[id];
+      if (type === 'event') return events[id];
+      if (type === 'dynasty') return dynasties[id];
+      return null;
+    },
+    getSimilarPersons: () => [],
+    getTodayHistory: () => [],
+    getPersonLocations: () => []
+  };
 })();

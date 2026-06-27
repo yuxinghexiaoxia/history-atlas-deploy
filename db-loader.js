@@ -110,12 +110,30 @@
       return true;
     } catch (e) {
       console.warn('API load failed, using fallback:', e.message);
+      ensureDBMethods();
       return false;
     }
   }
 
+  // 确保 DB 拥有所有前端必需的方法（即使 API 加载失败）
+  function ensureDBMethods() {
+    const db = window.DB || fallbackDB;
+    if (!db.get) {
+      db.get = (type, id) => {
+        if (type === 'person') return db.persons[id];
+        if (type === 'event') return db.events[id];
+        if (type === 'dynasty') return db.dynasties[id];
+        return null;
+      };
+    }
+    if (!db.getSimilarPersons) db.getSimilarPersons = () => [];
+    if (!db.getTodayHistory) db.getTodayHistory = () => [];
+    if (!db.getPersonLocations) db.getPersonLocations = () => [];
+    window.DB = db;
+  }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', loadFromAPI);
+    document.addEventListener('DOMContentLoaded', () => { loadFromAPI(); });
   } else {
     loadFromAPI();
   }
