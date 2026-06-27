@@ -1,5 +1,5 @@
 /* ============ 历史星图 · API Client ============ */
-const API_BASE = (window.__API_BASE || 'https://certification-devoted-carries-rapidly.trycloudflare.com') + '/api';
+const API_BASE = (window.__API_BASE || 'https://history-atlas-api.onrender.com') + '/api';
 
 const API = {
   base: API_BASE,
