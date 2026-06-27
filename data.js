@@ -10,7 +10,7 @@ const persons = {
     "alias": "轩辕氏",
     "born": -2697,
     "died": -2599,
-    "dynasty": "xia",
+    "dynasty": "shanggu",
     "role": [
       "五帝之首",
       "华夏人文始祖"
@@ -105,7 +105,7 @@ const persons = {
     "alias": "神农氏",
     "born": -2700,
     "died": -2600,
-    "dynasty": "xia",
+    "dynasty": "shanggu",
     "role": [
       "华夏部落首领",
       "农耕始祖"
@@ -185,7 +185,7 @@ const persons = {
     "alias": "高阳氏",
     "born": -2514,
     "died": -2436,
-    "dynasty": "xia",
+    "dynasty": "shanggu",
     "role": [
       "五帝之一",
       "黄帝之孙"
@@ -264,7 +264,7 @@ const persons = {
     "alias": "高辛氏",
     "born": -2436,
     "died": -2366,
-    "dynasty": "xia",
+    "dynasty": "shanggu",
     "role": [
       "五帝之一",
       "黄帝曾孙"
@@ -343,7 +343,7 @@ const persons = {
     "alias": "陶唐氏",
     "born": -2377,
     "died": -2259,
-    "dynasty": "xia",
+    "dynasty": "shanggu",
     "role": [
       "五帝之一",
       "禅让圣王"
@@ -442,7 +442,7 @@ const persons = {
     "alias": "有虞氏",
     "born": -2287,
     "died": -2188,
-    "dynasty": "xia",
+    "dynasty": "shanggu",
     "role": [
       "五帝之一",
       "孝感动天"
@@ -929,7 +929,7 @@ const persons = {
     "alias": "崇伯",
     "born": -2300,
     "died": -2195,
-    "dynasty": "xia",
+    "dynasty": "shanggu",
     "role": [
       "夏部落首领",
       "大禹之父"
@@ -2124,7 +2124,7 @@ const events = {
     "id": "banquan",
     "type": "event",
     "name": "阪泉之战",
-    "dynasty": "xia",
+    "dynasty": "shanggu",
     "start": -2677,
     "end": -2677,
     "place": "阪泉（今河北涿鹿东南）",
@@ -2169,7 +2169,7 @@ const events = {
     "id": "zhuolu",
     "type": "event",
     "name": "涿鹿之战",
-    "dynasty": "xia",
+    "dynasty": "shanggu",
     "start": -2672,
     "end": -2672,
     "place": "涿鹿之野（今河北涿鹿）",
@@ -2213,7 +2213,7 @@ const events = {
     "id": "shunrang",
     "type": "event",
     "name": "尧舜禅让",
-    "dynasty": "xia",
+    "dynasty": "shanggu",
     "start": -2287,
     "end": -2208,
     "place": "平阳（今山西临汾）",
@@ -2897,6 +2897,11 @@ const locations = {
 };
 
 const dynasties = [
+  {
+    "id": "shanggu",
+    "name": "上古",
+    "yr": "前3000"
+  },
   {
     "id": "xia",
     "name": "夏",
@@ -4160,6 +4165,32 @@ const hotEvents = [
 const relMeta = {};
 
 const dynastyInfo = {
+  "shanggu": {
+    "id": "shanggu",
+    "name": "上古",
+    "full": "上古时代",
+    "en": "PRIMORDIAL ERA",
+    "status": "partial",
+    "span": "约前3000 – 前2070",
+    "founded": "传说时代",
+    "ended": "前2070 夏朝建立",
+    "capital": "无固定都城",
+    "summary": "三皇五帝传说时代，华夏文明的源头。黄帝、炎帝、尧、舜等部落联盟首领在此时期活动，禅让制为主要权力传承方式。",
+    "stats": [
+      {
+        "k": "跨度",
+        "v": "约千年"
+      },
+      {
+        "k": "君主",
+        "v": "三皇五帝"
+      },
+      {
+        "k": "终结",
+        "v": "前2070 禹建夏"
+      }
+    ]
+  },
   "xia": {
     "id": "xia",
     "name": "夏",
