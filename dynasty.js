@@ -290,7 +290,7 @@ function DynastyPage({
   }, /*#__PURE__*/React.createElement(DynastyBand, {
     current: id,
     onPick: did => nav("dynasty", did)
-  })), !d ? /*#__PURE__*/React.createElement("div", {
+  })), !d || !d.emperors ? /*#__PURE__*/React.createElement("div", {
     className: "wrap-wide",
     style: {
       marginTop: 20
