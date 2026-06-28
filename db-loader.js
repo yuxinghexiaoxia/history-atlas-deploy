@@ -14,17 +14,20 @@
       alias: p.alias || '',
       born: p.born,
       died: p.died,
-      dynasty: p.dynastyId || '',
-      role: p.roles || [],
-      short: p.shortIntro || '',
-      intro: p.fullIntro || '',
+      // 兼容两种字段命名：API 可能用 dynastyId 或 dynasty
+      dynasty: p.dynastyId || p.dynasty || fb.dynasty || '',
+      // 兼容两种字段命名：API 可能用 roles 或 role
+      role: p.roles || p.role || fb.role || [],
+      short: p.shortIntro || p.short || fb.short || '',
+      intro: p.fullIntro || p.intro || fb.intro || '',
       achievements: p.achievements || [],
       controversy: p.controversy || '',
       quote: p.quote || '',
-      quoteSrc: p.quoteSource || '',
+      quoteSrc: p.quoteSource || p.quoteSrc || '',
       works: p.works || [],
       sources: fb.sources || [],
-      life: (p.lifeEvents || []).map(e => ({ y: e.y, key: e.key || false, t: e.t, s: e.s || '' })),
+      // 兼容两种字段命名：API 可能用 lifeEvents 或 life
+      life: (p.lifeEvents || p.life || []).map(e => ({ y: e.y, key: e.key || false, t: e.t, s: e.s || '' })),
       relations: fb.relations || [],
       events: fb.events || [],
       locations: fb.locations || [],
@@ -40,17 +43,18 @@
       id: e.id,
       type: 'event',
       name: e.name,
-      dynasty: e.dynastyId || '',
+      // 兼容两种字段命名：API 可能用 dynastyId 或 dynasty
+      dynasty: e.dynastyId || e.dynasty || fb.dynasty || '',
       // 同时输出 start/end 和 startYear/endYear，兼容前端两种命名
       start,
       end,
       startYear: start,
       endYear: end,
       place: e.place || '',
-      short: e.shortIntro || '',
+      short: e.shortIntro || e.short || fb.short || '',
       // 同时输出 bg/background，兼容前端两种命名
-      bg: e.background || e.bg || '',
-      background: e.background || e.bg || '',
+      bg: e.background || e.bg || fb.bg || '',
+      background: e.background || e.bg || fb.background || '',
       process: e.process || '',
       result: e.result || '',
       controversy: e.controversy || '',
@@ -62,6 +66,7 @@
   }
 
   function transformDynasty(d) {
+    const fb = fallbackDB && fallbackDB.dynastyInfo ? (fallbackDB.dynastyInfo[d.id] || {}) : {};
     return {
       id: d.id,
       name: d.name,
@@ -77,6 +82,11 @@
       summary: d.summary || '',
       stats: d.stats || [],
       status: d.status || 'partial',
+      // 保留本地数据中的扩展字段（皇帝、制度、疆域、战争等）
+      emperors: d.emperors || fb.emperors || [],
+      institutions: d.institutions || fb.institutions || [],
+      territory: d.territory || fb.territory || [],
+      wars: d.wars || fb.wars || [],
     };
   }
 
@@ -99,9 +109,14 @@
       const dynastiesInfoDict = {};
       dynastiesList.forEach(d => { dynastiesInfoDict[d.id] = transformDynasty(d); });
 
-      // 如果 API 返回空（fallback），使用 data.js 的本地数据，确保二级页面有内容
-      const personsFinal = Object.keys(persons).length ? persons : (fallbackDB.persons || {});
-      const eventsFinal = Object.keys(events).length ? events : (fallbackDB.events || {});
+      // 合并策略：API 数据覆盖本地数据中的同 ID 条目，本地独有的条目保留
+      // 这样确保 data.js 新增的隋唐、五代十国等条目不会被 API 数据覆盖丢失
+      const personsFinal = Object.keys(persons).length
+        ? { ...(fallbackDB.persons || {}), ...persons }
+        : (fallbackDB.persons || {});
+      const eventsFinal = Object.keys(events).length
+        ? { ...(fallbackDB.events || {}), ...events }
+        : (fallbackDB.events || {});
       const locations = fallbackDB.locations || {};
       const mapData = fallbackDB.mapData || [];
       // 简版 dynasties (array) 来自 fallback，供 home.js DynastyBand 用 .map 渲染朝代按钮
@@ -111,20 +126,29 @@
       const hotPersons = Object.keys(personsFinal).slice(0, 8);
       const hotEvents = Object.keys(eventsFinal).slice(0, 8);
 
+      // 合并 dynastyInfo：API 转换后的优先，fallback 中独有的字段保留
+      const mergedDynastyInfo = { ...(fallbackDB.dynastyInfo || {}) };
+      Object.keys(dynastiesInfoDict).forEach(did => {
+        mergedDynastyInfo[did] = {
+          ...(mergedDynastyInfo[did] || {}),
+          ...dynastiesInfoDict[did],
+        };
+      });
+
       window.DB = {
         persons: personsFinal,
         events: eventsFinal,
         locations, dynasties,
-        // 优先用 API 转换后的完整信息，回退到 data.js 的 dynastyInfo
-        dynastyInfo: Object.keys(dynastiesInfoDict).length
-          ? dynastiesInfoDict
+        // 优先用合并后的 dynastyInfo，回退到 data.js 的本地 dynastyInfo
+        dynastyInfo: Object.keys(mergedDynastyInfo).length
+          ? mergedDynastyInfo
           : (fallbackDB.dynastyInfo || {}),
         mapData, timeline, hotPersons, hotEvents,
         relMeta: fallbackDB.relMeta || {},
         get: (type, id) => {
           if (type === 'person') return personsFinal[id];
           if (type === 'event') return eventsFinal[id];
-          if (type === 'dynasty') return dynastiesInfoDict[id];
+          if (type === 'dynasty') return mergedDynastyInfo[id];
           return null;
         },
         getSimilarPersons: fallbackDB.getSimilarPersons,

@@ -328,7 +328,7 @@ function PersonCard({
     }
   }), /*#__PURE__*/React.createElement("span", {
     className: "tag tag-role"
-  }, p.role[0]))), /*#__PURE__*/React.createElement("button", {
+  }, (p.role && p.role[0]) || '人物'))), /*#__PURE__*/React.createElement("button", {
     className: "btn btn-ghost btn-sm",
     style: {
       padding: "5px 8px",
@@ -369,14 +369,14 @@ function PersonCard({
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "network",
     size: 13
-  }), /*#__PURE__*/React.createElement("span", null, p.relations.length, " \u5173\u7CFB"), /*#__PURE__*/React.createElement("span", {
+  }), /*#__PURE__*/React.createElement("span", null, (p.relations || []).length, " \u5173\u7CFB"), /*#__PURE__*/React.createElement("span", {
     style: {
       color: "var(--line-2)"
     }
   }, "\xB7"), /*#__PURE__*/React.createElement(Icon, {
     name: "event",
     size: 13
-  }), /*#__PURE__*/React.createElement("span", null, p.events.length, " \u4E8B\u4EF6")));
+  }), /*#__PURE__*/React.createElement("span", null, (p.events || []).length, " \u4E8B\u4EF6")));
 }
 
 /* ---- event card ---- */
