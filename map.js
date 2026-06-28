@@ -1045,6 +1045,13 @@ function NewMapPage(props) {
   const [hidden, setHidden] = React.useState({});  // {[routeId]: boolean}
   const [searchVal, setSearchVal] = React.useState('');
   const [searchOpen, setSearchOpen] = React.useState(false);
+  // 导出 / 分享 / AI 对话
+  const [exportOpen, setExportOpen] = React.useState(false);
+  const [exportFmt, setExportFmt] = React.useState('png');
+  const [exportScope, setExportScope] = React.useState('view');
+  const [shareCopied, setShareCopied] = React.useState(false);
+  const [aiOpen, setAiOpen] = React.useState(false);
+  const [aiQ, setAiQ] = React.useState('');
 
   const rafRef = React.useRef(null);
   const panRef = React.useRef({ panning: false, px: 0, py: 0, p0x: 0, p0y: 0, k: 1 });
@@ -1401,7 +1408,8 @@ function NewMapPage(props) {
   // 控制按钮
   const ctrls = React.createElement('div', { className: 'has-map-ctl' },
     React.createElement('button', { title: '重置视角', onClick: resetView }, '⌖'),
-    React.createElement('button', { title: '导出 / 分享地图', onClick: () => alert('导出功能开发中…') }, '↑'));
+    React.createElement('button', { title: '导出 / 分享地图', onClick: () => setExportOpen(true) }, '↑'),
+    React.createElement('button', { title: 'AI 助手', onClick: () => setAiOpen(!aiOpen) }, '✦'));
 
   // 底图选择
   const basemapDef = [
@@ -1504,6 +1512,194 @@ function NewMapPage(props) {
     });
   }
 
+  // 分享链接：把当前主题 / 路线 / 节点编码到 URL hash
+  const shareUrl = () => {
+    const base = window.location.origin + window.location.pathname;
+    const params = [];
+    if (themeId !== 'qing') params.push('theme=' + themeId);
+    if (selectedRouteId) params.push('route=' + selectedRouteId);
+    if (selectedNode) params.push('node=' + selectedNode.idx);
+    if (basemap !== 'dark') params.push('bm=' + basemap);
+    if (zoom !== 1) params.push('z=' + zoom.toFixed(2));
+    return params.length ? base + '#' + params.join('&') : base;
+  };
+  const copyShare = () => {
+    const url = shareUrl();
+    try {
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(url);
+      } else {
+        // 降级方案
+        const ta = document.createElement('textarea');
+        ta.value = url; document.body.appendChild(ta);
+        ta.select(); document.execCommand('copy'); document.body.removeChild(ta);
+      }
+    } catch (e) { /* noop */ }
+    setShareCopied(true);
+    setTimeout(() => { if (true) setShareCopied(false); }, 1800);
+  };
+
+  // 导出：把当前 SVG 序列化成 PNG / SVG / GeoJSON 下载
+  const downloadBlob = (filename, mime, data) => {
+    try {
+      const blob = data instanceof Blob ? data : new Blob([data], { type: mime });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = filename;
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(url), 1500);
+    } catch (e) { console.error('download failed', e); }
+  };
+  const doExport = () => {
+    const fname = (th.name || '历史地图') + '-' + (sel ? sel.name : 'all') + '-' + Date.now();
+    if (exportFmt === 'geojson') {
+      const features = [];
+      th.routes.forEach(r => {
+        if (!r.nodes || r.nodes.length < 2) return;
+        if (exportScope === 'route' && sel && r.id !== sel.id) return;
+        features.push({
+          type: 'Feature',
+          properties: { name: r.name, theme: th.name, color: r.color, accuracy: r.accuracy },
+          geometry: { type: 'LineString', coordinates: r.nodes.map(n => [n.lng, n.lat]) }
+        });
+      });
+      const geo = { type: 'FeatureCollection', features };
+      downloadBlob(fname + '.geojson', 'application/geo+json', JSON.stringify(geo, null, 2));
+      setExportOpen(false);
+      return;
+    }
+    // PNG / SVG：序列化当前 svg
+    const svgEl = document.querySelector('.has-canvas-wrap svg');
+    if (!svgEl) { setExportOpen(false); return; }
+    const cloned = svgEl.cloneNode(true);
+    cloned.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+    const svgStr = '<?xml version="1.0" encoding="UTF-8"?>\n' + cloned.outerHTML;
+    if (exportFmt === 'svg') {
+      downloadBlob(fname + '.svg', 'image/svg+xml;charset=utf-8', svgStr);
+      setExportOpen(false);
+      return;
+    }
+    // PNG：渲染 svg 到 canvas 再导出
+    const scale = 2;
+    const w = svgEl.clientWidth * scale;
+    const h = svgEl.clientHeight * scale;
+    const svgBlob = new Blob([svgStr], { type: 'image/svg+xml;charset=utf-8' });
+    const svgUrl = URL.createObjectURL(svgBlob);
+    const img = new Image();
+    img.onload = () => {
+      try {
+        const c = document.createElement('canvas');
+        c.width = w; c.height = h;
+        const ctx = c.getContext('2d');
+        ctx.fillStyle = '#070b17'; ctx.fillRect(0, 0, w, h);
+        ctx.drawImage(img, 0, 0, w, h);
+        c.toBlob(blob => {
+          if (blob) downloadBlob(fname + '@' + scale + 'x.png', 'image/png', blob);
+          URL.revokeObjectURL(svgUrl);
+          setExportOpen(false);
+        }, 'image/png');
+      } catch (e) { URL.revokeObjectURL(svgUrl); setExportOpen(false); }
+    };
+    img.onerror = () => { URL.revokeObjectURL(svgUrl); setExportOpen(false); };
+    img.src = svgUrl;
+  };
+
+  // 导出 / 分享 modal
+  const exportModal = exportOpen ? React.createElement('div', {
+    onClick: () => setExportOpen(false),
+    style: { position: 'absolute', inset: 0, zIndex: 60, background: 'rgba(5,8,16,0.62)', display: 'flex', alignItems: 'center', justifyContent: 'center', animation: 'hasFade .16s ease', backdropFilter: 'blur(3px)' }
+  },
+    React.createElement('div', {
+      onClick: e => e.stopPropagation(),
+      style: { width: 460, maxWidth: '92%', background: '#0b1120', border: '1px solid rgba(148,163,184,0.18)', borderRadius: 16, boxShadow: '0 24px 70px rgba(0,0,0,0.6)', overflow: 'hidden', animation: 'hasPop .18s ease' }
+    },
+      React.createElement('div', { style: { padding: '14px 18px 12px', borderBottom: '1px solid rgba(148,163,184,0.12)', display: 'flex', alignItems: 'center' } },
+        React.createElement('div', { style: { fontSize: 15, fontWeight: 700, color: '#eef2f8' } }, '导出 / 分享地图'),
+        React.createElement('span', { onClick: () => setExportOpen(false), style: { cursor: 'pointer', color: '#6f7b8f', fontSize: 22, lineHeight: 1, padding: '0 0 8px', marginLeft: 'auto' } }, '×')),
+      React.createElement('div', { style: { padding: '14px 18px' } },
+        React.createElement('div', { style: { display: 'flex', gap: 8, marginBottom: 12 } },
+          ['export', 'share'].map(k => React.createElement('button', {
+            key: k, onClick: () => {/* 两个 tab 都显示 */},
+            style: { flex: 1, padding: '8px 0', fontSize: 13, fontWeight: 600, color: '#d6b33f', background: 'transparent', border: 'none', borderBottom: '2px solid #d6b33f', cursor: 'pointer' }
+          }, k === 'export' ? '导出地图' : '分享链接'))),
+        // 导出格式
+        React.createElement('div', { style: { fontSize: 11, color: '#6f7b8f', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 } }, '导出格式'),
+        React.createElement('div', { style: { display: 'grid', gridTemplateColumns: 'repeat(3,1fr)', gap: 8, marginBottom: 14 } },
+          [['png', 'PNG 图片', '位图，适合打印 / 分享'], ['svg', 'SVG 矢量', '无损，可二次编辑'], ['geojson', 'GeoJSON', '地理数据，可导入 GIS']].map(([k, t, d]) =>
+            React.createElement('div', {
+              key: k, onClick: () => setExportFmt(k),
+              style: { padding: '10px 12px', borderRadius: 10, cursor: 'pointer', background: exportFmt === k ? 'rgba(214,179,63,0.1)' : '#101827', border: '1px solid ' + (exportFmt === k ? 'rgba(214,179,63,0.4)' : 'rgba(148,163,184,0.14)') }
+            },
+              React.createElement('div', { style: { fontSize: 13, fontWeight: 600, color: '#eef2f8' } }, t),
+              React.createElement('div', { style: { fontSize: 11, color: '#8794a8', marginTop: 2 } }, d))),
+          ),
+        // 范围
+        React.createElement('div', { style: { fontSize: 11, color: '#6f7b8f', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 } }, '范围'),
+        React.createElement('div', { style: { display: 'flex', gap: 8, marginBottom: 14 } },
+          [['view', '当前视角'], ['full', '完整范围']].map(([k, t]) => React.createElement('button', {
+            key: k, onClick: () => setExportScope(k),
+            style: { flex: 1, padding: '8px 0', fontSize: 12.5, fontWeight: exportScope === k ? 600 : 500, color: exportScope === k ? '#1a1407' : '#aeb8c8', background: exportScope === k ? '#d6b33f' : 'transparent', border: exportScope === k ? 'none' : '1px solid rgba(148,163,184,0.16)', borderRadius: 7, cursor: 'pointer' }
+          }, t))),
+        // 分享链接
+        React.createElement('div', { style: { fontSize: 11, color: '#6f7b8f', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 8 } }, '分享链接'),
+        React.createElement('div', { style: { display: 'flex', gap: 8 } },
+          React.createElement('input', {
+            readOnly: true, value: shareUrl(),
+            style: { flex: 1, padding: '9px 12px', background: '#101827', border: '1px solid rgba(148,163,184,0.16)', borderRadius: 9, color: '#c7d0de', fontSize: 12, fontFamily: 'monospace' }
+          }),
+          React.createElement('button', {
+            onClick: copyShare,
+            style: { flex: 'none', padding: '0 16px', fontSize: 13, fontWeight: 600, color: shareCopied ? '#7fc79c' : '#1a1407', background: shareCopied ? 'rgba(127,199,156,0.16)' : '#d6b33f', border: shareCopied ? '1px solid rgba(127,199,156,0.4)' : 'none', borderRadius: 9, cursor: 'pointer', whiteSpace: 'nowrap' }
+          }, shareCopied ? '已复制' : '复制')),
+        // 主操作
+        React.createElement('button', {
+          onClick: doExport,
+          style: { width: '100%', marginTop: 14, padding: '12px 0', fontSize: 14, fontWeight: 600, color: '#1a1407', background: '#d6b33f', border: 'none', borderRadius: 10, cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }
+        }, '下载 ' + exportFmt.toUpperCase())
+    )
+  )
+) : null;
+
+  // AI 助手对话框（地图内嵌"问 AI"）
+  const aiDialog = aiOpen ? React.createElement('div', {
+    style: { position: 'absolute', right: 14, bottom: 90, width: 340, background: '#0b1120', border: '1px solid rgba(148,163,184,0.2)', borderRadius: 14, boxShadow: '0 14px 40px rgba(0,0,0,0.5)', zIndex: 35, animation: 'hasDrawer .22s ease', overflow: 'hidden' }
+  },
+    React.createElement('div', { style: { padding: '11px 14px', borderBottom: '1px solid rgba(148,163,184,0.12)', display: 'flex', alignItems: 'center', gap: 9 } },
+      React.createElement('div', { style: { width: 28, height: 28, borderRadius: 8, background: 'linear-gradient(135deg, #e9855b, #d6b33f)', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#1a1407' } }, '✦'),
+      React.createElement('div', null,
+        React.createElement('div', { style: { fontSize: 13.5, fontWeight: 600, color: '#eef2f8' } }, '历史地理助手'),
+        React.createElement('div', { style: { fontSize: 11, color: '#67c7b7' } }, '在线 · 基于当前地图数据')),
+      React.createElement('span', { onClick: () => setAiOpen(false), style: { marginLeft: 'auto', cursor: 'pointer', color: '#6f7b8f', fontSize: 18, lineHeight: 1 } }, '×')),
+    React.createElement('div', { style: { padding: '12px 14px' } },
+      // 推荐问题
+      React.createElement('div', { style: { fontSize: 11, color: '#6f7b8f', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 7 } }, '推荐问题'),
+      (sel ? [
+        '这条' + sel.name + '的关键节点？',
+        sel.year0 ? sel.name + '发生在哪一年？' : null,
+        th.name + '时期还有什么相关路线？'
+      ].filter(Boolean) : [
+        '介绍一下' + th.name,
+        th.name + '时期的代表性事件',
+        '查看更多相关朝代'
+      ]).map((q, i) => React.createElement('div', {
+        key: i, onClick: () => setAiQ(q),
+        style: { fontSize: 12.5, padding: '9px 11px', borderRadius: 8, cursor: 'pointer', background: '#101827', border: '1px solid rgba(148,163,184,0.14)', marginBottom: 6, color: '#eef2f8', lineHeight: 1.5 }
+      }, q)),
+      // 提问框
+      React.createElement('div', { style: { marginTop: 10, display: 'flex', alignItems: 'center', gap: 8 } },
+        React.createElement('input', {
+          value: aiQ, onChange: e => setAiQ(e.target.value),
+          placeholder: '向 AI 提问历史地理…',
+          onKeyDown: e => { if (e.key === 'Enter' && aiQ.trim()) { nav && nav('ai', null, { q: aiQ }); setAiOpen(false); } },
+          style: { flex: 1, padding: '9px 12px', background: '#101827', border: '1px solid rgba(148,163,184,0.2)', borderRadius: 9, color: '#eef2f8', fontSize: 13, outline: 'none' }
+        }),
+        React.createElement('button', {
+          onClick: () => { if (aiQ.trim()) { nav && nav('ai', null, { q: aiQ }); setAiOpen(false); } },
+          style: { width: 36, height: 36, flex: 'none', borderRadius: 9, border: 'none', background: '#d6b33f', color: '#1a1407', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center' }
+        }, '➤')),
+    ),
+  ) : null;
+
   // 主结构
   return React.createElement('div', { className: 'has-map-shell fade-up' },
     topbar,
@@ -1518,8 +1714,10 @@ function NewMapPage(props) {
           zoomPanel,
           accuracyPanel,
           timelineBar,
-          hoverEl),
-        drawerEl))
+          hoverEl,
+          aiDialog),
+        drawerEl,
+        exportModal))
   );
 }
 
