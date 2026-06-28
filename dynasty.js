@@ -150,6 +150,9 @@ function DynastyPage({
   const band = DB.dynasties.find(d => d.id === id);
   const d = DB.dynastyInfo[id];
   const name = d ? d.full : band ? band.name + "朝" : "该朝代";
+  const dynastyPersons = Object.values(DB.persons || {}).filter(p => p.dynasty === id);
+  const dynastyEvents = Object.values(DB.events || {}).filter(e => e.dynasty === id);
+  const hasDynastyData = dynastyPersons.length > 0 || dynastyEvents.length > 0;
   return /*#__PURE__*/React.createElement("div", {
     className: "fade-up"
   }, /*#__PURE__*/React.createElement("div", {
@@ -290,7 +293,7 @@ function DynastyPage({
   }, /*#__PURE__*/React.createElement(DynastyBand, {
     current: id,
     onPick: did => nav("dynasty", did)
-  })), !d || !d.emperors ? /*#__PURE__*/React.createElement("div", {
+  })), !d && !hasDynastyData ? /*#__PURE__*/React.createElement("div", {
     className: "wrap-wide",
     style: {
       marginTop: 20
@@ -298,7 +301,7 @@ function DynastyPage({
   }, /*#__PURE__*/React.createElement(BuildingNote, {
     title: name,
     nav: nav
-  })) : /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement("div", {
+  })) : /*#__PURE__*/React.createElement(React.Fragment, null, d && d.emperors && /*#__PURE__*/React.createElement("div", {
     className: "wrap-wide",
     style: {
       marginTop: 20
@@ -315,7 +318,79 @@ function DynastyPage({
   }, /*#__PURE__*/React.createElement(EmperorRail, {
     list: d.emperors,
     nav: nav
+  }))), !d || d && !d.emperors && hasDynastyData && /*#__PURE__*/React.createElement("div", {
+    className: "wrap-wide",
+    style: {
+      marginTop: 20
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "1fr 1fr",
+      gap: 20
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 14
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "section-head"
+  }, /*#__PURE__*/React.createElement("h2", null, /*#__PURE__*/React.createElement(NodeGlyph, {
+    type: "person",
+    size: 13
+  }), " \u4EBA\u7269 ", dynastyPersons.length, " \u4F4D")), dynastyPersons.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "grid",
+      gridTemplateColumns: "repeat(2, 1fr)",
+      gap: 12
+    }
+  }, dynastyPersons.slice(0, 12).map(p => /*#__PURE__*/React.createElement(PersonCard, {
+    key: p.id,
+    id: p.id,
+    nav: nav,
+    compact: true
+  }))), dynastyPersons.length > 12 && /*#__PURE__*/React.createElement("button", {
+    className: "btn btn-ghost",
+    onClick: () => nav("search", null, {
+      q: "",
+      dynasty: id
+    })
+  }, "\u67E5\u770B\u5168\u90E8 ", dynastyPersons.length, " \u4F4D\u4EBA\u7269 ", /*#__PURE__*/React.createElement(Icon, {
+    name: "chevR",
+    size: 14
   }))), /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 14
+    }
+  }, /*#__PURE__*/React.createElement("div", {
+    className: "section-head"
+  }, /*#__PURE__*/React.createElement("h2", null, /*#__PURE__*/React.createElement(NodeGlyph, {
+    type: "event",
+    size: 12
+  }), " \u4E8B\u4EF6 ", dynastyEvents.length, " \u4E2A")), dynastyEvents.length > 0 && /*#__PURE__*/React.createElement("div", {
+    style: {
+      display: "flex",
+      flexDirection: "column",
+      gap: 12
+    }
+  }, dynastyEvents.slice(0, 10).map(e => /*#__PURE__*/React.createElement(EventCard, {
+    key: e.id,
+    id: e.id,
+    nav: nav,
+    compact: true
+  }))), dynastyEvents.length > 10 && /*#__PURE__*/React.createElement("button", {
+    className: "btn btn-ghost",
+    onClick: () => nav("timeline", null, {
+      dynasty: id
+    })
+  }, "\u67E5\u770B\u5168\u90E8 ", dynastyEvents.length, " \u4E2A\u4E8B\u4EF6 ", /*#__PURE__*/React.createElement(Icon, {
+    name: "chevR",
+    size: 14
+  })))))), /*#__PURE__*/React.createElement("div", {
     className: "wrap-wide",
     style: {
       display: "grid",
@@ -339,7 +414,7 @@ function DynastyPage({
       gridTemplateColumns: "1fr 1fr",
       gap: 13
     }
-  }, d.institutions.map((it, i) => /*#__PURE__*/React.createElement("div", {
+  }, d.institutions && d.institutions.map((it, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
       padding: "14px 16px",
@@ -376,7 +451,7 @@ function DynastyPage({
     icon: "location"
   }, /*#__PURE__*/React.createElement("div", {
     className: "tl-line"
-  }, d.territory.map((t, i) => /*#__PURE__*/React.createElement("div", {
+  }, d.territory && d.territory.map((t, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     className: "tl-item" + (t.to ? " key" : "")
   }, /*#__PURE__*/React.createElement("span", {
@@ -405,7 +480,7 @@ function DynastyPage({
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "location",
     size: 13
-  }), "\u5728\u5386\u53F2\u5730\u56FE\u4E2D\u67E5\u770B")), /*#__PURE__*/React.createElement(Panel, {
+  }), "\u5728\u5386\u53F2\u5730\u56FE\u4E2D\u67E5\u770B"), d.wars && /*#__PURE__*/React.createElement(Panel, {
     title: "\u91CD\u8981\u6218\u4E89",
     icon: "event",
     right: /*#__PURE__*/React.createElement("span", {
@@ -479,7 +554,7 @@ function DynastyPage({
       position: "sticky",
       top: 76
     }
-  }, d.keyPersons.length > 0 ? /*#__PURE__*/React.createElement(Panel, {
+  }, d.keyPersons && d.keyPersons.length > 0 ? /*#__PURE__*/React.createElement(Panel, {
     title: "\u91CD\u8981\u4EBA\u7269",
     icon: "person",
     right: /*#__PURE__*/React.createElement("span", {
@@ -566,7 +641,7 @@ function DynastyPage({
   }, "\u67E5\u770B\u6E05\u671D\u4EBA\u7269 ", /*#__PURE__*/React.createElement(Icon, {
     name: "arrow",
     size: 13
-  }))), d.keyEvents.length > 0 ? /*#__PURE__*/React.createElement(Panel, {
+  }))), d.keyEvents && d.keyEvents.length > 0 ? /*#__PURE__*/React.createElement(Panel, {
     title: "\u91CD\u8981\u4E8B\u4EF6",
     icon: "event"
   }, /*#__PURE__*/React.createElement("div", {
