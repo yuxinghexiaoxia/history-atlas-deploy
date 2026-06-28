@@ -124,7 +124,7 @@
         get: (type, id) => {
           if (type === 'person') return personsFinal[id];
           if (type === 'event') return eventsFinal[id];
-          if (type === 'dynasty') return dynastiesFinal[id];
+          if (type === 'dynasty') return dynastiesInfoDict[id];
           return null;
         },
         getSimilarPersons: fallbackDB.getSimilarPersons,
