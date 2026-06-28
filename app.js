@@ -110,20 +110,7 @@ function TopNav({
     key: l.p,
     className: route.page === l.p ? "active" : "",
     onClick: () => nav(l.p, l.p === "graph" ? "zengguofan" : null)
-  }, l.t))), /*#__PURE__*/React.createElement("a", {
-    href: "./history-map.html",
-    style: {
-      textDecoration: "none",
-      color: "var(--gold)",
-      fontSize: 13.5,
-      fontWeight: 500,
-      padding: "4px 10px",
-      borderRadius: 6,
-      border: "1px solid var(--gold-line)",
-      background: "var(--gold-soft)",
-      marginLeft: 8
-    }
-  }, "★ 新版地图"), /*#__PURE__*/React.createElement("div", {
+  }, l.t))), /*#__PURE__*/React.createElement("div", {
     ref: ref,
     className: "nav-search",
     style: {
@@ -377,7 +364,7 @@ function App() {
       });
       break;
     case "map":
-      view = /*#__PURE__*/React.createElement(MapPage, {
+      view = /*#__PURE__*/React.createElement(NewMapPage, {
         nav: nav
       });
       break;

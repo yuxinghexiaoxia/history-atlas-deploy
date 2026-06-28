@@ -53,8 +53,11 @@
     return {
       id: d.id,
       name: d.name,
-      fullName: d.fullName || d.name,
-      englishName: d.englishName || '',
+      // 同时输出 full/fullName 和 en/englishName，兼容前端两种命名
+      full: d.fullName || d.full || d.name,
+      fullName: d.fullName || d.full || d.name,
+      en: d.englishName || d.en || '',
+      englishName: d.englishName || d.en || '',
       span: d.span || '',
       founded: d.founded || '',
       capital: d.capital || '',
@@ -80,25 +83,36 @@
       const events = {};
       eventsList.forEach(e => { events[e.id] = transformEvent(e); });
 
-      const dynasties = {};
-      dynastiesList.forEach(d => { dynasties[d.id] = transformDynasty(d); });
+      // dynasty 详细信息 dict（key=id），供 DynastyPage 用 DB.dynastyInfo[id]
+      const dynastiesInfoDict = {};
+      dynastiesList.forEach(d => { dynastiesInfoDict[d.id] = transformDynasty(d); });
 
+      // 如果 API 返回空（fallback），使用 data.js 的本地数据，确保二级页面有内容
+      const personsFinal = Object.keys(persons).length ? persons : (fallbackDB.persons || {});
+      const eventsFinal = Object.keys(events).length ? events : (fallbackDB.events || {});
       const locations = fallbackDB.locations || {};
       const mapData = fallbackDB.mapData || [];
+      // 简版 dynasties (array) 来自 fallback，供 home.js DynastyBand 用 .map 渲染朝代按钮
+      const dynasties = fallbackDB.dynasties || [];
       const timeline = fallbackDB.timeline || [];
 
-      const hotPersons = Object.values(persons).slice(0, 8);
-      const hotEvents = Object.values(events).slice(0, 8);
+      const hotPersons = Object.values(personsFinal).slice(0, 8);
+      const hotEvents = Object.values(eventsFinal).slice(0, 8);
 
       window.DB = {
-        persons, events, locations, dynasties,
-        dynastyInfo: dynasties,
+        persons: personsFinal,
+        events: eventsFinal,
+        locations, dynasties,
+        // 优先用 API 转换后的完整信息，回退到 data.js 的 dynastyInfo
+        dynastyInfo: Object.keys(dynastiesInfoDict).length
+          ? dynastiesInfoDict
+          : (fallbackDB.dynastyInfo || {}),
         mapData, timeline, hotPersons, hotEvents,
         relMeta: fallbackDB.relMeta || {},
         get: (type, id) => {
-          if (type === 'person') return persons[id];
-          if (type === 'event') return events[id];
-          if (type === 'dynasty') return dynasties[id];
+          if (type === 'person') return personsFinal[id];
+          if (type === 'event') return eventsFinal[id];
+          if (type === 'dynasty') return dynastiesFinal[id];
           return null;
         },
         getSimilarPersons: fallbackDB.getSimilarPersons,

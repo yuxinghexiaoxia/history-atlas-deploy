@@ -870,7 +870,7 @@ function PersonPage({
       gap: 10
     }
   }, DB.getPersonLocations(id).map((loc, i) => {
-    const marker = Object.values(DB.mapData.markers).find(m => m.loc === loc.id);
+    const marker = (DB.mapData && DB.mapData.markers) ? Object.values(DB.mapData.markers).find(m => m.loc === loc.id) : null;
     return /*#__PURE__*/React.createElement("button", {
       key: i,
       className: "card card-hover",
