@@ -144,6 +144,7 @@ input,textarea{font-family:inherit;}
 
 /* ---------- page container ---------- */
 .page{flex:1;width:100%;}
+.page-full{position:fixed;inset:0;z-index:50;background:var(--bg-3);}
 .wrap{max-width:1280px;margin:0 auto;padding:0 28px;}
 .wrap-wide{max-width:1480px;margin:0 auto;padding:0 28px;}
 
@@ -410,3 +411,4 @@ select:focus{border-color:var(--gold-line);box-shadow:0 0 0 3px var(--gold-soft)
 
 /* 适配主 SPA：在 .page 容器中铺满 */
 .app-shell .page > .has-map-shell{position:relative;inset:auto;height:calc(100vh - 60px);}
+.app-shell .page-full > .has-map-shell{position:relative;inset:auto;height:100vh;}

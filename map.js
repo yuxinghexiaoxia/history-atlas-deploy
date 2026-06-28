@@ -1050,6 +1050,7 @@ function NewMapPage(props) {
   const [exportFmt, setExportFmt] = React.useState('png');
   const [exportScope, setExportScope] = React.useState('view');
   const [shareCopied, setShareCopied] = React.useState(false);
+  const [screen, setScreen] = React.useState('viewer');  // 'viewer' | 'studio' | 'route'
   const [aiOpen, setAiOpen] = React.useState(false);
   const [aiQ, setAiQ] = React.useState('');
 
@@ -1275,6 +1276,10 @@ function NewMapPage(props) {
       React.createElement('span', { className: 'active' }, '历史地图'),
       React.createElement('span', { onClick: () => nav && nav('ai') }, 'AI 助手')),
     React.createElement('div', { style: { flex: 1 } }),
+    React.createElement('div', { style: { display: 'flex', background: 'var(--surface-2)', border: '1px solid var(--border-subtle)', borderRadius: 9, padding: 3 } },
+      React.createElement('button', { onClick: () => setScreen('viewer'), style: { padding: '4px 12px', fontSize: 12, fontWeight: screen === 'viewer' ? 600 : 500, border: 'none', borderRadius: 6, cursor: 'pointer', background: screen === 'viewer' ? 'var(--surface-3)' : 'transparent', color: screen === 'viewer' ? 'var(--gold)' : 'var(--text-muted)' } }, '前台浏览'),
+      React.createElement('button', { onClick: () => setScreen('studio'), style: { padding: '4px 12px', fontSize: 12, fontWeight: screen === 'studio' ? 600 : 500, border: 'none', borderRadius: 6, cursor: 'pointer', background: screen === 'studio' ? 'var(--surface-3)' : 'transparent', color: screen === 'studio' ? 'var(--gold)' : 'var(--text-muted)' } }, 'Map Studio'),
+      React.createElement('button', { onClick: () => setScreen('route'), style: { padding: '4px 12px', fontSize: 12, fontWeight: screen === 'route' ? 600 : 500, border: 'none', borderRadius: 6, cursor: 'pointer', background: screen === 'route' ? 'var(--surface-3)' : 'transparent', color: screen === 'route' ? 'var(--gold)' : 'var(--text-muted)' } }, 'Route Studio')),
     React.createElement('div', { style: { position: 'relative', width: 220 } },
       React.createElement('div', {
         style: { display: 'flex', alignItems: 'center', gap: 7, padding: '0 10px', height: 34, background: 'var(--surface-2)', border: '1px solid var(--border-subtle)', borderRadius: 9, color: 'var(--text-muted)' }
@@ -1701,23 +1706,95 @@ function NewMapPage(props) {
   ) : null;
 
   // 主结构
+  const viewerBody = React.createElement('div', { className: 'has-body' },
+    breadcrumb,
+    React.createElement('div', { className: 'has-main' },
+      aside,
+      React.createElement('div', { className: 'has-canvas-wrap' },
+        canvas,
+        ctrls,
+        basemapPanel,
+        zoomPanel,
+        accuracyPanel,
+        timelineBar,
+        hoverEl,
+        aiDialog),
+      drawerEl,
+      exportModal))
+
+  // Studio 屏幕（基础布局）
+  const studioBody = React.createElement('div', { className: 'has-body', style: { display: 'flex', flexDirection: 'column' } },
+    React.createElement('div', { style: { padding: '13px 22px 12px', borderBottom: '1px solid var(--border-subtle)', background: 'linear-gradient(180deg, var(--surface-0), var(--map-bg))' } },
+      React.createElement('div', { style: { fontSize: 12, color: 'var(--text-muted)', marginBottom: 7 } }, '首页 / 历史地图 / Map Studio'),
+      React.createElement('div', { style: { display: 'flex', alignItems: 'baseline', gap: 16, flexWrap: 'wrap' } },
+        React.createElement('h1', { style: { margin: 0, fontSize: 27, fontWeight: 600, letterSpacing: .5 } }, 'Map Studio'),
+        React.createElement('span', { style: { fontSize: 13, color: 'var(--text-secondary)' } }, '地图编辑器 · 绘制路线与地点')),
+      React.createElement('div', { style: { display: 'flex', gap: 8, marginTop: 10 } },
+        React.createElement('button', { onClick: () => setScreen('viewer'), style: { padding: '5px 14px', fontSize: 12, border: '1px solid var(--border-subtle)', borderRadius: 7, background: 'var(--surface-2)', color: 'var(--text-secondary)', cursor: 'pointer' } }, '← 返回前台浏览'),
+        React.createElement('span', { style: { fontSize: 12, color: 'var(--text-muted)', padding: '5px 0' } }, '点击地图添加地点，拖动编辑位置'))),
+    React.createElement('div', { style: { flex: 1, display: 'flex', minHeight: 0, position: 'relative' } },
+      React.createElement('aside', { style: { width: 272, flex: 'none', background: 'var(--surface-0)', borderRight: '1px solid var(--border-subtle)', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '14px' } },
+        React.createElement('div', { style: { fontSize: 11, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 10 } }, '工具'),
+        React.createElement('div', { style: { display: 'flex', flexDirection: 'column', gap: 6 } },
+          ['选择', '添加地点', '画线', '画面', '测距'].map((tool, i) => React.createElement('button', { key: tool, style: { padding: '8px 11px', borderRadius: 8, border: '1px solid var(--border-subtle)', background: 'var(--surface-1)', color: 'var(--text-secondary)', textAlign: 'left', fontSize: 13, cursor: 'pointer' } }, tool)),
+        React.createElement('div', { style: { height: 1, background: 'var(--border-subtle)', margin: '14px 0' } }),
+        React.createElement('div', { style: { fontSize: 11, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 10 } }, '图层'),
+        React.createElement('div', { style: { display: 'flex', flexDirection: 'column', gap: 11 } },
+          ['路线', '地点', '扫描底图', '疆域', '标注'].map((l, i) => React.createElement('div', { key: l, style: { display: 'flex', alignItems: 'center', gap: 10 } },
+            React.createElement('div', { style: { width: 34, height: 19, borderRadius: 12, flex: 'none', background: 'var(--gold)', position: 'relative', cursor: 'pointer' } },
+              React.createElement('div', { style: { position: 'absolute', top: 2, width: 15, height: 15, borderRadius: '50%', background: '#fff', left: 17 } })),
+            React.createElement('span', { style: { flex: 1, fontSize: 12.5, color: 'var(--text-secondary)' } }, l),
+            React.createElement('input', { type: 'range', min: 0, max: 100, defaultValue: 100, style: { width: 62, accentColor: '#67c7b7', cursor: 'pointer' } })))))),
+      React.createElement('div', { style: { flex: 1, position: 'relative', minWidth: 0, overflow: 'hidden', background: 'var(--map-bg)' } },
+        canvas, // 复用 viewer 的 canvas 作为基础地图
+        React.createElement('div', { style: { position: 'absolute', top: 14, left: 14, display: 'flex', flexDirection: 'column', gap: 8, zIndex: 10 } },
+          React.createElement('button', { onClick: () => { setZoom(1); setPan({ x: 0, y: 0 }); }, title: '重置视角', style: { width: 34, height: 34, background: 'rgba(16,24,39,.86)', border: '1px solid var(--border-subtle)', borderRadius: 8, color: 'var(--text-secondary)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(6px)' } }, '⌖'),
+          React.createElement('button', { title: '保存', style: { width: 34, height: 34, background: 'rgba(16,24,39,.86)', border: '1px solid var(--border-subtle)', borderRadius: 8, color: 'var(--text-secondary)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(6px)' } }, '💾')),
+        React.createElement('div', { style: { position: 'absolute', top: 60, right: 14, display: 'flex', flexDirection: 'column', background: 'rgba(16,24,39,.86)', border: '1px solid var(--border-subtle)', borderRadius: 8, overflow: 'hidden', zIndex: 10, backdropFilter: 'blur(6px)' } },
+          React.createElement('button', { onClick: () => setZoom(Math.min(2.4, zoom * 1.2)), style: { width: 34, height: 33, background: 'none', border: 'none', borderBottom: '1px solid var(--border-subtle)', color: 'var(--text-secondary)', cursor: 'pointer', fontSize: 18 } }, '+'),
+          React.createElement('button', { onClick: () => setZoom(Math.max(0.6, zoom / 1.2)), style: { width: 34, height: 33, background: 'none', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', fontSize: 18 } }, '−')))),
+    exportModal
+  );
+
+  // Route Studio 屏幕（基础布局）
+  const routeBody = React.createElement('div', { className: 'has-body', style: { display: 'flex', flexDirection: 'column' } },
+    React.createElement('div', { style: { padding: '13px 22px 12px', borderBottom: '1px solid var(--border-subtle)', background: 'linear-gradient(180deg, var(--surface-0), var(--map-bg))' } },
+      React.createElement('div', { style: { fontSize: 12, color: 'var(--text-muted)', marginBottom: 7 } }, '首页 / 历史地图 / Route Studio'),
+      React.createElement('div', { style: { display: 'flex', alignItems: 'baseline', gap: 16, flexWrap: 'wrap' } },
+        React.createElement('h1', { style: { margin: 0, fontSize: 27, fontWeight: 600, letterSpacing: .5 } }, 'Route Studio'),
+        React.createElement('span', { style: { fontSize: 13, color: 'var(--text-secondary)' } }, '路线编辑器 · 编排历史事件节点')),
+      React.createElement('div', { style: { display: 'flex', gap: 8, marginTop: 10 } },
+        React.createElement('button', { onClick: () => setScreen('viewer'), style: { padding: '5px 14px', fontSize: 12, border: '1px solid var(--border-subtle)', borderRadius: 7, background: 'var(--surface-2)', color: 'var(--text-secondary)', cursor: 'pointer' } }, '← 返回前台浏览'))),
+    React.createElement('div', { style: { flex: 1, display: 'flex', minHeight: 0, position: 'relative' } },
+      React.createElement('aside', { style: { width: 320, flex: 'none', background: 'var(--surface-0)', borderRight: '1px solid var(--border-subtle)', overflowY: 'auto', display: 'flex', flexDirection: 'column', padding: '14px' } },
+        React.createElement('div', { style: { fontSize: 11, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 10 } }, '路线节点'),
+        React.createElement('div', { style: { display: 'flex', flexDirection: 'column', gap: 7 } },
+          th.routes.map((r, ri) => React.createElement('div', { key: r.id, style: { padding: '10px 11px', borderRadius: 11, border: '1px solid var(--border-subtle)', background: 'var(--surface-1)' } },
+            React.createElement('div', { style: { display: 'flex', alignItems: 'center', gap: 8 } },
+              React.createElement('span', { style: { width: 4, height: 30, borderRadius: 3, flex: 'none', background: r.color } }),
+              React.createElement('div', { style: { flex: 1 } },
+                React.createElement('div', { style: { fontWeight: 600, fontSize: 13 } }, r.name),
+                React.createElement('div', { style: { fontSize: 11, color: 'var(--text-muted)', marginTop: 2 } }, r.nodes.length + ' 个节点'))),
+            React.createElement('div', { style: { fontSize: 11, color: 'var(--text-secondary)', marginTop: 6, paddingLeft: 12, lineHeight: 1.5 } }, r.nodes.map(n => n.name).slice(0, 5).join(' → ') + (r.nodes.length > 5 ? ' …' : ''))))),
+        React.createElement('div', { style: { height: 1, background: 'var(--border-subtle)', margin: '14px 0' } }),
+        React.createElement('div', { style: { fontSize: 11, color: 'var(--text-muted)', textTransform: 'uppercase', letterSpacing: 1, marginBottom: 10 } }, '操作'),
+        React.createElement('div', { style: { display: 'flex', flexDirection: 'column', gap: 6 } },
+          React.createElement('button', { style: { padding: '8px 11px', borderRadius: 8, border: '1px solid var(--border-subtle)', background: 'var(--surface-1)', color: 'var(--text-secondary)', textAlign: 'left', fontSize: 13, cursor: 'pointer' } }, '➕ 添加节点'),
+          React.createElement('button', { style: { padding: '8px 11px', borderRadius: 8, border: '1px solid var(--border-subtle)', background: 'var(--surface-1)', color: 'var(--text-secondary)', textAlign: 'left', fontSize: 13, cursor: 'pointer' } }, '✏️ 编辑节点'),
+          React.createElement('button', { style: { padding: '8px 11px', borderRadius: 8, border: '1px solid var(--border-subtle)', background: 'var(--surface-1)', color: 'var(--text-secondary)', textAlign: 'left', fontSize: 13, cursor: 'pointer' } }, '🗑️ 删除节点'))),
+      React.createElement('div', { style: { flex: 1, position: 'relative', minWidth: 0, overflow: 'hidden', background: 'var(--map-bg)' } },
+        canvas,
+        React.createElement('div', { style: { position: 'absolute', top: 14, left: 14, display: 'flex', flexDirection: 'column', gap: 8, zIndex: 10 } },
+          React.createElement('button', { onClick: () => { setZoom(1); setPan({ x: 0, y: 0 }); }, title: '重置视角', style: { width: 34, height: 34, background: 'rgba(16,24,39,.86)', border: '1px solid var(--border-subtle)', borderRadius: 8, color: 'var(--text-secondary)', cursor: 'pointer', display: 'flex', alignItems: 'center', justifyContent: 'center', backdropFilter: 'blur(6px)' } }, '⌖')),
+        React.createElement('div', { style: { position: 'absolute', top: 60, right: 14, display: 'flex', flexDirection: 'column', background: 'rgba(16,24,39,.86)', border: '1px solid var(--border-subtle)', borderRadius: 8, overflow: 'hidden', zIndex: 10, backdropFilter: 'blur(6px)' } },
+          React.createElement('button', { onClick: () => setZoom(Math.min(2.4, zoom * 1.2)), style: { width: 34, height: 33, background: 'none', border: 'none', borderBottom: '1px solid var(--border-subtle)', color: 'var(--text-secondary)', cursor: 'pointer', fontSize: 18 } }, '+'),
+          React.createElement('button', { onClick: () => setZoom(Math.max(0.6, zoom / 1.2)), style: { width: 34, height: 33, background: 'none', border: 'none', color: 'var(--text-secondary)', cursor: 'pointer', fontSize: 18 } }, '−')))),
+    exportModal
+  );
+
   return React.createElement('div', { className: 'has-map-shell fade-up' },
     topbar,
-    React.createElement('div', { className: 'has-body' },
-      breadcrumb,
-      React.createElement('div', { className: 'has-main' },
-        aside,
-        React.createElement('div', { className: 'has-canvas-wrap' },
-          canvas,
-          ctrls,
-          basemapPanel,
-          zoomPanel,
-          accuracyPanel,
-          timelineBar,
-          hoverEl,
-          aiDialog),
-        drawerEl,
-        exportModal))
+    screen === 'viewer' ? viewerBody : screen === 'studio' ? studioBody : routeBody
   );
 }
 

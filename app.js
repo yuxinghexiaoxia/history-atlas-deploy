@@ -396,16 +396,17 @@ function App() {
         nav: nav
       });
   }
+  const isMap = route.page === 'map';
   return /*#__PURE__*/React.createElement("div", {
     className: "app-shell"
-  }, /*#__PURE__*/React.createElement(TopNav, {
+  }, !isMap && /*#__PURE__*/React.createElement(TopNav, {
     route: route,
     nav: nav,
     onAuth: () => setAuthOpen(true)
   }), /*#__PURE__*/React.createElement("div", {
-    className: "page",
+    className: isMap ? "page page-full" : "page",
     key: route.page + (route.id || "") + (route.params.q || "")
-  }, view), authOpen && /*#__PURE__*/React.createElement(AuthModal, {
+  }, view), authOpen && !isMap && /*#__PURE__*/React.createElement(AuthModal, {
     onClose: () => setAuthOpen(false),
     nav: nav
   }));
