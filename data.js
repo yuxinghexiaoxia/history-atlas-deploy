@@ -19286,6 +19286,220 @@ const events = {
     "endYear": 668,
     "short": "唐太宗、高宗多次征伐高丽，最终灭亡高句丽。",
     "desc": "贞观十八年（645年），唐太宗亲征高丽，安市之战大胜。后唐高宗继续征伐，总章元年（668年），李绩率军灭亡高句丽，设安东都护府。唐朝征高丽为东亚格局之重要变化。"
+  },
+  "zhuwen_cuantang": {
+    "id": "zhuwen_cuantang",
+    "type": "event",
+    "name": "朱温篡唐",
+    "start": 907,
+    "end": 907,
+    "dynasty": "wudai",
+    "short": "朱温逼唐哀帝禅位，建立后梁，唐朝正式灭亡。",
+    "desc": "天祐四年，朱温逼唐哀帝禅位，建立后梁，改元开平，定都开封。唐朝正式灭亡，五代十国开始。",
+    "persons": [
+      "zhu_wen"
+    ],
+    "tags": [
+      "朝代更替"
+    ]
+  },
+  "liang_mie": {
+    "id": "liang_mie",
+    "type": "event",
+    "name": "李存勖灭后梁",
+    "start": 923,
+    "end": 923,
+    "dynasty": "wudai",
+    "short": "李存勖攻破开封，后梁灭亡，建立后唐。",
+    "desc": "同光元年，李存勖于魏州称帝，建立后唐。随即率军攻破开封，后梁末帝朱友贞自杀，后梁灭亡。",
+    "persons": [
+      "li_cunxu",
+      "zhu_wen"
+    ],
+    "tags": [
+      "朝代更替"
+    ]
+  },
+  "xingjiaomen": {
+    "id": "xingjiaomen",
+    "type": "event",
+    "name": "兴教门之变",
+    "start": 926,
+    "end": 926,
+    "dynasty": "wudai",
+    "short": "李存勖宠信伶人，郭从谦发动兵变，李存勖中流矢身亡。",
+    "desc": "同光四年，魏博军兵变，李存勖派李嗣源平叛，嗣源被叛军拥立。伶人郭从谦发动兴教门之变，李存勖中流矢身亡。李嗣源即位，是为后唐明宗。",
+    "persons": [
+      "li_cunxu",
+      "li_siyuan"
+    ],
+    "tags": [
+      "政变"
+    ]
+  },
+  "shijingtang_gediyun": {
+    "id": "shijingtang_gediyun",
+    "type": "event",
+    "name": "石敬瑭引契丹灭后唐",
+    "start": 936,
+    "end": 936,
+    "dynasty": "wudai",
+    "short": "石敬瑭引契丹军灭后唐，建立后晋。",
+    "desc": "清泰三年，石敬瑭与后唐末帝李从珂不睦，引契丹攻后唐。契丹大败后唐军，助石敬瑭入洛阳。李从珂自焚，后唐亡。石敬瑭建立后晋。",
+    "persons": [
+      "shi_jingtang",
+      "li_congke"
+    ],
+    "tags": [
+      "朝代更替"
+    ]
+  },
+  "yanyun_shiliuzhou": {
+    "id": "yanyun_shiliuzhou",
+    "type": "event",
+    "name": "割让燕云十六州",
+    "start": 936,
+    "end": 936,
+    "dynasty": "wudai",
+    "short": "石敬瑭割让燕云十六州给契丹，中原失去北方屏障。",
+    "desc": "石敬瑭为换取契丹支持，割让燕云十六州给契丹，并岁输帛三十万匹，称契丹主耶律德光为父皇帝。燕云十六州之失，使中原失去北方屏障，直至明朝才收复。",
+    "persons": [
+      "shi_jingtang"
+    ],
+    "tags": [
+      "领土割让"
+    ]
+  },
+  "qidan_miejin": {
+    "id": "qidan_miejin",
+    "type": "event",
+    "name": "契丹灭后晋",
+    "start": 947,
+    "end": 947,
+    "dynasty": "wudai",
+    "short": "契丹大军攻入开封，后晋灭亡。",
+    "desc": "开运四年，契丹主耶律德光发大军南下，后晋大将杜重威降敌。契丹攻入开封，后晋出帝石重贵被俘，后晋灭亡。",
+    "persons": [
+      "shi_chonggui"
+    ],
+    "tags": [
+      "外族入侵"
+    ]
+  },
+  "guowei_qibing": {
+    "id": "guowei_qibing",
+    "type": "event",
+    "name": "郭威建立后周",
+    "start": 951,
+    "end": 951,
+    "dynasty": "wudai",
+    "short": "郭威起兵反叛后汉，建立后周。",
+    "desc": "乾祐三年，后汉隐帝诛杀大臣，密诏杀郭威。郭威起兵，以清君侧为名。隐帝兵败被杀，郭威入开封。广顺元年，郭威即位，建立后周。",
+    "persons": [
+      "guo_wei",
+      "liu_chengyou"
+    ],
+    "tags": [
+      "朝代更替"
+    ]
+  },
+  "chai_rong_beifa": {
+    "id": "chai_rong_beifa",
+    "type": "event",
+    "name": "柴荣北伐契丹",
+    "start": 959,
+    "end": 959,
+    "dynasty": "wudai",
+    "short": "后周世宗北伐，收复瀛莫二州，为北宋统一奠定基础。",
+    "desc": "显德六年，后周世宗柴荣率军北伐契丹，收复瀛州、莫州等地。及攻幽州，世宗忽病，遂班师。世宗不久卒，北伐中止。",
+    "persons": [
+      "chai_rong"
+    ],
+    "tags": [
+      "北伐"
+    ]
+  },
+  "chai_rong_zhengtang": {
+    "id": "chai_rong_zhengtang",
+    "type": "event",
+    "name": "后周世宗三征南唐",
+    "start": 956,
+    "end": 958,
+    "dynasty": "wudai",
+    "short": "后周世宗三次征讨南唐，南唐割江北之地称臣。",
+    "desc": "显德三年至五年，后周世宗三次征讨南唐，南唐大败，割江北十四州，向后周称臣，去帝号。",
+    "persons": [
+      "chai_rong",
+      "li_jing"
+    ],
+    "tags": [
+      "战争"
+    ]
+  },
+  "nantang_jianguo": {
+    "id": "nantang_jianguo",
+    "type": "event",
+    "name": "南唐建立",
+    "start": 937,
+    "end": 937,
+    "dynasty": "wudai",
+    "short": "李昪逼迫吴主禅位，建立南唐。",
+    "desc": "天祚三年，徐知诰逼迫吴主杨溥禅位，建立南唐，恢复李姓，自称唐宗室后裔。",
+    "persons": [
+      "li_bian"
+    ],
+    "tags": [
+      "朝代更替"
+    ]
+  },
+  "song_mie_nantang": {
+    "id": "song_mie_nantang",
+    "type": "event",
+    "name": "宋灭南唐",
+    "start": 975,
+    "end": 975,
+    "dynasty": "wudai",
+    "short": "宋军攻破金陵，南唐后主李煜出降。",
+    "desc": "开宝八年，宋军攻破金陵，南唐后主李煜出降，南唐灭亡。",
+    "persons": [
+      "li_yu",
+      "zhao_kuangyin"
+    ],
+    "tags": [
+      "朝代更替"
+    ]
+  },
+  "wangjian_jianqianshu": {
+    "id": "wangjian_jianqianshu",
+    "type": "event",
+    "name": "王建建立前蜀",
+    "start": 907,
+    "end": 907,
+    "dynasty": "wudai",
+    "short": "王建在成都称帝，建立前蜀。",
+    "desc": "907年，朱温建立后梁，王建亦在成都称帝，建立前蜀。",
+    "persons": [
+      "wang_jian"
+    ],
+    "tags": [
+      "朝代更替"
+    ]
+  },
+  "mengzhixiang_jianhoushu": {
+    "id": "mengzhixiang_jianhoushu",
+    "type": "event",
+    "name": "孟知祥建立后蜀",
+    "start": 934,
+    "end": 934,
+    "dynasty": "wudai",
+    "short": "孟知祥在成都称帝，建立后蜀。",
+    "desc": "934年，孟知祥在成都称帝，建立后蜀。",
+    "persons": [
+      "meng_zhixiang"
+    ],
+    "tags": [
+      "朝代更替"
+    ]
   }
 };
 
@@ -25859,219 +26073,5 @@ return { persons, events, locations, dynasties, timeline, hotPersons, hotEvents,
     getSimilarPersons: () => [],
     getTodayHistory: () => [],
     getPersonLocations: () => []
-  ,
-  "zhuwen_cuantang": {
-  "id": "zhuwen_cuantang",
-  "type": "event",
-  "name": "朱温篡唐",
-  "start": 907,
-  "end": 907,
-  "dynasty": "wudai",
-  "short": "朱温逼唐哀帝禅位，建立后梁，唐朝正式灭亡。",
-  "desc": "天祐四年，朱温逼唐哀帝禅位，建立后梁，改元开平，定都开封。唐朝正式灭亡，五代十国开始。",
-  "persons": [
-    "zhu_wen"
-  ],
-  "tags": [
-    "朝代更替"
-  ]
-},
-  "liang_mie": {
-  "id": "liang_mie",
-  "type": "event",
-  "name": "李存勖灭后梁",
-  "start": 923,
-  "end": 923,
-  "dynasty": "wudai",
-  "short": "李存勖攻破开封，后梁灭亡，建立后唐。",
-  "desc": "同光元年，李存勖于魏州称帝，建立后唐。随即率军攻破开封，后梁末帝朱友贞自杀，后梁灭亡。",
-  "persons": [
-    "li_cunxu",
-    "zhu_wen"
-  ],
-  "tags": [
-    "朝代更替"
-  ]
-},
-  "xingjiaomen": {
-  "id": "xingjiaomen",
-  "type": "event",
-  "name": "兴教门之变",
-  "start": 926,
-  "end": 926,
-  "dynasty": "wudai",
-  "short": "李存勖宠信伶人，郭从谦发动兵变，李存勖中流矢身亡。",
-  "desc": "同光四年，魏博军兵变，李存勖派李嗣源平叛，嗣源被叛军拥立。伶人郭从谦发动兴教门之变，李存勖中流矢身亡。李嗣源即位，是为后唐明宗。",
-  "persons": [
-    "li_cunxu",
-    "li_siyuan"
-  ],
-  "tags": [
-    "政变"
-  ]
-},
-  "shijingtang_gediyun": {
-  "id": "shijingtang_gediyun",
-  "type": "event",
-  "name": "石敬瑭引契丹灭后唐",
-  "start": 936,
-  "end": 936,
-  "dynasty": "wudai",
-  "short": "石敬瑭引契丹军灭后唐，建立后晋。",
-  "desc": "清泰三年，石敬瑭与后唐末帝李从珂不睦，引契丹攻后唐。契丹大败后唐军，助石敬瑭入洛阳。李从珂自焚，后唐亡。石敬瑭建立后晋。",
-  "persons": [
-    "shi_jingtang",
-    "li_congke"
-  ],
-  "tags": [
-    "朝代更替"
-  ]
-},
-  "yanyun_shiliuzhou": {
-  "id": "yanyun_shiliuzhou",
-  "type": "event",
-  "name": "割让燕云十六州",
-  "start": 936,
-  "end": 936,
-  "dynasty": "wudai",
-  "short": "石敬瑭割让燕云十六州给契丹，中原失去北方屏障。",
-  "desc": "石敬瑭为换取契丹支持，割让燕云十六州给契丹，并岁输帛三十万匹，称契丹主耶律德光为父皇帝。燕云十六州之失，使中原失去北方屏障，直至明朝才收复。",
-  "persons": [
-    "shi_jingtang"
-  ],
-  "tags": [
-    "领土割让"
-  ]
-},
-  "qidan_miejin": {
-  "id": "qidan_miejin",
-  "type": "event",
-  "name": "契丹灭后晋",
-  "start": 947,
-  "end": 947,
-  "dynasty": "wudai",
-  "short": "契丹大军攻入开封，后晋灭亡。",
-  "desc": "开运四年，契丹主耶律德光发大军南下，后晋大将杜重威降敌。契丹攻入开封，后晋出帝石重贵被俘，后晋灭亡。",
-  "persons": [
-    "shi_chonggui"
-  ],
-  "tags": [
-    "外族入侵"
-  ]
-},
-  "guowei_qibing": {
-  "id": "guowei_qibing",
-  "type": "event",
-  "name": "郭威建立后周",
-  "start": 951,
-  "end": 951,
-  "dynasty": "wudai",
-  "short": "郭威起兵反叛后汉，建立后周。",
-  "desc": "乾祐三年，后汉隐帝诛杀大臣，密诏杀郭威。郭威起兵，以清君侧为名。隐帝兵败被杀，郭威入开封。广顺元年，郭威即位，建立后周。",
-  "persons": [
-    "guo_wei",
-    "liu_chengyou"
-  ],
-  "tags": [
-    "朝代更替"
-  ]
-},
-  "chai_rong_beifa": {
-  "id": "chai_rong_beifa",
-  "type": "event",
-  "name": "柴荣北伐契丹",
-  "start": 959,
-  "end": 959,
-  "dynasty": "wudai",
-  "short": "后周世宗北伐，收复瀛莫二州，为北宋统一奠定基础。",
-  "desc": "显德六年，后周世宗柴荣率军北伐契丹，收复瀛州、莫州等地。及攻幽州，世宗忽病，遂班师。世宗不久卒，北伐中止。",
-  "persons": [
-    "chai_rong"
-  ],
-  "tags": [
-    "北伐"
-  ]
-},
-  "chai_rong_zhengtang": {
-  "id": "chai_rong_zhengtang",
-  "type": "event",
-  "name": "后周世宗三征南唐",
-  "start": 956,
-  "end": 958,
-  "dynasty": "wudai",
-  "short": "后周世宗三次征讨南唐，南唐割江北之地称臣。",
-  "desc": "显德三年至五年，后周世宗三次征讨南唐，南唐大败，割江北十四州，向后周称臣，去帝号。",
-  "persons": [
-    "chai_rong",
-    "li_jing"
-  ],
-  "tags": [
-    "战争"
-  ]
-},
-  "nantang_jianguo": {
-  "id": "nantang_jianguo",
-  "type": "event",
-  "name": "南唐建立",
-  "start": 937,
-  "end": 937,
-  "dynasty": "wudai",
-  "short": "李昪逼迫吴主禅位，建立南唐。",
-  "desc": "天祚三年，徐知诰逼迫吴主杨溥禅位，建立南唐，恢复李姓，自称唐宗室后裔。",
-  "persons": [
-    "li_bian"
-  ],
-  "tags": [
-    "朝代更替"
-  ]
-},
-  "song_mie_nantang": {
-  "id": "song_mie_nantang",
-  "type": "event",
-  "name": "宋灭南唐",
-  "start": 975,
-  "end": 975,
-  "dynasty": "wudai",
-  "short": "宋军攻破金陵，南唐后主李煜出降。",
-  "desc": "开宝八年，宋军攻破金陵，南唐后主李煜出降，南唐灭亡。",
-  "persons": [
-    "li_yu",
-    "zhao_kuangyin"
-  ],
-  "tags": [
-    "朝代更替"
-  ]
-},
-  "wangjian_jianqianshu": {
-  "id": "wangjian_jianqianshu",
-  "type": "event",
-  "name": "王建建立前蜀",
-  "start": 907,
-  "end": 907,
-  "dynasty": "wudai",
-  "short": "王建在成都称帝，建立前蜀。",
-  "desc": "907年，朱温建立后梁，王建亦在成都称帝，建立前蜀。",
-  "persons": [
-    "wang_jian"
-  ],
-  "tags": [
-    "朝代更替"
-  ]
-},
-  "mengzhixiang_jianhoushu": {
-  "id": "mengzhixiang_jianhoushu",
-  "type": "event",
-  "name": "孟知祥建立后蜀",
-  "start": 934,
-  "end": 934,
-  "dynasty": "wudai",
-  "short": "孟知祥在成都称帝，建立后蜀。",
-  "desc": "934年，孟知祥在成都称帝，建立后蜀。",
-  "persons": [
-    "meng_zhixiang"
-  ],
-  "tags": [
-    "朝代更替"
-  ]
-}};
+};
 })();
