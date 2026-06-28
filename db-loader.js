@@ -5,6 +5,8 @@
   const fallbackDB = window.DB;
 
   function transformPerson(p) {
+    // 如果 fallback 里有这条 person，保留附属字段（relations/locations/events/sources）
+    const fb = fallbackDB && fallbackDB.persons ? (fallbackDB.persons[p.id] || {}) : {};
     return {
       id: p.id,
       type: 'person',
@@ -21,31 +23,41 @@
       quote: p.quote || '',
       quoteSrc: p.quoteSource || '',
       works: p.works || [],
-      sources: [],
+      sources: fb.sources || [],
       life: (p.lifeEvents || []).map(e => ({ y: e.y, key: e.key || false, t: e.t, s: e.s || '' })),
-      relations: [],
-      events: [],
-      locations: [],
+      relations: fb.relations || [],
+      events: fb.events || [],
+      locations: fb.locations || [],
     };
   }
 
   function transformEvent(e) {
+    const start = e.startYear ?? e.start;
+    const end = e.endYear ?? e.end;
+    // 如果 fallback 里有这条 event，保留附属字段（sources/chain/related/persons）
+    const fb = fallbackDB && fallbackDB.events ? (fallbackDB.events[e.id] || {}) : {};
     return {
       id: e.id,
       type: 'event',
       name: e.name,
       dynasty: e.dynastyId || '',
-      startYear: e.startYear,
-      endYear: e.endYear,
+      // 同时输出 start/end 和 startYear/endYear，兼容前端两种命名
+      start,
+      end,
+      startYear: start,
+      endYear: end,
       place: e.place || '',
       short: e.shortIntro || '',
-      background: e.background || '',
+      // 同时输出 bg/background，兼容前端两种命名
+      bg: e.background || e.bg || '',
+      background: e.background || e.bg || '',
       process: e.process || '',
       result: e.result || '',
       controversy: e.controversy || '',
-      chain: e.chain || [],
-      persons: [],
-      related: e.relatedEventIds || [],
+      chain: fb.chain || e.chain || [],
+      persons: fb.persons || [],
+      related: e.relatedEventIds || fb.related || [],
+      sources: fb.sources || [],
     };
   }
 
@@ -96,8 +108,8 @@
       const dynasties = fallbackDB.dynasties || [];
       const timeline = fallbackDB.timeline || [];
 
-      const hotPersons = Object.values(personsFinal).slice(0, 8);
-      const hotEvents = Object.values(eventsFinal).slice(0, 8);
+      const hotPersons = Object.keys(personsFinal).slice(0, 8);
+      const hotEvents = Object.keys(eventsFinal).slice(0, 8);
 
       window.DB = {
         persons: personsFinal,
