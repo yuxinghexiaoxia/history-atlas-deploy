@@ -17320,6 +17320,700 @@ const persons = {
     "relations": [],
     "events": ["tongyi_sanguo"], "locations": ["duling"]
   }
+,
+"pi_cao": {
+    "id": "pi_cao", "type": "person", "name": "曹丕", "alias": "字子桓，沛国谯人，魏文帝",
+    "born": 187, "died": 226, "dynasty": "sanguo",
+    "role": ["皇帝", "文学家"],
+    "short": "曹操次子，篡汉建立曹魏，文学评论家，代表作《典论·论文》。",
+    "intro": "曹丕，字子桓，沛国谯人。据《三国志·魏书·文帝纪》，丕为曹操次子。建安二十五年，曹操卒，丕嗣位为魏王。同年，丕逼迫汉献帝禅位，建立曹魏，是为魏文帝。丕在位期间，整顿吏治，恢复经济。丕又善文学，与父曹操、弟曹植并称「三曹」，作《典论·论文》，为中国文学批评史上重要文献。黄初七年，丕卒，年四十。",
+    "achievements": ["篡汉建立曹魏", "整顿吏治，恢复经济", "《典论·论文》", "与曹操、曹植并称三曹"],
+    "controversy": "曹丕逼迫汉献帝禅位，为后世所议；又猜忌曹植，七步成诗之典故。",
+    "quote": "盖文章，经国之大业，不朽之盛事。", "quoteSrc": "《典论·论文》",
+    "works": ["《典论·论文》"], "sources": [{"t": "《三国志·魏书·文帝纪》", "lv": "A"}],
+    "life": [
+      {"y": 187, "key": false, "t": "生于谯县", "s": "曹操次子"},
+      {"y": 220, "key": true, "t": "篡汉建魏", "s": "魏文帝"},
+      {"y": 226, "key": true, "t": "崩", "s": "年四十"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "KIN", "label": "父子", "desc": "曹操次子。"},
+      {"to": "zhi_cao", "type": "KIN", "label": "兄弟", "desc": "曹植之兄。"}
+    ],
+    "events": ["tongyi_sanguo"], "locations": ["qiaoxian"]
+  },
+  "zhi_cao": {
+    "id": "zhi_cao", "type": "person", "name": "曹植", "alias": "字子建，沛国谯人，陈思王",
+    "born": 192, "died": 232, "dynasty": "sanguo",
+    "role": ["文学家", "诗人"],
+    "short": "曹操第三子，才高八斗，七步成诗，代表作《洛神赋》《七步诗》。",
+    "intro": "曹植，字子建，沛国谯人。据《三国志·魏书·陈思王传》，植为曹操第三子。植少聪敏，才思敏捷，太祖甚爱之，几欲立为太子。然植任性而行，不自雕励，终为曹丕所忌。丕即位后，植屡遭贬谪。植善诗，才高八斗，代表作有《洛神赋》《七步诗》《白马篇》等。太和六年，植卒，年四十一。",
+    "achievements": ["才高八斗", "七步成诗", "代表作《洛神赋》《七步诗》", "与曹操、曹丕并称三曹"],
+    "controversy": "曹植几欲立为太子，终为曹丕所忌，一生坎坷。",
+    "quote": "本是同根生，相煎何太急。", "quoteSrc": "《七步诗》",
+    "works": ["《洛神赋》", "《七步诗》", "《白马篇》"], "sources": [{"t": "《三国志·魏书·陈思王传》", "lv": "A"}],
+    "life": [
+      {"y": 192, "key": false, "t": "生于谯县", "s": "曹操第三子"},
+      {"y": 220, "key": true, "t": "曹丕即位", "s": "屡遭贬谪"},
+      {"y": 232, "key": true, "t": "卒", "s": "年四十一"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "KIN", "label": "父子", "desc": "曹操第三子。"},
+      {"to": "pi_cao", "type": "KIN", "label": "兄弟", "desc": "曹丕之弟。"}
+    ],
+    "events": [], "locations": ["qiaoxian"]
+  },
+  "yu_xun": {
+    "id": "yu_xun", "type": "person", "name": "荀彧", "alias": "字文若，颍川颍阴人，王佐之才",
+    "born": 163, "died": 212, "dynasty": "sanguo",
+    "role": ["谋士", "政治家"],
+    "short": "曹操首席谋士，王佐之才， stabilizing 后方，推荐郭嘉、荀攸等。",
+    "intro": "荀彧，字文若，颍川颍阴人。据《三国志·魏书·荀彧传》，彧为东汉末年名士。彧少有大才，被誉为「王佐之才」。初从袁绍，后归曹操。彧为曹操 stabilizing 后方，荐举人才，如郭嘉、荀攸、司马懿等皆其所荐。彧又劝曹操迎汉献帝于许都，挟天子以令诸侯。后因反对曹操称魏公，彧忧愤而死，一说被逼自杀。",
+    "achievements": ["王佐之才", "为曹操 stabilizing 后方", "荐举郭嘉、荀攸等人才", "劝曹操迎汉献帝"],
+    "controversy": "荀彧反对曹操称魏公，忧愤而死，为后世所议。",
+    "quote": "吾以王佐之才，当为汉室尽力。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·魏书·荀彧传》", "lv": "A"}],
+    "life": [
+      {"y": 163, "key": false, "t": "生于颍阴", "s": "颍川名士"},
+      {"y": 191, "key": true, "t": "归曹操", "s": "为谋士"},
+      {"y": 196, "key": true, "t": "劝迎汉献帝", "s": "挟天子以令诸侯"},
+      {"y": 212, "key": true, "t": "忧愤而死", "s": "反对曹操称魏公"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "SERVE_AS", "label": "君臣", "desc": "曹操首席谋士。"},
+      {"to": "you_xun", "type": "KIN", "label": "叔侄", "desc": "荀攸之叔。"}
+    ],
+    "events": ["tongyi_sanguo"], "locations": ["yinying"]
+  },
+  "you_xun": {
+    "id": "you_xun", "type": "person", "name": "荀攸", "alias": "字公达，颍川颍阴人，曹操谋士",
+    "born": 157, "died": 214, "dynasty": "sanguo",
+    "role": ["谋士"],
+    "short": "曹操谋士，荀彧之侄，善奇谋，官渡之战献计斩颜良、诛文丑。",
+    "intro": "荀攸，字公达，颍川颍阴人。据《三国志·魏书·荀攸传》，攸为荀彧之侄。攸少孤，及长，为曹操谋士。攸善奇谋，官渡之战，攸献计斩颜良、诛文丑，又劝曹操袭乌巢，烧袁绍粮草。攸又从平袁绍诸子，定河北。建安十九年，攸从征孙权，道卒，年五十八。",
+    "achievements": ["官渡之战献计斩颜良、诛文丑", "劝袭乌巢，烧袁绍粮草", "从平河北"],
+    "controversy": "荀攸善奇谋，为曹操谋士之典范。",
+    "quote": "吾以奇谋佐明公，当为汉室尽忠。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·魏书·荀攸传》", "lv": "A"}],
+    "life": [
+      {"y": 157, "key": false, "t": "生于颍阴", "s": "荀彧之侄"},
+      {"y": 200, "key": true, "t": "官渡之战", "s": "献计斩颜良、诛文丑"},
+      {"y": 214, "key": true, "t": "卒", "s": "年五十八"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "SERVE_AS", "label": "君臣", "desc": "曹操谋士。"},
+      {"to": "yu_xun", "type": "KIN", "label": "叔侄", "desc": "荀彧之侄。"}
+    ],
+    "events": ["guandu"], "locations": ["yinying"]
+  },
+  "xu_jia": {
+    "id": "xu_jia", "type": "person", "name": "贾诩", "alias": "字文和，武威姑臧人，毒士",
+    "born": 147, "died": 223, "dynasty": "sanguo",
+    "role": ["谋士"],
+    "short": "曹操谋士，算无遗策，劝张绣降曹，助曹丕夺嫡。",
+    "intro": "贾诩，字文和，武威姑臧人。据《三国志·魏书·贾诩传》，诩少时人莫知，唯汉阳阎忠异之。诩初为董卓部将，后劝李傕、郭汜反攻长安。又归张绣，献计击曹操。后劝张绣降曹，曹操大悦，拜诩为执金吾。曹丕即位，拜诩为太尉。黄初四年，诩卒，年七十七。",
+    "achievements": ["算无遗策", "劝张绣降曹", "助曹丕夺嫡", "拜太尉"],
+    "controversy": "贾诩善谋，然其劝李傕、郭汜反攻长安，为祸不小。",
+    "quote": "吾以谋立身，当以智全。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·魏书·贾诩传》", "lv": "A"}],
+    "life": [
+      {"y": 147, "key": false, "t": "生于姑臧", "s": "武威郡"},
+      {"y": 198, "key": true, "t": "劝张绣降曹", "s": "拜执金吾"},
+      {"y": 223, "key": true, "t": "卒", "s": "年七十七"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "SERVE_AS", "label": "君臣", "desc": "曹操谋士。"}
+    ],
+    "events": [], "locations": ["guzang"]
+  },
+  "he_zhang": {
+    "id": "he_zhang", "type": "person", "name": "张郃", "alias": "字儁乂，河间鄚人，五子良将之一",
+    "born": None, "died": 231, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "曹魏五子良将之一，善用兵，街亭之战大破马谡。",
+    "intro": "张郃，字儁乂，河间鄚人。据《三国志·魏书·张郃传》，郃初为韩馥部将，后归袁绍。官渡之战，郃归曹操。郃从曹操平河北，征乌桓，讨关中，屡建战功。后从曹真、司马懿拒诸葛亮，街亭之战大破马谡。太和五年，郃追诸葛亮至木门，中箭而死。",
+    "achievements": ["五子良将之一", "街亭之战大破马谡", "从平河北，征乌桓"],
+    "controversy": "张郃为曹魏名将，然其晚年轻敌追诸葛亮，中箭而死。",
+    "quote": "吾以兵法立身，当以智取胜。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·魏书·张郃传》", "lv": "A"}],
+    "life": [
+      {"y": 200, "key": true, "t": "归曹操", "s": "官渡之战"},
+      {"y": 228, "key": true, "t": "街亭之战", "s": "大破马谡"},
+      {"y": 231, "key": true, "t": "中箭而死", "s": "追诸葛亮至木门"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "SERVE_AS", "label": "君臣", "desc": "曹魏名将。"}
+    ],
+    "events": ["jieting"], "locations": ["jie_ting"]
+  },
+  "huang_xu": {
+    "id": "huang_xu", "type": "person", "name": "徐晃", "alias": "字公明，河东杨人，五子良将之一",
+    "born": None, "died": 227, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "曹魏五子良将之一，治军严整，解樊城之围。",
+    "intro": "徐晃，字公明，河东杨人。据《三国志·魏书·徐晃传》，晃初为杨奉部将，后归曹操。晃从曹操征伐，屡建战功。晃治军严整，曹操称「有周亚夫之风」。后解樊城之围，击退关羽。太和元年，晃卒。",
+    "achievements": ["五子良将之一", "解樊城之围", "治军严整，有周亚夫之风"],
+    "controversy": "徐晃为曹魏名将，治军严整。",
+    "quote": "吾以严治军，当以整取胜。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·魏书·徐晃传》", "lv": "A"}],
+    "life": [
+      {"y": 200, "key": true, "t": "归曹操", "s": "从征伐"},
+      {"y": 219, "key": true, "t": "解樊城之围", "s": "击退关羽"},
+      {"y": 227, "key": true, "t": "卒", "s": "太和元年"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "SERVE_AS", "label": "君臣", "desc": "曹魏名将。"}
+    ],
+    "events": [], "locations": ["yangxian"]
+  },
+  "jin_yue": {
+    "id": "jin_yue", "type": "person", "name": "乐进", "alias": "字文谦，阳平卫国人，五子良将之一",
+    "born": None, "died": 218, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "曹魏五子良将之一，每战先登，勇猛过人。",
+    "intro": "乐进，字文谦，阳平卫国人。据《三国志·魏书·乐进传》，进容貌短小，以胆烈从曹操。进每战先登，勇猛过人，从曹操征伐，屡建战功。后从征孙权，进卒。",
+    "achievements": ["五子良将之一", "每战先登，勇猛过人"],
+    "controversy": "乐进为曹魏名将，然其记载较少。",
+    "quote": "吾以先登为勇，当以死报国。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·魏书·乐进传》", "lv": "A"}],
+    "life": [
+      {"y": 218, "key": true, "t": "卒", "s": "从征孙权"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "SERVE_AS", "label": "君臣", "desc": "曹魏名将。"}
+    ],
+    "events": [], "locations": ["weiguo"]
+  },
+  "jin_yu": {
+    "id": "jin_yu", "type": "person", "name": "于禁", "alias": "字文则，泰山钜平人，五子良将之一",
+    "born": None, "died": 221, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "曹魏五子良将之一，治军严整，然樊城之战降关羽，晚节不保。",
+    "intro": "于禁，字文则，泰山钜平人。据《三国志·魏书·于禁传》，禁初为鲍信部将，后归曹操。禁从曹操征伐，屡建战功。禁治军严整，曹操甚重之。后樊城之战，禁被关羽水淹七军，投降关羽。关羽败后，禁归吴，后归魏。曹丕即位，禁羞愤而死。",
+    "achievements": ["五子良将之一", "治军严整"],
+    "controversy": "于禁樊城之战降关羽，晚节不保，为后世所议。",
+    "quote": "吾以严治军，今以降失节。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·魏书·于禁传》", "lv": "A"}],
+    "life": [
+      {"y": 219, "key": true, "t": "樊城之战降关羽", "s": "晚节不保"},
+      {"y": 221, "key": true, "t": "羞愤而死", "s": "曹丕即位后"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "SERVE_AS", "label": "君臣", "desc": "曹魏名将。"}
+    ],
+    "events": [], "locations": ["juping"]
+  },
+  "ai_deng": {
+    "id": "ai_deng", "type": "person", "name": "邓艾", "alias": "字士载，义阳棘阳人，灭蜀名将",
+    "born": 197, "died": 264, "dynasty": "sanguo",
+    "role": ["将领", "军事家"],
+    "short": "曹魏名将，率军偷渡阴平，灭蜀汉，后与钟会争功被杀。",
+    "intro": "邓艾，字士载，义阳棘阳人。据《三国志·魏书·邓艾传》，艾少孤，为农民。后遇太尉司马懿，被辟为掾属。艾善军事，数拒姜维。景元四年，艾与钟会分兵伐蜀。艾率军偷渡阴平，攻克江油、绵竹，直逼成都，后主刘禅投降，蜀汉灭亡。后艾与钟会争功，被钟会诬陷，被杀。",
+    "achievements": ["偷渡阴平，灭蜀汉", "数拒姜维", "与钟会分兵伐蜀"],
+    "controversy": "邓艾灭蜀汉有功，然与钟会争功，被诬陷而死。",
+    "quote": "出身寒微，不是耻辱；能屈能伸，方为丈夫。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·魏书·邓艾传》", "lv": "A"}],
+    "life": [
+      {"y": 197, "key": false, "t": "生于棘阳", "s": "少孤"},
+      {"y": 263, "key": true, "t": "偷渡阴平", "s": "灭蜀汉"},
+      {"y": 264, "key": true, "t": "被杀", "s": "与钟会争功"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "SERVE_AS", "label": "君臣", "desc": "曹魏名将。"},
+      {"to": "hui_zhong", "type": "RIVAL", "label": "争功", "desc": "与钟会争功，被诬陷。"}
+    ],
+    "events": ["mie_shuhan"], "locations": ["jiyang"]
+  },
+  "hui_zhong": {
+    "id": "hui_zhong", "type": "person", "name": "钟会", "alias": "字士季，颍川长社人，灭蜀名将",
+    "born": 225, "died": 264, "dynasty": "sanguo",
+    "role": ["将领", "谋士"],
+    "short": "曹魏名将，与邓艾分兵伐蜀灭蜀汉，后据蜀叛乱，被杀。",
+    "intro": "钟会，字士季，颍川长社人。据《三国志·魏书·钟会传》，会为太傅钟繇之子。会少聪敏，有才数。景元四年，会与邓艾分兵伐蜀。会率大军取汉中，后进逼剑阁。后邓艾偷渡阴平，先至成都，蜀汉灭亡。会忌艾功，诬陷艾谋反。后会据蜀叛乱，欲自立，为部将所杀，年四十。",
+    "achievements": ["与邓艾分兵伐蜀", "灭蜀汉", "才华横溢"],
+    "controversy": "钟会才华横溢，然其据蜀叛乱，为不忠之臣。",
+    "quote": "吾以才略自诩，当以功立身。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·魏书·钟会传》", "lv": "A"}],
+    "life": [
+      {"y": 225, "key": false, "t": "生于长社", "s": "钟繇之子"},
+      {"y": 263, "key": true, "t": "伐蜀", "s": "与邓艾分兵"},
+      {"y": 264, "key": true, "t": "据蜀叛乱", "s": "被杀"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "SERVE_AS", "label": "君臣", "desc": "曹魏名将。"},
+      {"to": "ai_deng", "type": "RIVAL", "label": "争功", "desc": "诬陷邓艾谋反。"}
+    ],
+    "events": ["mie_shuhan"], "locations": ["changshe"]
+  },
+  "dun_xiahou": {
+    "id": "dun_xiahou", "type": "person", "name": "夏侯惇", "alias": "字元让，沛国谯人，曹魏大将",
+    "born": None, "died": 220, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "曹操族弟，曹魏大将，性情刚烈，拔矢啖睛。",
+    "intro": "夏侯惇，字元让，沛国谯人。据《三国志·魏书·夏侯惇传》，惇为曹操族弟。惇少时以勇气闻名。初从曹操起兵，为裨将。后曹操平定兖州，惇为东郡太守。惇与吕布战，为流矢所中，伤左目，拔矢啖睛。惇为人清俭，有余财辄以分施。建安二十五年，惇卒。",
+    "achievements": ["曹操族弟", "拔矢啖睛", "曹魏大将"],
+    "controversy": "夏侯惇为曹魏大将，然其军事才能一般。",
+    "quote": "父精母血，不可弃也。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·魏书·夏侯惇传》", "lv": "A"}],
+    "life": [
+      {"y": 190, "key": true, "t": "从曹操起兵", "s": "为裨将"},
+      {"y": 198, "key": true, "t": "拔矢啖睛", "s": "与吕布战"},
+      {"y": 220, "key": true, "t": "卒", "s": "建安二十五年"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "KIN", "label": "族兄弟", "desc": "曹操族弟。"},
+      {"to": "yuan_xiahou", "type": "KIN", "label": "族兄弟", "desc": "夏侯渊族兄。"}
+    ],
+    "events": [], "locations": ["qiaoxian"]
+  },
+  "yuan_xiahou": {
+    "id": "yuan_xiahou", "type": "person", "name": "夏侯渊", "alias": "字妙才，沛国谯人，征西将军",
+    "born": None, "died": 219, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "曹操族弟，征西将军，虎步关右，后为黄忠所杀。",
+    "intro": "夏侯渊，字妙才，沛国谯人。据《三国志·魏书·夏侯渊传》，渊为夏侯惇族弟。渊初从曹操起兵，为别部司马。后曹操平定关中，渊为征西将军，虎步关右。渊用兵神速，常出敌不意。建安二十四年，渊与刘备战于定军山，为黄忠所杀。",
+    "achievements": ["征西将军", "虎步关右", "用兵神速"],
+    "controversy": "夏侯渊用兵神速，然定军山之战轻敌，为黄忠所杀。",
+    "quote": "吾以神速用兵，当以快取胜。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·魏书·夏侯渊传》", "lv": "A"}],
+    "life": [
+      {"y": 190, "key": true, "t": "从曹操起兵", "s": "为别部司马"},
+      {"y": 219, "key": true, "t": "定军山被杀", "s": "为黄忠所杀"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "KIN", "label": "族兄弟", "desc": "曹操族弟。"},
+      {"to": "dun_xiahou", "type": "KIN", "label": "族兄弟", "desc": "夏侯惇族弟。"}
+    ],
+    "events": ["dingjunshan"], "locations": ["qiaoxian"]
+  },
+  "huai_guo": {
+    "id": "huai_guo", "type": "person", "name": "郭淮", "alias": "字伯济，太原阳曲人，曹魏名将",
+    "born": None, "died": 255, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "曹魏名将，长期驻守关中，抵御蜀汉诸葛亮、姜维。",
+    "intro": "郭淮，字伯济，太原阳曲人。据《三国志·魏书·郭淮传》，淮初为曹操门下贼曹。后从曹操征伐，为将领。曹丕即位，淮为雍州刺史，封射阳亭侯。后淮长期驻守关中，抵御蜀汉诸葛亮、姜维。正元二年，淮卒，追封大将军。",
+    "achievements": ["曹魏名将", "长期驻守关中", "抵御诸葛亮、姜维"],
+    "controversy": "郭淮为曹魏名将，然其记载较少。",
+    "quote": "吾以守为攻，当以稳取胜。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·魏书·郭淮传》", "lv": "A"}],
+    "life": [
+      {"y": 255, "key": true, "t": "卒", "s": "追封大将军"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "SERVE_AS", "label": "君臣", "desc": "曹魏名将。"}
+    ],
+    "events": [], "locations": ["yangqu"]
+  },
+  "zhao_sima": {
+    "id": "zhao_sima", "type": "person", "name": "司马昭", "alias": "字子上，河内温县人，晋文帝",
+    "born": 211, "died": 265, "dynasty": "sanguo",
+    "role": ["权臣", "军事家"],
+    "short": "司马懿次子，司马师之弟，灭蜀，为西晋奠基。",
+    "intro": "司马昭，字子上，河内温县人。据《三国志·魏书·三少帝纪》注引，昭为司马懿次子。兄司马师死后，昭继掌朝政。后昭遣钟会、邓艾灭蜀汉。咸熙二年，昭卒，追尊为晋文帝。",
+    "achievements": ["继掌朝政", "遣钟会、邓艾灭蜀汉", "为西晋奠基"],
+    "controversy": "司马昭之心，路人皆知。",
+    "quote": "吾以天下为己任，当以功立业。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志》", "lv": "A"}],
+    "life": [
+      {"y": 211, "key": false, "t": "生于温县", "s": "司马懿次子"},
+      {"y": 255, "key": true, "t": "继掌朝政", "s": "司马师死后"},
+      {"y": 263, "key": true, "t": "灭蜀汉", "s": "遣钟会、邓艾"},
+      {"y": 265, "key": true, "t": "卒", "s": "追尊晋文帝"}
+    ],
+    "relations": [
+      {"to": "cao_cao", "type": "SERVE_AS", "label": "君臣", "desc": "曹魏权臣。"},
+      {"to": "si_ma_yi", "type": "KIN", "label": "父子", "desc": "司马懿次子。"}
+    ],
+    "events": ["mie_shuhan"], "locations": ["wenxian"]
+  },
+  "tong_pang": {
+    "id": "tong_pang", "type": "person", "name": "庞统", "alias": "字士元，襄阳人，凤雏",
+    "born": 179, "died": 214, "dynasty": "sanguo",
+    "role": ["谋士"],
+    "short": "刘备谋士，号凤雏，与诸葛亮齐名，入蜀时中箭身亡。",
+    "intro": "庞统，字士元，襄阳人。据《三国志·蜀书·庞统传》，统少时朴钝，未有识者。后司马徽称统为「南州士之冠冕」。刘备领荆州，统为从事。后与诸葛亮同为军师中郎将。刘备入蜀，统随军，献计取成都。建安十九年，统率众攻城，为流矢所中，卒，年三十六。",
+    "achievements": ["凤雏", "与诸葛亮齐名", "献计取成都"],
+    "controversy": "庞统与诸葛亮齐名，然其早亡，未能尽展其才。",
+    "quote": "吾以凤雏自诩，当以智佐明主。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·蜀书·庞统传》", "lv": "A"}],
+    "life": [
+      {"y": 179, "key": false, "t": "生于襄阳", "s": "南州士之冠冕"},
+      {"y": 214, "key": true, "t": "中箭身亡", "s": "攻城时"}
+    ],
+    "relations": [
+      {"to": "liu_bei", "type": "SERVE_AS", "label": "君臣", "desc": "刘备谋士。"},
+      {"to": "zhu_ge_liang", "type": "COLLEAGUE", "label": "同僚", "desc": "同为军师中郎将。"}
+    ],
+    "events": [], "locations": ["xiangyang"]
+  },
+  "zhong_huang": {
+    "id": "zhong_huang", "type": "person", "name": "黄忠", "alias": "字汉升，南阳人，五虎上将之一",
+    "born": None, "died": 220, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "蜀汉五虎上将之一，定军山斩夏侯渊，老当益壮。",
+    "intro": "黄忠，字汉升，南阳人。据《三国志·蜀书·黄忠传》，忠初为刘表部将，后归刘备。忠从刘备入蜀，常先登陷阵，勇冠三军。建安二十四年，忠从刘备取汉中，于定军山斩夏侯渊，拜征西将军。后刘备称汉中王，忠为后将军，赐关内侯。次年，忠卒。",
+    "achievements": ["五虎上将之一", "定军山斩夏侯渊", "老当益壮"],
+    "controversy": "黄忠老当益壮，然其晚年才显达。",
+    "quote": "吾以老当益壮，当以勇取胜。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·蜀书·黄忠传》", "lv": "A"}],
+    "life": [
+      {"y": 219, "key": true, "t": "定军山斩夏侯渊", "s": "拜征西将军"},
+      {"y": 220, "key": true, "t": "卒", "s": "后将军"}
+    ],
+    "relations": [
+      {"to": "liu_bei", "type": "SERVE_AS", "label": "君臣", "desc": "蜀汉五虎上将。"}
+    ],
+    "events": ["dingjunshan"], "locations": ["nanyang"]
+  },
+  "chao_ma": {
+    "id": "chao_ma", "type": "person", "name": "马超", "alias": "字孟起，扶风茂陵人，五虎上将之一",
+    "born": 176, "died": 222, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "蜀汉五虎上将之一，西凉锦马超，后归刘备。",
+    "intro": "马超，字孟起，扶风茂陵人。据《三国志·蜀书·马超传》，超为马腾之子。腾为东汉末年西凉军阀，后被曹操所杀。超为父报仇，起兵反曹，与曹操战于潼关，大败。后超归张鲁，又归刘备。刘备称汉中王，超为左将军。章武二年，超卒，年四十七。",
+    "achievements": ["五虎上将之一", "西凉锦马超", "潼关之战大败曹操"],
+    "controversy": "马超勇猛过人，然其反复无常，为后世所议。",
+    "quote": "吾以勇冠三军，当以死报父仇。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·蜀书·马超传》", "lv": "A"}],
+    "life": [
+      {"y": 176, "key": false, "t": "生于茂陵", "s": "马腾之子"},
+      {"y": 211, "key": true, "t": "潼关之战", "s": "大败曹操"},
+      {"y": 222, "key": true, "t": "卒", "s": "年四十七"}
+    ],
+    "relations": [
+      {"to": "liu_bei", "type": "SERVE_AS", "label": "君臣", "desc": "蜀汉五虎上将。"}
+    ],
+    "events": [], "locations": ["maoling"]
+  },
+  "yan_wei": {
+    "id": "yan_wei", "type": "person", "name": "魏延", "alias": "字文长，义阳人，蜀汉名将",
+    "born": None, "died": 234, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "蜀汉名将，脑后反骨，诸葛亮死后与杨仪争权被杀。",
+    "intro": "魏延，字文长，义阳人。据《三国志·蜀书·魏延传》，延初为刘备部曲，以勇略闻名。刘备称汉中王，拔延为督汉中镇远将军，领汉中太守。后延从诸葛亮北伐，为前军师征西大将军。诸葛亮卒，延与杨仪争权，延败走，为马岱所追斩。",
+    "achievements": ["蜀汉名将", "督汉中", "从诸葛亮北伐"],
+    "controversy": "魏延脑后反骨，诸葛亮死后与杨仪争权，被杀。",
+    "quote": "吾以勇略自诩，当以功立身。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·蜀书·魏延传》", "lv": "A"}],
+    "life": [
+      {"y": 234, "key": true, "t": "与杨仪争权被杀", "s": "为马岱追斩"}
+    ],
+    "relations": [
+      {"to": "liu_bei", "type": "SERVE_AS", "label": "君臣", "desc": "蜀汉名将。"},
+      {"to": "zhu_ge_liang", "type": "SERVE_AS", "label": "君臣", "desc": "从诸葛亮北伐。"}
+    ],
+    "events": [], "locations": ["yiyang"]
+  },
+  "su_ma": {
+    "id": "su_ma", "type": "person", "name": "马谡", "alias": "字幼常，襄阳宜城人，蜀汉将领",
+    "born": 190, "died": 228, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "蜀汉将领，马良之弟，失街亭被斩，诸葛亮挥泪斩马谡。",
+    "intro": "马谡，字幼常，襄阳宜城人。据《三国志·蜀书·马谡传》，谡为马良之弟。谡少时才器过人，好论军计，诸葛亮深加器异。后诸葛亮出祁山，以谡为先锋，守街亭。谡违亮节度，舍水上山，为张郃所破，街亭失守。亮还，斩谡，年三十九。",
+    "achievements": ["才器过人", "好论军计"],
+    "controversy": "马谡失街亭，诸葛亮挥泪斩之，为后世所叹。",
+    "quote": "吾以论兵自诩，今以实战败亡。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·蜀书·马谡传》", "lv": "A"}],
+    "life": [
+      {"y": 228, "key": true, "t": "失街亭", "s": "为张郃所破"},
+      {"y": 228, "key": true, "t": "被斩", "s": "诸葛亮挥泪斩马谡"}
+    ],
+    "relations": [
+      {"to": "zhu_ge_liang", "type": "SERVE_AS", "label": "君臣", "desc": "诸葛亮深加器异。"}
+    ],
+    "events": ["jieting"], "locations": ["yicheng"]
+  },
+  "zheng_fa": {
+    "id": "zheng_fa", "type": "person", "name": "法正", "alias": "字孝直，扶风郿人，刘备谋士",
+    "born": 176, "died": 220, "dynasty": "sanguo",
+    "role": ["谋士"],
+    "short": "刘备谋士，定军山之计斩夏侯渊，刘备称汉中王拜尚书令。",
+    "intro": "法正，字孝直，扶风郿人。据《三国志·蜀书·法正传》，正初为刘璋部下，后归刘备。正为刘备献计取成都，又献定军山之计，斩夏侯渊。刘备称汉中王，以正为尚书令、护军将军。章武元年，正卒，年四十五。",
+    "achievements": ["献计取成都", "定军山之计斩夏侯渊", "尚书令"],
+    "controversy": "法正为刘备谋士，然其睚眦必报，为后世所议。",
+    "quote": "吾以智谋佐明主，当以功立身。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·蜀书·法正传》", "lv": "A"}],
+    "life": [
+      {"y": 176, "key": false, "t": "生于郿县", "s": "扶风郡"},
+      {"y": 219, "key": true, "t": "定军山之计", "s": "斩夏侯渊"},
+      {"y": 220, "key": true, "t": "卒", "s": "年四十五"}
+    ],
+    "relations": [
+      {"to": "liu_bei", "type": "SERVE_AS", "label": "君臣", "desc": "刘备谋士。"}
+    ],
+    "events": ["dingjunshan"], "locations": ["meixian"]
+  },
+  "yan_li": {
+    "id": "yan_li", "type": "person", "name": "李严", "alias": "字正方，南阳人，蜀汉托孤大臣",
+    "born": None, "died": 234, "dynasty": "sanguo",
+    "role": ["政治家"],
+    "short": "蜀汉托孤大臣之一，与诸葛亮同受遗诏，后因过失被废。",
+    "intro": "李严，字正方，南阳人。据《三国志·蜀书·李严传》，严初为刘表部下，后归刘备。刘备伐吴，严为尚书令。刘备病笃，严与诸葛亮并受遗诏辅少主。后严为中都护，统内外军事。诸葛亮北伐，严督运粮草，以误期限，被废为庶人。",
+    "achievements": ["蜀汉托孤大臣", "与诸葛亮同受遗诏"],
+    "controversy": "李严为蜀汉托孤大臣，然因过失被废，为后世所议。",
+    "quote": "吾以受托孤之重，当以死报国。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·蜀书·李严传》", "lv": "A"}],
+    "life": [
+      {"y": 223, "key": true, "t": "受遗诏", "s": "与诸葛亮同受遗诏"},
+      {"y": 234, "key": true, "t": "被废", "s": "误期限"}
+    ],
+    "relations": [
+      {"to": "liu_bei", "type": "SERVE_AS", "label": "君臣", "desc": "蜀汉托孤大臣。"},
+      {"to": "zhu_ge_liang", "type": "COLLEAGUE", "label": "同僚", "desc": "同受遗诏。"}
+    ],
+    "events": [], "locations": ["nanyang"]
+  },
+  "yi_fei": {
+    "id": "yi_fei", "type": "person", "name": "费祎", "alias": "字文伟，江夏鄳人，蜀汉四相之一",
+    "born": None, "died": 253, "dynasty": "sanguo",
+    "role": ["政治家"],
+    "short": "蜀汉四相之一，继蒋琬之后为尚书令，后为魏降将郭循所刺。",
+    "intro": "费祎，字文伟，江夏鄳人。据《三国志·蜀书·费祎传》，祎少时丧父，依族父费伯仁。后刘备立太子，祎为舍人。后主即位，祎为黄门侍郎。诸葛亮卒，祎为后军师，后继蒋琬为尚书令。祎当国，政事无阙。延熙十六年，祎为魏降将郭循所刺，卒。",
+    "achievements": ["蜀汉四相之一", "继蒋琬为尚书令"],
+    "controversy": "费祎为蜀汉四相之一，然其被刺，为蜀汉之损失。",
+    "quote": "吾以政事当国，当以稳治国。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·蜀书·费祎传》", "lv": "A"}],
+    "life": [
+      {"y": 253, "key": true, "t": "被刺", "s": "为魏降将郭循所刺"}
+    ],
+    "relations": [
+      {"to": "liu_bei", "type": "SERVE_AS", "label": "君臣", "desc": "蜀汉四相。"}
+    ],
+    "events": [], "locations": ["mengxian"]
+  },
+  "yun_dong": {
+    "id": "yun_dong", "type": "person", "name": "董允", "alias": "字休昭，南郡枝江人，蜀汉四相之一",
+    "born": None, "died": 246, "dynasty": "sanguo",
+    "role": ["政治家"],
+    "short": "蜀汉四相之一，与诸葛亮、蒋琬、费祎并称，正直不阿。",
+    "intro": "董允，字休昭，南郡枝江人。据《三国志·蜀书·董允传》，允为董和之子。后主即位，允为黄门侍郎。诸葛亮北伐，允为侍中，领虎贲中郎将，统宿卫亲兵。允正直不阿，后主甚惮之。延熙九年，允卒。",
+    "achievements": ["蜀汉四相之一", "正直不阿"],
+    "controversy": "董允为蜀汉四相之一，正直不阿。",
+    "quote": "吾以正直立身，当以廉治国。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·蜀书·董允传》", "lv": "A"}],
+    "life": [
+      {"y": 246, "key": true, "t": "卒", "s": "延熙九年"}
+    ],
+    "relations": [
+      {"to": "liu_bei", "type": "SERVE_AS", "label": "君臣", "desc": "蜀汉四相。"}
+    ],
+    "events": [], "locations": ["zhijiang"]
+  },
+  "yueying_huang": {
+    "id": "yueying_huang", "type": "person", "name": "黄月英", "alias": "沔南人，诸葛亮之妻，才女",
+    "born": None, "died": None, "dynasty": "sanguo",
+    "role": ["才女"],
+    "short": "诸葛亮之妻，黄承彦之女，传说其貌不扬而才智过人。",
+    "intro": "黄月英，沔南人。据《三国志·蜀书·诸葛亮传》注引《襄阳记》，月英为黄承彦之女。承彦谓诸葛亮曰：「闻君择妇，身有丑女，黄头黑色，而才堪相配。」诸葛亮许之，即载送女。时人以为笑乐，乡里为之谚曰：「莫作孔明择妇，正得阿承丑女。」然月英才智过人，相传木牛流马即其所设计。",
+    "achievements": ["诸葛亮之妻", "才智过人", "相传木牛流马为其设计"],
+    "controversy": "黄月英貌不扬而才智过人，为才女之典范。",
+    "quote": "吾以才智佐夫君，当以智相夫。", "quoteSrc": "《襄阳记》",
+    "works": [], "sources": [{"t": "《三国志注引襄阳记》", "lv": "B"}],
+    "life": [],
+    "relations": [
+      {"to": "zhu_ge_liang", "type": "KIN", "label": "夫妻", "desc": "诸葛亮之妻。"}
+    ],
+    "events": [], "locations": ["miannan"]
+  },
+  "ce_sun": {
+    "id": "ce_sun", "type": "person", "name": "孙策", "alias": "字伯符，吴郡富春人，小霸王",
+    "born": 175, "died": 200, "dynasty": "sanguo",
+    "role": ["将领", "割据者"],
+    "short": "孙坚长子，小霸王，奠定江东基业，后被刺杀。",
+    "intro": "孙策，字伯符，吴郡富春人。据《三国志·吴书·孙策传》，策为孙坚长子。坚死后，策依附袁术，后借兵平定江东。策勇武过人，所向披靡，时人称为「小霸王」。策又善于用人，招揽周瑜、张昭等人才。建安五年，策遇刺，重伤而死，年二十六。",
+    "achievements": ["小霸王", "平定江东", "奠定东吴基业", "善于用人"],
+    "controversy": "孙策勇武过人，然其遇刺早亡，未能尽展其才。",
+    "quote": "吾以父之志，当以武定江东。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·吴书·孙策传》", "lv": "A"}],
+    "life": [
+      {"y": 175, "key": false, "t": "生于富春", "s": "孙坚长子"},
+      {"y": 195, "key": true, "t": "平定江东", "s": "小霸王"},
+      {"y": 200, "key": true, "t": "遇刺", "s": "年二十六"}
+    ],
+    "relations": [
+      {"to": "sun_quan", "type": "KIN", "label": "兄弟", "desc": "孙权之兄。"},
+      {"to": "jian_sun", "type": "KIN", "label": "父子", "desc": "孙坚长子。"}
+    ],
+    "events": [], "locations": ["fuchun"]
+  },
+  "jian_sun": {
+    "id": "jian_sun", "type": "person", "name": "孙坚", "alias": "字文台，吴郡富春人，武烈皇帝",
+    "born": 155, "died": 191, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "东吴奠基人，孙策孙权之父，讨伐董卓有功，战死沙场。",
+    "intro": "孙坚，字文台，吴郡富春人。据《三国志·吴书·孙坚传》，坚少为县吏，勇武过人。黄巾起义，坚从朱儁镇压黄巾，有功。后坚从袁术讨伐董卓，为先锋，攻入洛阳，得传国玉玺。初平二年，坚与刘表战，为黄祖部将所射杀，年三十七。",
+    "achievements": ["东吴奠基人", "讨伐董卓", "攻入洛阳", "得传国玉玺"],
+    "controversy": "孙坚勇武过人，然其战死沙场，未能平定天下。",
+    "quote": "吾以武勇立身，当以死报国。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·吴书·孙坚传》", "lv": "A"}],
+    "life": [
+      {"y": 155, "key": false, "t": "生于富春", "s": "吴郡"},
+      {"y": 190, "key": true, "t": "讨伐董卓", "s": "攻入洛阳"},
+      {"y": 191, "key": true, "t": "战死", "s": "为黄祖部将所射杀"}
+    ],
+    "relations": [
+      {"to": "sun_quan", "type": "KIN", "label": "父子", "desc": "孙权之父。"},
+      {"to": "ce_sun", "type": "KIN", "label": "父子", "desc": "孙策之父。"}
+    ],
+    "events": [], "locations": ["fuchun"]
+  },
+  "su_lu": {
+    "id": "su_lu", "type": "person", "name": "鲁肃", "alias": "字子敬，临淮东城人，东吴战略家",
+    "born": 172, "died": 217, "dynasty": "sanguo",
+    "role": ["战略家", "政治家"],
+    "short": "东吴战略家，榻上策提出三分天下，联刘抗曹。",
+    "intro": "鲁肃，字子敬，临淮东城人。据《三国志·吴书·鲁肃传》，肃少有大志，好为奇计。后肃归孙权，为孙权提出「榻上策」，建议鼎足江东，以观天下之衅。曹操南下，肃劝孙权联合刘备，共抗曹操。赤壁之战后，肃为赞军校尉，助周瑜。后又代周瑜为奋武校尉，领兵镇守陆口。建安二十二年，肃卒，年四十六。",
+    "achievements": ["榻上策提出三分天下", "联刘抗曹", "代周瑜镇守陆口"],
+    "controversy": "鲁肃为东吴战略家，然其主张借荆州于刘备，为后世所议。",
+    "quote": "吾以战略佐明主，当以智定天下。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·吴书·鲁肃传》", "lv": "A"}],
+    "life": [
+      {"y": 172, "key": false, "t": "生于东城", "s": "临淮郡"},
+      {"y": 208, "key": true, "t": "联刘抗曹", "s": "赤壁之战"},
+      {"y": 217, "key": true, "t": "卒", "s": "年四十六"}
+    ],
+    "relations": [
+      {"to": "sun_quan", "type": "SERVE_AS", "label": "君臣", "desc": "东吴战略家。"},
+      {"to": "yu_zhou", "type": "COLLEAGUE", "label": "同僚", "desc": "代周瑜镇守陆口。"}
+    ],
+    "events": ["chibi"], "locations": ["dongcheng"]
+  },
+  "meng_lv": {
+    "id": "meng_lv", "type": "person", "name": "吕蒙", "alias": "字子明，汝南富陂人，东吴名将",
+    "born": 178, "died": 219, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "东吴名将，吴下阿蒙，白衣渡江袭取荆州，擒关羽。",
+    "intro": "吕蒙，字子明，汝南富陂人。据《三国志·吴书·吕蒙传》，蒙少时依姐夫邓当，后归孙策。蒙勇猛善战，然少学问。后孙权劝学，蒙发奋读书，学识大进，鲁肃称「非复吴下阿蒙」。建安二十四年，蒙白衣渡江，袭取荆州，擒关羽。后蒙卒，年四十二。",
+    "achievements": ["吴下阿蒙", "白衣渡江袭取荆州", "擒关羽"],
+    "controversy": "吕蒙袭取荆州，擒关羽，为东吴之胜，然其背盟，为后世所议。",
+    "quote": "士别三日，即更刮目相待。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·吴书·吕蒙传》", "lv": "A"}],
+    "life": [
+      {"y": 178, "key": false, "t": "生于富陂", "s": "汝南郡"},
+      {"y": 219, "key": true, "t": "白衣渡江", "s": "袭取荆州，擒关羽"}
+    ],
+    "relations": [
+      {"to": "sun_quan", "type": "SERVE_AS", "label": "君臣", "desc": "东吴名将。"},
+      {"to": "guan_yu", "type": "RIVAL", "label": "敌对", "desc": "擒关羽。"}
+    ],
+    "events": ["jingzhou"], "locations": ["fupo"]
+  },
+  "ning_gan": {
+    "id": "ning_gan", "type": "person", "name": "甘宁", "alias": "字兴霸，巴郡临江人，东吴猛将",
+    "born": None, "died": 215, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "东吴猛将，锦帆贼，百骑劫魏营，勇猛过人。",
+    "intro": "甘宁，字兴霸，巴郡临江人。据《三国志·吴书·甘宁传》，宁少有力气，好游侠，招合轻薄少年，为之渠帅，人称「锦帆贼」。后宁归孙权，为将。宁勇猛善战，合肥之战，宁率百骑劫魏营，不损一人。建安二十年，宁卒。",
+    "achievements": ["锦帆贼", "百骑劫魏营", "东吴猛将"],
+    "controversy": "甘宁勇猛过人，然其少时为贼，为后世所议。",
+    "quote": "吾以勇立身，当以死报国。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·吴书·甘宁传》", "lv": "A"}],
+    "life": [
+      {"y": 215, "key": true, "t": "卒", "s": "建安二十年"}
+    ],
+    "relations": [
+      {"to": "sun_quan", "type": "SERVE_AS", "label": "君臣", "desc": "东吴猛将。"}
+    ],
+    "events": [], "locations": ["linjiang"]
+  },
+  "ci_taishi": {
+    "id": "ci_taishi", "type": "person", "name": "太史慈", "alias": "字子义，东莱黄县人，东吴名将",
+    "born": 166, "died": 206, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "东吴名将，神射手，北海救孔融，后归孙策。",
+    "intro": "太史慈，字子义，东莱黄县人。据《三国志·吴书·太史慈传》，慈少好学，仕郡奏曹吏。后北海孔融被黄巾军围困，慈单骑突围求救于刘备。后慈归孙策，为孙策平定江东。慈善射，弦不虚发。建安十一年，慈卒，年四十一。",
+    "achievements": ["神射手", "北海救孔融", "归孙策平定江东"],
+    "controversy": "太史慈为东吴名将，然其早亡，未能尽展其才。",
+    "quote": "吾以箭立身，当以直射敌。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·吴书·太史慈传》", "lv": "A"}],
+    "life": [
+      {"y": 166, "key": false, "t": "生于黄县", "s": "东莱郡"},
+      {"y": 206, "key": true, "t": "卒", "s": "年四十一"}
+    ],
+    "relations": [
+      {"to": "sun_quan", "type": "SERVE_AS", "label": "君臣", "desc": "东吴名将。"}
+    ],
+    "events": [], "locations": ["huangxian"]
+  },
+  "kang_lu": {
+    "id": "kang_lu", "type": "person", "name": "陆抗", "alias": "字幼节，吴郡吴县人，东吴名将",
+    "born": 226, "died": 274, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "陆逊之子，东吴名将，西陵之战大破晋军，东吴最后柱石。",
+    "intro": "陆抗，字幼节，吴郡吴县人。据《三国志·吴书·陆抗传》，抗为陆逊之子。抗袭父爵，为江陵侯。后抗为大司马、荆州牧。凤凰元年，晋将羊祜攻江陵，抗率军抵御，西陵之战大破晋军。抗为东吴最后柱石，凤凰三年，抗卒，年四十九。",
+    "achievements": ["陆逊之子", "西陵之战大破晋军", "东吴最后柱石"],
+    "controversy": "陆抗为东吴最后柱石，然其死后，东吴不久灭亡。",
+    "quote": "吾以父之志，当以死守江东。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·吴书·陆抗传》", "lv": "A"}],
+    "life": [
+      {"y": 226, "key": false, "t": "生于吴县", "s": "陆逊之子"},
+      {"y": 272, "key": true, "t": "西陵之战", "s": "大破晋军"},
+      {"y": 274, "key": true, "t": "卒", "s": "年四十九"}
+    ],
+    "relations": [
+      {"to": "sun_quan", "type": "SERVE_AS", "label": "君臣", "desc": "东吴名将。"},
+      {"to": "lu_xun", "type": "KIN", "label": "父子", "desc": "陆逊之子。"}
+    ],
+    "events": [], "locations": ["wuxian"]
+  },
+  "jin_zhuge": {
+    "id": "jin_zhuge", "type": "person", "name": "诸葛瑾", "alias": "字子瑜，琅琊阳都人，东吴重臣",
+    "born": 174, "died": 241, "dynasty": "sanguo",
+    "role": ["政治家"],
+    "short": "诸葛亮之兄，东吴重臣，为人弘雅，与孙权有生死之交。",
+    "intro": "诸葛瑾，字子瑜，琅琊阳都人。据《三国志·吴书·诸葛瑾传》，瑾为诸葛亮之兄。瑾避乱江东，为孙权长史。瑾为人弘雅，与孙权有生死之交。后瑾为大将军、左都护，领豫州牧。赤乌四年，瑾卒，年六十八。",
+    "achievements": ["诸葛亮之兄", "东吴重臣", "为人弘雅"],
+    "controversy": "诸葛瑾为东吴重臣，然其才名不及弟诸葛亮。",
+    "quote": "吾以弘雅立身，当以和处世。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·吴书·诸葛瑾传》", "lv": "A"}],
+    "life": [
+      {"y": 174, "key": false, "t": "生于阳都", "s": "诸葛亮之兄"},
+      {"y": 241, "key": true, "t": "卒", "s": "年六十八"}
+    ],
+    "relations": [
+      {"to": "sun_quan", "type": "SERVE_AS", "label": "君臣", "desc": "东吴重臣。"},
+      {"to": "zhu_ge_liang", "type": "KIN", "label": "兄弟", "desc": "诸葛亮之兄。"}
+    ],
+    "events": [], "locations": ["yangdu"]
+  },
+  "gai_huang": {
+    "id": "gai_huang", "type": "person", "name": "黄盖", "alias": "字公覆，零陵泉陵人，东吴老将",
+    "born": None, "died": 215, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "东吴老将，赤壁诈降，苦肉计，火烧赤壁。",
+    "intro": "黄盖，字公覆，零陵泉陵人。据《三国志·吴书·黄盖传》，盖初为孙坚部将，后从孙策、孙权。盖随周瑜赤壁之战，献诈降之计，受苦肉，后乘艨艟斗舰，实以薪草，灌以鱼膏，因风纵火，烧尽曹操战船。建安二十年，盖卒。",
+    "achievements": ["赤壁诈降", "苦肉计", "火烧赤壁"],
+    "controversy": "黄盖为东吴老将，赤壁之战献诈降之计，功不可没。",
+    "quote": "吾以苦肉计破曹，当以死报国。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·吴书·黄盖传》", "lv": "A"}],
+    "life": [
+      {"y": 208, "key": true, "t": "赤壁之战", "s": "献诈降之计"},
+      {"y": 215, "key": true, "t": "卒", "s": "建安二十年"}
+    ],
+    "relations": [
+      {"to": "sun_quan", "type": "SERVE_AS", "label": "君臣", "desc": "东吴老将。"}
+    ],
+    "events": ["chibi"], "locations": ["quanling"]
+  },
+  "pu_cheng": {
+    "id": "pu_cheng", "type": "person", "name": "程普", "alias": "字德谋，右北平土垠人，东吴老将",
+    "born": None, "died": 215, "dynasty": "sanguo",
+    "role": ["将领"],
+    "short": "东吴老将，历仕孙坚、孙策、孙权三代，赤壁之战与周瑜分任左右督。",
+    "intro": "程普，字德谋，右北平土垠人。据《三国志·吴书·程普传》，普初为州吏，后从孙坚征伐。坚死后，普从孙策平定江东。孙策卒，普从孙权。赤壁之战，普与周瑜分任左右督，大破曹操。建安二十年，普卒。",
+    "achievements": ["东吴老将", "历仕三代", "赤壁之战左右督"],
+    "controversy": "程普为东吴老将，然其自恃老臣，与周瑜不睦。",
+    "quote": "吾以老臣之身，当以死守江东。", "quoteSrc": "《三国志》",
+    "works": [], "sources": [{"t": "《三国志·吴书·程普传》", "lv": "A"}],
+    "life": [
+      {"y": 208, "key": true, "t": "赤壁之战", "s": "与周瑜分左右督"},
+      {"y": 215, "key": true, "t": "卒", "s": "建安二十年"}
+    ],
+    "relations": [
+      {"to": "sun_quan", "type": "SERVE_AS", "label": "君臣", "desc": "东吴老将。"}
+    ],
+    "events": ["chibi"], "locations": ["tuyin"]
+  }
 };
 
 const events = {
