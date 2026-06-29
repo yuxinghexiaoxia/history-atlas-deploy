@@ -37,6 +37,7 @@
         hotEvents: Object.keys(eventsData.events || {}).slice(0, 8),
 
         get: function (type, id) {
+          if (id === undefined) { id = type; type = 'person'; }
           if (type === 'person') return this.persons[id];
           if (type === 'event') return this.events[id];
           if (type === 'dynasty') return this.dynastyInfo[id];
