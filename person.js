@@ -299,7 +299,7 @@ function ClassicCard({
   }, "\u91CA\u4E49 \xB7 ", c.note));
 }
 function PersonDossier({
-  p,
+  person,
   nav
 }) {
   const d = person.detail || {};
@@ -821,7 +821,7 @@ function PersonPage({
     v: `${person.born} – ${person.died}（享年 ${person.died - person.born}）`
   }), /*#__PURE__*/React.createElement(InfoRow, {
     k: "\u671D\u4EE3",
-    v: "\u6E05\u671D\uFF08\u665A\u6E05\uFF09"
+    v: (DB.dynastyInfo[person.dynasty] ? DB.dynastyInfo[person.dynasty].full : person.dynasty) || "\u672A\u77E5"
   }), /*#__PURE__*/React.createElement(InfoRow, {
     k: "\u8EAB\u4EFD",
     v: person.role.join("、")
@@ -938,7 +938,7 @@ function PersonPage({
       gap: 20
     }
   }, /*#__PURE__*/React.createElement(PersonDossier, {
-    p: person,
+    person: person,
     nav: nav
   }), /*#__PURE__*/React.createElement(Panel, {
     title: "\u4EBA\u7269\u5173\u7CFB\u56FE\u8C31",

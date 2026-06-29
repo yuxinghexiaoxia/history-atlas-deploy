@@ -58,6 +58,10 @@
   } catch (e) {
     state = seed;
   }
+  // 防御：确保数组字段正确
+  if (!Array.isArray(state.favorites)) state.favorites = [];
+  if (!Array.isArray(state.history)) state.history = [];
+  if (!Array.isArray(state.exports)) state.exports = [];
   const listeners = new Set();
   function commit(next) {
     state = next;
