@@ -1,0 +1,721 @@
+{
+  "locations": {
+    "zhuojun": {
+      "id": "zhuojun",
+      "type": "location",
+      "name": "涿郡",
+      "desc": "今河北省涿州市，刘备、张飞故乡。"
+    },
+    "qiao": {
+      "id": "qiao",
+      "type": "location",
+      "name": "谯县",
+      "desc": "今安徽省亳州市，曹操故乡。"
+    },
+    "xudu": {
+      "id": "xudu",
+      "type": "location",
+      "name": "许都",
+      "desc": "今河南省许昌市，曹操迎献帝都许之地。"
+    },
+    "guandu": {
+      "id": "guandu",
+      "type": "location",
+      "name": "官渡",
+      "desc": "今河南省中牟县，官渡之战发生地。"
+    },
+    "chibi": {
+      "id": "chibi",
+      "type": "location",
+      "name": "赤壁",
+      "desc": "今湖北省赤壁市，赤壁之战发生地。"
+    },
+    "yiling": {
+      "id": "yiling",
+      "type": "location",
+      "name": "夷陵",
+      "desc": "今湖北省宜昌市，夷陵之战发生地。"
+    },
+    "fuchun": {
+      "id": "fuchun",
+      "type": "location",
+      "name": "富春",
+      "desc": "今浙江省杭州市富阳区，孙权故乡。"
+    },
+    "jianye": {
+      "id": "jianye",
+      "type": "location",
+      "name": "建业",
+      "desc": "今江苏省南京市，东吴都城。"
+    },
+    "longzhong": {
+      "id": "longzhong",
+      "type": "location",
+      "name": "隆中",
+      "desc": "今湖北省襄阳市，诸葛亮躬耕之地，三顾茅庐发生地。"
+    },
+    "yangdu": {
+      "id": "yangdu",
+      "type": "location",
+      "name": "阳都",
+      "desc": "今山东省临沂市沂南县，诸葛亮故乡。"
+    },
+    "wuzhangyuan": {
+      "id": "wuzhangyuan",
+      "type": "location",
+      "name": "五丈原",
+      "desc": "今陕西省宝鸡市岐山县，诸葛亮病逝之地。"
+    },
+    "jie": {
+      "id": "jie",
+      "type": "location",
+      "name": "解县",
+      "desc": "今山西省运城市解州镇，关羽故乡。"
+    },
+    "fancheng": {
+      "id": "fancheng",
+      "type": "location",
+      "name": "樊城",
+      "desc": "今湖北省襄阳市樊城区，关羽攻曹仁之地。"
+    },
+    "maicheng": {
+      "id": "maicheng",
+      "type": "location",
+      "name": "麦城",
+      "desc": "今湖北省当阳市，关羽败走被擒之地。"
+    },
+    "changban": {
+      "id": "changban",
+      "type": "location",
+      "name": "长坂坡",
+      "desc": "今湖北省当阳市，赵云单骑救主之地。"
+    },
+    "shu": {
+      "id": "shu",
+      "type": "location",
+      "name": "舒县",
+      "desc": "今安徽省庐江县，周瑜故乡。"
+    },
+    "baren": {
+      "id": "baren",
+      "type": "location",
+      "name": "巴丘",
+      "desc": "今湖南省岳阳市，周瑜病逝之地。"
+    },
+    "wen": {
+      "id": "wen",
+      "type": "location",
+      "name": "温县",
+      "desc": "今河南省焦作市温县，司马懿故乡。"
+    },
+    "yangdi": {
+      "id": "yangdi",
+      "type": "location",
+      "name": "阳翟",
+      "desc": "今河南省禹州市，郭嘉故乡。"
+    },
+    "zhending": {
+      "id": "zhending",
+      "type": "location",
+      "name": "真定",
+      "desc": "今河北省正定县，赵云故乡。"
+    },
+    "baidi": {
+      "id": "baidi",
+      "type": "location",
+      "name": "白帝城",
+      "desc": "今重庆市奉节县，刘备托孤之地。"
+    },
+    "gaopingling": {
+      "id": "gaopingling",
+      "type": "location",
+      "name": "高平陵",
+      "desc": "今河南省洛阳市，高平陵之变发生地。"
+    },
+    "jiuwu": {
+      "id": "jiuwu",
+      "type": "location",
+      "name": "己吾",
+      "desc": "今河南省宁陵县，典韦故乡。"
+    },
+    "wancheng": {
+      "id": "wancheng",
+      "type": "location",
+      "name": "宛城",
+      "desc": "今河南省南阳市，宛城之战发生地。"
+    },
+    "hefei": {
+      "id": "hefei",
+      "type": "location",
+      "name": "合肥",
+      "desc": "今安徽省合肥市，逍遥津之战发生地。"
+    },
+    "tianshui": {
+      "id": "tianshui",
+      "type": "location",
+      "name": "天水",
+      "desc": "今甘肃省天水市，姜维故乡。"
+    },
+    "nanpi": {
+      "id": "nanpi",
+      "type": "location",
+      "name": "南皮",
+      "desc": "今河北省南皮县，石崇故乡。"
+    },
+    "jingu": {
+      "id": "jingu",
+      "type": "location",
+      "name": "金谷",
+      "desc": "今河南省洛阳市西北，石崇金谷园所在地。"
+    },
+    "xiangling": {
+      "id": "xiangling",
+      "type": "location",
+      "name": "襄陵",
+      "desc": "今山西省襄汾县，贾南风故乡。"
+    },
+    "linyi": {
+      "id": "linyi",
+      "type": "location",
+      "name": "临沂",
+      "desc": "今山东省临沂市，王导故乡。"
+    },
+    "guangling": {
+      "id": "guangling",
+      "type": "location",
+      "name": "广陵",
+      "desc": "今江苏省扬州市，谢玄组建北府兵之地。"
+    },
+    "zhuolu": {
+      "id": "zhuolu",
+      "type": "location",
+      "name": "涿鹿",
+      "desc": "黄帝与蚩尤决战之地，今河北省张家口市涿鹿县。"
+    },
+    "qiaoshan": {
+      "id": "qiaoshan",
+      "type": "location",
+      "name": "桥山",
+      "desc": "黄帝崩葬之地，今陕西省延安市黄陵县。"
+    },
+    "banquan": {
+      "id": "banquan",
+      "type": "location",
+      "name": "阪泉",
+      "desc": "黄帝与炎帝之战发生地，约在今河北涿鹿东南。"
+    },
+    "yanling": {
+      "id": "yanling",
+      "type": "location",
+      "name": "炎陵",
+      "desc": "炎帝陵，今湖南省株洲市炎陵县。"
+    },
+    "pingyao": {
+      "id": "pingyao",
+      "type": "location",
+      "name": "平阳",
+      "desc": "尧都，今山西省临汾市。"
+    },
+    "lishan": {
+      "id": "lishan",
+      "type": "location",
+      "name": "历山",
+      "desc": "舜耕之地，传说在今山西永济或山东济南。"
+    },
+    "cangwu": {
+      "id": "cangwu",
+      "type": "location",
+      "name": "苍梧",
+      "desc": "舜崩之地，今湖南省永州市宁远县九疑山。"
+    },
+    "huaiji": {
+      "id": "huaiji",
+      "type": "location",
+      "name": "会稽",
+      "desc": "禹崩葬之地，今浙江省绍兴市。"
+    },
+    "jiuzhou": {
+      "id": "jiuzhou",
+      "type": "location",
+      "name": "九州",
+      "desc": "禹治水后划定的九个行政区域，泛指天下。"
+    },
+    "ruyang": {
+      "id": "ruyang",
+      "type": "location",
+      "name": "濮阳",
+      "desc": "颛顼、帝喾崩葬之地，今河南省濮阳市。"
+    },
+    "linzi": {
+      "id": "linzi",
+      "type": "location",
+      "name": "临淄",
+      "desc": "齐国都城，今山东省淄博市。"
+    },
+    "gusu": {
+      "id": "gusu",
+      "type": "location",
+      "name": "姑苏",
+      "desc": "吴国都城，今江苏省苏州市。"
+    },
+    "ying": {
+      "id": "ying",
+      "type": "location",
+      "name": "郢",
+      "desc": "楚国都城，今湖北省荆州市。"
+    },
+    "miluo": {
+      "id": "miluo",
+      "type": "location",
+      "name": "汨罗江",
+      "desc": "屈原投江之地，今湖南省汨罗市。"
+    },
+    "yishui": {
+      "id": "yishui",
+      "type": "location",
+      "name": "易水",
+      "desc": "荆轲易水送别之地，今河北省易县。"
+    },
+    "youli": {
+      "id": "youli",
+      "type": "location",
+      "name": "羑里",
+      "desc": "周文王被囚禁之地，在今河南省安阳市汤阴县。"
+    },
+    "haojing": {
+      "id": "haojing",
+      "type": "location",
+      "name": "镐京",
+      "desc": "西周都城，今陕西省西安市长安区。"
+    },
+    "qufu": {
+      "id": "qufu",
+      "type": "location",
+      "name": "曲阜",
+      "desc": "周公封地，鲁国都城，今山东省济宁市曲阜市。"
+    },
+    "yushan": {
+      "id": "yushan",
+      "type": "location",
+      "name": "羽山",
+      "desc": "鲧被殛之地，今山东省临沂市临沭县。"
+    },
+    "gan": {
+      "id": "gan",
+      "type": "location",
+      "name": "甘",
+      "desc": "甘之战发生地，今陕西省西安市户县。"
+    },
+    "bo": {
+      "id": "bo",
+      "type": "location",
+      "name": "亳",
+      "desc": "商汤定都之地，今河南省商丘市或郑州市。"
+    },
+    "mingtiao": {
+      "id": "mingtiao",
+      "type": "location",
+      "name": "鸣条",
+      "desc": "鸣条之战发生地，今山西省运城市夏县。"
+    },
+    "chaoge": {
+      "id": "chaoge",
+      "type": "location",
+      "name": "朝歌",
+      "desc": "商朝都城，今河南省鹤壁市淇县。"
+    },
+    "muye": {
+      "id": "muye",
+      "type": "location",
+      "name": "牧野",
+      "desc": "牧野之战发生地，今河南省新乡市淇县。"
+    },
+    "xue": {
+      "id": "xue",
+      "type": "location",
+      "name": "薛",
+      "desc": "孟尝君封地，今山东省滕州市。"
+    },
+    "daliang": {
+      "id": "daliang",
+      "type": "location",
+      "name": "大梁",
+      "desc": "魏国都城，今河南省开封市。"
+    },
+    "wuxian": {
+      "id": "wuxian",
+      "type": "location",
+      "name": "吴县",
+      "desc": "春申君封地，今江苏省苏州市。"
+    },
+    "yique": {
+      "id": "yique",
+      "type": "location",
+      "name": "伊阙",
+      "desc": "伊阙之战发生地，今河南省洛阳市。"
+    },
+    "changping": {
+      "id": "changping",
+      "type": "location",
+      "name": "长平",
+      "desc": "长平之战发生地，今山西省高平市。"
+    },
+    "mianchi": {
+      "id": "mianchi",
+      "type": "location",
+      "name": "渑池",
+      "desc": "渑池之会发生地，今河南省渑池县。"
+    },
+    "jiankang": {
+      "id": "jiankang",
+      "type": "location",
+      "name": "建康",
+      "desc": "今江苏省南京市，南朝宋、齐、梁、陈的都城。"
+    },
+    "pingcheng": {
+      "id": "pingcheng",
+      "type": "location",
+      "name": "平城",
+      "desc": "今山西省大同市，北魏迁都洛阳前的都城。"
+    },
+    "wuchuan": {
+      "id": "wuchuan",
+      "type": "location",
+      "name": "武川",
+      "desc": "今内蒙古自治区武川县，宇文泰故乡。"
+    },
+    "ye": {
+      "id": "ye",
+      "type": "location",
+      "name": "邺城",
+      "desc": "今河北省临漳县，东魏、北齐都城。"
+    },
+    "shunyang": {
+      "id": "shunyang",
+      "type": "location",
+      "name": "顺阳",
+      "desc": "今河南省淅川县，范晔故乡。"
+    },
+    "wukang": {
+      "id": "wukang",
+      "type": "location",
+      "name": "武康",
+      "desc": "今浙江省德清县，沈约故乡。"
+    },
+    "xinye": {
+      "id": "xinye",
+      "type": "location",
+      "name": "新野",
+      "desc": "今河南省新野县，庾信故乡。"
+    },
+    "huaiyin": {
+      "id": "huaiyin",
+      "type": "location",
+      "name": "淮阴",
+      "desc": "今江苏省淮安市，祖逖渡江北伐之地。"
+    },
+    "huiji": {
+      "id": "huiji",
+      "type": "location",
+      "name": "会稽",
+      "desc": "今浙江省绍兴市，王羲之兰亭雅集之地。"
+    },
+    "chaisang": {
+      "id": "chaisang",
+      "type": "location",
+      "name": "柴桑",
+      "desc": "今江西省九江市，陶渊明故乡。"
+    },
+    "qiaoguo": {
+      "id": "qiaoguo",
+      "type": "location",
+      "name": "谯国",
+      "desc": "今安徽省亳州市，嵇康、桓温故乡。"
+    },
+    "chenliu": {
+      "id": "chenliu",
+      "type": "location",
+      "name": "陈留",
+      "desc": "今河南省开封市，阮籍、谢安故乡。"
+    },
+    "feishui": {
+      "id": "feishui",
+      "type": "location",
+      "name": "淝水",
+      "desc": "今安徽省寿县，淝水之战发生地。"
+    },
+    "daze": {
+      "id": "daze",
+      "type": "location",
+      "name": "大泽乡",
+      "desc": "大泽乡起义发生地，今安徽省宿州市。"
+    },
+    "bolang": {
+      "id": "bolang",
+      "type": "location",
+      "name": "博浪沙",
+      "desc": "张良刺秦之地，今河南省原阳县。"
+    },
+    "xianyang": {
+      "id": "xianyang",
+      "type": "location",
+      "name": "咸阳",
+      "desc": "秦朝都城，今陕西省咸阳市。"
+    },
+    "handan": {
+      "id": "handan",
+      "type": "location",
+      "name": "邯郸",
+      "desc": "赵国都城，今河北省邯郸市。"
+    },
+    "xiyu": {
+      "id": "xiyu",
+      "type": "location",
+      "name": "西域",
+      "desc": "今新疆及中亚地区，班超出使三十一年之地。"
+    },
+    "hetao": {
+      "id": "hetao",
+      "type": "location",
+      "name": "河套",
+      "desc": "黄河几字弯地区，今内蒙古、宁夏一带。汉武帝时期收复，设朔方郡。"
+    },
+    "langxuxu": {
+      "id": "langxuxu",
+      "type": "location",
+      "name": "狼居胥山",
+      "desc": "霍去病封狼居胥之地，约在今蒙古国肯特山一带。"
+    },
+    "shaqiu": {
+      "id": "shaqiu",
+      "type": "location",
+      "name": "沙丘",
+      "desc": "秦始皇崩逝之地，今河北省邢台市广宗县。"
+    },
+    "changyi": {
+      "id": "changyi",
+      "type": "location",
+      "name": "昌邑",
+      "desc": "彭越故乡，今山东省菏泽市。"
+    },
+    "liuan": {
+      "id": "liuan",
+      "type": "location",
+      "name": "六安",
+      "desc": "黥布故乡，今安徽省六安市。"
+    },
+    "yangwu": {
+      "id": "yangwu",
+      "type": "location",
+      "name": "阳武",
+      "desc": "陈平故乡，今河南省原阳县。"
+    },
+    "longxi": {
+      "id": "longxi",
+      "type": "location",
+      "name": "陇西",
+      "desc": "李广故乡，今甘肃省陇西县。"
+    },
+    "youbeiping": {
+      "id": "youbeiping",
+      "type": "location",
+      "name": "右北平",
+      "desc": "李广曾任右北平太守，今河北省唐山市。"
+    },
+    "julu": {
+      "id": "julu",
+      "type": "location",
+      "name": "巨鹿",
+      "desc": "巨鹿之战发生地，今河北省邢台市平乡县。"
+    },
+    "hongmen": {
+      "id": "hongmen",
+      "type": "location",
+      "name": "鸿门",
+      "desc": "鸿门宴发生地，今陕西省西安市临潼区。"
+    },
+    "gaixia": {
+      "id": "gaixia",
+      "type": "location",
+      "name": "垓下",
+      "desc": "项羽被围之地，今安徽省宿州市灵璧县。"
+    },
+    "wujiang": {
+      "id": "wujiang",
+      "type": "location",
+      "name": "乌江",
+      "desc": "项羽自刎之地，今安徽省马鞍山市和县。"
+    },
+    "peixian": {
+      "id": "peixian",
+      "type": "location",
+      "name": "沛县",
+      "desc": "刘邦故里，今江苏省徐州市沛县。"
+    },
+    "chang_an": {
+      "id": "chang_an",
+      "type": "location",
+      "name": "长安",
+      "desc": "汉朝都城，今陕西省西安市。"
+    },
+    "zhongyuan": {
+      "id": "zhongyuan",
+      "type": "location",
+      "name": "中原",
+      "desc": "楚汉战争主战场，泛指今河南、山东、安徽一带。"
+    },
+    "kunyang": {
+      "id": "kunyang",
+      "type": "location",
+      "name": "昆阳",
+      "desc": "今河南省叶县，昆阳之战发生地。"
+    },
+    "yanran": {
+      "id": "yanran",
+      "type": "location",
+      "name": "燕然山",
+      "desc": "今蒙古国杭爱山，窦宪勒石纪功之地。"
+    },
+    "wuling": {
+      "id": "wuling",
+      "type": "location",
+      "name": "武陵",
+      "desc": "今湖南省常德市一带，马援征五溪蛮之地。"
+    },
+    "guiyang": {
+      "id": "guiyang",
+      "type": "location",
+      "name": "桂阳",
+      "desc": "今湖南省郴州市，蔡伦故乡。"
+    },
+    "anling": {
+      "id": "anling",
+      "type": "location",
+      "name": "安陵",
+      "desc": "今陕西省咸阳市，班固、班超故乡。"
+    },
+    "zhaoling": {
+      "id": "zhaoling",
+      "type": "location",
+      "name": "召陵",
+      "desc": "今河南省漯河市，许慎故乡。"
+    },
+    "wushi": {
+      "id": "wushi",
+      "type": "location",
+      "name": "乌氏",
+      "desc": "今甘肃省平凉市，梁冀故乡。"
+    },
+    "maoling": {
+      "id": "maoling",
+      "type": "location",
+      "name": "茂陵",
+      "desc": "今陕西省咸阳市，耿弇、马援故乡。"
+    },
+    "luoyang": {
+      "id": "luoyang",
+      "type": "location",
+      "name": "洛阳",
+      "desc": "贾谊故乡，今河南省洛阳市。"
+    },
+    "changsha": {
+      "id": "changsha",
+      "type": "location",
+      "name": "长沙",
+      "desc": "贾谊贬为长沙王太傅，今湖南省长沙市。"
+    },
+    "yingchuan": {
+      "id": "yingchuan",
+      "type": "location",
+      "name": "颍川",
+      "desc": "晁错故乡，今河南省禹州市。"
+    },
+    "linqiong": {
+      "id": "linqiong",
+      "type": "location",
+      "name": "临邛",
+      "desc": "司马相如与卓文君私奔之地，今四川省邛崃市。"
+    },
+    "beihai": {
+      "id": "beihai",
+      "type": "location",
+      "name": "北海",
+      "desc": "苏武牧羊之地，今贝加尔湖。"
+    },
+    "jilu": {
+      "id": "jilu",
+      "type": "location",
+      "name": "浚稽山",
+      "desc": "李陵与匈奴激战之地，今蒙古国境内。"
+    },
+    "huayin": {
+      "id": "huayin",
+      "type": "location",
+      "name": "华阴",
+      "desc": "今陕西省华阴市，杨坚、杨广故乡。"
+    },
+    "daxing": {
+      "id": "daxing",
+      "type": "location",
+      "name": "大兴城",
+      "desc": "今陕西省西安市，隋朝都城。"
+    },
+    "jiangdu": {
+      "id": "jiangdu",
+      "type": "location",
+      "name": "江都",
+      "desc": "今江苏省扬州市，隋炀帝巡游之地，江都兵变发生地。"
+    },
+    "wugong": {
+      "id": "wugong",
+      "type": "location",
+      "name": "武功",
+      "desc": "今陕西省武功县，李世民诞生地。"
+    },
+    "wenshui": {
+      "id": "wenshui",
+      "type": "location",
+      "name": "文水",
+      "desc": "今山西省文水县，武则天故乡。"
+    },
+    "qucheng": {
+      "id": "qucheng",
+      "type": "location",
+      "name": "曲城",
+      "desc": "今河北省晋州市，魏征故乡。"
+    },
+    "sanyuan": {
+      "id": "sanyuan",
+      "type": "location",
+      "name": "三原",
+      "desc": "今陕西省三原县，李靖故乡。"
+    },
+    "zhengxian": {
+      "id": "zhengxian",
+      "type": "location",
+      "name": "郑县",
+      "desc": "今陕西省华州区，郭子仪故乡。"
+    },
+    "liucheng": {
+      "id": "liucheng",
+      "type": "location",
+      "name": "柳城",
+      "desc": "今辽宁省朝阳市，安禄山故乡。"
+    },
+    "chengji": {
+      "id": "chengji",
+      "type": "location",
+      "name": "成纪",
+      "desc": "今甘肃省天水市，李白故乡。"
+    },
+    "dingxiang": {
+      "id": "dingxiang",
+      "type": "location",
+      "name": "定襄",
+      "desc": "今山西省定襄县，李靖灭东突厥之地。"
+    }
+  },
+  "meta": {
+    "count": 119
+  }
+}

@@ -1,7 +1,7 @@
 /* ============ 历史星图 · 沉浸式星图 Hero（Canvas 动效） ============ */
 /* 星空视差 + 流星 + 星云辉光 + 会发光、脉冲流动的人物星座 */
 
-const SM_FIGURES = [{
+const FALLBACK_FIGURES = [{
   id: "zengguofan",
   kind: "person",
   x: 50,
@@ -38,11 +38,40 @@ const SM_FIGURES = [{
   x: 70,
   y: 85
 }];
-// constellation edges (index pairs) + relation tint
-const SM_EDGES = [[0, 1], [0, 2], [0, 5], [0, 6], [1, 4], [1, 6], [1, 5], [3, 5], [2, 6], [1, 2]];
+const FALLBACK_EDGES = [[0, 1], [0, 2], [0, 5], [0, 6], [1, 4], [1, 6], [1, 5], [3, 5], [2, 6], [1, 2]];
 function StarmapHero({
   nav
 }) {
+  const smFigures = React.useMemo(function() {
+    if (!DB.persons || Object.keys(DB.persons).length === 0) {
+      return FALLBACK_FIGURES;
+    }
+    var persons = Object.values(DB.persons).filter(function(p) { return p.born && p.died; }).slice(0, 30);
+    return persons.map(function(p, i) {
+      return {
+        id: p.id,
+        kind: "person",
+        x: (i * 37 + 15) % 100,
+        y: ((i * 53 + 10) % 80) + 10,
+        big: i < 3
+      };
+    });
+  }, []);
+  const smEdges = React.useMemo(function() {
+    if (!DB.persons || Object.keys(DB.persons).length === 0) {
+      return FALLBACK_EDGES;
+    }
+    var edges = [];
+    var n = smFigures.length;
+    for (var i = 0; i < n; i++) {
+      edges.push([i, (i + 1) % n]);
+      if (i < 3) {
+        edges.push([i, (i + 3) % n]);
+        edges.push([i, (i + 5) % n]);
+      }
+    }
+    return edges;
+  }, [smFigures]);
   const wrapRef = useRef(null),
     canvasRef = useRef(null);
   const nodeEls = useRef({});
@@ -156,9 +185,9 @@ function StarmapHero({
       ctx.globalAlpha = 1;
 
       // node positions
-      const P = SM_FIGURES.map(nodePx);
+      const P = smFigures.map(nodePx);
       // sync DOM node float transforms
-      SM_FIGURES.forEach((f, i) => {
+      smFigures.forEach((f, i) => {
         const el = nodeEls.current[f.id];
         if (el) {
           const baseX = f.x / 100 * S.W,
@@ -170,7 +199,7 @@ function StarmapHero({
         coy = oy * 30 * 1.3; // constellation parallax (match dom)
 
       // edges
-      SM_EDGES.forEach((e, k) => {
+      smEdges.forEach((e, k) => {
         const a = P[e[0]],
           b = P[e[1]];
         const ax = a.x + cox,
@@ -204,7 +233,7 @@ function StarmapHero({
 
       // node halos on canvas (behind dom dot)
       P.forEach((p, i) => {
-        const f = SM_FIGURES[i];
+        const f = smFigures[i];
         const px = p.x + cox,
           py = p.y + coy;
         const gold = f.kind === "person";
@@ -278,7 +307,7 @@ function StarmapHero({
     className: "smhero-vignette"
   }), /*#__PURE__*/React.createElement("div", {
     className: "sm-constellation"
-  }, SM_FIGURES.map(f => {
+  }, smFigures.map(f => {
     const o = DB.get(f.id);
     if (!o) return null;
     const gold = f.kind === "person";

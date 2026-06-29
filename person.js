@@ -302,7 +302,7 @@ function PersonDossier({
   p,
   nav
 }) {
-  const d = p.detail || {};
+  const d = person.detail || {};
   const tabs = [{
     k: "overview",
     t: "综述"
@@ -386,7 +386,7 @@ function PersonDossier({
       color: "var(--text)",
       fontFamily: "var(--font-serif)"
     }
-  }, p.intro), /*#__PURE__*/React.createElement("div", {
+  }, person.intro), /*#__PURE__*/React.createElement("div", {
     style: {
       padding: "15px 18px",
       borderLeft: "3px solid var(--gold)",
@@ -400,13 +400,13 @@ function PersonDossier({
       color: "var(--gold-2)",
       lineHeight: 1.7
     }
-  }, "\u300C", p.quote, "\u300D"), /*#__PURE__*/React.createElement("div", {
+  }, "\u300C", person.quote, "\u300D"), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: 12.5,
       color: "var(--text-3)",
       marginTop: 7
     }
-  }, "\u2014\u2014 ", p.quoteSrc)), /*#__PURE__*/React.createElement("div", {
+  }, "\u2014\u2014 ", person.quoteSrc)), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
@@ -436,7 +436,7 @@ function PersonDossier({
       flexDirection: "column",
       gap: 10
     }
-  }, p.achievements.map((a, i) => /*#__PURE__*/React.createElement("li", {
+  }, person.achievements.map((a, i) => /*#__PURE__*/React.createElement("li", {
     key: i,
     style: {
       display: "flex",
@@ -477,7 +477,7 @@ function PersonDossier({
       lineHeight: 1.8,
       color: "var(--text-2)"
     }
-  }, p.controversy)))), tab === "bio" && /*#__PURE__*/React.createElement("div", {
+  }, person.controversy)))), tab === "bio" && /*#__PURE__*/React.createElement("div", {
     className: "fade-up",
     style: {
       display: "flex",
@@ -602,7 +602,7 @@ function PersonDossier({
       flexDirection: "column",
       gap: 12
     }
-  }, (d.worksDetail && d.worksDetail.length ? d.worksDetail : p.works.map(w => ({
+  }, (d.worksDetail && d.worksDetail.length ? d.worksDetail : person.works.map(w => ({
     name: w,
     desc: ""
   }))).map((w, i) => /*#__PURE__*/React.createElement("div", {
@@ -644,16 +644,30 @@ function PersonPage({
   id,
   nav
 }) {
-  const p = DB.persons[id];
+  const [person, setPerson] = useState(null);
+  const [loading, setLoading] = useState(true);
   const st = useStore();
   const fav = st.isFav(id);
   const [exp, setExp] = useState(false);
   const graphWrapRef = useRef(null);
   useEffect(() => {
-    window.scrollTo(0, 0);
-    if (DB.persons[id]) Store.visit(id, "person");
+    async function load() {
+      setLoading(true);
+      const p = await DB.loadPerson(id);
+      setPerson(p);
+      if (p) Store.visit(id, "person");
+      setLoading(false);
+      window.scrollTo(0, 0);
+    }
+    load();
   }, [id]);
-  if (!p) return /*#__PURE__*/React.createElement("div", {
+  if (loading) return /*#__PURE__*/React.createElement("div", {
+    className: "wrap",
+    style: {
+      padding: 60
+    }
+  }, "\u6B63\u5728\u52A0\u8F7D\u4EBA\u7269\u6570\u636E\u2026");
+  if (!person) return /*#__PURE__*/React.createElement("div", {
     className: "wrap",
     style: {
       padding: 60
@@ -677,7 +691,7 @@ function PersonPage({
     style: {
       color: "var(--text)"
     }
-  }, p.name))), /*#__PURE__*/React.createElement("div", {
+  }, person.name))), /*#__PURE__*/React.createElement("div", {
     className: "wrap-wide",
     style: {
       position: "relative"
@@ -707,7 +721,7 @@ function PersonPage({
       flexWrap: "wrap"
     }
   }, /*#__PURE__*/React.createElement(Avatar, {
-    name: p.name,
+    name: person.name,
     size: 92,
     radius: 18
   }), /*#__PURE__*/React.createElement("div", {
@@ -729,18 +743,18 @@ function PersonPage({
       margin: 0,
       fontWeight: 700
     }
-  }, p.name), /*#__PURE__*/React.createElement("span", {
+  }, person.name), /*#__PURE__*/React.createElement("span", {
     style: {
       fontFamily: "var(--font-num)",
       fontSize: 17,
       color: "var(--gold)"
     }
-  }, p.born, "\u2013", p.died), /*#__PURE__*/React.createElement("span", {
+  }, person.born, "\u2013", person.died), /*#__PURE__*/React.createElement("span", {
     style: {
       fontSize: 14,
       color: "var(--text-2)"
     }
-  }, p.alias)), /*#__PURE__*/React.createElement("div", {
+  }, person.alias)), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
       gap: 8,
@@ -748,9 +762,9 @@ function PersonPage({
       flexWrap: "wrap"
     }
   }, /*#__PURE__*/React.createElement(DynTag, {
-    id: p.dynasty,
-    onClick: () => nav("dynasty", p.dynasty)
-  }), p.role.map((r, i) => /*#__PURE__*/React.createElement("span", {
+    id: person.dynasty,
+    onClick: () => nav("dynasty", person.dynasty)
+  }), person.role.map((r, i) => /*#__PURE__*/React.createElement("span", {
     key: i,
     className: "tag tag-role"
   }, r)))), /*#__PURE__*/React.createElement("div", {
@@ -776,7 +790,7 @@ function PersonPage({
   }), "\u5BFC\u51FA\u7D20\u6750"), /*#__PURE__*/React.createElement("button", {
     className: "btn btn-gold",
     onClick: () => nav("ai", null, {
-      q: `帮我写一篇关于${p.name}的公众号文章选题与大纲`
+      q: `帮我写一篇关于${person.name}的公众号文章选题与大纲`
     })
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "sparkle",
@@ -801,16 +815,16 @@ function PersonPage({
     icon: "person"
   }, /*#__PURE__*/React.createElement(InfoRow, {
     k: "\u5B57\u53F7",
-    v: p.alias
+    v: person.alias
   }), /*#__PURE__*/React.createElement(InfoRow, {
     k: "\u751F\u5352",
-    v: `${p.born} – ${p.died}（享年 ${p.died - p.born}）`
+    v: `${person.born} – ${person.died}（享年 ${person.died - person.born}）`
   }), /*#__PURE__*/React.createElement(InfoRow, {
     k: "\u671D\u4EE3",
     v: "\u6E05\u671D\uFF08\u665A\u6E05\uFF09"
   }), /*#__PURE__*/React.createElement(InfoRow, {
     k: "\u8EAB\u4EFD",
-    v: p.role.join("、")
+    v: person.role.join("、")
   }), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "flex",
@@ -826,7 +840,7 @@ function PersonPage({
     }
   }, "\u8457\u4F5C"), /*#__PURE__*/React.createElement("div", {
     className: "chips"
-  }, p.works.map((w, i) => /*#__PURE__*/React.createElement("span", {
+  }, person.works.map((w, i) => /*#__PURE__*/React.createElement("span", {
     key: i,
     className: "chip",
     style: {
@@ -840,10 +854,10 @@ function PersonPage({
         fontSize: 12,
         color: "var(--text-3)"
       }
-    }, p.life.length, " \u4E2A\u8282\u70B9")
+    }, person.life.length, " \u4E2A\u8282\u70B9")
   }, /*#__PURE__*/React.createElement("div", {
     className: "tl-line"
-  }, p.life.map((l, i) => /*#__PURE__*/React.createElement("div", {
+  }, person.life.map((l, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     className: "tl-item" + (l.key ? " key" : "")
   }, /*#__PURE__*/React.createElement("span", {
@@ -924,7 +938,7 @@ function PersonPage({
       gap: 20
     }
   }, /*#__PURE__*/React.createElement(PersonDossier, {
-    p: p,
+    p: person,
     nav: nav
   }), /*#__PURE__*/React.createElement(Panel, {
     title: "\u4EBA\u7269\u5173\u7CFB\u56FE\u8C31",
@@ -950,14 +964,14 @@ function PersonPage({
         fontSize: 12,
         color: "var(--text-3)"
       }
-    }, p.events.length, " \u9879")
+    }, person.events.length, " \u9879")
   }, /*#__PURE__*/React.createElement("div", {
     style: {
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
       gap: 13
     }
-  }, p.events.map(ev => /*#__PURE__*/React.createElement(EventCard, {
+  }, person.events.map(ev => /*#__PURE__*/React.createElement(EventCard, {
     key: ev,
     id: ev,
     nav: nav,
@@ -979,7 +993,7 @@ function PersonPage({
       flexDirection: "column",
       gap: 3
     }
-  }, p.relations.map((r, i) => {
+  }, person.relations.map((r, i) => {
     const t = DB.get(r.to);
     const m = DB.relMeta[r.type] || {};
     return /*#__PURE__*/React.createElement("button", {
@@ -1085,7 +1099,7 @@ function PersonPage({
       flexDirection: "column",
       gap: 11
     }
-  }, p.sources.map((s, i) => /*#__PURE__*/React.createElement("div", {
+  }, person.sources.map((s, i) => /*#__PURE__*/React.createElement("div", {
     key: i,
     style: {
       display: "flex",
@@ -1114,7 +1128,7 @@ function PersonPage({
       height: 50
     }
   }), exp && /*#__PURE__*/React.createElement(ExportModal, {
-    entity: p,
+    entity: person,
     onClose: () => setExp(false),
     graphWrapRef: graphWrapRef
   }));

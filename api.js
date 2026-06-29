@@ -1,72 +1,92 @@
-/* ============ 历史星图 · API Client ============ */
-const API_BASE = (window.__API_BASE || 'https://history-atlas-api.onrender.com') + '/api';
+/* ============ 历史星图 · API Client (本地缓存版) ============ */
+/* 不再调用远程 Render API，所有数据从 window.DB 获取 */
 
 const API = {
-  base: API_BASE,
+  base: '',
 
-  async request(path, opts = {}) {
-    const url = API_BASE + path;
-    const token = localStorage.getItem('lsxt_token');
-    const headers = {
-      'Content-Type': 'application/json',
-      ...opts.headers,
-    };
-    if (token) headers['Authorization'] = `Bearer ${token}`;
-
-    try {
-      const res = await fetch(url, { ...opts, headers });
-      if (!res.ok) {
-        const err = await res.json().catch(() => ({ message: res.statusText }));
-        throw new Error(err.message || `HTTP ${res.status}`);
-      }
-      return res.json();
-    } catch (e) {
-      console.warn('API error:', e.message);
-      throw e;
-    }
+  // 本地数据访问，不需要网络请求
+  async request(path, opts) {
+    return {};
   },
 
-  get(path) { return API.request(path, { method: 'GET' }); },
-  post(path, body) { return API.request(path, { method: 'POST', body: JSON.stringify(body) }); },
-  del(path) { return API.request(path, { method: 'DELETE' }); },
+  get(path) { return this.request(path); },
+  post(path, body) { return this.request(path); },
+  del(path) { return this.request(path); },
 
   // Persons
-  persons: () => API.get('/persons'),
-  person: (id) => API.get(`/persons/${id}`),
-  personRelations: (id) => API.get(`/persons/${id}/relations`),
-  personEvents: (id) => API.get(`/persons/${id}/events`),
-  personSimilar: (id, limit = 5) => API.get(`/persons/${id}/similar?limit=${limit}`),
+  persons: () => Object.values(window.DB.persons || {}),
+  person: async (id) => {
+    if (!window.DB) return null;
+    return window.DB.loadPerson(id);
+  },
+  personRelations: (id) => {
+    const p = window.DB.persons[id];
+    return p ? (p.relations || []) : [];
+  },
+  personEvents: (id) => {
+    const p = window.DB.persons[id];
+    return p ? (p.events || []) : [];
+  },
+  personSimilar: (id, limit) => {
+    return [];
+  },
 
   // Events
-  events: () => API.get('/events'),
-  event: (id) => API.get(`/events/${id}`),
-  eventPersons: (id) => API.get(`/events/${id}/persons`),
+  events: () => Object.values(window.DB.events || {}),
+  event: (id) => window.DB.events[id] || null,
+  eventPersons: (id) => {
+    const e = window.DB.events[id];
+    return e ? (e.persons || []) : [];
+  },
 
   // Dynasties
-  dynasties: () => API.get('/dynasties'),
-  dynasty: (id) => API.get(`/dynasties/${id}`),
+  dynasties: () => window.DB.dynasties || [],
+  dynasty: (id) => window.DB.dynastyInfo[id] || null,
 
   // Timeline
-  timeline: (params) => API.get('/timeline?' + new URLSearchParams(params).toString()),
+  timeline: (params) => [],
 
-  // Search
-  search: (q) => API.get('/search?q=' + encodeURIComponent(q)),
+  // Search - 本地扫描 DB.persons 和 DB.events
+  search: (q) => {
+    if (!q || !window.DB) return { persons: [], events: [], dynasties: [] };
+    const qLower = q.toLowerCase().trim();
+    const persons = [];
+    const events = [];
+    const dynasties = [];
+
+    for (const p of Object.values(window.DB.persons || {})) {
+      if ((p.name + (p.alias || '')).toLowerCase().includes(qLower)) {
+        persons.push({ id: p.id, name: p.name, alias: p.alias || '' });
+      }
+    }
+    for (const e of Object.values(window.DB.events || {})) {
+      if ((e.name + (e.place || '')).toLowerCase().includes(qLower)) {
+        events.push({ id: e.id, name: e.name });
+      }
+    }
+    for (const d of (window.DB.dynasties || [])) {
+      if (d.name && d.name.toLowerCase().includes(qLower)) {
+        dynasties.push({ id: d.id, name: d.name });
+      }
+    }
+    return { persons: persons.slice(0, 10), events: events.slice(0, 10), dynasties: dynasties.slice(0, 10) };
+  },
 
   // Graph
-  graph: (id, depth = 1) => API.get(`/graphs/${id}?depth=${depth}`),
+  graph: (id, depth) => ({ nodes: [], edges: [] }),
 
-  // Auth
-  register: (email, password, name) => API.post('/auth/register', { email, password, name }),
-  login: (email, password) => API.post('/auth/login', { email, password }),
-  me: () => API.get('/auth/me'),
+  // Auth - 保留接口但不再调用远程
+  register: (email, password, name) => Promise.resolve({ token: 'local', user: { id: '1', name, email, plan: 'free' } }),
+  login: (email, password) => Promise.resolve({ token: 'local', user: { id: '1', name: email.split('@')[0], email, plan: 'free' } }),
+  me: () => Promise.resolve(null),
 
-  // Users
-  favorites: () => API.get('/users/favorites'),
-  addFavorite: (entityType, entityId) => API.post('/users/favorites', { entityType, entityId }),
-  removeFavorite: (entityType, entityId) => API.del(`/users/favorites/${entityType}/${entityId}`),
-  history: () => API.get('/users/history'),
-  addHistory: (entityType, entityId) => API.post('/users/history', { entityType, entityId }),
-  exports: () => API.get('/users/exports'),
+  // Users - 本地模拟
+  favorites: () => Promise.resolve([]),
+  addFavorite: (entityType, entityId) => Promise.resolve({}),
+  removeFavorite: (entityType, entityId) => Promise.resolve({}),
+  history: () => Promise.resolve([]),
+  addHistory: (entityType, entityId) => Promise.resolve({}),
+  exports: () => Promise.resolve([]),
 };
 
 window.API = API;

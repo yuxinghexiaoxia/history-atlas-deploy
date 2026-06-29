@@ -1,0 +1,4186 @@
+{
+  "persons": {
+    "cao_cao": {
+      "id": "cao_cao",
+      "name": "曹操",
+      "alias": "字孟德，小字阿瞒，沛国谯人",
+      "dynasty": "sanguo",
+      "born": 155,
+      "died": 220,
+      "role": "东汉末年政治家",
+      "short": "东汉末年政治家、军事家、文学家。挟天子以令诸侯，统一北方，为曹魏奠基。"
+    },
+    "liu_bei": {
+      "id": "liu_bei",
+      "name": "刘备",
+      "alias": "字玄德，涿郡涿县人",
+      "dynasty": "sanguo",
+      "born": 161,
+      "died": 223,
+      "role": "蜀汉开国皇帝",
+      "short": "蜀汉开国皇帝，汉景帝之子中山靖王刘胜之后。与关羽、张飞桃园结义，三顾茅庐请诸葛亮，建立蜀汉。"
+    },
+    "sun_quan": {
+      "id": "sun_quan",
+      "name": "孙权",
+      "alias": "字仲谋，吴郡富春人",
+      "dynasty": "sanguo",
+      "born": 182,
+      "died": 252,
+      "role": "东吴开国皇帝",
+      "short": "东吴开国皇帝，吴大帝。承父兄基业，赤壁之战联合刘备大破曹操，割据江东。"
+    },
+    "zhu_ge_liang": {
+      "id": "zhu_ge_liang",
+      "name": "诸葛亮",
+      "alias": "字孔明，号卧龙，琅琊阳都人",
+      "dynasty": "sanguo",
+      "born": 181,
+      "died": 234,
+      "role": "蜀汉丞相",
+      "short": "蜀汉丞相，政治家、军事家。刘备三顾茅庐请出山，辅佐蜀汉两代君主，鞠躬尽瘁，死而后已。"
+    },
+    "guan_yu": {
+      "id": "guan_yu",
+      "name": "关羽",
+      "alias": "字云长，河东解人",
+      "dynasty": "sanguo",
+      "born": 160,
+      "died": 220,
+      "role": "蜀汉名将",
+      "short": "蜀汉名将，与刘备、张飞桃园结义。勇武绝伦，威震华夏，后被孙权部将吕蒙所杀。"
+    },
+    "zhang_fei": {
+      "id": "zhang_fei",
+      "name": "张飞",
+      "alias": "字益德，涿郡人",
+      "dynasty": "sanguo",
+      "born": 165,
+      "died": 221,
+      "role": "蜀汉名将",
+      "short": "蜀汉名将，与刘备、关羽桃园结义。勇武过人，长坂坡据水断桥，后被部将范强、张达所杀。"
+    },
+    "zhou_yu": {
+      "id": "zhou_yu",
+      "name": "周瑜",
+      "alias": "字公瑾，庐江舒人",
+      "dynasty": "sanguo",
+      "born": 175,
+      "died": 210,
+      "role": "东吴名将",
+      "short": "东吴名将，字公瑾。赤壁之战中任大都督，火烧赤壁大破曹操。精音律，时人谣曰：曲有误，周郎顾。"
+    },
+    "si_ma_yi": {
+      "id": "si_ma_yi",
+      "name": "司马懿",
+      "alias": "字仲达，河内温人",
+      "dynasty": "sanguo",
+      "born": 179,
+      "died": 251,
+      "role": "曹魏权臣",
+      "short": "曹魏权臣，字仲达。抵御诸葛亮北伐，平定辽东，高平陵之变掌控曹魏大权，为晋朝奠基。"
+    },
+    "guo_jia": {
+      "id": "guo_jia",
+      "name": "郭嘉",
+      "alias": "字奉孝，颍川阳翟人",
+      "dynasty": "sanguo",
+      "born": 170,
+      "died": 207,
+      "role": "曹操谋士",
+      "short": "曹操帐下著名谋士，字奉孝。深通算略，屡建奇功，英年早逝，曹操痛惜不已。"
+    },
+    "zhao_yun": {
+      "id": "zhao_yun",
+      "name": "赵云",
+      "alias": "字子龙，常山真定人",
+      "dynasty": "sanguo",
+      "born": 168,
+      "died": 229,
+      "role": "蜀汉名将",
+      "short": "蜀汉名将，字子龙。长坂坡单骑救主，截江夺阿斗，忠勇无双，一生未尝败绩。"
+    },
+    "dian_wei": {
+      "id": "dian_wei",
+      "name": "典韦",
+      "alias": "陈留己吾人",
+      "dynasty": "sanguo",
+      "born": 160,
+      "died": 197,
+      "role": "曹魏猛将",
+      "short": "曹操帐下猛将，力大无穷，擅使双戟。宛城之战为保护曹操而战死。"
+    },
+    "xu_chu": {
+      "id": "xu_chu",
+      "name": "许褚",
+      "alias": "字仲康，谯国谯人",
+      "dynasty": "sanguo",
+      "born": 170,
+      "died": 226,
+      "role": "曹魏猛将",
+      "short": "曹操帐下猛将，虎痴。力大如虎而痴，护送曹操，威震马超。"
+    },
+    "zhang_liao": {
+      "id": "zhang_liao",
+      "name": "张辽",
+      "alias": "字文远，雁门马邑人",
+      "dynasty": "sanguo",
+      "born": 169,
+      "died": 222,
+      "role": "曹魏名将",
+      "short": "曹魏名将，五子良将之首。威震逍遥津，以八百破孙权十万，威名远播。"
+    },
+    "lu_xun": {
+      "id": "lu_xun",
+      "name": "陆逊",
+      "alias": "字伯言，吴郡吴人",
+      "dynasty": "sanguo",
+      "born": 183,
+      "died": 245,
+      "role": "东吴名将",
+      "short": "东吴名将，丞相。夷陵之战火烧连营七百里，大败刘备。后出将入相，为东吴柱石。"
+    },
+    "jiang_wei": {
+      "id": "jiang_wei",
+      "name": "姜维",
+      "alias": "字伯约，天水冀人",
+      "dynasty": "sanguo",
+      "born": 202,
+      "died": 264,
+      "role": "蜀汉名将",
+      "short": "蜀汉名将，诸葛亮继承人。九伐中原，矢志恢复汉室，最终兵败被杀。"
+    },
+    "shi_chong": {
+      "id": "shi_chong",
+      "name": "石崇",
+      "alias": "字季伦，渤海南皮人，西晋富豪",
+      "dynasty": "jin",
+      "born": 249,
+      "died": 300,
+      "role": "富豪",
+      "short": "西晋富豪，与王恺斗富，金谷园之主人，后被赵王伦所杀。"
+    },
+    "jia_nanfeng": {
+      "id": "jia_nanfeng",
+      "name": "贾南风",
+      "alias": "小名旹，平阳襄陵人，晋惠帝皇后",
+      "dynasty": "jin",
+      "born": 257,
+      "died": 300,
+      "role": "皇后",
+      "short": "晋惠帝皇后，晋武帝之媳，专权乱政，引发八王之乱。"
+    },
+    "wang_dao": {
+      "id": "wang_dao",
+      "name": "王导",
+      "alias": "字茂弘，琅邪临沂人",
+      "dynasty": "jin",
+      "born": 276,
+      "died": 339,
+      "role": "东晋名相",
+      "short": "东晋名相，辅佐司马睿建立东晋，与王敦共撑大局，有王与马共天下之称。"
+    },
+    "xie_xuan": {
+      "id": "xie_xuan",
+      "name": "谢玄",
+      "alias": "字幼度，陈郡阳夏人，东晋名将，谢安之侄",
+      "dynasty": "jin",
+      "born": 343,
+      "died": 388,
+      "role": "将领",
+      "short": "东晋名将，组建北府兵，淝水之战大破前秦苻坚。"
+    },
+    "huangdi": {
+      "id": "huangdi",
+      "name": "黄帝",
+      "alias": "轩辕氏",
+      "dynasty": "shanggu",
+      "born": -2697,
+      "died": -2599,
+      "role": "五帝之首",
+      "short": "五帝之首，华夏民族的人文始祖，传说中原各族的共同祖先。"
+    },
+    "yandi": {
+      "id": "yandi",
+      "name": "炎帝",
+      "alias": "神农氏",
+      "dynasty": "shanggu",
+      "born": -2700,
+      "died": -2600,
+      "role": "华夏部落首领",
+      "short": "华夏部落首领，传说为姜姓始祖，与黄帝并称炎黄，为中华民族共同的祖先象征。"
+    },
+    "zhuanxu": {
+      "id": "zhuanxu",
+      "name": "颛顼",
+      "alias": "高阳氏",
+      "dynasty": "shanggu",
+      "born": -2514,
+      "died": -2436,
+      "role": "五帝之一",
+      "short": "五帝之一，黄帝之孙，昌意之子。继位后征伐四方，建立行政制度，制定历法。"
+    },
+    "di_ku": {
+      "id": "di_ku",
+      "name": "帝喾",
+      "alias": "高辛氏",
+      "dynasty": "shanggu",
+      "born": -2436,
+      "died": -2366,
+      "role": "五帝之一",
+      "short": "五帝之一，黄帝曾孙，玄嚣之孙，蟜极之子。以仁德治国，选拔贤能。"
+    },
+    "yao": {
+      "id": "yao",
+      "name": "尧",
+      "alias": "陶唐氏",
+      "dynasty": "shanggu",
+      "born": -2377,
+      "died": -2259,
+      "role": "五帝之一",
+      "short": "五帝之一，帝喾之子。仁德治国，天下太平，后禅让于舜，为禅让制典范。"
+    },
+    "shun": {
+      "id": "shun",
+      "name": "舜",
+      "alias": "有虞氏",
+      "dynasty": "shanggu",
+      "born": -2287,
+      "died": -2188,
+      "role": "五帝之一",
+      "short": "五帝之一，以孝闻名。受尧禅让，明德治国，后禅让于禹，为禅让制典范。"
+    },
+    "yu": {
+      "id": "yu",
+      "name": "大禹",
+      "alias": "夏禹",
+      "dynasty": "xia",
+      "born": -2208,
+      "died": -2100,
+      "role": "夏朝开国君主",
+      "short": "夏朝开国君主，以治水闻名。三过家门而不入，十三年治水功成，受舜禅让建立夏朝。"
+    },
+    "guan_zhong": {
+      "id": "guan_zhong",
+      "name": "管仲",
+      "alias": "字夷吾，管子",
+      "dynasty": "zhou",
+      "born": -723,
+      "died": -645,
+      "role": "春秋齐国宰相",
+      "short": "春秋时期齐国名相，辅佐齐桓公成为春秋五霸之首，推行改革，富国强兵。"
+    },
+    "yan_ying": {
+      "id": "yan_ying",
+      "name": "晏婴",
+      "alias": "字仲，晏子",
+      "dynasty": "zhou",
+      "born": -578,
+      "died": -500,
+      "role": "春秋齐国名相",
+      "short": "春秋时期齐国名相，历仕齐灵公、庄公、景公三朝，以节俭力行、机智善辩著称。"
+    },
+    "shang_yang": {
+      "id": "shang_yang",
+      "name": "商鞅",
+      "alias": "公孙鞅，卫鞅",
+      "dynasty": "qin",
+      "born": -390,
+      "died": -338,
+      "role": "战国时期法家代表人物",
+      "short": "战国时期法家代表人物，辅佐秦孝公推行变法，使秦国由弱变强，为日后统一六国奠定基础。"
+    },
+    "sun_wu": {
+      "id": "sun_wu",
+      "name": "孙武",
+      "alias": "字长卿，孙子",
+      "dynasty": "zhou",
+      "born": -545,
+      "died": -470,
+      "role": "春秋时期军事家",
+      "short": "春秋时期齐国军事家，著有《孙子兵法》，被尊为兵家鼻祖。"
+    },
+    "wu_zixu": {
+      "id": "wu_zixu",
+      "name": "伍子胥",
+      "alias": "字子胥，楚国人",
+      "dynasty": "zhou",
+      "born": -559,
+      "died": -484,
+      "role": "春秋时期吴国大夫",
+      "short": "春秋时期吴国大夫，因楚平王杀其父兄，逃亡吴国，辅佐吴王阖闾攻破楚都，鞭尸楚平王。"
+    },
+    "qu_yuan": {
+      "id": "qu_yuan",
+      "name": "屈原",
+      "alias": "字原，又字灵均",
+      "dynasty": "zhou",
+      "born": -340,
+      "died": -278,
+      "role": "战国时期楚国诗人",
+      "short": "战国时期楚国诗人、政治家，中国浪漫主义文学的奠基人，代表作《离骚》。"
+    },
+    "jing_ke": {
+      "id": "jing_ke",
+      "name": "荆轲",
+      "alias": "字次非，卫国人",
+      "dynasty": "qin",
+      "born": -300,
+      "died": -227,
+      "role": "战国时期刺客",
+      "short": "战国时期著名刺客，受燕太子丹之托刺秦王，图穷匕见，事败被杀。"
+    },
+    "king_wen": {
+      "id": "king_wen",
+      "name": "周文王",
+      "alias": "姬昌",
+      "dynasty": "zhou",
+      "born": -1152,
+      "died": -1056,
+      "role": "周朝奠基者",
+      "short": "周朝奠基者，被商纣王囚禁于羑里，演《周易》。修德行善，诸侯归心，为武王伐纣奠定基础。"
+    },
+    "king_wu": {
+      "id": "king_wu",
+      "name": "周武王",
+      "alias": "姬发",
+      "dynasty": "zhou",
+      "born": -1087,
+      "died": -1043,
+      "role": "周朝开国君主",
+      "short": "周朝开国君主，继承文王遗志，率诸侯伐纣，牧野之战击败商军，建立周朝。"
+    },
+    "zhou_dan": {
+      "id": "zhou_dan",
+      "name": "周公",
+      "alias": "姬旦",
+      "dynasty": "zhou",
+      "born": -1100,
+      "died": -1030,
+      "role": "周朝贤相",
+      "short": "周文王之子，武王之弟，成王叔父。辅佐成王，平定三监之乱，制礼作乐，奠定周朝礼乐制度。"
+    },
+    "gun": {
+      "id": "gun",
+      "name": "鲧",
+      "alias": "崇伯",
+      "dynasty": "shanggu",
+      "born": -2300,
+      "died": -2195,
+      "role": "夏部落首领",
+      "short": "禹之父，尧时受命治水，用堵截之法，九年无功，被舜流放羽山。"
+    },
+    "qi": {
+      "id": "qi",
+      "name": "启",
+      "alias": "夏启",
+      "dynasty": "xia",
+      "born": -2180,
+      "died": -2100,
+      "role": "夏朝第二任君主",
+      "short": "禹之子，继位为夏朝君主，开启世袭制，终结禅让制。"
+    },
+    "shang_tang": {
+      "id": "shang_tang",
+      "name": "商汤",
+      "alias": "成汤",
+      "dynasty": "shang",
+      "born": -1670,
+      "died": -1587,
+      "role": "商朝开国君主",
+      "short": "商朝开国君主，推翻夏桀，建立商朝。以仁德治国，网开三面。"
+    },
+    "yi_yin": {
+      "id": "yi_yin",
+      "name": "伊尹",
+      "alias": "阿衡",
+      "dynasty": "shang",
+      "born": -1680,
+      "died": -1587,
+      "role": "商朝贤相",
+      "short": "商汤贤相，辅佐商汤灭夏，以烹饪之道比喻治国，为后世名臣典范。"
+    },
+    "zhou_xin": {
+      "id": "zhou_xin",
+      "name": "商纣王",
+      "alias": "帝辛",
+      "dynasty": "shang",
+      "born": -1075,
+      "died": -1046,
+      "role": "商朝末代君主",
+      "short": "商朝末代君主，以暴虐闻名。宠信妲己，比干剖心，终在牧野之战败于周武王，自焚于鹿台。"
+    },
+    "bi_gan": {
+      "id": "bi_gan",
+      "name": "比干",
+      "alias": "",
+      "dynasty": "shang",
+      "born": -1100,
+      "died": -1046,
+      "role": "商朝贤臣",
+      "short": "商纣王叔父，贤臣。因谏纣王被剖心，为后世忠臣典范。"
+    },
+    "mengchang": {
+      "id": "mengchang",
+      "name": "孟尝君",
+      "alias": "田文",
+      "dynasty": "zhou",
+      "born": -340,
+      "died": -279,
+      "role": "战国四公子之一",
+      "short": "战国四公子之一，齐国贵族。广纳门客，以鸡鸣狗盗之徒闻名，曾入秦为相，后逃归。"
+    },
+    "pingyuan": {
+      "id": "pingyuan",
+      "name": "平原君",
+      "alias": "赵胜",
+      "dynasty": "zhou",
+      "born": -308,
+      "died": -251,
+      "role": "战国四公子之一",
+      "short": "战国四公子之一，赵国贵族。食客数千人，毛遂自荐即出此门下。"
+    },
+    "xinling": {
+      "id": "xinling",
+      "name": "信陵君",
+      "alias": "魏无忌",
+      "dynasty": "zhou",
+      "born": -310,
+      "died": -243,
+      "role": "战国四公子之一",
+      "short": "战国四公子之一，魏昭王少子。窃符救赵，威震天下，为后世称颂。"
+    },
+    "chunshen": {
+      "id": "chunshen",
+      "name": "春申君",
+      "alias": "黄歇",
+      "dynasty": "zhou",
+      "born": -314,
+      "died": -238,
+      "role": "战国四公子之一",
+      "short": "战国四公子之一，楚国贵族。辅佐楚考烈王，封于吴，后移封于楚。"
+    },
+    "bai_qi": {
+      "id": "bai_qi",
+      "name": "白起",
+      "alias": "字公孙，武安君",
+      "dynasty": "qin",
+      "born": -332,
+      "died": -257,
+      "role": "战国时期秦国名将",
+      "short": "战国时期秦国名将，「人屠」。伊阙之战、鄢郢之战、长平之战，杀伐百万。"
+    },
+    "lian_po": {
+      "id": "lian_po",
+      "name": "廉颇",
+      "alias": "字颇，赵国大将",
+      "dynasty": "zhou",
+      "born": -327,
+      "died": -243,
+      "role": "战国时期赵国名将",
+      "short": "战国时期赵国名将，以勇猛善战著称。长平之战前期坚守不战，后因赵王中反间计被赵括替代。"
+    },
+    "lin_xiangru": {
+      "id": "lin_xiangru",
+      "name": "蔺相如",
+      "alias": "字相如，赵国人",
+      "dynasty": "zhou",
+      "born": -329,
+      "died": -259,
+      "role": "战国时期赵国大臣",
+      "short": "战国时期赵国大臣，以完璧归赵、渑池之会、负荆请罪闻名。"
+    },
+    "yue_yi": {
+      "id": "yue_yi",
+      "name": "乐毅",
+      "alias": "字永霸，魏国大将",
+      "dynasty": "zhou",
+      "born": -310,
+      "died": -236,
+      "role": "战国时期燕国名将",
+      "short": "战国时期燕国名将，率五国联军伐齐，连下七十余城。"
+    },
+    "liu_yilong": {
+      "id": "liu_yilong",
+      "name": "刘义隆",
+      "alias": "字车儿，宋文帝，彭城人",
+      "dynasty": "nanbei",
+      "born": 407,
+      "died": 453,
+      "role": "南朝宋皇帝",
+      "short": "南朝宋第三位皇帝，在位三十年，开创元嘉之治，国力鼎盛。后三次北伐失败，被太子刘劭所杀。"
+    },
+    "xiao_daocheng": {
+      "id": "xiao_daocheng",
+      "name": "萧道成",
+      "alias": "字绍伯，齐高帝，兰陵人",
+      "dynasty": "nanbei",
+      "born": 427,
+      "died": 482,
+      "role": "南朝齐开国皇帝",
+      "short": "南朝齐开国皇帝，齐高帝。原为刘宋将领，后废杀宋后废帝，自立为帝，建立南齐。"
+    },
+    "xiao_yan": {
+      "id": "xiao_yan",
+      "name": "萧衍",
+      "alias": "字叔达，梁武帝，兰陵人",
+      "dynasty": "nanbei",
+      "born": 464,
+      "died": 549,
+      "role": "南朝梁开国皇帝",
+      "short": "南朝梁开国皇帝，在位四十八年。博学多才，崇信佛教，晚年侯景之乱，饿死台城。"
+    },
+    "chen_baxian": {
+      "id": "chen_baxian",
+      "name": "陈霸先",
+      "alias": "字兴国，陈武帝，吴兴长城人",
+      "dynasty": "nanbei",
+      "born": 503,
+      "died": 559,
+      "role": "南朝陈开国皇帝",
+      "short": "南朝陈开国皇帝，出身寒门。平定侯景之乱，击败北齐，建立南陈，为南朝最后一朝。"
+    },
+    "tuoba_hong": {
+      "id": "tuoba_hong",
+      "name": "拓跋宏",
+      "alias": "北魏孝文帝，献文帝之子",
+      "dynasty": "nanbei",
+      "born": 467,
+      "died": 499,
+      "role": "北魏皇帝",
+      "short": "北魏第七位皇帝，推行汉化改革，迁都洛阳，改鲜卑姓为汉姓，促进民族融合。"
+    },
+    "yuwen_tai": {
+      "id": "yuwen_tai",
+      "name": "宇文泰",
+      "alias": "字黑獭，代郡武川人",
+      "dynasty": "nanbei",
+      "born": 507,
+      "died": 556,
+      "role": "西魏权臣",
+      "short": "西魏权臣，北周奠基人。推行府兵制，建立关陇集团，为隋唐盛世奠定基础。"
+    },
+    "gao_huan": {
+      "id": "gao_huan",
+      "name": "高欢",
+      "alias": "字贺六浑，渤海蓨人",
+      "dynasty": "nanbei",
+      "born": 496,
+      "died": 547,
+      "role": "东魏权臣",
+      "short": "东魏权臣，北齐奠基人。出身寒微，以六镇起义起家，据有河北，与宇文泰对峙，为北齐奠基。"
+    },
+    "fan_ye": {
+      "id": "fan_ye",
+      "name": "范晔",
+      "alias": "字蔚宗，顺阳人",
+      "dynasty": "nanbei",
+      "born": 398,
+      "died": 445,
+      "role": "南朝宋史学家",
+      "short": "南朝宋史学家，著《后汉书》，集东汉一代史事，与《史记》《汉书》《三国志》并称前四史。"
+    },
+    "shen_yue": {
+      "id": "shen_yue",
+      "name": "沈约",
+      "alias": "字休文，吴兴武康人",
+      "dynasty": "nanbei",
+      "born": 441,
+      "died": 513,
+      "role": "南朝文学家",
+      "short": "南朝文学家，提出四声八病说，著《宋书》，与谢朓等共创永明体，对唐诗格律影响深远。"
+    },
+    "yu_xin": {
+      "id": "yu_xin",
+      "name": "庾信",
+      "alias": "字子山，南阳新野人",
+      "dynasty": "nanbei",
+      "born": 513,
+      "died": 581,
+      "role": "南北朝文学家",
+      "short": "南北朝文学家，初仕梁，后出使西魏被留，历仕西魏、北周。诗赋融合南北风格，杜甫称其庾信文章老更成。"
+    },
+    "sima_yan": {
+      "id": "sima_yan",
+      "name": "司马炎",
+      "alias": "字安世，河内温县人，晋武帝，西晋开国皇帝",
+      "dynasty": "jin",
+      "born": 236,
+      "died": 290,
+      "role": "皇帝",
+      "short": "晋武帝，篡魏建立西晋，灭吴统一全国，太康盛世。"
+    },
+    "zu_ti": {
+      "id": "zu_ti",
+      "name": "祖逖",
+      "alias": "字士稚，范阳遒县人，东晋名将",
+      "dynasty": "jin",
+      "born": 266,
+      "died": 321,
+      "role": "将领",
+      "short": "东晋名将，闻鸡起舞典故，率军北伐收复黄河以南。"
+    },
+    "xie_an": {
+      "id": "xie_an",
+      "name": "谢安",
+      "alias": "字安石，陈郡阳夏人，东晋名相",
+      "dynasty": "jin",
+      "born": 320,
+      "died": 385,
+      "role": "政治家",
+      "short": "东晋名相，东山再起典故，淝水之战运筹帷幄，从容淡定。"
+    },
+    "wang_xizhi": {
+      "id": "wang_xizhi",
+      "name": "王羲之",
+      "alias": "字逸少，琅琊临沂人，东晋书法家，书圣",
+      "dynasty": "jin",
+      "born": 303,
+      "died": 361,
+      "role": "书法家",
+      "short": "东晋书法家，书圣，代表作《兰亭序》，天下第一行书。"
+    },
+    "tao_yuanming": {
+      "id": "tao_yuanming",
+      "name": "陶渊明",
+      "alias": "字元亮，号五柳先生，浔阳柴桑人，东晋诗人",
+      "dynasty": "jin",
+      "born": 365,
+      "died": 427,
+      "role": "诗人",
+      "short": "东晋诗人，田园诗派创始人，不为五斗米折腰，代表作《归去来兮辞》《桃花源记》。"
+    },
+    "huan_wen": {
+      "id": "huan_wen",
+      "name": "桓温",
+      "alias": "字元子，谯国龙亢人，东晋权臣",
+      "dynasty": "jin",
+      "born": 312,
+      "died": 373,
+      "role": "权臣",
+      "short": "东晋权臣，三次北伐，废立皇帝，有篡位之心未遂。"
+    },
+    "liu_yu": {
+      "id": "liu_yu",
+      "name": "刘裕",
+      "alias": "字德舆，小字寄奴，彭城郡人",
+      "dynasty": "nanbei",
+      "born": 363,
+      "died": 422,
+      "role": "南朝宋开国皇帝",
+      "short": "南朝宋开国皇帝，宋武帝。北府兵名将，平定孙恩、卢循，灭南燕、后秦，最终代晋建宋。"
+    },
+    "ji_kang": {
+      "id": "ji_kang",
+      "name": "嵇康",
+      "alias": "字叔夜，谯国铚县人，竹林七贤之一，文学家",
+      "dynasty": "jin",
+      "born": 224,
+      "died": 263,
+      "role": "文学家",
+      "short": "竹林七贤之首，文学家、音乐家，因不与司马氏合作，被司马昭所杀。"
+    },
+    "ruan_ji": {
+      "id": "ruan_ji",
+      "name": "阮籍",
+      "alias": "字嗣宗，陈留尉氏人，竹林七贤之一，诗人",
+      "dynasty": "jin",
+      "born": 210,
+      "died": 263,
+      "role": "诗人",
+      "short": "竹林七贤之一，诗人，作《咏怀诗》八十二首，以醉酒避世。"
+    },
+    "chen_sheng": {
+      "id": "chen_sheng",
+      "name": "陈胜",
+      "alias": "字涉，阳城人",
+      "dynasty": "qin",
+      "born": -240,
+      "died": -208,
+      "role": "秦末起义领袖",
+      "short": "秦末农民起义领袖，大泽乡起义发起者，中国历史上第一次大规模农民起义。"
+    },
+    "wu_guang": {
+      "id": "wu_guang",
+      "name": "吴广",
+      "alias": "字叔，阳夏人",
+      "dynasty": "qin",
+      "born": -242,
+      "died": -208,
+      "role": "秦末起义领袖",
+      "short": "秦末农民起义领袖，陈胜之副手，大泽乡起义共同发起者。"
+    },
+    "xiao_he": {
+      "id": "xiao_he",
+      "name": "萧何",
+      "alias": "字子房，沛丰人",
+      "dynasty": "han",
+      "born": -257,
+      "died": -193,
+      "role": "汉初三杰之一",
+      "short": "汉初三杰之一，刘邦的丞相。镇国家抚百姓，给饷馈不绝粮道，为刘邦建立汉朝立下汗马功劳。"
+    },
+    "cao_shen": {
+      "id": "cao_shen",
+      "name": "曹参",
+      "alias": "字子敬，沛人",
+      "dynasty": "han",
+      "born": -260,
+      "died": -190,
+      "role": "汉初名将",
+      "short": "汉初名将，刘邦部将。战功赫赫，继萧何为丞相，推行「萧规曹随」，无为而治。"
+    },
+    "zhang_liang": {
+      "id": "zhang_liang",
+      "name": "张良",
+      "alias": "字子房，留侯",
+      "dynasty": "han",
+      "born": -250,
+      "died": -186,
+      "role": "汉初三杰之一",
+      "short": "汉初三杰之一，刘邦的谋士。博浪沙刺秦，圯上受书，运筹帷幄之中，决胜千里之外。"
+    },
+    "han_xin": {
+      "id": "han_xin",
+      "name": "韩信",
+      "alias": "字子然，淮阴侯",
+      "dynasty": "han",
+      "born": -231,
+      "died": -196,
+      "role": "汉初三杰之一",
+      "short": "汉初三杰之一，刘邦的大将军。国士无双，功高震主，最终被吕后诛杀。"
+    },
+    "qin_shihuang": {
+      "id": "qin_shihuang",
+      "name": "秦始皇",
+      "alias": "嬴政",
+      "dynasty": "qin",
+      "born": -259,
+      "died": -210,
+      "role": "秦朝开国皇帝",
+      "short": "中国历史上第一位皇帝，统一六国，建立中央集权制度。"
+    },
+    "li_si": {
+      "id": "li_si",
+      "name": "李斯",
+      "alias": "字通古",
+      "dynasty": "qin",
+      "born": -284,
+      "died": -208,
+      "role": "秦朝丞相",
+      "short": "秦朝丞相，法家代表人物，助秦始皇统一六国，推行郡县制。"
+    },
+    "meng_tian": {
+      "id": "meng_tian",
+      "name": "蒙恬",
+      "alias": "",
+      "dynasty": "qin",
+      "born": -259,
+      "died": -210,
+      "role": "秦朝名将",
+      "short": "秦朝名将，北击匈奴，修筑长城，主持修建秦直道。"
+    },
+    "lv_zhi": {
+      "id": "lv_zhi",
+      "name": "吕后",
+      "alias": "吕雉，汉高皇后",
+      "dynasty": "han",
+      "born": -241,
+      "died": -180,
+      "role": "汉初实际掌权者",
+      "short": "汉高祖刘邦皇后，汉惠帝刘盈之母。惠帝死后临朝称制，掌权十六年，扶植吕氏势力，死后诸吕被诛。"
+    },
+    "han_wen": {
+      "id": "han_wen",
+      "name": "汉文帝",
+      "alias": "刘恒，太宗",
+      "dynasty": "han",
+      "born": -203,
+      "died": -157,
+      "role": "汉朝第五位皇帝",
+      "short": "汉高祖刘邦第四子，代王。诸吕之乱后被迎立为帝，开创文景之治，以仁德节俭著称。"
+    },
+    "han_jing": {
+      "id": "han_jing",
+      "name": "汉景帝",
+      "alias": "刘启",
+      "dynasty": "han",
+      "born": -188,
+      "died": -141,
+      "role": "汉朝第六位皇帝",
+      "short": "汉文帝长子，继续推行休养生息政策，平定七国之乱，巩固中央集权。"
+    },
+    "han_wu": {
+      "id": "han_wu",
+      "name": "汉武帝",
+      "alias": "刘彻，世宗",
+      "dynasty": "han",
+      "born": -156,
+      "died": -87,
+      "role": "汉朝第七位皇帝",
+      "short": "汉景帝之子，在位五十四年。独尊儒术，开疆拓土，北击匈奴，开通西域，是汉朝鼎盛时期的代表。"
+    },
+    "wei_qing": {
+      "id": "wei_qing",
+      "name": "卫青",
+      "alias": "字仲卿",
+      "dynasty": "han",
+      "born": -154,
+      "died": -106,
+      "role": "西汉大将军",
+      "short": "汉武帝时期大将军，平阳侯，皇后卫子夫之弟。七次出击匈奴，收复河套，为汉朝解除北方边患。"
+    },
+    "huo_qu": {
+      "id": "huo_qu",
+      "name": "霍去病",
+      "alias": "字子孟",
+      "dynasty": "han",
+      "born": -140,
+      "died": -117,
+      "role": "西汉骠骑将军",
+      "short": "汉武帝时期骠骑将军，卫青外甥。十七岁即率军深入匈奴腹地，封狼居胥，打通河西走廊。"
+    },
+    "zhang_qian": {
+      "id": "zhang_qian",
+      "name": "张骞",
+      "alias": "字子文，博望侯",
+      "dynasty": "han",
+      "born": -164,
+      "died": -114,
+      "role": "西汉外交家",
+      "short": "汉武帝时期使者，两次出使西域，被匈奴扣押十余年不屈，开辟丝绸之路，被誉为「凿空」第一人。"
+    },
+    "dong_zhongshu": {
+      "id": "dong_zhongshu",
+      "name": "董仲舒",
+      "alias": "",
+      "dynasty": "han",
+      "born": -179,
+      "died": -104,
+      "role": "西汉思想家",
+      "short": "汉武帝时期著名思想家，提出「罢黜百家，独尊儒术」和「天人感应」学说，奠定儒家正统地位。"
+    },
+    "hu_hai": {
+      "id": "hu_hai",
+      "name": "秦二世",
+      "alias": "胡亥",
+      "dynasty": "qin",
+      "born": -230,
+      "died": -207,
+      "role": "秦朝第二位皇帝",
+      "short": "秦始皇第十八子，被赵高与李斯矫诏立为皇帝。荒淫无道，诛杀兄弟大臣，最终被赵高逼迫自杀。"
+    },
+    "zhao_gao": {
+      "id": "zhao_gao",
+      "name": "赵高",
+      "alias": "",
+      "dynasty": "qin",
+      "born": -258,
+      "died": -207,
+      "role": "秦朝宦官",
+      "short": "秦朝宦官，精通律法，沙丘之变主谋。矫诏立胡亥，诛杀李斯，指鹿为马，最终逼死胡亥，自立为帝失败被杀。"
+    },
+    "peng_yue": {
+      "id": "peng_yue",
+      "name": "彭越",
+      "alias": "字仲，昌邑人",
+      "dynasty": "han",
+      "born": -250,
+      "died": -196,
+      "role": "汉初名将",
+      "short": "汉初名将，游击战术鼻祖。楚汉战争中以游击战术断项羽粮道，为刘邦胜利立下大功。"
+    },
+    "qing_bu": {
+      "id": "qing_bu",
+      "name": "黥布",
+      "alias": "英布，九江王",
+      "dynasty": "han",
+      "born": -240,
+      "died": -195,
+      "role": "汉初名将",
+      "short": "汉初名将，因受黥刑，故称黥布。先属项羽，后归刘邦，为汉初三大将之一。"
+    },
+    "fan_kuai": {
+      "id": "fan_kuai",
+      "name": "樊哙",
+      "alias": "字仲，沛人",
+      "dynasty": "han",
+      "born": -242,
+      "died": -189,
+      "role": "汉初名将",
+      "short": "汉初名将，刘邦的连襟。鸿门宴上闯营救刘邦，勇猛过人。"
+    },
+    "zhou_bo": {
+      "id": "zhou_bo",
+      "name": "周勃",
+      "alias": "字亚夫，沛人",
+      "dynasty": "han",
+      "born": -240,
+      "died": -169,
+      "role": "汉初名将",
+      "short": "汉初名将，从刘邦起兵。刘邦死前预言「安刘氏者必勃也」。吕后死后，周勃平诸吕之乱，迎立汉文帝。"
+    },
+    "chen_ping": {
+      "id": "chen_ping",
+      "name": "陈平",
+      "alias": "字孺子，阳武人",
+      "dynasty": "han",
+      "born": -248,
+      "died": -178,
+      "role": "汉初谋士",
+      "short": "汉初谋士，刘邦的重要谋士。六出奇计，为刘邦建立汉朝立下大功。"
+    },
+    "zhou_yafu": {
+      "id": "zhou_yafu",
+      "name": "周亚夫",
+      "alias": "字亚夫，绛侯之子",
+      "dynasty": "han",
+      "born": -199,
+      "died": -143,
+      "role": "汉初名将",
+      "short": "汉初名将，周勃之子。细柳营军纪严明，平定七国之乱，后因功高震主被景帝猜忌。"
+    },
+    "li_guang": {
+      "id": "li_guang",
+      "name": "李广",
+      "alias": "字子房，陇西人",
+      "dynasty": "han",
+      "born": -184,
+      "died": -119,
+      "role": "西汉名将",
+      "short": "西汉名将，人称「飞将军」。与匈奴作战七十余次，以勇猛善战著称，但终未封侯。"
+    },
+    "xiang_yu": {
+      "id": "xiang_yu",
+      "name": "项羽",
+      "alias": "字羽，西楚霸王",
+      "dynasty": "han",
+      "born": -232,
+      "died": -202,
+      "role": "西楚霸王",
+      "short": "秦末起义军领袖，巨鹿之战破釜沉舟击败秦军主力，鸿门宴错失杀刘邦之机，楚汉战争败于垓下，自刎乌江。"
+    },
+    "liu_bang": {
+      "id": "liu_bang",
+      "name": "汉高祖",
+      "alias": "刘邦，字季",
+      "dynasty": "han",
+      "born": -256,
+      "died": -195,
+      "role": "汉朝开国皇帝",
+      "short": "汉朝开国皇帝，秦末起兵，先入关中，楚汉战争击败项羽，建立汉朝，定都长安。"
+    },
+    "fan_zeng": {
+      "id": "fan_zeng",
+      "name": "范增",
+      "alias": "亚父",
+      "dynasty": "han",
+      "born": -277,
+      "died": -204,
+      "role": "项羽谋士",
+      "short": "项羽谋士，被尊为亚父。鸿门宴上劝项羽杀刘邦，项羽不听。后陈平反间计，项羽疑范增，范增怒而离去，病死于途中。"
+    },
+    "liu_xiu": {
+      "id": "liu_xiu",
+      "name": "刘秀",
+      "alias": "字文叔，汉光武帝，南阳人",
+      "dynasty": "han",
+      "born": -5,
+      "died": 57,
+      "role": "东汉开国皇帝",
+      "short": "东汉开国皇帝，汉高祖九世孙。新莽末年天下大乱，起兵于舂陵，昆阳之战大破王莽军，定都洛阳，开创光武中兴。"
+    },
+    "deng_yu": {
+      "id": "deng_yu",
+      "name": "邓禹",
+      "alias": "字仲华，南阳新野人",
+      "dynasty": "han",
+      "born": 2,
+      "died": 58,
+      "role": "东汉开国功臣",
+      "short": "东汉开国功臣，云台二十八将之首。与刘秀友善，从起兵到定天下，功第一。"
+    },
+    "geng_yan": {
+      "id": "geng_yan",
+      "name": "耿弇",
+      "alias": "字伯昭，扶风茂陵人",
+      "dynasty": "han",
+      "born": 3,
+      "died": 58,
+      "role": "东汉名将",
+      "short": "东汉开国名将，云台二十八将之一。善用兵法，攻城略地，未尝挫折。"
+    },
+    "ma_yuan": {
+      "id": "ma_yuan",
+      "name": "马援",
+      "alias": "字文渊，扶风茂陵人",
+      "dynasty": "han",
+      "born": -14,
+      "died": 49,
+      "role": "东汉名将",
+      "short": "东汉名将，伏波将军。平交趾、征武陵，马革裹尸，老当益壮。"
+    },
+    "dou_xian": {
+      "id": "dou_xian",
+      "name": "窦宪",
+      "alias": "字伯度，扶风平陵人",
+      "dynasty": "han",
+      "born": 40,
+      "died": 92,
+      "role": "东汉外戚",
+      "short": "东汉外戚，窦皇后之兄。燕然勒石，大破北匈奴，但骄横跋扈，终被诛杀。"
+    },
+    "ban_gu": {
+      "id": "ban_gu",
+      "name": "班固",
+      "alias": "字孟坚，扶风安陵人",
+      "dynasty": "han",
+      "born": 32,
+      "died": 92,
+      "role": "东汉史学家",
+      "short": "东汉史学家，续父班彪之志，著《汉书》，为中国第一部纪传体断代史。"
+    },
+    "ban_chao": {
+      "id": "ban_chao",
+      "name": "班超",
+      "alias": "字仲升，扶风安陵人",
+      "dynasty": "han",
+      "born": 32,
+      "died": 102,
+      "role": "东汉外交家",
+      "short": "东汉外交家，出使西域三十一年，平定西域五十余国，封定远侯。"
+    },
+    "cai_lun": {
+      "id": "cai_lun",
+      "name": "蔡伦",
+      "alias": "字敬仲，桂阳人",
+      "dynasty": "han",
+      "born": 50,
+      "died": 121,
+      "role": "东汉宦官",
+      "short": "东汉宦官，改进造纸术，用树皮、麻头、破布、渔网等造纸，封龙亭侯。"
+    },
+    "zhang_heng": {
+      "id": "zhang_heng",
+      "name": "张衡",
+      "alias": "字平子，南阳西鄂人",
+      "dynasty": "han",
+      "born": 78,
+      "died": 139,
+      "role": "东汉科学家",
+      "short": "东汉科学家、文学家，发明地动仪、浑天仪，著《二京赋》《归田赋》。"
+    },
+    "xu_shen": {
+      "id": "xu_shen",
+      "name": "许慎",
+      "alias": "字叔重，汝南召陵人",
+      "dynasty": "han",
+      "born": 58,
+      "died": 147,
+      "role": "东汉经学家",
+      "short": "东汉经学家，著《说文解字》，为中国第一部系统分析汉字字形和考究字源的著作。"
+    },
+    "liang_ji": {
+      "id": "liang_ji",
+      "name": "梁冀",
+      "alias": "字伯卓，安定乌氏人",
+      "dynasty": "han",
+      "born": 88,
+      "died": 159,
+      "role": "东汉外戚",
+      "short": "东汉外戚，跋扈将军，专权二十年，毒杀质帝，终被桓帝与宦官单超等合谋诛杀。"
+    },
+    "jia_yi": {
+      "id": "jia_yi",
+      "name": "贾谊",
+      "alias": "字太傅，洛阳人",
+      "dynasty": "han",
+      "born": -200,
+      "died": -168,
+      "role": "西汉政论家",
+      "short": "西汉著名政论家、文学家。年十八以能诵诗属书闻于郡中，文帝召为博士，迁太中大夫。"
+    },
+    "chao_cuo": {
+      "id": "chao_cuo",
+      "name": "晁错",
+      "alias": "字子明，颍川人",
+      "dynasty": "han",
+      "born": -200,
+      "died": -154,
+      "role": "西汉政治家",
+      "short": "西汉政治家，主张削藩，引发七国之乱。景帝采纳其削藩之策，但最终为安抚诸侯而将其诛杀。"
+    },
+    "dongfang_shuo": {
+      "id": "dongfang_shuo",
+      "name": "东方朔",
+      "alias": "字曼倩，平原人",
+      "dynasty": "han",
+      "born": -154,
+      "died": -93,
+      "role": "西汉文学家",
+      "short": "西汉文学家，滑稽多智，以诙谐谏武帝。"
+    },
+    "sima_xiangru": {
+      "id": "sima_xiangru",
+      "name": "司马相如",
+      "alias": "字长卿，蜀郡人",
+      "dynasty": "han",
+      "born": -179,
+      "died": -117,
+      "role": "西汉辞赋家",
+      "short": "西汉著名辞赋家，代表作《子虚赋》《上林赋》，与卓文君的爱情故事广为流传。"
+    },
+    "su_wu": {
+      "id": "su_wu",
+      "name": "苏武",
+      "alias": "字子卿，杜陵人",
+      "dynasty": "han",
+      "born": -140,
+      "died": -60,
+      "role": "西汉使臣",
+      "short": "西汉使臣，出使匈奴被扣十九年，牧羊北海，坚贞不屈，成为民族气节的象征。"
+    },
+    "li_ling": {
+      "id": "li_ling",
+      "name": "李陵",
+      "alias": "字少卿，陇西人",
+      "dynasty": "han",
+      "born": -134,
+      "died": -74,
+      "role": "西汉名将",
+      "short": "西汉名将李广之孙，率五千步兵深入匈奴，战败投降，司马迁因替其辩护而受腐刑。"
+    },
+    "huo_guang": {
+      "id": "huo_guang",
+      "name": "霍光",
+      "alias": "字子孟，河东人",
+      "dynasty": "han",
+      "born": -130,
+      "died": -68,
+      "role": "西汉权臣",
+      "short": "西汉权臣，霍去病之弟。昭帝死后，废昌邑王刘贺，立宣帝，执政二十年，权倾天下。"
+    },
+    "wang_mang": {
+      "id": "wang_mang",
+      "name": "王莽",
+      "alias": "字巨君，魏郡人",
+      "dynasty": "han",
+      "born": -45,
+      "died": 23,
+      "role": "新朝建立者",
+      "short": "西汉外戚，篡汉建立新朝，推行托古改制，引发天下大乱，最终被杀。"
+    },
+    "yang_jian": {
+      "id": "yang_jian",
+      "name": "杨坚",
+      "alias": "字那罗延，弘农郡华阴县人，隋朝开国皇帝",
+      "dynasty": "sui",
+      "born": 541,
+      "died": 604,
+      "role": "隋朝开国皇帝",
+      "short": "隋朝开国皇帝，统一南北，开创开皇之治。"
+    },
+    "yang_guang": {
+      "id": "yang_guang",
+      "name": "杨广",
+      "alias": "字阿摮，隋文帝次子，隋炀帝",
+      "dynasty": "sui",
+      "born": 569,
+      "died": 618,
+      "role": "隋朝皇帝",
+      "short": "隋炀帝，营建东都、开凿大运河，三征高丽致天下大乱。"
+    },
+    "li_shimin": {
+      "id": "li_shimin",
+      "name": "李世民",
+      "alias": "字太宗，陇西成纪人，唐朝第二位皇帝",
+      "dynasty": "tang",
+      "born": 598,
+      "died": 649,
+      "role": "唐朝皇帝",
+      "short": "唐太宗，发动玄武门之变即位，开创贞观之治，被尊为天可汗。"
+    },
+    "wu_zetian": {
+      "id": "wu_zetian",
+      "name": "武则天",
+      "alias": "名曌，并州文水人，中国历史上唯一正统女皇帝",
+      "dynasty": "tang",
+      "born": 624,
+      "died": 705,
+      "role": "女皇帝",
+      "short": "中国历史上唯一正统女皇帝，改唐为周，开创殿试与武举。"
+    },
+    "li_longji": {
+      "id": "li_longji",
+      "name": "李隆基",
+      "alias": "字隆基，又称唐明皇，唐朝第七位皇帝",
+      "dynasty": "tang",
+      "born": 685,
+      "died": 762,
+      "role": "唐朝皇帝",
+      "short": "唐玄宗，开创开元盛世，晚年安史之乱，唐朝由盛转衰。"
+    },
+    "wei_zheng": {
+      "id": "wei_zheng",
+      "name": "魏征",
+      "alias": "字玄成，钜鹿郡人，唐朝名相",
+      "dynasty": "tang",
+      "born": 580,
+      "died": 643,
+      "role": "政治家",
+      "short": "唐太宗名相，以直言敢谏闻名，辅佐太宗开创贞观之治。"
+    },
+    "li_jing": {
+      "id": "li_jing",
+      "name": "李靖",
+      "alias": "字药师，雍州三原人，唐朝开国名将",
+      "dynasty": "tang",
+      "born": 571,
+      "died": 649,
+      "role": "军事家",
+      "short": "唐朝开国名将，灭东突厥、吐谷浑，封卫国公，为凌烟阁功臣之一。"
+    },
+    "guo_ziyi": {
+      "id": "guo_ziyi",
+      "name": "郭子仪",
+      "alias": "字子仪，华州郑县人，唐朝中兴名将",
+      "dynasty": "tang",
+      "born": 697,
+      "died": 781,
+      "role": "将领",
+      "short": "唐朝中兴名将，平定安史之乱，收复两京，封汾阳王。"
+    },
+    "an_lushan": {
+      "id": "an_lushan",
+      "name": "安禄山",
+      "alias": "本名轧荦山，营州柳城人，唐朝叛将",
+      "dynasty": "tang",
+      "born": 703,
+      "died": 757,
+      "role": "叛将",
+      "short": "发动安史之乱，自称大燕皇帝，后被其子安庆绪所杀。"
+    },
+    "li_bai": {
+      "id": "li_bai",
+      "name": "李白",
+      "alias": "字太白，号青莲居士，陇西成纪人，唐朝诗人",
+      "dynasty": "tang",
+      "born": 701,
+      "died": 762,
+      "role": "诗人",
+      "short": "唐代伟大诗人，诗仙，与杜甫并称「李杜」，其诗豪放飘逸。"
+    },
+    "du_gu_jialuo": {
+      "id": "du_gu_jialuo",
+      "name": "独孤伽罗",
+      "alias": "文献皇后，河南洛阳人，独孤信之女",
+      "dynasty": "sui",
+      "born": 544,
+      "died": 602,
+      "role": "隋朝皇后",
+      "short": "隋文帝杨坚皇后，协助杨坚建立隋朝，参与朝政。"
+    },
+    "yang_su": {
+      "id": "yang_su",
+      "name": "杨素",
+      "alias": "字处道，弘农郡华阴人，隋朝军事家",
+      "dynasty": "sui",
+      "born": 544,
+      "died": 606,
+      "role": "隋朝军事家",
+      "short": "隋朝越国公，军事统帅，灭陈功臣，后助杨广夺嫡。"
+    },
+    "han_qinhu": {
+      "id": "han_qinhu",
+      "name": "韩擒虎",
+      "alias": "字子通，河南东垣人，隋朝开国名将",
+      "dynasty": "sui",
+      "born": 538,
+      "died": 592,
+      "role": "隋朝将领",
+      "short": "隋朝开国名将，灭陈先锋，率军攻入建康，擒获陈后主。"
+    },
+    "gao_jiong": {
+      "id": "gao_jiong",
+      "name": "高颎",
+      "alias": "字昭玄，渤海蓨人，隋朝开国功臣",
+      "dynasty": "sui",
+      "born": 541,
+      "died": 607,
+      "role": "隋朝政治家",
+      "short": "隋朝尚书左仆射，开国功臣，灭陈统帅的参谋长。"
+    },
+    "he_ruobi": {
+      "id": "he_ruobi",
+      "name": "贺若弼",
+      "alias": "字辅伯，河南洛阳人，隋朝名将",
+      "dynasty": "sui",
+      "born": 544,
+      "died": 607,
+      "role": "隋朝将领",
+      "short": "隋朝灭陈名将，率军自广陵渡江，攻克京口、曲阿，直逼建康。"
+    },
+    "shi_wansui": {
+      "id": "shi_wansui",
+      "name": "史万岁",
+      "alias": "字万寿，京兆杜陵人，隋朝名将",
+      "dynasty": "sui",
+      "born": 549,
+      "died": 600,
+      "role": "隋朝将领",
+      "short": "隋朝名将，擅长骑射，北击突厥，南平叛乱。"
+    },
+    "yuwen_kai": {
+      "id": "yuwen_kai",
+      "name": "宇文恺",
+      "alias": "字安乐，京兆长安人，隋朝建筑师",
+      "dynasty": "sui",
+      "born": 555,
+      "died": 612,
+      "role": "建筑师",
+      "short": "隋朝建筑师，营建大兴城、东都洛阳，设计明堂、仁寿宫。"
+    },
+    "zhang_sun_sheng": {
+      "id": "zhang_sun_sheng",
+      "name": "长孙晟",
+      "alias": "字季晟，河南洛阳人，隋朝外交家",
+      "dynasty": "sui",
+      "born": 551,
+      "died": 609,
+      "role": "外交家",
+      "short": "隋朝外交家，出使突厥，运用离间计分裂突厥，为隋朝北境安定立下大功。"
+    },
+    "li_mu": {
+      "id": "li_mu",
+      "name": "李穆",
+      "alias": "字显庆，陇西成纪人，隋朝开国功臣",
+      "dynasty": "sui",
+      "born": 510,
+      "died": 586,
+      "role": "隋朝将领",
+      "short": "隋朝开国功臣，佐命元勋，封申国公。"
+    },
+    "wang_tong": {
+      "id": "wang_tong",
+      "name": "王通",
+      "alias": "字仲淹，绛州龙门人，隋朝大儒，私谥文中子",
+      "dynasty": "sui",
+      "born": 584,
+      "died": 617,
+      "role": "大儒",
+      "short": "隋朝大儒，私谥文中子，主张儒道合流，弟子众多，对唐初儒学影响深远。"
+    },
+    "xue_daoheng": {
+      "id": "xue_daoheng",
+      "name": "薛道衡",
+      "alias": "字玄卿，河东汾阴人，隋朝诗人",
+      "dynasty": "sui",
+      "born": 540,
+      "died": 609,
+      "role": "诗人",
+      "short": "隋朝诗人，与卢思道齐名，因诗名被炀帝嫉妒，赐死。"
+    },
+    "yu_shiji": {
+      "id": "yu_shiji",
+      "name": "虞世基",
+      "alias": "字茂世，会稽余姚人，隋朝文学家",
+      "dynasty": "sui",
+      "born": 556,
+      "died": 618,
+      "role": "文学家",
+      "short": "隋朝内史侍郎，掌诏诰，后从炀帝于江都，宇文化及兵变时被杀。"
+    },
+    "yuwen_huaji": {
+      "id": "yuwen_huaji",
+      "name": "宇文化及",
+      "alias": "字及，代郡武川人，隋朝将领，弑君者",
+      "dynasty": "sui",
+      "born": 569,
+      "died": 619,
+      "role": "将领",
+      "short": "隋朝右屯卫将军，大业十四年发动江都兵变，缢杀隋炀帝。"
+    },
+    "wang_shichong": {
+      "id": "wang_shichong",
+      "name": "王世充",
+      "alias": "字行满，西域人，隋末割据势力",
+      "dynasty": "sui",
+      "born": null,
+      "died": 621,
+      "role": "割据势力",
+      "short": "隋末洛阳割据势力，自立为郑帝，后为李世民所败。"
+    },
+    "dou_jiande": {
+      "id": "dou_jiande",
+      "name": "窦建德",
+      "alias": "字建德，清河漳南人，隋末起义领袖",
+      "dynasty": "sui",
+      "born": 573,
+      "died": 621,
+      "role": "起义领袖",
+      "short": "隋末河北起义领袖，建夏国，后为李世民所擒。"
+    },
+    "li_mi": {
+      "id": "li_mi",
+      "name": "李密",
+      "alias": "字玄邃，京兆长安人，隋末瓦岗军领袖",
+      "dynasty": "sui",
+      "born": 582,
+      "died": 619,
+      "role": "起义领袖",
+      "short": "隋末瓦岗军领袖，据守洛口仓，后为王世充所败。"
+    },
+    "zai_rang": {
+      "id": "zai_rang",
+      "name": "翟让",
+      "alias": "字让，东郡韦城人，瓦岗军创始人",
+      "dynasty": "sui",
+      "born": null,
+      "died": 617,
+      "role": "起义领袖",
+      "short": "瓦岗军创始人，后让位于李密，最终被李密所杀。"
+    },
+    "xiao_xian": {
+      "id": "xiao_xian",
+      "name": "萧铣",
+      "alias": "字元吉，兰陵人，隋末割据势力",
+      "dynasty": "sui",
+      "born": 583,
+      "died": 621,
+      "role": "割据势力",
+      "short": "隋末割据江陵，自称梁帝，后为唐将李靖所灭。"
+    },
+    "du_fuwei": {
+      "id": "du_fuwei",
+      "name": "杜伏威",
+      "alias": "字伏威，齐州章丘人，隋末起义领袖",
+      "dynasty": "sui",
+      "born": null,
+      "died": 624,
+      "role": "起义领袖",
+      "short": "隋末江淮起义领袖，据历阳，后为唐所招安。"
+    },
+    "fu_gongshi": {
+      "id": "fu_gongshi",
+      "name": "辅公祏",
+      "alias": "字公祏，齐州临济人，隋末起义领袖",
+      "dynasty": "sui",
+      "born": null,
+      "died": 624,
+      "role": "起义领袖",
+      "short": "隋末江淮起义领袖，与杜伏威共同起兵，后反唐被杀。"
+    },
+    "yang_xuangan": {
+      "id": "yang_xuangan",
+      "name": "杨玄感",
+      "alias": "字玄感，弘农华阴人，隋朝贵族",
+      "dynasty": "sui",
+      "born": null,
+      "died": 613,
+      "role": "反叛者",
+      "short": "杨素之子，大业九年起兵反隋，后兵败被杀。"
+    },
+    "liu_chao": {
+      "id": "liu_chao",
+      "name": "刘焯",
+      "alias": "字士元，信都昌亭人，隋朝经学家",
+      "dynasty": "sui",
+      "born": 544,
+      "died": 610,
+      "role": "经学家",
+      "short": "隋朝经学家，精通天文历法，著有《历书》。"
+    },
+    "liu_xuan": {
+      "id": "liu_xuan",
+      "name": "刘炫",
+      "alias": "字光伯，河间景城人，隋朝经学家",
+      "dynasty": "sui",
+      "born": null,
+      "died": 613,
+      "role": "经学家",
+      "short": "隋朝经学家，与刘焯齐名，精通诸经，弟子众多。"
+    },
+    "li_xiong": {
+      "id": "li_xiong",
+      "name": "李雄",
+      "alias": "字雄，陇西成纪人，隋朝将领",
+      "dynasty": "sui",
+      "born": null,
+      "died": 613,
+      "role": "将领",
+      "short": "隋朝将领，佐命功臣，从杨坚代周，封赵国公。"
+    },
+    "zhang_lihua": {
+      "id": "zhang_lihua",
+      "name": "张丽华",
+      "alias": "字丽华，吴郡人，陈后主宠妃",
+      "dynasty": "sui",
+      "born": 559,
+      "died": 589,
+      "role": "后妃",
+      "short": "陈后主宠妃，以色艺冠绝后宫，陈亡后被隋将斩于青溪。"
+    },
+    "chen_shubao": {
+      "id": "chen_shubao",
+      "name": "陈叔宝",
+      "alias": "字元秀，吴兴长城人，陈后主",
+      "dynasty": "nanbei",
+      "born": 553,
+      "died": 604,
+      "role": "皇帝",
+      "short": "南朝陈末代皇帝，荒淫误国，隋灭陈，被俘至长安。"
+    },
+    "wei_ding": {
+      "id": "wei_ding",
+      "name": "韦鼎",
+      "alias": "字超盛，京兆杜陵人，隋朝相术家",
+      "dynasty": "sui",
+      "born": null,
+      "died": null,
+      "role": "相术家",
+      "short": "隋朝相术家，善相人，曾预言杨坚当为天子。"
+    },
+    "yang_yichen": {
+      "id": "yang_yichen",
+      "name": "杨义臣",
+      "alias": "字义臣，弘农华阴人，隋朝将领",
+      "dynasty": "sui",
+      "born": null,
+      "died": 616,
+      "role": "将领",
+      "short": "隋朝将领，从征高丽，镇压起义，后病卒。"
+    },
+    "li_yuan": {
+      "id": "li_yuan",
+      "name": "李渊",
+      "alias": "字叔德，陇西成纪人，唐朝开国皇帝",
+      "dynasty": "tang",
+      "born": 566,
+      "died": 635,
+      "role": "唐朝开国皇帝",
+      "short": "唐高祖，太原起兵，建立唐朝，统一全国。"
+    },
+    "fang_xuanling": {
+      "id": "fang_xuanling",
+      "name": "房玄龄",
+      "alias": "字乔，齐州临淄人，唐朝名相",
+      "dynasty": "tang",
+      "born": 579,
+      "died": 648,
+      "role": "政治家",
+      "short": "唐太宗名相，善谋，与杜如晦并称「房谋杜断」。"
+    },
+    "du_ruhui": {
+      "id": "du_ruhui",
+      "name": "杜如晦",
+      "alias": "字克明，京兆杜陵人，唐朝名相",
+      "dynasty": "tang",
+      "born": 585,
+      "died": 630,
+      "role": "政治家",
+      "short": "唐太宗名相，善断，与房玄龄并称「房谋杜断」。"
+    },
+    "chang_sun_wuji": {
+      "id": "chang_sun_wuji",
+      "name": "长孙无忌",
+      "alias": "字辅机，河南洛阳人，唐朝开国功臣",
+      "dynasty": "tang",
+      "born": 594,
+      "died": 659,
+      "role": "政治家",
+      "short": "唐太宗长孙皇后之兄，凌烟阁功臣第一，辅佐太宗、高宗两朝。"
+    },
+    "yu_chi_jingde": {
+      "id": "yu_chi_jingde",
+      "name": "尉迟敬德",
+      "alias": "本名尉迟恭，字敬德，朔州善阳人，唐朝名将",
+      "dynasty": "tang",
+      "born": 585,
+      "died": 658,
+      "role": "将领",
+      "short": "唐朝开国名将，玄武门之变功臣，封鄂国公，凌烟阁功臣。"
+    },
+    "qin_qiong": {
+      "id": "qin_qiong",
+      "name": "秦琼",
+      "alias": "字叔宝，齐州历城人，唐朝名将",
+      "dynasty": "tang",
+      "born": null,
+      "died": 638,
+      "role": "将领",
+      "short": "唐朝开国名将，勇武过人，后为民间门神之一。"
+    },
+    "cheng_yaojin": {
+      "id": "cheng_yaojin",
+      "name": "程咬金",
+      "alias": "本名程知节，字义贞，东平东阿人，唐朝名将",
+      "dynasty": "tang",
+      "born": 589,
+      "died": 665,
+      "role": "将领",
+      "short": "唐朝开国名将，瓦岗军出身，从太宗平天下，封卢国公。"
+    },
+    "li_ji": {
+      "id": "li_ji",
+      "name": "李绩",
+      "alias": "本名徐世绩，字懋功，曹州离狐人，唐朝名将",
+      "dynasty": "tang",
+      "born": 594,
+      "died": 669,
+      "role": "将领",
+      "short": "唐朝开国名将，原瓦岗军，从太宗、高宗两朝，封英国公，图形凌烟阁。"
+    },
+    "su_dingfang": {
+      "id": "su_dingfang",
+      "name": "苏定方",
+      "alias": "名烈，字定方，冀州武邑人，唐朝名将",
+      "dynasty": "tang",
+      "born": 592,
+      "died": 667,
+      "role": "将领",
+      "short": "唐朝名将，灭西突厥、百济，拓地至中亚，封邢国公。"
+    },
+    "xue_rengui": {
+      "id": "xue_rengui",
+      "name": "薛仁贵",
+      "alias": "名礼，字仁贵，绛州龙门人，唐朝名将",
+      "dynasty": "tang",
+      "born": 614,
+      "died": 683,
+      "role": "将领",
+      "short": "唐朝名将，三箭定天山，征高丽、突厥，封平阳郡公。"
+    },
+    "li_guangbi": {
+      "id": "li_guangbi",
+      "name": "李光弼",
+      "alias": "字光弼，营州柳城人，唐朝名将",
+      "dynasty": "tang",
+      "born": 708,
+      "died": 764,
+      "role": "将领",
+      "short": "唐朝平定安史之乱名将，与郭子仪齐名，封临淮郡王。"
+    },
+    "du_fu": {
+      "id": "du_fu",
+      "name": "杜甫",
+      "alias": "字子美，号少陵野老，河南巩县人，唐朝诗人",
+      "dynasty": "tang",
+      "born": 712,
+      "died": 770,
+      "role": "诗人",
+      "short": "唐代伟大诗人，诗圣，与李白并称「李杜」，其诗沉郁顿挫。"
+    },
+    "bai_juyi": {
+      "id": "bai_juyi",
+      "name": "白居易",
+      "alias": "字乐天，号香山居士，下邽人，唐朝诗人",
+      "dynasty": "tang",
+      "born": 772,
+      "died": 846,
+      "role": "诗人",
+      "short": "唐代大诗人，新乐府运动领袖，诗风平易通俗，代表作《长恨歌》《琵琶行》。"
+    },
+    "wang_wei": {
+      "id": "wang_wei",
+      "name": "王维",
+      "alias": "字摩诘，河东蒲州人，唐朝诗人、画家",
+      "dynasty": "tang",
+      "born": 701,
+      "died": 761,
+      "role": "诗人",
+      "short": "唐代诗人、画家，诗中有画，画中有诗，被誉为「诗佛」。"
+    },
+    "di_renjie": {
+      "id": "di_renjie",
+      "name": "狄仁杰",
+      "alias": "字怀英，并州太原人，唐朝名相",
+      "dynasty": "tang",
+      "born": 630,
+      "died": 700,
+      "role": "政治家",
+      "short": "武则天名相，刚正不阿，断案如神，被尊为「狄公」。"
+    },
+    "yao_chong": {
+      "id": "yao_chong",
+      "name": "姚崇",
+      "alias": "本名元崇，字元之，陕州硖石人，唐朝名相",
+      "dynasty": "tang",
+      "born": 650,
+      "died": 721,
+      "role": "政治家",
+      "short": "唐玄宗开元贤相，与宋璟并称「姚宋」，奠定开元盛世。"
+    },
+    "song_jing": {
+      "id": "song_jing",
+      "name": "宋璟",
+      "alias": "字广平，邢州南和人，唐朝名相",
+      "dynasty": "tang",
+      "born": 663,
+      "died": 737,
+      "role": "政治家",
+      "short": "唐玄宗开元贤相，与姚崇并称「姚宋」，刚正不阿，守文持正。"
+    },
+    "han_yu": {
+      "id": "han_yu",
+      "name": "韩愈",
+      "alias": "字退之，河南河阳人，唐朝文学家、思想家",
+      "dynasty": "tang",
+      "born": 768,
+      "died": 824,
+      "role": "文学家",
+      "short": "唐代古文运动领袖，唐宋八大家之首，被尊为「文起八代之衰」。"
+    },
+    "liu_zongyuan": {
+      "id": "liu_zongyuan",
+      "name": "柳宗元",
+      "alias": "字子厚，河东解人，唐朝文学家、思想家",
+      "dynasty": "tang",
+      "born": 773,
+      "died": 819,
+      "role": "文学家",
+      "short": "唐代古文运动领袖，唐宋八大家之一，代表作《永州八记》《捕蛇者说》。"
+    },
+    "shi_siming": {
+      "id": "shi_siming",
+      "name": "史思明",
+      "alias": "本名窣干，营州柳城人，唐朝叛将",
+      "dynasty": "tang",
+      "born": 703,
+      "died": 761,
+      "role": "叛将",
+      "short": "安史之乱叛将，安禄山死后自称大燕皇帝，后为子史朝义所杀。"
+    },
+    "huang_chao": {
+      "id": "huang_chao",
+      "name": "黄巢",
+      "alias": "字巨天，曹州冤句人，唐末起义领袖",
+      "dynasty": "tang",
+      "born": null,
+      "died": 884,
+      "role": "起义领袖",
+      "short": "唐末起义领袖，攻入长安，建立大齐政权，后为唐军所败。"
+    },
+    "yang_guifei": {
+      "id": "yang_guifei",
+      "name": "杨贵妃",
+      "alias": "名玉环，蒲州永乐人，唐玄宗宠妃",
+      "dynasty": "tang",
+      "born": 719,
+      "died": 756,
+      "role": "后妃",
+      "short": "唐玄宗宠妃，四大美女之一，安史之乱中马嵬坡兵变被赐死。"
+    },
+    "zhu_wen": {
+      "id": "zhu_wen",
+      "name": "朱温",
+      "alias": "字全忠，宋州砀山人，后梁开国皇帝",
+      "dynasty": "wudai",
+      "born": 852,
+      "died": 912,
+      "role": "后梁开国皇帝",
+      "short": "后梁太祖，原为黄巢部将，降唐后掌握大权，最终篡唐建立后梁。"
+    },
+    "jing_xiang": {
+      "id": "jing_xiang",
+      "name": "敬翔",
+      "alias": "字子振，同州冯翊人，后梁谋臣",
+      "dynasty": "wudai",
+      "born": null,
+      "died": 923,
+      "role": "政治家",
+      "short": "后梁太祖朱温首席谋臣，运筹帷幄，为朱温出谋划策，后梁开国功臣。"
+    },
+    "wang_yanzhang": {
+      "id": "wang_yanzhang",
+      "name": "王彦章",
+      "alias": "字子明，郓州寿昌人，后梁名将",
+      "dynasty": "wudai",
+      "born": 863,
+      "died": 923,
+      "role": "将领",
+      "short": "后梁名将，勇武过人，号铁枪。后梁灭亡时率军苦战，终为后唐所擒。"
+    },
+    "li_cunxu": {
+      "id": "li_cunxu",
+      "name": "李存勖",
+      "alias": "字亚子，沙陀人，后唐庄宗",
+      "dynasty": "wudai",
+      "born": 885,
+      "died": 926,
+      "role": "后唐皇帝",
+      "short": "后唐庄宗，灭后梁统一北方，后期宠信伶人，死于兴教门之变。"
+    },
+    "li_siyuan": {
+      "id": "li_siyuan",
+      "name": "李嗣源",
+      "alias": "本名邈佶烈，沙陀人，后唐明宗",
+      "dynasty": "wudai",
+      "born": 867,
+      "died": 933,
+      "role": "后唐皇帝",
+      "short": "后唐明宗，李克用养子。庄宗死后被拥立为帝，励精图治，史称明宗之治。"
+    },
+    "li_congke": {
+      "id": "li_congke",
+      "name": "李从珂",
+      "alias": "本姓王，小字二十三，后唐末帝",
+      "dynasty": "wudai",
+      "born": 885,
+      "died": 936,
+      "role": "后唐皇帝",
+      "short": "后唐末帝，李嗣源养子。石敬瑭引契丹攻后唐，从珂自焚而死。"
+    },
+    "li_cunxiao": {
+      "id": "li_cunxiao",
+      "name": "李存孝",
+      "alias": "本名安敬思，沙陀人，后唐猛将",
+      "dynasty": "wudai",
+      "born": 858,
+      "died": 894,
+      "role": "将领",
+      "short": "李克用养子，勇冠三军，后因功高见嫉，被李克用车裂。"
+    },
+    "zhou_dewei": {
+      "id": "zhou_dewei",
+      "name": "周德威",
+      "alias": "字镇远，朔州马邑人，后唐名将",
+      "dynasty": "wudai",
+      "born": null,
+      "died": 919,
+      "role": "将领",
+      "short": "李克用名将，骁勇善战，以谋略著称。后为契丹所败，战死。"
+    },
+    "feng_dao": {
+      "id": "feng_dao",
+      "name": "冯道",
+      "alias": "字可道，瀛州景城人，五代名相",
+      "dynasty": "wudai",
+      "born": 882,
+      "died": 954,
+      "role": "政治家",
+      "short": "五代四朝宰相，历事后唐、后晋、后汉、后周四朝，被后世称为不倒翁。"
+    },
+    "shi_jingtang": {
+      "id": "shi_jingtang",
+      "name": "石敬瑭",
+      "alias": "字敬瑭，沙陀人，后晋高祖",
+      "dynasty": "wudai",
+      "born": 892,
+      "died": 942,
+      "role": "后晋皇帝",
+      "short": "后晋高祖，引契丹灭后唐，割让燕云十六州，称契丹主为父皇帝。"
+    },
+    "sang_weihan": {
+      "id": "sang_weihan",
+      "name": "桑维翰",
+      "alias": "字国侨，河南洛阳人，后晋谋臣",
+      "dynasty": "wudai",
+      "born": 899,
+      "died": 947,
+      "role": "政治家",
+      "short": "石敬瑭心腹谋臣，主张向契丹称臣求援，后晋开国功臣。"
+    },
+    "shi_chonggui": {
+      "id": "shi_chonggui",
+      "name": "石重贵",
+      "alias": "字子瑞，后晋出帝",
+      "dynasty": "wudai",
+      "born": 914,
+      "died": 974,
+      "role": "后晋皇帝",
+      "short": "后晋出帝，石敬瑭侄。对契丹称孙不称臣，导致契丹灭后晋。"
+    },
+    "liu_zhiyuan": {
+      "id": "liu_zhiyuan",
+      "name": "刘知远",
+      "alias": "字暠，沙陀人，后汉高祖",
+      "dynasty": "wudai",
+      "born": 895,
+      "died": 948,
+      "role": "后汉皇帝",
+      "short": "后汉高祖，原为后晋河东节度使。契丹灭后晋后称帝，建立后汉。"
+    },
+    "guo_wei": {
+      "id": "guo_wei",
+      "name": "郭威",
+      "alias": "字文仲，邢州尧山人，后周太祖",
+      "dynasty": "wudai",
+      "born": 904,
+      "died": 954,
+      "role": "后周皇帝",
+      "short": "后周太祖，原为后汉大将。后汉隐帝诛杀大臣，郭威起兵反叛，建立后周。"
+    },
+    "chai_rong": {
+      "id": "chai_rong",
+      "name": "柴荣",
+      "alias": "字世宗，邢州龙岗人，后周世宗",
+      "dynasty": "wudai",
+      "born": 921,
+      "died": 959,
+      "role": "后周皇帝",
+      "short": "后周世宗，郭威养子。励精图治，改革军政，北伐契丹，为北宋统一奠定基础。"
+    },
+    "wang_pu": {
+      "id": "wang_pu",
+      "name": "王朴",
+      "alias": "字文伯，东平人，后周谋臣",
+      "dynasty": "wudai",
+      "born": 905,
+      "died": 959,
+      "role": "政治家",
+      "short": "后周世宗谋臣，献《平边策》，为后周统一战略奠定基础。"
+    },
+    "yang_xingmi": {
+      "id": "yang_xingmi",
+      "name": "杨行密",
+      "alias": "字化源，庐州合肥人，吴太祖",
+      "dynasty": "wudai",
+      "born": 852,
+      "died": 905,
+      "role": "吴国奠基人",
+      "short": "吴太祖，唐末割据江淮，建立吴国基础，为十国之首。"
+    },
+    "xu_wen": {
+      "id": "xu_wen",
+      "name": "徐温",
+      "alias": "字敦美，海州朐山人，南唐奠基人",
+      "dynasty": "wudai",
+      "born": 862,
+      "died": 927,
+      "role": "政治家",
+      "short": "杨行密部将，后控制吴国大权，为其养子李昪建立南唐奠定基础。"
+    },
+    "li_bian": {
+      "id": "li_bian",
+      "name": "李昪",
+      "alias": "字正伦，徐州人，南唐烈祖",
+      "dynasty": "wudai",
+      "born": 889,
+      "died": 943,
+      "role": "南唐皇帝",
+      "short": "南唐烈祖，本姓徐，名知诰，徐温养子。后恢复李姓，建立南唐。"
+    },
+    "li_yu": {
+      "id": "li_yu",
+      "name": "李煜",
+      "alias": "字重光，号钟隐，南唐后主",
+      "dynasty": "wudai",
+      "born": 937,
+      "died": 978,
+      "role": "南唐皇帝",
+      "short": "南唐后主，著名词人。治国无能，后被宋太祖所灭，被俘至开封，死于牵机药。"
+    },
+    "qian_liu": {
+      "id": "qian_liu",
+      "name": "钱镠",
+      "alias": "字具美，杭州临安人，吴越太祖",
+      "dynasty": "wudai",
+      "born": 852,
+      "died": 932,
+      "role": "吴越国主",
+      "short": "吴越太祖，割据两浙，保境安民，兴修水利，为吴越盛世奠定基础。"
+    },
+    "wang_jian": {
+      "id": "wang_jian",
+      "name": "王建",
+      "alias": "字光图，许州舞阳人，前蜀高祖",
+      "dynasty": "wudai",
+      "born": 847,
+      "died": 918,
+      "role": "前蜀皇帝",
+      "short": "前蜀高祖，唐末割据西川，建立前蜀，保境安民。"
+    },
+    "meng_zhixiang": {
+      "id": "meng_zhixiang",
+      "name": "孟知祥",
+      "alias": "字保胤，邢州龙冈人，后蜀高祖",
+      "dynasty": "wudai",
+      "born": 874,
+      "died": 934,
+      "role": "后蜀皇帝",
+      "short": "后蜀高祖，后唐西川节度使。后唐内乱后称帝，建立后蜀。"
+    },
+    "wang_shenzhi": {
+      "id": "wang_shenzhi",
+      "name": "王审知",
+      "alias": "字信通，光州固始人，闽太祖",
+      "dynasty": "wudai",
+      "born": 862,
+      "died": 925,
+      "role": "闽国主",
+      "short": "闽太祖，割据福建，保境安民，发展海上贸易。"
+    },
+    "ma_yin": {
+      "id": "ma_yin",
+      "name": "马殷",
+      "alias": "字霸图，许州鄢陵人，楚武穆王",
+      "dynasty": "wudai",
+      "born": 852,
+      "died": 930,
+      "role": "楚国主",
+      "short": "楚武穆王，割据湖南，保境安民，发展茶贸易。"
+    },
+    "liu_yan": {
+      "id": "liu_yan",
+      "name": "刘龑",
+      "alias": "字岩，上蔡人，南汉高祖",
+      "dynasty": "wudai",
+      "born": 889,
+      "died": 942,
+      "role": "南汉皇帝",
+      "short": "南汉高祖，割据岭南，建立南汉，奢侈残暴。"
+    },
+    "gao_jixing": {
+      "id": "gao_jixing",
+      "name": "高季兴",
+      "alias": "字贻孙，陕州硖石人，荆南武信王",
+      "dynasty": "wudai",
+      "born": 858,
+      "died": 929,
+      "role": "荆南国主",
+      "short": "荆南武信王，割据江陵，国小力弱，靠称臣朝贡于各大国以自保。"
+    },
+    "liu_chong": {
+      "id": "liu_chong",
+      "name": "刘崇",
+      "alias": "字承钧，沙陀人，北汉世祖",
+      "dynasty": "wudai",
+      "born": 895,
+      "died": 954,
+      "role": "北汉皇帝",
+      "short": "北汉世祖，刘知远之弟。后汉亡后称帝，依附契丹以自保。"
+    },
+    "li_zhen": {
+      "id": "li_zhen",
+      "name": "李振",
+      "alias": "字兴绪，河西人，后梁谋臣",
+      "dynasty": "wudai",
+      "born": null,
+      "died": 923,
+      "role": "政治家",
+      "short": "朱温心腹谋士，参与谋划朱温篡唐，后梁开国功臣。"
+    },
+    "zhao_hongyin": {
+      "id": "zhao_hongyin",
+      "name": "赵弘殷",
+      "alias": "字弘殷，涿郡人，后周将领",
+      "dynasty": "wudai",
+      "born": 899,
+      "died": 956,
+      "role": "将领",
+      "short": "后周禁军将领，宋太祖赵匡胤之父。"
+    },
+    "li_jing_nantang": {
+      "id": "li_jing_nantang",
+      "name": "李璟",
+      "alias": "字伯玉，南唐中主",
+      "dynasty": "wudai",
+      "born": 916,
+      "died": 961,
+      "role": "南唐皇帝",
+      "short": "南唐中主，李昪之子。好文学，但军事扩张失败，向后周称臣。"
+    },
+    "tuoba_gui": {
+      "id": "tuoba_gui",
+      "name": "拓跋珪",
+      "alias": "字涉圭，代郡参合陂人，北魏道武帝",
+      "dynasty": "nanbei",
+      "born": 371,
+      "died": 409,
+      "role": "皇帝",
+      "short": "北魏开国皇帝，统一北方，建立北魏基业。"
+    },
+    "tuoba_tao": {
+      "id": "tuoba_tao",
+      "name": "拓跋焘",
+      "alias": "字佛狸，北魏太武帝",
+      "dynasty": "nanbei",
+      "born": 408,
+      "died": 452,
+      "role": "皇帝",
+      "short": "北魏太武帝，统一北方，击败柔然，攻灭夏、北燕、北凉。"
+    },
+    "xiao_ze": {
+      "id": "xiao_ze",
+      "name": "萧赜",
+      "alias": "字宣俨，南兰陵人，齐武帝",
+      "dynasty": "nanbei",
+      "born": 440,
+      "died": 493,
+      "role": "皇帝",
+      "short": "南朝齐武帝，延续永明之治，政治清明。"
+    },
+    "xiao_tong": {
+      "id": "xiao_tong",
+      "name": "萧统",
+      "alias": "字德施，南兰陵人，梁昭明太子",
+      "dynasty": "nanbei",
+      "born": 501,
+      "died": 531,
+      "role": "文学家",
+      "short": "梁武帝长子，文学家，主编《昭明文选》，英年早逝。"
+    },
+    "xiao_gang": {
+      "id": "xiao_gang",
+      "name": "萧纲",
+      "alias": "字世缵，南兰陵人，梁简文帝",
+      "dynasty": "nanbei",
+      "born": 503,
+      "died": 551,
+      "role": "皇帝",
+      "short": "梁武帝第三子，侯景之乱后被立为帝，后为侯景所杀。宫体诗代表。"
+    },
+    "xiao_yi": {
+      "id": "xiao_yi",
+      "name": "萧绎",
+      "alias": "字世诚，南兰陵人，梁元帝",
+      "dynasty": "nanbei",
+      "born": 508,
+      "died": 555,
+      "role": "皇帝",
+      "short": "梁武帝第七子，侯景之乱后于江陵即位，西魏攻江陵时被杀。"
+    },
+    "gao_yang": {
+      "id": "gao_yang",
+      "name": "高洋",
+      "alias": "字子进，渤海蓨人，北齐文宣帝",
+      "dynasty": "nanbei",
+      "born": 529,
+      "died": 559,
+      "role": "皇帝",
+      "short": "北齐开国皇帝，高欢次子，前期励精图治，后期暴虐。"
+    },
+    "gao_zhan": {
+      "id": "gao_zhan",
+      "name": "高湛",
+      "alias": "字步落稽，渤海蓨人，北齐武成帝",
+      "dynasty": "nanbei",
+      "born": 537,
+      "died": 569,
+      "role": "皇帝",
+      "short": "北齐武成帝，高欢第九子，荒淫残暴，逼奸嫂李祖娥。"
+    },
+    "gao_changgong": {
+      "id": "gao_changgong",
+      "name": "高长恭",
+      "alias": "又名高孝瓘，渤海蓨人，兰陵王",
+      "dynasty": "nanbei",
+      "born": 541,
+      "died": 573,
+      "role": "将领",
+      "short": "北齐名将，兰陵王，貌柔心壮，邙山之战大胜北周。"
+    },
+    "yuwen_yong": {
+      "id": "yuwen_yong",
+      "name": "宇文邕",
+      "alias": "字祢罗突，代郡武川人，北周武帝",
+      "dynasty": "nanbei",
+      "born": 543,
+      "died": 578,
+      "role": "皇帝",
+      "short": "北周武帝，灭北齐统一北方，三武灭佛之一。"
+    },
+    "yuwen_hu": {
+      "id": "yuwen_hu",
+      "name": "宇文护",
+      "alias": "字萨保，代郡武川人，北周权臣",
+      "dynasty": "nanbei",
+      "born": 513,
+      "died": 572,
+      "role": "权臣",
+      "short": "北周权臣，宇文泰之侄，连弑三帝，后为宇文邕所杀。"
+    },
+    "erzhu_rong": {
+      "id": "erzhu_rong",
+      "name": "尔朱荣",
+      "alias": "字天宝，北秀容人，北魏权臣",
+      "dynasty": "nanbei",
+      "born": 493,
+      "died": 528,
+      "role": "军事家",
+      "short": "北魏权臣，契胡族，平定六镇起义，河阴之变弑杀百官，后被孝庄帝所杀。"
+    },
+    "hou_jing": {
+      "id": "hou_jing",
+      "name": "侯景",
+      "alias": "字万景，怀朔镇人，北魏/东魏/梁叛将",
+      "dynasty": "nanbei",
+      "born": 503,
+      "died": 552,
+      "role": "叛将",
+      "short": "东魏叛将，降梁后发动侯景之乱，攻入建康，饿死梁武帝，自立为汉帝。"
+    },
+    "hulu_guang": {
+      "id": "hulu_guang",
+      "name": "斛律光",
+      "alias": "字明月，朔州敕勒部人，北齐名将",
+      "dynasty": "nanbei",
+      "born": 515,
+      "died": 572,
+      "role": "将领",
+      "short": "北齐名将，斛律金之子，善骑射，屡破北周，后被祖珽诬陷致死。"
+    },
+    "wei_xiaokuan": {
+      "id": "wei_xiaokuan",
+      "name": "韦孝宽",
+      "alias": "字孝宽，京兆杜陵人，北周名将",
+      "dynasty": "nanbei",
+      "born": 509,
+      "died": 580,
+      "role": "将领",
+      "short": "北周名将，守玉璧城，以少胜多大败高欢，助杨坚平定三方之乱。"
+    },
+    "zu_chongzhi": {
+      "id": "zu_chongzhi",
+      "name": "祖冲之",
+      "alias": "字文远，范阳郡遒县人，南朝数学家",
+      "dynasty": "nanbei",
+      "born": 429,
+      "died": 500,
+      "role": "数学家",
+      "short": "南朝数学家，首次将圆周率精确到小数点后七位，编制《大明历》。"
+    },
+    "li_daoyuan": {
+      "id": "li_daoyuan",
+      "name": "郦道元",
+      "alias": "字善长，范阳涿县人，北魏地理学家",
+      "dynasty": "nanbei",
+      "born": 472,
+      "died": 527,
+      "role": "地理学家",
+      "short": "北魏地理学家，著有《水经注》，为古代地理学名著。"
+    },
+    "tao_hongjing": {
+      "id": "tao_hongjing",
+      "name": "陶弘景",
+      "alias": "字通明，丹阳秣陵人，南朝医学家、道士",
+      "dynasty": "nanbei",
+      "born": 456,
+      "died": 536,
+      "role": "医学家",
+      "short": "南朝医学家、道士，著有《本草经集注》，隐居茅山，人称「山中宰相」。"
+    },
+    "fan_zhen": {
+      "id": "fan_zhen",
+      "name": "范缜",
+      "alias": "字子真，南乡舞阴人，南朝思想家",
+      "dynasty": "nanbei",
+      "born": 450,
+      "died": 515,
+      "role": "思想家",
+      "short": "南朝思想家，无神论者，著有《神灭论》，批判佛教神不灭论。"
+    },
+    "jiang_yan": {
+      "id": "jiang_yan",
+      "name": "江淹",
+      "alias": "字文通，济阳考城人，南朝文学家",
+      "dynasty": "nanbei",
+      "born": 444,
+      "died": 505,
+      "role": "文学家",
+      "short": "南朝文学家，代表作《别赋》《恨赋》，成语「江郎才尽」即源于他。"
+    },
+    "xie_tiao": {
+      "id": "xie_tiao",
+      "name": "谢朓",
+      "alias": "字玄晖，陈郡阳夏人，南朝诗人",
+      "dynasty": "nanbei",
+      "born": 464,
+      "died": 499,
+      "role": "诗人",
+      "short": "南朝诗人，山水诗代表，与谢灵运并称「大小谢」，后卷入政治斗争被杀。"
+    },
+    "bao_zhao": {
+      "id": "bao_zhao",
+      "name": "鲍照",
+      "alias": "字明远，东海郡人，南朝诗人",
+      "dynasty": "nanbei",
+      "born": 414,
+      "died": 466,
+      "role": "诗人",
+      "short": "南朝诗人，诗风雄健豪放，代表作《拟行路难》，对李白影响深远。"
+    },
+    "liu_xie": {
+      "id": "liu_xie",
+      "name": "刘勰",
+      "alias": "字彦和，东莞郡莒县人，南朝文学评论家",
+      "dynasty": "nanbei",
+      "born": 465,
+      "died": 520,
+      "role": "文学评论家",
+      "short": "南朝文学评论家，著有《文心雕龙》，为中国文学批评史上不朽名著。"
+    },
+    "zhong_rong": {
+      "id": "zhong_rong",
+      "name": "钟嵘",
+      "alias": "字仲伟，颍川长社人，南朝诗论家",
+      "dynasty": "nanbei",
+      "born": 468,
+      "died": 518,
+      "role": "诗论家",
+      "short": "南朝诗论家，著有《诗品》，品评汉魏至齐梁诗人，为中国诗论开山之作。"
+    },
+    "wen_zisheng": {
+      "id": "wen_zisheng",
+      "name": "温子昇",
+      "alias": "字鹏举，太原郡人，北朝文学家",
+      "dynasty": "nanbei",
+      "born": 495,
+      "died": 547,
+      "role": "文学家",
+      "short": "北朝文学家，代表作《捣衣诗》，与邢劭并称「温邢」。"
+    },
+    "wei_shou": {
+      "id": "wei_shou",
+      "name": "魏收",
+      "alias": "字伯起，钜鹿下曲阳人，北朝史学家",
+      "dynasty": "nanbei",
+      "born": 506,
+      "died": 572,
+      "role": "史学家",
+      "short": "北朝史学家，主编《魏书》，为北齐重要史籍。"
+    },
+    "xiao_ziliang": {
+      "id": "xiao_ziliang",
+      "name": "萧子良",
+      "alias": "字云英，南兰陵人，竟陵王",
+      "dynasty": "nanbei",
+      "born": 460,
+      "died": 494,
+      "role": "文学家",
+      "short": "南朝齐竟陵王，文学家，礼贤下士，与沈约、谢朓等称「竟陵八友」。"
+    },
+    "xing_shao": {
+      "id": "xing_shao",
+      "name": "邢劭",
+      "alias": "字子才，河间鄚人，北朝文学家",
+      "dynasty": "nanbei",
+      "born": 496,
+      "died": 561,
+      "role": "文学家",
+      "short": "北朝文学家，与温子昇并称「温邢」，又与魏收并称「北地三才」。"
+    },
+    "yin_keng": {
+      "id": "yin_keng",
+      "name": "阴铿",
+      "alias": "字子坚，武威姑臧人，南朝诗人",
+      "dynasty": "nanbei",
+      "born": 511,
+      "died": 563,
+      "role": "诗人",
+      "short": "南朝陈诗人，诗风清新，与何逊并称「阴何」。"
+    },
+    "li_zu": {
+      "id": "li_zu",
+      "name": "李祖娥",
+      "alias": "赵郡人，北齐文宣帝皇后",
+      "dynasty": "nanbei",
+      "born": 529,
+      "died": null,
+      "role": "后妃",
+      "short": "北齐文宣帝皇后，高洋之妻，后被高湛逼奸，遭迫害。"
+    },
+    "hu_taihou": {
+      "id": "hu_taihou",
+      "name": "胡太后",
+      "alias": "安定临泾人，北魏灵太后",
+      "dynasty": "nanbei",
+      "born": null,
+      "died": 528,
+      "role": "皇太后",
+      "short": "北魏灵太后，临朝称制，荒淫乱政，后被尔朱荣沉杀于河。"
+    },
+    "mu_lan": {
+      "id": "mu_lan",
+      "name": "花木兰",
+      "alias": "传说中北魏女英雄，代父从军",
+      "dynasty": "nanbei",
+      "born": null,
+      "died": null,
+      "role": "传说人物",
+      "short": "传说中北魏女英雄，代父从军，击败柔然，凯旋辞官归乡。"
+    },
+    "sima_yi": {
+      "id": "sima_yi",
+      "name": "司马懿",
+      "alias": "字仲达，河内温县人，曹魏权臣，西晋奠基人",
+      "dynasty": "jin",
+      "born": 179,
+      "died": 251,
+      "role": "军事家",
+      "short": "曹魏权臣，精通谋略，高平陵之变独揽大权，为西晋奠基。"
+    },
+    "sima_zhao": {
+      "id": "sima_zhao",
+      "name": "司马昭",
+      "alias": "字子上，河内温县人，曹魏权臣，追尊晋文帝",
+      "dynasty": "jin",
+      "born": 211,
+      "died": 265,
+      "role": "权臣",
+      "short": "司马昭之心，路人皆知。灭蜀汉，为西晋代魏奠基。"
+    },
+    "sima_zhong": {
+      "id": "sima_zhong",
+      "name": "司马衷",
+      "alias": "字正度，晋惠帝，历史上有名的白痴皇帝",
+      "dynasty": "jin",
+      "born": 259,
+      "died": 307,
+      "role": "皇帝",
+      "short": "晋惠帝，智力低下，何不食肉糜典故，八王之乱中傀儡。"
+    },
+    "sima_rui": {
+      "id": "sima_rui",
+      "name": "司马睿",
+      "alias": "字景文，晋元帝，东晋开国皇帝",
+      "dynasty": "jin",
+      "born": 276,
+      "died": 323,
+      "role": "皇帝",
+      "short": "晋元帝，永嘉之乱后在江南建立东晋，与王导共治，王与马共天下。"
+    },
+    "wang_dun": {
+      "id": "wang_dun",
+      "name": "王敦",
+      "alias": "字处仲，琅琊临沂人，东晋权臣，王导堂兄",
+      "dynasty": "jin",
+      "born": 266,
+      "died": 324,
+      "role": "权臣",
+      "short": "东晋权臣，王导堂兄，拥立晋元帝，后起兵叛乱，病死军中。"
+    },
+    "liu_kun": {
+      "id": "liu_kun",
+      "name": "刘琨",
+      "alias": "字越石，中山魏昌人，西晋名将、诗人",
+      "dynasty": "jin",
+      "born": 271,
+      "died": 318,
+      "role": "将领",
+      "short": "西晋名将，闻鸡起舞典故，坚守并州抵御匈奴，后被害。"
+    },
+    "wen_jiao": {
+      "id": "wen_jiao",
+      "name": "温峤",
+      "alias": "字太真，太原祁县人，东晋名臣",
+      "dynasty": "jin",
+      "born": 288,
+      "died": 329,
+      "role": "政治家",
+      "short": "东晋名臣，平定王敦之乱、苏峻祖逖之乱，稳定东晋政局。"
+    },
+    "tao_kan": {
+      "id": "tao_kan",
+      "name": "陶侃",
+      "alias": "字士行，鄱阳郡人，东晋名将",
+      "dynasty": "jin",
+      "born": 259,
+      "died": 334,
+      "role": "将领",
+      "short": "东晋名将，出身寒门，平定苏峻祖逖之乱，运甓典故。"
+    },
+    "huan_xuan": {
+      "id": "huan_xuan",
+      "name": "桓玄",
+      "alias": "字敬道，谯国龙亢人，桓温之子",
+      "dynasty": "jin",
+      "born": 369,
+      "died": 404,
+      "role": "权臣",
+      "short": "桓温之子，篡晋自立，建立桓楚，后为刘裕所灭。"
+    },
+    "wang_xianzhi": {
+      "id": "wang_xianzhi",
+      "name": "王献之",
+      "alias": "字子敬，琅琊临沂人，王羲之第七子，书法家",
+      "dynasty": "jin",
+      "born": 344,
+      "died": 386,
+      "role": "书法家",
+      "short": "王羲之第七子，书法家，与其父并称「二王」，代表作《鸭头丸帖》。"
+    },
+    "gu_kaizhi": {
+      "id": "gu_kaizhi",
+      "name": "顾恺之",
+      "alias": "字长康，晋陵无锡人，东晋画家",
+      "dynasty": "jin",
+      "born": 348,
+      "died": 409,
+      "role": "画家",
+      "short": "东晋画家，画圣，人称「虎头三绝」（才绝、画绝、痴绝），代表作《女史箴图》《洛神赋图》。"
+    },
+    "xie_lingyun": {
+      "id": "xie_lingyun",
+      "name": "谢灵运",
+      "alias": "字灵运，陈郡阳夏人，东晋诗人，山水诗派创始人",
+      "dynasty": "jin",
+      "born": 385,
+      "died": 433,
+      "role": "诗人",
+      "short": "东晋诗人，山水诗派创始人，谢玄之孙，与陶渊明并称，后因谋反被杀。"
+    },
+    "shan_tao": {
+      "id": "shan_tao",
+      "name": "山涛",
+      "alias": "字巨源，河内怀县人，竹林七贤之一",
+      "dynasty": "jin",
+      "born": 205,
+      "died": 283,
+      "role": "政治家",
+      "short": "竹林七贤之一，西晋名臣，与嵇康绝交，举荐人才。"
+    },
+    "xie_yao": {
+      "id": "xie_yao",
+      "name": "谢道韫",
+      "alias": "字令姜，陈郡阳夏人，东晋才女",
+      "dynasty": "jin",
+      "born": null,
+      "died": null,
+      "role": "才女",
+      "short": "东晋才女，谢安侄女，王凝之之妻，咏絮之才典故。"
+    },
+    "sima_liang": {
+      "id": "sima_liang",
+      "name": "司马亮",
+      "alias": "字子翼，西晋宗室，汝南王",
+      "dynasty": "jin",
+      "born": null,
+      "died": 291,
+      "role": "宗室",
+      "short": "西晋宗室，汝南王，八王之乱中被贾后所杀。"
+    },
+    "sima_lun": {
+      "id": "sima_lun",
+      "name": "司马伦",
+      "alias": "字子彝，西晋宗室，赵王",
+      "dynasty": "jin",
+      "born": null,
+      "died": 301,
+      "role": "宗室",
+      "short": "西晋宗室，赵王，杀贾后，篡位自立，后被诛杀。"
+    },
+    "pan_yue": {
+      "id": "pan_yue",
+      "name": "潘岳",
+      "alias": "字安仁，荥阳中牟人，西晋诗人",
+      "dynasty": "jin",
+      "born": 247,
+      "died": 300,
+      "role": "诗人",
+      "short": "西晋诗人，美男子，掷果盈车典故，与石崇等被杀。"
+    },
+    "zuo_si": {
+      "id": "zuo_si",
+      "name": "左思",
+      "alias": "字太冲，临淄人，西晋诗人",
+      "dynasty": "jin",
+      "born": 250,
+      "died": 305,
+      "role": "诗人",
+      "short": "西晋诗人，貌丑口讷，以《三都赋》名震天下，洛阳纸贵典故。"
+    },
+    "lu_ji": {
+      "id": "lu_ji",
+      "name": "陆机",
+      "alias": "字士衡，吴郡吴县人，西晋诗人，陆逊之孙",
+      "dynasty": "jin",
+      "born": 261,
+      "died": 303,
+      "role": "诗人",
+      "short": "西晋诗人，陆逊之孙，与弟陆云并称「二陆」，后死于八王之乱。"
+    },
+    "liu_ling": {
+      "id": "liu_ling",
+      "name": "刘伶",
+      "alias": "字伯伦，沛国人，竹林七贤之一",
+      "dynasty": "jin",
+      "born": 221,
+      "died": 300,
+      "role": "文学家",
+      "short": "竹林七贤之一，以酒闻名，作《酒德颂》，酒中仙。"
+    },
+    "du_yu": {
+      "id": "du_yu",
+      "name": "杜预",
+      "alias": "字元凯，京兆杜陵人，西晋名将、学者",
+      "dynasty": "jin",
+      "born": 222,
+      "died": 285,
+      "role": "将领",
+      "short": "西晋名将，灭吴功臣之一，博学多才，人称「杜武库」。"
+    },
+    "pi_cao": {
+      "id": "pi_cao",
+      "name": "曹丕",
+      "alias": "字子桓，沛国谯人，魏文帝",
+      "dynasty": "sanguo",
+      "born": 187,
+      "died": 226,
+      "role": "皇帝",
+      "short": "曹操次子，篡汉建立曹魏，文学评论家，代表作《典论·论文》。"
+    },
+    "zhi_cao": {
+      "id": "zhi_cao",
+      "name": "曹植",
+      "alias": "字子建，沛国谯人，陈思王",
+      "dynasty": "sanguo",
+      "born": 192,
+      "died": 232,
+      "role": "文学家",
+      "short": "曹操第三子，才高八斗，七步成诗，代表作《洛神赋》《七步诗》。"
+    },
+    "yu_xun": {
+      "id": "yu_xun",
+      "name": "荀彧",
+      "alias": "字文若，颍川颍阴人，王佐之才",
+      "dynasty": "sanguo",
+      "born": 163,
+      "died": 212,
+      "role": "谋士",
+      "short": "曹操首席谋士，王佐之才， stabilizing 后方，推荐郭嘉、荀攸等。"
+    },
+    "you_xun": {
+      "id": "you_xun",
+      "name": "荀攸",
+      "alias": "字公达，颍川颍阴人，曹操谋士",
+      "dynasty": "sanguo",
+      "born": 157,
+      "died": 214,
+      "role": "谋士",
+      "short": "曹操谋士，荀彧之侄，善奇谋，官渡之战献计斩颜良、诛文丑。"
+    },
+    "xu_jia": {
+      "id": "xu_jia",
+      "name": "贾诩",
+      "alias": "字文和，武威姑臧人，毒士",
+      "dynasty": "sanguo",
+      "born": 147,
+      "died": 223,
+      "role": "谋士",
+      "short": "曹操谋士，算无遗策，劝张绣降曹，助曹丕夺嫡。"
+    },
+    "he_zhang": {
+      "id": "he_zhang",
+      "name": "张郃",
+      "alias": "字儁乂，河间鄚人，五子良将之一",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 231,
+      "role": "将领",
+      "short": "曹魏五子良将之一，善用兵，街亭之战大破马谡。"
+    },
+    "huang_xu": {
+      "id": "huang_xu",
+      "name": "徐晃",
+      "alias": "字公明，河东杨人，五子良将之一",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 227,
+      "role": "将领",
+      "short": "曹魏五子良将之一，治军严整，解樊城之围。"
+    },
+    "jin_yue": {
+      "id": "jin_yue",
+      "name": "乐进",
+      "alias": "字文谦，阳平卫国人，五子良将之一",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 218,
+      "role": "将领",
+      "short": "曹魏五子良将之一，每战先登，勇猛过人。"
+    },
+    "jin_yu": {
+      "id": "jin_yu",
+      "name": "于禁",
+      "alias": "字文则，泰山钜平人，五子良将之一",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 221,
+      "role": "将领",
+      "short": "曹魏五子良将之一，治军严整，然樊城之战降关羽，晚节不保。"
+    },
+    "ai_deng": {
+      "id": "ai_deng",
+      "name": "邓艾",
+      "alias": "字士载，义阳棘阳人，灭蜀名将",
+      "dynasty": "sanguo",
+      "born": 197,
+      "died": 264,
+      "role": "将领",
+      "short": "曹魏名将，率军偷渡阴平，灭蜀汉，后与钟会争功被杀。"
+    },
+    "hui_zhong": {
+      "id": "hui_zhong",
+      "name": "钟会",
+      "alias": "字士季，颍川长社人，灭蜀名将",
+      "dynasty": "sanguo",
+      "born": 225,
+      "died": 264,
+      "role": "将领",
+      "short": "曹魏名将，与邓艾分兵伐蜀灭蜀汉，后据蜀叛乱，被杀。"
+    },
+    "dun_xiahou": {
+      "id": "dun_xiahou",
+      "name": "夏侯惇",
+      "alias": "字元让，沛国谯人，曹魏大将",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 220,
+      "role": "将领",
+      "short": "曹操族弟，曹魏大将，性情刚烈，拔矢啖睛。"
+    },
+    "yuan_xiahou": {
+      "id": "yuan_xiahou",
+      "name": "夏侯渊",
+      "alias": "字妙才，沛国谯人，征西将军",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 219,
+      "role": "将领",
+      "short": "曹操族弟，征西将军，虎步关右，后为黄忠所杀。"
+    },
+    "huai_guo": {
+      "id": "huai_guo",
+      "name": "郭淮",
+      "alias": "字伯济，太原阳曲人，曹魏名将",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 255,
+      "role": "将领",
+      "short": "曹魏名将，长期驻守关中，抵御蜀汉诸葛亮、姜维。"
+    },
+    "zhao_sima": {
+      "id": "zhao_sima",
+      "name": "司马昭",
+      "alias": "字子上，河内温县人，晋文帝",
+      "dynasty": "sanguo",
+      "born": 211,
+      "died": 265,
+      "role": "权臣",
+      "short": "司马懿次子，司马师之弟，灭蜀，为西晋奠基。"
+    },
+    "tong_pang": {
+      "id": "tong_pang",
+      "name": "庞统",
+      "alias": "字士元，襄阳人，凤雏",
+      "dynasty": "sanguo",
+      "born": 179,
+      "died": 214,
+      "role": "谋士",
+      "short": "刘备谋士，号凤雏，与诸葛亮齐名，入蜀时中箭身亡。"
+    },
+    "zhong_huang": {
+      "id": "zhong_huang",
+      "name": "黄忠",
+      "alias": "字汉升，南阳人，五虎上将之一",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 220,
+      "role": "将领",
+      "short": "蜀汉五虎上将之一，定军山斩夏侯渊，老当益壮。"
+    },
+    "chao_ma": {
+      "id": "chao_ma",
+      "name": "马超",
+      "alias": "字孟起，扶风茂陵人，五虎上将之一",
+      "dynasty": "sanguo",
+      "born": 176,
+      "died": 222,
+      "role": "将领",
+      "short": "蜀汉五虎上将之一，西凉锦马超，后归刘备。"
+    },
+    "yan_wei": {
+      "id": "yan_wei",
+      "name": "魏延",
+      "alias": "字文长，义阳人，蜀汉名将",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 234,
+      "role": "将领",
+      "short": "蜀汉名将，脑后反骨，诸葛亮死后与杨仪争权被杀。"
+    },
+    "su_ma": {
+      "id": "su_ma",
+      "name": "马谡",
+      "alias": "字幼常，襄阳宜城人，蜀汉将领",
+      "dynasty": "sanguo",
+      "born": 190,
+      "died": 228,
+      "role": "将领",
+      "short": "蜀汉将领，马良之弟，失街亭被斩，诸葛亮挥泪斩马谡。"
+    },
+    "zheng_fa": {
+      "id": "zheng_fa",
+      "name": "法正",
+      "alias": "字孝直，扶风郿人，刘备谋士",
+      "dynasty": "sanguo",
+      "born": 176,
+      "died": 220,
+      "role": "谋士",
+      "short": "刘备谋士，定军山之计斩夏侯渊，刘备称汉中王拜尚书令。"
+    },
+    "yan_li": {
+      "id": "yan_li",
+      "name": "李严",
+      "alias": "字正方，南阳人，蜀汉托孤大臣",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 234,
+      "role": "政治家",
+      "short": "蜀汉托孤大臣之一，与诸葛亮同受遗诏，后因过失被废。"
+    },
+    "yi_fei": {
+      "id": "yi_fei",
+      "name": "费祎",
+      "alias": "字文伟，江夏鄳人，蜀汉四相之一",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 253,
+      "role": "政治家",
+      "short": "蜀汉四相之一，继蒋琬之后为尚书令，后为魏降将郭循所刺。"
+    },
+    "yun_dong": {
+      "id": "yun_dong",
+      "name": "董允",
+      "alias": "字休昭，南郡枝江人，蜀汉四相之一",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 246,
+      "role": "政治家",
+      "short": "蜀汉四相之一，与诸葛亮、蒋琬、费祎并称，正直不阿。"
+    },
+    "yueying_huang": {
+      "id": "yueying_huang",
+      "name": "黄月英",
+      "alias": "沔南人，诸葛亮之妻，才女",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": null,
+      "role": "才女",
+      "short": "诸葛亮之妻，黄承彦之女，传说其貌不扬而才智过人。"
+    },
+    "ce_sun": {
+      "id": "ce_sun",
+      "name": "孙策",
+      "alias": "字伯符，吴郡富春人，小霸王",
+      "dynasty": "sanguo",
+      "born": 175,
+      "died": 200,
+      "role": "将领",
+      "short": "孙坚长子，小霸王，奠定江东基业，后被刺杀。"
+    },
+    "jian_sun": {
+      "id": "jian_sun",
+      "name": "孙坚",
+      "alias": "字文台，吴郡富春人，武烈皇帝",
+      "dynasty": "sanguo",
+      "born": 155,
+      "died": 191,
+      "role": "将领",
+      "short": "东吴奠基人，孙策孙权之父，讨伐董卓有功，战死沙场。"
+    },
+    "su_lu": {
+      "id": "su_lu",
+      "name": "鲁肃",
+      "alias": "字子敬，临淮东城人，东吴战略家",
+      "dynasty": "sanguo",
+      "born": 172,
+      "died": 217,
+      "role": "战略家",
+      "short": "东吴战略家，榻上策提出三分天下，联刘抗曹。"
+    },
+    "meng_lv": {
+      "id": "meng_lv",
+      "name": "吕蒙",
+      "alias": "字子明，汝南富陂人，东吴名将",
+      "dynasty": "sanguo",
+      "born": 178,
+      "died": 219,
+      "role": "将领",
+      "short": "东吴名将，吴下阿蒙，白衣渡江袭取荆州，擒关羽。"
+    },
+    "ning_gan": {
+      "id": "ning_gan",
+      "name": "甘宁",
+      "alias": "字兴霸，巴郡临江人，东吴猛将",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 215,
+      "role": "将领",
+      "short": "东吴猛将，锦帆贼，百骑劫魏营，勇猛过人。"
+    },
+    "ci_taishi": {
+      "id": "ci_taishi",
+      "name": "太史慈",
+      "alias": "字子义，东莱黄县人，东吴名将",
+      "dynasty": "sanguo",
+      "born": 166,
+      "died": 206,
+      "role": "将领",
+      "short": "东吴名将，神射手，北海救孔融，后归孙策。"
+    },
+    "kang_lu": {
+      "id": "kang_lu",
+      "name": "陆抗",
+      "alias": "字幼节，吴郡吴县人，东吴名将",
+      "dynasty": "sanguo",
+      "born": 226,
+      "died": 274,
+      "role": "将领",
+      "short": "陆逊之子，东吴名将，西陵之战大破晋军，东吴最后柱石。"
+    },
+    "jin_zhuge": {
+      "id": "jin_zhuge",
+      "name": "诸葛瑾",
+      "alias": "字子瑜，琅琊阳都人，东吴重臣",
+      "dynasty": "sanguo",
+      "born": 174,
+      "died": 241,
+      "role": "政治家",
+      "short": "诸葛亮之兄，东吴重臣，为人弘雅，与孙权有生死之交。"
+    },
+    "gai_huang": {
+      "id": "gai_huang",
+      "name": "黄盖",
+      "alias": "字公覆，零陵泉陵人，东吴老将",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 215,
+      "role": "将领",
+      "short": "东吴老将，赤壁诈降，苦肉计，火烧赤壁。"
+    },
+    "pu_cheng": {
+      "id": "pu_cheng",
+      "name": "程普",
+      "alias": "字德谋，右北平土垠人，东吴老将",
+      "dynasty": "sanguo",
+      "born": null,
+      "died": 215,
+      "role": "将领",
+      "short": "东吴老将，历仕孙坚、孙策、孙权三代，赤壁之战与周瑜分任左右督。"
+    },
+    "sima_qian": {
+      "id": "sima_qian",
+      "name": "司马迁",
+      "alias": "字子长，左冯翊夏阳人，西汉史学家、文学家",
+      "dynasty": "han",
+      "born": -145,
+      "died": -86,
+      "role": "史学家",
+      "short": "西汉伟大史学家，著《史记》，中国第一部纪传体通史，被尊为史圣。"
+    },
+    "wang_zhaojun": {
+      "id": "wang_zhaojun",
+      "name": "王昭君",
+      "alias": "名嫱，字昭君，南郡秭归人，汉元帝宫女",
+      "dynasty": "han",
+      "born": -52,
+      "died": -19,
+      "role": "后妃",
+      "short": "中国古代四大美女之一，出塞和亲，促进汉匈和平。"
+    },
+    "ban_zhao": {
+      "id": "ban_zhao",
+      "name": "班昭",
+      "alias": "字惠班，扶风安陵人，东汉女史学家、文学家",
+      "dynasty": "han",
+      "born": 49,
+      "died": 120,
+      "role": "史学家",
+      "short": "东汉著名女学者，续写《汉书》，著《女诫》，为才女之典范。"
+    },
+    "cai_yong": {
+      "id": "cai_yong",
+      "name": "蔡邕",
+      "alias": "字伯喈，陈留圉人，东汉文学家、书法家、音乐家",
+      "dynasty": "han",
+      "born": 133,
+      "died": 192,
+      "role": "文学家",
+      "short": "东汉著名学者，通经史、音律、书法，蔡文姬之父。"
+    },
+    "hua_tuo": {
+      "id": "hua_tuo",
+      "name": "华佗",
+      "alias": "字元化，沛国谯人，东汉末年医学家",
+      "dynasty": "han",
+      "born": 145,
+      "died": 208,
+      "role": "医学家",
+      "short": "东汉末年著名医学家，精通外科，创麻沸散，被誉为外科鼻祖。"
+    },
+    "zhang_zhongjing": {
+      "id": "zhang_zhongjing",
+      "name": "张仲景",
+      "alias": "名机，字仲景，南阳涅阳人，东汉医学家",
+      "dynasty": "han",
+      "born": 150,
+      "died": 219,
+      "role": "医学家",
+      "short": "东汉末年著名医学家，著《伤寒杂病论》，被尊为医圣。"
+    },
+    "zhang_jiao": {
+      "id": "zhang_jiao",
+      "name": "张角",
+      "alias": "巨鹿人，东汉末年黄巾起义领袖",
+      "dynasty": "han",
+      "born": null,
+      "died": 184,
+      "role": "起义领袖",
+      "short": "东汉末年黄巾起义领袖，创太平道，发动中国历史上规模最大的农民起义之一。"
+    },
+    "dong_zhuo": {
+      "id": "dong_zhuo",
+      "name": "董卓",
+      "alias": "字仲颖，陇西临洮人，东汉末年军阀",
+      "dynasty": "han",
+      "born": null,
+      "died": 192,
+      "role": "军阀",
+      "short": "东汉末年军阀，挟持汉献帝，迁都长安，暴虐无道，为吕布所杀。"
+    },
+    "yuan_shao": {
+      "id": "yuan_shao",
+      "name": "袁绍",
+      "alias": "字本初，汝南汝阳人，东汉末年军阀",
+      "dynasty": "han",
+      "born": null,
+      "died": 202,
+      "role": "军阀",
+      "short": "东汉末年军阀，四世三公，官渡之战败于曹操，北方霸主。"
+    },
+    "lu_bu": {
+      "id": "lu_bu",
+      "name": "吕布",
+      "alias": "字奉先，五原郡九原人，东汉末年武将",
+      "dynasty": "han",
+      "born": null,
+      "died": 199,
+      "role": "将领",
+      "short": "东汉末年著名武将，以勇武著称，有「人中吕布，马中赤兔」之誉。"
+    },
+    "zheng_xuan": {
+      "id": "zheng_xuan",
+      "name": "郑玄",
+      "alias": "字康成，北海高密人，东汉经学家",
+      "dynasty": "han",
+      "born": 127,
+      "died": 200,
+      "role": "经学家",
+      "short": "东汉著名经学家，遍注群经，为汉代经学之集大成者。"
+    },
+    "sang_hongyang": {
+      "id": "sang_hongyang",
+      "name": "桑弘羊",
+      "alias": "洛阳人，西汉政治家、理财家",
+      "dynasty": "han",
+      "born": -152,
+      "died": -80,
+      "role": "政治家",
+      "short": "西汉著名理财家，推行盐铁官营、均输平准，为汉武帝财政改革之核心人物。"
+    },
+    "zhufu_yan": {
+      "id": "zhufu_yan",
+      "name": "主父偃",
+      "alias": "字游卿，临淄人，西汉政治家",
+      "dynasty": "han",
+      "born": null,
+      "died": -126,
+      "role": "政治家",
+      "short": "西汉政治家，提出「推恩令」，为汉武帝削弱诸侯国势力之关键谋士。"
+    },
+    "li_guangli": {
+      "id": "li_guangli",
+      "name": "李广利",
+      "alias": "中山人，汉武帝宠妃李夫人之兄，西汉将领",
+      "dynasty": "han",
+      "born": null,
+      "died": -88,
+      "role": "将领",
+      "short": "汉武帝将领，多次远征大宛、匈奴，封贰师将军，后因兵败降匈奴。"
+    },
+    "shangguan_jie": {
+      "id": "shangguan_jie",
+      "name": "上官桀",
+      "alias": "字少叔，陇西上邽人，西汉权臣",
+      "dynasty": "han",
+      "born": null,
+      "died": -80,
+      "role": "政治家",
+      "short": "西汉权臣，武帝临终托孤大臣之一，后与霍光争权，被诛。"
+    },
+    "jin_midi": {
+      "id": "jin_midi",
+      "name": "金日磾",
+      "alias": "字翁叔，匈奴休屠王太子，西汉大臣",
+      "dynasty": "han",
+      "born": -134,
+      "died": -86,
+      "role": "政治家",
+      "short": "匈奴休屠王太子，降汉后成为汉武帝心腹，托孤大臣之一。"
+    },
+    "sima_tan": {
+      "id": "sima_tan",
+      "name": "司马谈",
+      "alias": "西汉史学家、太史令",
+      "dynasty": "han",
+      "born": null,
+      "died": -110,
+      "role": "史学家",
+      "short": "西汉史学家，太史令，司马迁之父，为《史记》之奠基者。"
+    },
+    "chen_yu": {
+      "id": "chen_yu",
+      "name": "陈馀",
+      "alias": "字馀，大梁人，秦末汉初诸侯",
+      "dynasty": "han",
+      "born": null,
+      "died": -204,
+      "role": "诸侯",
+      "short": "秦末汉初诸侯，与张耳为刎颈之交，后反目，井陉之战败于韩信。"
+    },
+    "zhang_er": {
+      "id": "zhang_er",
+      "name": "张耳",
+      "alias": "字耳，大梁人，秦末汉初诸侯",
+      "dynasty": "han",
+      "born": -264,
+      "died": -202,
+      "role": "诸侯",
+      "short": "秦末汉初诸侯，与陈馀为刎颈之交，后封赵王，刘邦之女婿。"
+    },
+    "tian_rong": {
+      "id": "tian_rong",
+      "name": "田荣",
+      "alias": "秦末汉初齐地诸侯",
+      "dynasty": "han",
+      "born": null,
+      "died": -205,
+      "role": "诸侯",
+      "short": "秦末汉初齐地诸侯，反秦义军领袖之一，后为项羽所败。"
+    },
+    "zang_tu": {
+      "id": "zang_tu",
+      "name": "臧荼",
+      "alias": "秦末汉初燕王",
+      "dynasty": "han",
+      "born": null,
+      "died": -202,
+      "role": "诸侯",
+      "short": "秦末汉初燕王，原为燕将，随项羽入关，后归刘邦，因谋反被诛。"
+    },
+    "liu_biao": {
+      "id": "liu_biao",
+      "name": "刘表",
+      "alias": "字景升，山阳高平人，东汉末年军阀",
+      "dynasty": "han",
+      "born": 142,
+      "died": 208,
+      "role": "军阀",
+      "short": "东汉末年军阀，汉室宗亲，据荆州十九年，为一方霸主。"
+    },
+    "gongsun_zan": {
+      "id": "gongsun_zan",
+      "name": "公孙瓒",
+      "alias": "字伯珪，辽西令支人，东汉末年军阀",
+      "dynasty": "han",
+      "born": null,
+      "died": 199,
+      "role": "军阀",
+      "short": "东汉末年军阀，据幽州，以白马义从闻名，后与袁绍争战，兵败自杀。"
+    },
+    "xun_yu": {
+      "id": "xun_yu",
+      "name": "荀彧",
+      "alias": "字文若，颍川颍阴人，东汉末年谋士",
+      "dynasty": "han",
+      "born": 163,
+      "died": 212,
+      "role": "谋士",
+      "short": "东汉末年著名谋士，曹操谋士之首，被誉为「王佐之才」，以谋略和识人著称。"
+    },
+    "gongsun_hong": {
+      "id": "gongsun_hong",
+      "name": "公孙弘",
+      "alias": "字季，淄川薛人，西汉政治家",
+      "dynasty": "han",
+      "born": 200,
+      "died": -121,
+      "role": "政治家",
+      "short": "西汉丞相，第一位以平民出身拜相封侯者，以儒学治国。"
+    },
+    "liu_an": {
+      "id": "liu_an",
+      "name": "刘安",
+      "alias": "字公干，淮南王，西汉宗室、思想家",
+      "dynasty": "han",
+      "born": -179,
+      "died": -122,
+      "role": "宗室",
+      "short": "西汉淮南王，著《淮南子》，召集门客编纂，为西汉重要思想著作。"
+    },
+    "liu_xiang": {
+      "id": "liu_xiang",
+      "name": "刘向",
+      "alias": "字子政，沛县人，西汉经学家、目录学家",
+      "dynasty": "han",
+      "born": -77,
+      "died": -6,
+      "role": "经学家",
+      "short": "西汉著名学者，校理群书，撰《别录》，为中国目录学之祖。"
+    },
+    "liu_xin": {
+      "id": "liu_xin",
+      "name": "刘歆",
+      "alias": "字子骏，后改名秀，字颖叔，沛县人，西汉学者",
+      "dynasty": "han",
+      "born": -50,
+      "died": 23,
+      "role": "经学家",
+      "short": "西汉著名学者，刘向之子，编《七略》，支持王莽篡汉，后自杀。"
+    },
+    "bing_ji": {
+      "id": "bing_ji",
+      "name": "丙吉",
+      "alias": "字少卿，鲁国人，西汉政治家",
+      "dynasty": "han",
+      "born": null,
+      "died": -55,
+      "role": "政治家",
+      "short": "西汉名臣，曾任丞相，幼时保护汉宣帝，宣帝朝功臣。"
+    },
+    "huang_ba": {
+      "id": "huang_ba",
+      "name": "黄霸",
+      "alias": "字次公，淮阳阳夏人，西汉政治家",
+      "dynasty": "han",
+      "born": 130,
+      "died": -51,
+      "role": "政治家",
+      "short": "西汉名臣，曾任丞相，以治理地方闻名，被誉为循吏之典范。"
+    },
+    "lü_buwei": {
+      "id": "lü_buwei",
+      "name": "吕不韦",
+      "alias": "姜姓，吕氏，名不韦，卫国濮阳人",
+      "dynasty": "qin",
+      "born": -292,
+      "died": -235,
+      "role": "秦国丞相",
+      "short": "战国末年卫国商人，后入秦为相，辅佐秦庄襄王与秦王政，组织编纂《吕氏春秋》。"
+    },
+    "wang_jian_qin": {
+      "id": "wang_jian_qin",
+      "name": "王翦",
+      "alias": "频阳东乡人，秦国名将",
+      "dynasty": "qin",
+      "born": -330,
+      "died": -255,
+      "role": "秦国名将",
+      "short": "战国末年秦国名将，秦灭六国的最大功臣之一，破赵灭燕、大败楚军，与白起、廉颇、李牧并称战国四大名将。"
+    },
+    "wang_ben_qin": {
+      "id": "wang_ben_qin",
+      "name": "王贲",
+      "alias": "频阳东乡人，王翦之子",
+      "dynasty": "qin",
+      "born": -310,
+      "died": -240,
+      "role": "秦国名将",
+      "short": "战国末年秦国名将，王翦之子。率军水淹大梁灭魏，后又攻燕、代，最后灭齐，为秦统一六国作出重大贡献。"
+    },
+    "meng_wu": {
+      "id": "meng_wu",
+      "name": "蒙武",
+      "alias": "齐国蒙山人，秦国将领",
+      "dynasty": "qin",
+      "born": -340,
+      "died": -260,
+      "role": "秦国将领",
+      "short": "战国末年秦国将领，蒙骜之子，蒙恬之父。曾随王翦攻楚，俘虏楚王负刍，斩杀楚将项燕。"
+    },
+    "meng_yi": {
+      "id": "meng_yi",
+      "name": "蒙毅",
+      "alias": "齐国蒙山人，蒙恬之弟",
+      "dynasty": "qin",
+      "born": -320,
+      "died": -210,
+      "role": "秦国上卿",
+      "short": "秦朝上卿，蒙恬之弟。深受秦始皇宠信，常随始皇左右，掌司法刑狱。后为赵高所忌，与兄蒙恬同被逼自杀。"
+    },
+    "zheng_guo": {
+      "id": "zheng_guo",
+      "name": "郑国",
+      "alias": "韩国水工",
+      "dynasty": "qin",
+      "born": -290,
+      "died": -230,
+      "role": "水利工程师",
+      "short": "战国时期韩国水工，受韩王之命入秦，游说秦王修建水利工程，本意以消耗秦国国力，但渠成后使关中四万余顷盐碱地变为良田，反而增强了秦国实力。"
+    },
+    "han_fei": {
+      "id": "han_fei",
+      "name": "韩非",
+      "alias": "韩非子，韩国公子，战国末期法家代表人物",
+      "dynasty": "qin",
+      "born": -280,
+      "died": -233,
+      "role": "法家思想家",
+      "short": "战国末期法家集大成者，韩王之子。著有《韩非子》，集法、术、势于一体，深受秦始皇赏识，后被李斯、姚贾陷害，死于秦狱。"
+    },
+    "li_you": {
+      "id": "li_you",
+      "name": "李由",
+      "alias": "上蔡人，李斯长子",
+      "dynasty": "qin",
+      "born": -260,
+      "died": -208,
+      "role": "秦朝官员",
+      "short": "李斯长子，秦朝三川郡守。陈胜吴广起义后，李由坚守三川郡，与起义军作战，最终战死。"
+    },
+    "zhang_han": {
+      "id": "zhang_han",
+      "name": "章邯",
+      "alias": "秦朝少府，后封雍王",
+      "dynasty": "qin",
+      "born": -270,
+      "died": -205,
+      "role": "秦朝将领",
+      "short": "秦朝末年名将，原任少府，统率骊山刑徒迎击陈胜吴广起义军，屡建战功。后在巨鹿之战中被项羽击败，投降项羽，受封雍王。"
+    },
+    "feng_quji": {
+      "id": "feng_quji",
+      "name": "冯去疾",
+      "alias": "秦朝右丞相",
+      "dynasty": "qin",
+      "born": -290,
+      "died": -208,
+      "role": "秦朝丞相",
+      "short": "秦朝右丞相，与左丞相李斯、将军冯劫共同辅政。秦二世时，赵高专权，冯去疾与冯劫、李斯联名上书劝谏，被下狱，冯去疾与冯劫自杀。"
+    },
+    "feng_jie": {
+      "id": "feng_jie",
+      "name": "冯劫",
+      "alias": "秦朝将军，冯去疾之子",
+      "dynasty": "qin",
+      "born": -270,
+      "died": -208,
+      "role": "秦朝将军",
+      "short": "秦朝将军，右丞相冯去疾之子。秦二世时，与父冯去疾、丞相李斯联名上书劝谏，被赵高诬陷，下狱后自杀。"
+    },
+    "zi_ying": {
+      "id": "zi_ying",
+      "name": "子婴",
+      "alias": "秦王子婴，一说为扶苏之子，一说为秦始皇之弟",
+      "dynasty": "qin",
+      "born": -290,
+      "died": -206,
+      "role": "秦朝末代君主",
+      "short": "秦朝末代君主，赵高杀秦二世后立子婴为帝，子婴设计诛杀赵高，投降刘邦，秦朝灭亡。后为项羽所杀。"
+    },
+    "zhao_ji": {
+      "id": "zhao_ji",
+      "name": "赵姬",
+      "alias": "邯郸姬，秦始皇生母",
+      "dynasty": "qin",
+      "born": -305,
+      "died": -228,
+      "role": "秦庄襄王太后",
+      "short": "秦始皇生母，原为吕不韦姬妾，后被献给秦庄襄王子楚。庄襄王死后与嫪毐私通，嫪毐叛乱后，被秦始皇软禁。"
+    },
+    "lao_ai": {
+      "id": "lao_ai",
+      "name": "嫪毐",
+      "alias": "大阴人，秦国长信侯",
+      "dynasty": "qin",
+      "born": -280,
+      "died": -238,
+      "role": "长信侯",
+      "short": "原为吕不韦舍人，诈为宦官入宫，与秦始皇生母赵姬私通，封长信侯，权势极大。后因谋反被秦始皇夷三族。"
+    },
+    "cheng_xiao": {
+      "id": "cheng_xiao",
+      "name": "成蟜",
+      "alias": "长安君，秦始皇之弟",
+      "dynasty": "qin",
+      "born": -275,
+      "died": -239,
+      "role": "秦国公子",
+      "short": "秦庄襄王之子，秦始皇嬴政同父异母弟。封长安君。秦王政八年，成蟜率军攻赵，在屯留反叛，投降赵国，后被赵国所杀。"
+    },
+    "li_xin": {
+      "id": "li_xin",
+      "name": "李信",
+      "alias": "字有成，秦国少年将军",
+      "dynasty": "qin",
+      "born": -300,
+      "died": -220,
+      "role": "秦国将军",
+      "short": "秦国少年将军，勇武果敢。曾率轻兵逐燕太子丹于衍水，破燕国。后请兵二十万伐楚，被项燕击败，由王翦取代。"
+    },
+    "huan_yi": {
+      "id": "huan_yi",
+      "name": "桓齮",
+      "alias": "秦国将军",
+      "dynasty": "qin",
+      "born": -320,
+      "died": -227,
+      "role": "秦国将军",
+      "short": "战国末年秦国将军，曾多次攻赵，斩杀赵将扈辄，斩首十万。后在赵被李牧击败，一说战死于赵。"
+    },
+    "nei_sheng_teng": {
+      "id": "nei_sheng_teng",
+      "name": "内史腾",
+      "alias": "秦国内史，后任南郡守",
+      "dynasty": "qin",
+      "born": -310,
+      "died": -225,
+      "role": "秦国内史",
+      "short": "秦国将领，曾任内史，后率军攻韩，俘虏韩王安，灭韩国。秦统一后任南郡守，治理新征服地区。"
+    },
+    "yang_duanhe": {
+      "id": "yang_duanhe",
+      "name": "杨端和",
+      "alias": "秦国将军",
+      "dynasty": "qin",
+      "born": -330,
+      "died": -230,
+      "role": "秦国将军",
+      "short": "战国末年秦国将军，与王翦、桓齮等共同参与攻赵、攻魏等战役，为秦统一六国作出贡献。"
+    },
+    "wang_ling": {
+      "id": "wang_ling",
+      "name": "王陵",
+      "alias": "秦国将领，后归汉",
+      "dynasty": "qin",
+      "born": -280,
+      "died": -200,
+      "role": "秦国将领",
+      "short": "战国末年秦国将领，曾参与秦灭六国战争。秦末归汉，为刘邦部下，后因母被项羽俘获，宁死不降楚，母自刎以励其志。"
+    },
+    "fan_ju": {
+      "id": "fan_ju",
+      "name": "范雎",
+      "alias": "字叔，魏国芮城人，秦国相国",
+      "dynasty": "qin",
+      "born": -340,
+      "died": -255,
+      "role": "秦国相国",
+      "short": "战国后期秦国相国，提出「远交近攻」战略，辅助秦昭襄王成就霸业。因旧怨逼迫魏齐自杀，后荐蔡泽自代。"
+    },
+    "wei_liao": {
+      "id": "wei_liao",
+      "name": "尉缭",
+      "alias": "魏国大梁人，秦国国尉",
+      "dynasty": "qin",
+      "born": -340,
+      "died": -235,
+      "role": "秦国国尉",
+      "short": "战国后期魏国大梁人，入秦后任国尉，辅佐秦始皇统一六国。著有《尉缭子》，为武经七书之一。"
+    },
+    "gan_mao": {
+      "id": "gan_mao",
+      "name": "甘茂",
+      "alias": "下蔡人，秦国左丞相",
+      "dynasty": "qin",
+      "born": -360,
+      "died": -305,
+      "role": "秦国左丞相",
+      "short": "战国中期秦国左丞相，师从史举学百家之术。曾率军攻取汉中，平定蜀乱，后因向寿、公孙奭谮毁，逃亡齐国，卒于魏国。"
+    },
+    "bai_li_xi": {
+      "id": "bai_li_xi",
+      "name": "百里奚",
+      "alias": "字井伯，虞国人，秦国大夫",
+      "dynasty": "qin",
+      "born": -720,
+      "died": -621,
+      "role": "秦国大夫",
+      "short": "春秋时期虞国大夫，后为秦穆公贤相。以五张羊皮赎身，辅佐秦穆公称霸西戎，「谋无不当，举必有功」。"
+    },
+    "jian_shu": {
+      "id": "jian_shu",
+      "name": "蹇叔",
+      "alias": "宋国铫人，秦国上大夫",
+      "dynasty": "qin",
+      "born": -730,
+      "died": -620,
+      "role": "秦国上大夫",
+      "short": "春秋时期宋国铫人，百里奚之挚友。经百里奚推荐，秦穆公以厚币迎之，任上大夫。曾劝谏秦穆公不要轻率伐郑，穆公不听，导致崤之战惨败。"
+    },
+    "mu_gong": {
+      "id": "mu_gong",
+      "name": "秦穆公",
+      "alias": "名任好，春秋五霸之一",
+      "dynasty": "qin",
+      "born": -683,
+      "died": -621,
+      "role": "秦国君主",
+      "short": "春秋时期秦国国君，名任好。任用百里奚、蹇叔等贤臣，称霸西戎，辟地千里，为春秋五霸之一。"
+    },
+    "xiao_gong": {
+      "id": "xiao_gong",
+      "name": "秦孝公",
+      "alias": "名渠梁，秦国国君",
+      "dynasty": "qin",
+      "born": -381,
+      "died": -338,
+      "role": "秦国君主",
+      "short": "战国时期秦国国君，名渠梁。任用商鞅实行变法，使秦国由弱变强，为日后统一六国奠定基础。"
+    },
+    "hui_wen": {
+      "id": "hui_wen",
+      "name": "秦惠文王",
+      "alias": "名驷，秦国国君",
+      "dynasty": "qin",
+      "born": -356,
+      "died": -311,
+      "role": "秦国君主",
+      "short": "战国时期秦国国君，名驷。即位后车裂商鞅，但继续推行新法。任张仪为相，连横破合纵，称王，是秦国第一位称王的君主。"
+    },
+    "wu_wang": {
+      "id": "wu_wang",
+      "name": "秦武王",
+      "alias": "名荡，秦国国君",
+      "dynasty": "qin",
+      "born": -329,
+      "died": -307,
+      "role": "秦国君主",
+      "short": "战国时期秦国国君，名荡。勇武好战，喜欢与力士角力。举鼎绝膑，重伤而死，在位仅四年。"
+    },
+    "zhao_wang": {
+      "id": "zhao_wang",
+      "name": "秦昭襄王",
+      "alias": "名则，一名稷，秦国国君",
+      "dynasty": "qin",
+      "born": -325,
+      "died": -251,
+      "role": "秦国君主",
+      "short": "战国时期秦国国君，在位五十六年，为秦国历史上在位时间最长的君主。任用范雎、白起等，远交近攻，大败六国，为秦统一奠定基础。"
+    },
+    "king_cheng": {
+      "id": "king_cheng",
+      "name": "周成王",
+      "alias": "姬诵，周武王之子",
+      "dynasty": "zhou",
+      "born": -1055,
+      "died": -1021,
+      "role": "西周第二位君主",
+      "short": "西周第二位君主，周武王之子。幼年继位，周公旦摄政，平定三监之乱，营建成周洛邑，制礼作乐，奠定西周盛世基业。"
+    },
+    "king_kang": {
+      "id": "king_kang",
+      "name": "周康王",
+      "alias": "姬钊，周成王之子",
+      "dynasty": "zhou",
+      "born": -1040,
+      "died": -996,
+      "role": "西周第三位君主",
+      "short": "西周第三位君主，周成王之子。继位后继续推行成王政策，平定东夷叛乱，加强宗法制度，与成王时期合称「成康之治」，天下安宁，刑措四十余年不用。"
+    },
+    "king_mu": {
+      "id": "king_mu",
+      "name": "周穆王",
+      "alias": "姬满，周昭王之子",
+      "dynasty": "zhou",
+      "born": -1052,
+      "died": -947,
+      "role": "西周第五位君主",
+      "short": "西周第五位君主，周昭王之子。喜游历，传说西行会见西王母，《穆天子传》记其行程。曾征犬戎、徐戎，促进周与西域交通。"
+    },
+    "king_li": {
+      "id": "king_li",
+      "name": "周厉王",
+      "alias": "姬胡，周夷王之子",
+      "dynasty": "zhou",
+      "born": -890,
+      "died": -828,
+      "role": "西周第十位君主",
+      "short": "西周第十位君主，以暴虐著称。任用荣夷公，实行专利政策，压制言论，引发国人暴动，被驱逐出镐京，死于彘。开启共和行政，是中国历史上有确切纪年的开端。"
+    },
+    "king_xuan": {
+      "id": "king_xuan",
+      "name": "周宣王",
+      "alias": "姬静，周厉王之子",
+      "dynasty": "zhou",
+      "born": -865,
+      "died": -782,
+      "role": "西周第十一位君主",
+      "short": "西周第十一位君主，周厉王之子。幼年时因国人暴动藏匿于召公家，后即位。任用召公、周公辅佐，修明政事，讨伐猃狁、淮夷、徐国，一度恢复周朝威望，史称「宣王中兴」。"
+    },
+    "king_you": {
+      "id": "king_you",
+      "name": "周幽王",
+      "alias": "姬宫湦，周宣王之子",
+      "dynasty": "zhou",
+      "born": -795,
+      "died": -771,
+      "role": "西周末代君主",
+      "short": "西周最后一位君主，周宣王之子。宠爱褒姒，废申后及太子宜臼，立褒姒之子伯服为太子。为博褒姒一笑，烽火戏诸侯。申侯联合犬戎攻破镐京，幽王被杀于骊山，西周灭亡。"
+    },
+    "king_ping": {
+      "id": "king_ping",
+      "name": "周平王",
+      "alias": "姬宜臼，周幽王太子",
+      "dynasty": "zhou",
+      "born": -781,
+      "died": -720,
+      "role": "东周开国君主",
+      "short": "东周第一位君主，周幽王太子。因幽王废申后及自己，申侯联合犬戎攻破镐京，幽王被杀。平王即位后，迁都洛邑，开启东周时代，史称「平王东迁」。"
+    },
+    "confucius": {
+      "id": "confucius",
+      "name": "孔子",
+      "alias": "孔丘，字仲尼，鲁国陬邑人",
+      "dynasty": "zhou",
+      "born": -551,
+      "died": -479,
+      "role": "思想家",
+      "short": "春秋末期思想家、教育家，儒家学派创始人。提倡仁、义、礼、智、信，主张「有教无类」，周游列国，整理六经，对中国文化产生深远影响，被尊为「至圣先师」。"
+    },
+    "laozi": {
+      "id": "laozi",
+      "name": "老子",
+      "alias": "李耳，字聃，楚国苦县人",
+      "dynasty": "zhou",
+      "born": -571,
+      "died": -471,
+      "role": "思想家",
+      "short": "春秋末期思想家，道家学派创始人。曾任周守藏室之史，孔子曾向其问礼。著《道德经》五千言，主张无为而治、道法自然，对中国哲学影响深远。"
+    },
+    "mozi": {
+      "id": "mozi",
+      "name": "墨子",
+      "alias": "墨翟，宋国人",
+      "dynasty": "zhou",
+      "born": -468,
+      "died": -376,
+      "role": "思想家",
+      "short": "战国初期思想家，墨家学派创始人。主张「兼爱」「非攻」「尚贤」「节用」，反对儒家的礼乐繁饰和等级制度，代表平民阶层利益，与儒家并称「显学」。"
+    },
+    "mencius": {
+      "id": "mencius",
+      "name": "孟子",
+      "alias": "孟轲，字子舆，邹国人",
+      "dynasty": "zhou",
+      "born": -372,
+      "died": -289,
+      "role": "思想家",
+      "short": "战国时期思想家，儒家代表人物，被尊为「亚圣」。主张性善论、仁政、民贵君轻，游说齐宣王、梁惠王等诸侯，影响深远。"
+    },
+    "zhuangzi": {
+      "id": "zhuangzi",
+      "name": "庄子",
+      "alias": "庄周，宋国蒙人",
+      "dynasty": "zhou",
+      "born": -369,
+      "died": -286,
+      "role": "思想家",
+      "short": "战国时期思想家，道家代表人物。主张逍遥无为、齐物我、齐是非，其文汪洋恣肆，想象丰富，对后世文学与哲学影响极大。"
+    },
+    "xunzi": {
+      "id": "xunzi",
+      "name": "荀子",
+      "alias": "荀况，字卿，赵国人",
+      "dynasty": "zhou",
+      "born": -313,
+      "died": -238,
+      "role": "思想家",
+      "short": "战国末期思想家，儒家代表人物。主张性恶论，强调后天教化与礼法并用。曾任兰陵令，弟子有李斯、韩非，对法家思想有重要影响。"
+    },
+    "bao_shuya": {
+      "id": "bao_shuya",
+      "name": "鲍叔牙",
+      "alias": "鲍叔，齐国大夫",
+      "dynasty": "zhou",
+      "born": -725,
+      "died": -644,
+      "role": "齐国大夫",
+      "short": "春秋时期齐国大夫，管仲的挚友。向齐桓公推荐管仲，甘居其下，被后世视为知人之明、举贤让能的典范。"
+    },
+    "zi_chan": {
+      "id": "zi_chan",
+      "name": "子产",
+      "alias": "公孙侨，字子产，郑国大夫",
+      "dynasty": "zhou",
+      "born": -582,
+      "died": -522,
+      "role": "郑国执政",
+      "short": "春秋时期郑国著名政治家，执政二十余年。推行改革，铸造刑书，不毁乡校，以礼治国，孔子称其为「古之遗爱」。"
+    },
+    "sun_bin": {
+      "id": "sun_bin",
+      "name": "孙膑",
+      "alias": "孙伯灵，齐国军事家",
+      "dynasty": "zhou",
+      "born": -378,
+      "died": -316,
+      "role": "军事家",
+      "short": "战国时期齐国军事家，孙武之后代。与庞涓同师学艺，遭庞涓陷害受膑刑。后辅佐齐将田忌，桂陵之战、马陵之战大败魏军，著有《孙膑兵法》。"
+    },
+    "wu_qi": {
+      "id": "wu_qi",
+      "name": "吴起",
+      "alias": "吴起，卫国左氏人",
+      "dynasty": "zhou",
+      "born": -440,
+      "died": -381,
+      "role": "军事家",
+      "short": "战国时期著名军事家、政治家。初仕鲁，后仕魏，创建魏武卒，大败秦军。晚年仕楚，主持变法，使楚国国力大增，后被旧贵族杀害。"
+    },
+    "tian_dan": {
+      "id": "tian_dan",
+      "name": "田单",
+      "alias": "田单，齐国临淄人",
+      "dynasty": "zhou",
+      "born": -330,
+      "died": -250,
+      "role": "齐国名将",
+      "short": "战国时期齐国名将。乐毅伐齐，齐仅剩莒、即墨二城。田单坚守即墨，以火牛阵大破燕军，收复失地七十余城，迎立齐襄王，被封为安平君。"
+    },
+    "shen_buhai": {
+      "id": "shen_buhai",
+      "name": "申不害",
+      "alias": "申子，郑国京人",
+      "dynasty": "zhou",
+      "born": -385,
+      "died": -337,
+      "role": "法家代表人物",
+      "short": "战国时期法家代表人物，韩昭侯之相。主张「术治」，以权术驾驭臣下，使韩国国治兵强，诸侯不敢侵韩。"
+    },
+    "li_kui": {
+      "id": "li_kui",
+      "name": "李悝",
+      "alias": "李克，魏国相",
+      "dynasty": "zhou",
+      "born": -455,
+      "died": -395,
+      "role": "法家代表人物",
+      "short": "战国时期魏国政治家、法家代表人物。魏文侯之相，主持变法，颁布《法经》，废除世卿世禄，奖励耕战，使魏国成为战国初期最强盛的国家。"
+    },
+    "zou_yan": {
+      "id": "zou_yan",
+      "name": "邹衍",
+      "alias": "邹子，齐国临淄人",
+      "dynasty": "zhou",
+      "born": -324,
+      "died": -250,
+      "role": "思想家",
+      "short": "战国时期阴阳家代表人物，齐国人。提出「大九州」说和「五德终始」说，以阴阳五行解释历史演变与朝代更替，对秦汉政治理论影响深远。"
+    },
+    "gongsun_long": {
+      "id": "gongsun_long",
+      "name": "公孙龙",
+      "alias": "公孙龙，赵国邯郸人",
+      "dynasty": "zhou",
+      "born": -320,
+      "died": -250,
+      "role": "哲学家",
+      "short": "战国时期名家代表人物，赵国人。以「白马非马」论和「离坚白」论著称，擅长逻辑思辨与名实之辩，对古代逻辑学发展有重要贡献。"
+    },
+    "hui_shi": {
+      "id": "hui_shi",
+      "name": "惠施",
+      "alias": "惠子，宋国人",
+      "dynasty": "zhou",
+      "born": -370,
+      "died": -310,
+      "role": "哲学家",
+      "short": "战国时期名家代表人物，宋国人。曾任魏惠王相，主张「合同异」，认为万物毕同毕异。与庄子为好友，二人多有辩论，尤以濠梁之辩最为著名。"
+    },
+    "yang_zhu": {
+      "id": "yang_zhu",
+      "name": "杨朱",
+      "alias": "杨子，魏国大梁人",
+      "dynasty": "zhou",
+      "born": -395,
+      "died": -335,
+      "role": "哲学家",
+      "short": "战国时期思想家，主张「贵己」「全性保真」，认为人人不损一毫、不利天下，天下治矣。与墨子的兼爱思想形成对立，其说曾盛极一时。"
+    },
+    "zengzi": {
+      "id": "zengzi",
+      "name": "曾子",
+      "alias": "曾参，字子舆，鲁国南武城人",
+      "dynasty": "zhou",
+      "born": -505,
+      "died": -435,
+      "role": "儒家弟子",
+      "short": "孔子重要弟子，以孝道著称。主张「吾日三省吾身」，传孔子之道，作《大学》，被后世尊为「宗圣」。"
+    },
+    "zisi": {
+      "id": "zisi",
+      "name": "子思",
+      "alias": "孔伋，字子思，孔子之孙",
+      "dynasty": "zhou",
+      "born": -483,
+      "died": -402,
+      "role": "儒家思想家",
+      "short": "孔子之孙，儒家「思孟学派」创始人。受业于曾子，作《中庸》，提出「诚」的哲学，上承孔子，下启孟子，被后世尊为「述圣」。"
+    },
+    "yan_hui": {
+      "id": "yan_hui",
+      "name": "颜回",
+      "alias": "颜渊，字子渊，鲁国人",
+      "dynasty": "zhou",
+      "born": -521,
+      "died": -481,
+      "role": "儒家弟子",
+      "short": "孔子最得意的弟子，以德行著称。安贫乐道，「一箪食，一瓢饮，在陋巷，人不堪其忧，回也不改其乐」。孔子赞其「不迁怒，不贰过」，被后世尊为「复圣」。"
+    },
+    "zi_gong": {
+      "id": "zi_gong",
+      "name": "子贡",
+      "alias": "端木赐，字子贡，卫国人",
+      "dynasty": "zhou",
+      "born": -520,
+      "died": -456,
+      "role": "儒家弟子",
+      "short": "孔子重要弟子，以言语和政事见长。善于外交辞令，曾游说齐、吴、越、晋四国，存鲁乱齐破吴强晋而霸越。经商致富，富可敌国，是儒商代表人物。"
+    },
+    "zi_lu": {
+      "id": "zi_lu",
+      "name": "子路",
+      "alias": "仲由，字子路，鲁国人",
+      "dynasty": "zhou",
+      "born": -542,
+      "died": -480,
+      "role": "儒家弟子",
+      "short": "孔子重要弟子，以政事和勇敢著称。性格直率，好勇力，事亲至孝。曾任卫国蒲大夫、季氏宰，后仕于卫，在蒯聩之乱中战死，结缨而死，践行君子之风。"
+    },
+    "zi_xia": {
+      "id": "zi_xia",
+      "name": "子夏",
+      "alias": "卜商，字子夏，卫国人",
+      "dynasty": "zhou",
+      "born": -507,
+      "died": -400,
+      "role": "儒家弟子",
+      "short": "孔子重要弟子，以文学著称。精通《诗》《书》《礼》《乐》，教授西河，魏文侯师事之，为战国儒学传播作出重要贡献，被后世视为传经之儒的典范。"
+    },
+    "tai_jia": {
+      "id": "tai_jia",
+      "name": "太甲",
+      "alias": "商汤之孙，商朝第三位君主",
+      "dynasty": "shang",
+      "born": -1580,
+      "died": -1557,
+      "role": "商朝君主",
+      "short": "商汤之孙，初继位不务德，被伊尹放之于桐宫，三年后改过自新，复位为明君。"
+    },
+    "wo_ding": {
+      "id": "wo_ding",
+      "name": "沃丁",
+      "alias": "太甲之子，商朝第四位君主",
+      "dynasty": "shang",
+      "born": -1557,
+      "died": -1536,
+      "role": "商朝君主",
+      "short": "太甲之子，商朝第四位君主，以伊尹为贤相，治理天下。"
+    },
+    "tai_geng": {
+      "id": "tai_geng",
+      "name": "太庚",
+      "alias": "沃丁之弟，商朝第五位君主",
+      "dynasty": "shang",
+      "born": -1536,
+      "died": -1518,
+      "role": "商朝君主",
+      "short": "沃丁之弟，商朝第五位君主，承商汤之业，治国有方。"
+    },
+    "xiao_jia": {
+      "id": "xiao_jia",
+      "name": "小甲",
+      "alias": "太庚之子，商朝第六位君主",
+      "dynasty": "shang",
+      "born": -1518,
+      "died": -1491,
+      "role": "商朝君主",
+      "short": "太庚之子，商朝第六位君主，治国有方，商朝继续发展。"
+    },
+    "yong_ji": {
+      "id": "yong_ji",
+      "name": "雍己",
+      "alias": "小甲之弟，商朝第七位君主",
+      "dynasty": "shang",
+      "born": -1491,
+      "died": -1481,
+      "role": "商朝君主",
+      "short": "小甲之弟，商朝第七位君主，执政期间商朝国力有所衰退。"
+    },
+    "tai_wu": {
+      "id": "tai_wu",
+      "name": "太戊",
+      "alias": "雍己之弟，商朝第八位君主，中兴之主",
+      "dynasty": "shang",
+      "born": -1481,
+      "died": -1412,
+      "role": "商朝君主",
+      "short": "雍己之弟，商朝中兴之主，任用伊陟、巫咸，商朝国力强盛，诸侯归附。"
+    },
+    "zhong_ding": {
+      "id": "zhong_ding",
+      "name": "仲丁",
+      "alias": "太戊之子，商朝第九位君主",
+      "dynasty": "shang",
+      "born": -1412,
+      "died": -1394,
+      "role": "商朝君主",
+      "short": "太戊之子，商朝第九位君主，迁都于嚣，商朝开始衰落。"
+    },
+    "wai_ren": {
+      "id": "wai_ren",
+      "name": "外壬",
+      "alias": "仲丁之弟，商朝第十位君主",
+      "dynasty": "shang",
+      "born": -1394,
+      "died": -1385,
+      "role": "商朝君主",
+      "short": "仲丁之弟，商朝第十位君主，诸侯叛乱，商朝国力继续衰退。"
+    },
+    "he_dan_jia": {
+      "id": "he_dan_jia",
+      "name": "河亶甲",
+      "alias": "外壬之弟，商朝第十一位君主",
+      "dynasty": "shang",
+      "born": -1385,
+      "died": -1378,
+      "role": "商朝君主",
+      "short": "外壬之弟，商朝第十一位君主，迁都于相，试图复兴商朝。"
+    },
+    "zu_yi": {
+      "id": "zu_yi",
+      "name": "祖乙",
+      "alias": "河亶甲之子，商朝第十二位君主",
+      "dynasty": "shang",
+      "born": -1378,
+      "died": -1360,
+      "role": "商朝君主",
+      "short": "河亶甲之子，商朝第十二位君主，迁都于耿，商朝略有复兴。"
+    },
+    "zu_xin": {
+      "id": "zu_xin",
+      "name": "祖辛",
+      "alias": "祖乙之子，商朝第十三位君主",
+      "dynasty": "shang",
+      "born": -1360,
+      "died": -1345,
+      "role": "商朝君主",
+      "short": "祖乙之子，商朝第十三位君主，维持商朝统治。"
+    },
+    "wo_jia": {
+      "id": "wo_jia",
+      "name": "沃甲",
+      "alias": "祖辛之弟，商朝第十四位君主",
+      "dynasty": "shang",
+      "born": -1345,
+      "died": -1337,
+      "role": "商朝君主",
+      "short": "祖辛之弟，商朝第十四位君主，维持商朝统治。"
+    },
+    "zu_ding": {
+      "id": "zu_ding",
+      "name": "祖丁",
+      "alias": "祖辛之子，商朝第十五位君主",
+      "dynasty": "shang",
+      "born": -1337,
+      "died": -1320,
+      "role": "商朝君主",
+      "short": "祖辛之子，商朝第十五位君主，商朝国力继续发展。"
+    },
+    "nan_geng": {
+      "id": "nan_geng",
+      "name": "南庚",
+      "alias": "沃甲之子，商朝第十六位君主",
+      "dynasty": "shang",
+      "born": -1320,
+      "died": -1310,
+      "role": "商朝君主",
+      "short": "沃甲之子，商朝第十六位君主，迁都于奄，商朝国力有所衰退。"
+    },
+    "yang_jia": {
+      "id": "yang_jia",
+      "name": "阳甲",
+      "alias": "祖丁之子，商朝第十七位君主",
+      "dynasty": "shang",
+      "born": -1310,
+      "died": -1298,
+      "role": "商朝君主",
+      "short": "祖丁之子，商朝第十七位君主，商朝国力继续衰退。"
+    },
+    "pan_geng_shang": {
+      "id": "pan_geng_shang",
+      "name": "盘庚",
+      "alias": "阳甲之弟，商朝第十八位君主，中兴之主",
+      "dynasty": "shang",
+      "born": -1298,
+      "died": -1273,
+      "role": "商朝君主",
+      "short": "阳甲之弟，商朝第十八位君主，迁都于殷，商朝再次中兴。"
+    },
+    "xiao_xin": {
+      "id": "xiao_xin",
+      "name": "小辛",
+      "alias": "盘庚之弟，商朝第十九位君主",
+      "dynasty": "shang",
+      "born": -1273,
+      "died": -1265,
+      "role": "商朝君主",
+      "short": "盘庚之弟，商朝第十九位君主，商朝国力有所衰退。"
+    },
+    "wu_ding": {
+      "id": "wu_ding",
+      "name": "武丁",
+      "alias": "小乙之子，商朝第二十一位君主，中兴之主",
+      "dynasty": "shang",
+      "born": -1250,
+      "died": -1192,
+      "role": "商朝君主",
+      "short": "小乙之子，商朝中兴之主，任用傅说、甘盘，讨伐四方，商朝达到鼎盛。"
+    },
+    "zu_geng": {
+      "id": "zu_geng",
+      "name": "祖庚",
+      "alias": "武丁之子，商朝第二十二位君主",
+      "dynasty": "shang",
+      "born": -1192,
+      "died": -1180,
+      "role": "商朝君主",
+      "short": "武丁之子，商朝第二十二位君主，继续武丁之政，商朝维持强盛。"
+    },
+    "zu_jia": {
+      "id": "zu_jia",
+      "name": "祖甲",
+      "alias": "祖庚之弟，商朝第二十三位君主",
+      "dynasty": "shang",
+      "born": -1180,
+      "died": -1160,
+      "role": "商朝君主",
+      "short": "祖庚之弟，商朝第二十三位君主，早期贤明，后期刑罚过重，商朝开始衰落。"
+    },
+    "lin_xin": {
+      "id": "lin_xin",
+      "name": "廪辛",
+      "alias": "祖甲之子，商朝第二十四位君主",
+      "dynasty": "shang",
+      "born": -1160,
+      "died": -1150,
+      "role": "商朝君主",
+      "short": "祖甲之子，商朝第二十四位君主，商朝国力继续衰退。"
+    },
+    "kang_ding": {
+      "id": "kang_ding",
+      "name": "康丁",
+      "alias": "廪辛之弟，商朝第二十五位君主",
+      "dynasty": "shang",
+      "born": -1150,
+      "died": -1145,
+      "role": "商朝君主",
+      "short": "廪辛之弟，商朝第二十五位君主，商朝国力继续衰退。"
+    },
+    "wu_yi": {
+      "id": "wu_yi",
+      "name": "武乙",
+      "alias": "康丁之子，商朝第二十六位君主",
+      "dynasty": "shang",
+      "born": -1145,
+      "died": -1119,
+      "role": "商朝君主",
+      "short": "康丁之子，商朝第二十六位君主，暴虐无道，射天辱神，后被雷震死。"
+    },
+    "wen_ding": {
+      "id": "wen_ding",
+      "name": "文丁",
+      "alias": "武乙之子，商朝第二十七位君主",
+      "dynasty": "shang",
+      "born": -1119,
+      "died": -1109,
+      "role": "商朝君主",
+      "short": "武乙之子，商朝第二十七位君主，杀害周季历，与周部族结怨。"
+    },
+    "di_yi": {
+      "id": "di_yi",
+      "name": "帝乙",
+      "alias": "文丁之子，商朝第二十八位君主",
+      "dynasty": "shang",
+      "born": -1109,
+      "died": -1076,
+      "role": "商朝君主",
+      "short": "文丁之子，商朝第二十八位君主，商朝国力衰退，周部族更加强大。"
+    },
+    "fu_hao": {
+      "id": "fu_hao",
+      "name": "妇好",
+      "alias": "商王武丁之妻，商朝女将军",
+      "dynasty": "shang",
+      "born": -1250,
+      "died": -1200,
+      "role": "商朝王后",
+      "short": "商王武丁之妻，中国历史上最早的女将军，多次率军出征，战功卓著。"
+    },
+    "wei_zi": {
+      "id": "wei_zi",
+      "name": "微子",
+      "alias": "帝乙长子，商纣王之兄，宋国始祖",
+      "dynasty": "shang",
+      "born": -1100,
+      "died": -1039,
+      "role": "商朝贵族",
+      "short": "帝乙长子，商纣王之兄，因谏纣王不听，出奔于周，周朝建立后封于宋。"
+    },
+    "jizi": {
+      "id": "jizi",
+      "name": "箕子",
+      "alias": "商纣王叔父，朝鲜始祖",
+      "dynasty": "shang",
+      "born": -1120,
+      "died": -1040,
+      "role": "商朝贤臣",
+      "short": "商纣王叔父，贤臣。因谏纣王被囚，周朝建立后封于朝鲜，为朝鲜始祖。"
+    },
+    "fei_lian": {
+      "id": "fei_lian",
+      "name": "蜚廉",
+      "alias": "商朝末年将领，秦国始祖之先祖",
+      "dynasty": "shang",
+      "born": -1100,
+      "died": -1040,
+      "role": "商朝将领",
+      "short": "商朝末年将领，善走，为商纣王效命，秦赵两国始祖之先祖。"
+    },
+    "e_lai": {
+      "id": "e_lai",
+      "name": "恶来",
+      "alias": "蜚廉之子，商朝末年将领，秦国始祖之先祖",
+      "dynasty": "shang",
+      "born": -1080,
+      "died": -1046,
+      "role": "商朝将领",
+      "short": "蜚廉之子，商朝末年将领，有力，为商纣王效命，周武王伐纣时被杀。"
+    }
+  },
+  "meta": {
+    "personCount": 416,
+    "eventCount": 125,
+    "dynastyList": [
+      "shanggu",
+      "xia",
+      "shang",
+      "zhou",
+      "qin",
+      "han",
+      "sanguo",
+      "jin",
+      "nanbei",
+      "sui",
+      "tang",
+      "song",
+      "yuan",
+      "ming",
+      "qing"
+    ],
+    "generated": "2026-06-29T16:30:07.371Z"
+  }
+}
