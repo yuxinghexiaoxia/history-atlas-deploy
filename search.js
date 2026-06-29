@@ -5,11 +5,11 @@ function buildSearchIndex(q) {
   const isYear = /^-?\d{3,4}$/.test(ql);
   const y = isYear ? parseInt(ql, 10) : null;
   const hit = (...parts) => {
-    if (!ql) return false;
+    if (!ql) return true;
     if (parts.join(" ").toLowerCase().includes(ql)) return true;
     return false;
   };
-  const persons = Object.values(DB.persons).filter(p => hit(p.name, p.alias, p.short, p.intro, p.role.join("")) || isYear && y >= p.born && y <= p.died);
+  const persons = Object.values(DB.persons).filter(p => hit(p.name, p.alias, p.short, p.intro, Array.isArray(p.role) ? p.role.join("") : (p.role || "")) || isYear && y >= p.born && y <= p.died);
   const events = Object.values(DB.events).filter(e => hit(e.name, e.short, e.place, e.bg) || isYear && y >= e.start && y <= e.end);
   const dynasties = Object.values(DB.dynastyInfo).filter(d => hit(d.name, d.full, d.en, d.summary) || isYear && new RegExp("\\d{3,4}").test(d.span));
   const locations = Object.values(DB.locations).filter(l => hit(l.name, l.desc));
@@ -203,6 +203,7 @@ function ResultBlock({
 }
 function SearchPage({
   query,
+  dynasty,
   nav
 }) {
   const [q, setQ] = useState(query || "");
@@ -235,24 +236,40 @@ function SearchPage({
     return () => clearTimeout(timer);
   }, [q]);
   const R = React.useMemo(() => {
+    let persons, events, dynasties, locations, sources, isYear, y;
     if (apiData) {
-      const persons = apiData.persons || [];
-      const events = apiData.events || [];
-      const dynasties = apiData.dynasties || [];
-      const locations = [];
-      const sources = [];
-      return {
-        persons,
-        events,
-        dynasties,
-        locations,
-        sources,
-        isYear: apiData.isYear || false,
-        y: apiData.y || null
-      };
+      persons = apiData.persons || [];
+      events = apiData.events || [];
+      dynasties = apiData.dynasties || [];
+      locations = [];
+      sources = [];
+      isYear = apiData.isYear || false;
+      y = apiData.y || null;
+    } else {
+      const res = buildSearchIndex(q);
+      persons = res.persons;
+      events = res.events;
+      dynasties = res.dynasties;
+      locations = res.locations;
+      sources = res.sources;
+      isYear = res.isYear;
+      y = res.y;
     }
-    return buildSearchIndex(q);
-  }, [q, apiData]);
+    // Apply dynasty filter if provided
+    if (dynasty) {
+      persons = persons.filter(p => p.dynasty === dynasty);
+      events = events.filter(e => e.dynasty === dynasty);
+    }
+    return {
+      persons,
+      events,
+      dynasties,
+      locations,
+      sources,
+      isYear,
+      y
+    };
+  }, [q, apiData, dynasty]);
   const total = R.persons.length + R.events.length + R.dynasties.length + R.locations.length;
   const cats = [{
     k: "all",

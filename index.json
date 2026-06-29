@@ -90,16 +90,6 @@
       "role": "曹操谋士",
       "short": "曹操帐下著名谋士，字奉孝。深通算略，屡建奇功，英年早逝，曹操痛惜不已。"
     },
-    "zhao_yun": {
-      "id": "zhao_yun",
-      "name": "赵云",
-      "alias": "字子龙，常山真定人",
-      "dynasty": "sanguo",
-      "born": 168,
-      "died": 229,
-      "role": "蜀汉名将",
-      "short": "蜀汉名将，字子龙。长坂坡单骑救主，截江夺阿斗，忠勇无双，一生未尝败绩。"
-    },
     "dian_wei": {
       "id": "dian_wei",
       "name": "典韦",
@@ -4159,10 +4149,820 @@
       "died": -1046,
       "role": "商朝将领",
       "short": "蜚廉之子，商朝末年将领，有力，为商纣王效命，周武王伐纣时被杀。"
+    },
+    "zhao_kuangyin": {
+      "id": "zhao_kuangyin",
+      "name": "赵匡胤",
+      "alias": "字元朗，涿郡人，宋朝开国皇帝",
+      "dynasty": "song",
+      "born": 927,
+      "died": 976,
+      "role": "宋朝皇帝",
+      "short": "宋太祖，发动陈桥兵变建立宋朝，杯酒释兵权，结束五代十国分裂局面。"
+    },
+    "zhao_kuangyi": {
+      "id": "zhao_kuangyi",
+      "name": "赵光义",
+      "alias": "字廷宜，即位后改字元侃，宋朝第二位皇帝",
+      "dynasty": "song",
+      "born": 939,
+      "died": 997,
+      "role": "宋朝皇帝",
+      "short": "宋太宗，灭北汉，基本完成统一，高粱河之战败于辽。"
+    },
+    "zhao_hen": {
+      "id": "zhao_hen",
+      "name": "赵恒",
+      "alias": "字德昌，宋朝第三位皇帝",
+      "dynasty": "song",
+      "born": 968,
+      "died": 1022,
+      "role": "宋朝皇帝",
+      "short": "宋真宗，与辽签订澶渊之盟，开创咸平之治。"
+    },
+    "zhao_zhen": {
+      "id": "zhao_zhen",
+      "name": "赵祯",
+      "alias": "字受益，宋朝第四位皇帝",
+      "dynasty": "song",
+      "born": 1010,
+      "died": 1063,
+      "role": "宋朝皇帝",
+      "short": "宋仁宗，在位四十二年，北宋盛世，名臣辈出。"
+    },
+    "zhao_xu": {
+      "id": "zhao_xu",
+      "name": "赵顼",
+      "alias": "字仲针，宋朝第六位皇帝",
+      "dynasty": "song",
+      "born": 1048,
+      "died": 1085,
+      "role": "宋朝皇帝",
+      "short": "宋神宗，支持王安石变法，意图富国强兵。"
+    },
+    "zhao_gou": {
+      "id": "zhao_gou",
+      "name": "赵构",
+      "alias": "字德基，南宋开国皇帝",
+      "dynasty": "song",
+      "born": 1107,
+      "died": 1187,
+      "role": "南宋皇帝",
+      "short": "宋高宗，建立南宋，定都临安，用秦桧杀岳飞。"
+    },
+    "zhao_kuo": {
+      "id": "zhao_kuo",
+      "name": "赵佶",
+      "alias": "号宣和主人，北宋第八位皇帝",
+      "dynasty": "song",
+      "born": 1082,
+      "died": 1135,
+      "role": "宋朝皇帝",
+      "short": "宋徽宗，艺术造诣极高，靖康之变为金人所俘。"
+    },
+    "zhao_huan": {
+      "id": "zhao_huan",
+      "name": "赵桓",
+      "alias": "字亶，北宋末代皇帝",
+      "dynasty": "song",
+      "born": 1100,
+      "died": 1161,
+      "role": "宋朝皇帝",
+      "short": "宋钦宗，靖康之变中被金人俘虏，北宋灭亡。"
+    },
+    "zhao_shi": {
+      "id": "zhao_shi",
+      "name": "赵昺",
+      "alias": "宋朝末代皇帝",
+      "dynasty": "song",
+      "born": 1271,
+      "died": 1279,
+      "role": "南宋皇帝",
+      "short": "宋帝昺，崖山海战中陆秀夫背之投海，南宋灭亡。"
+    },
+    "kou_zhun": {
+      "id": "kou_zhun",
+      "name": "寇准",
+      "alias": "字平仲，华州下邽人，北宋名相",
+      "dynasty": "song",
+      "born": 961,
+      "died": 1023,
+      "role": "政治家",
+      "short": "北宋名相，力主真宗亲征，促成澶渊之盟。"
+    },
+    "fan_zhongyan": {
+      "id": "fan_zhongyan",
+      "name": "范仲淹",
+      "alias": "字希文，苏州吴县人，北宋政治家、文学家",
+      "dynasty": "song",
+      "born": 989,
+      "died": 1052,
+      "role": "政治家",
+      "short": "北宋名臣，庆历新政主导者，「先天下之忧而忧」 author。"
+    },
+    "wang_anshi": {
+      "id": "wang_anshi",
+      "name": "王安石",
+      "alias": "字介甫，号半山，临川人，北宋政治家、文学家",
+      "dynasty": "song",
+      "born": 1021,
+      "died": 1086,
+      "role": "政治家",
+      "short": "北宋改革家，王安石变法主导者，唐宋八大家之一。"
+    },
+    "sima_guang": {
+      "id": "sima_guang",
+      "name": "司马光",
+      "alias": "字君实，号迂叟，陕州夏县人，北宋史学家",
+      "dynasty": "song",
+      "born": 1019,
+      "died": 1086,
+      "role": "史学家",
+      "short": "北宋史学家，主编《资治通鉴》，反对变法。"
+    },
+    "ouyang_xiu": {
+      "id": "ouyang_xiu",
+      "name": "欧阳修",
+      "alias": "字永叔，号醉翁，吉州永丰人，北宋文学家",
+      "dynasty": "song",
+      "born": 1007,
+      "died": 1072,
+      "role": "文学家",
+      "short": "北宋文坛领袖，唐宋八大家之一，古文运动倡导者。"
+    },
+    "su_shi": {
+      "id": "su_shi",
+      "name": "苏轼",
+      "alias": "字子瞻，号东坡居士，眉州眉山人，北宋文学家",
+      "dynasty": "song",
+      "born": 1037,
+      "died": 1101,
+      "role": "文学家",
+      "short": "北宋大文豪，唐宋八大家之一，诗书画三绝。"
+    },
+    "su_zhe": {
+      "id": "su_zhe",
+      "name": "苏辙",
+      "alias": "字子由，号颍滨遗老，眉州眉山人，北宋文学家",
+      "dynasty": "song",
+      "born": 1039,
+      "died": 1112,
+      "role": "文学家",
+      "short": "北宋文学家，苏轼之弟，唐宋八大家之一。"
+    },
+    "li_qingzhao": {
+      "id": "li_qingzhao",
+      "name": "李清照",
+      "alias": "号易安居士，济南人，南宋女词人",
+      "dynasty": "song",
+      "born": 1084,
+      "died": 1155,
+      "role": "词人",
+      "short": "宋代第一女词人，婉约词派代表，人称「千古第一才女」。"
+    },
+    "xin_qiji": {
+      "id": "xin_qiji",
+      "name": "辛弃疾",
+      "alias": "字幼安，号稼轩，历城人，南宋词人",
+      "dynasty": "song",
+      "born": 1140,
+      "died": 1207,
+      "role": "词人",
+      "short": "南宋豪放词派代表，与苏轼并称「苏辛」，爱国词人。"
+    },
+    "yue_fei": {
+      "id": "yue_fei",
+      "name": "岳飞",
+      "alias": "字鹏举，相州汤阴人，南宋名将",
+      "dynasty": "song",
+      "born": 1103,
+      "died": 1142,
+      "role": "将领",
+      "short": "南宋抗金名将，精忠报国，被秦桧以莫须有罪名杀害。"
+    },
+    "han_shizhong": {
+      "id": "han_shizhong",
+      "name": "韩世忠",
+      "alias": "字良臣，延安人，南宋名将",
+      "dynasty": "song",
+      "born": 1089,
+      "died": 1151,
+      "role": "将领",
+      "short": "南宋抗金名将，黄天荡之战大败金军，与岳飞齐名。"
+    },
+    "wen_tianxiang": {
+      "id": "wen_tianxiang",
+      "name": "文天祥",
+      "alias": "字履善，号文山，吉州庐陵人，南宋民族英雄",
+      "dynasty": "song",
+      "born": 1236,
+      "died": 1283,
+      "role": "政治家",
+      "short": "南宋民族英雄，抗元被俘，宁死不降，「人生自古谁无死」。"
+    },
+    "bao_zheng": {
+      "id": "bao_zheng",
+      "name": "包拯",
+      "alias": "字希仁，庐州合肥人，北宋清官",
+      "dynasty": "song",
+      "born": 999,
+      "died": 1062,
+      "role": "政治家",
+      "short": "北宋清官代表，铁面无私，后世尊为包青天。"
+    },
+    "shen_kuo": {
+      "id": "shen_kuo",
+      "name": "沈括",
+      "alias": "字存中，钱塘人，北宋科学家",
+      "dynasty": "song",
+      "born": 1031,
+      "died": 1095,
+      "role": "科学家",
+      "short": "北宋科学家，著《梦溪笔谈》，涵盖天文、地理、数学等。"
+    },
+    "bi_sheng": {
+      "id": "bi_sheng",
+      "name": "毕昇",
+      "alias": "淮南路蕲州人，北宋发明家",
+      "dynasty": "song",
+      "born": 972,
+      "died": 1051,
+      "role": "发明家",
+      "short": "北宋发明家，发明活字印刷术，四大发明之一。"
+    },
+    "qin_hui": {
+      "id": "qin_hui",
+      "name": "秦桧",
+      "alias": "字会之，江宁人，南宋权臣",
+      "dynasty": "song",
+      "born": 1090,
+      "died": 1155,
+      "role": "权臣",
+      "short": "南宋权臣，主和派代表，以莫须有罪名杀害岳飞。"
+    },
+    "cai_jing": {
+      "id": "cai_jing",
+      "name": "蔡京",
+      "alias": "字元长，兴化军仙游人，北宋权臣",
+      "dynasty": "song",
+      "born": 1047,
+      "died": 1126,
+      "role": "权臣",
+      "short": "北宋权臣，书法家，六贼之首，导致北宋末年政治腐败。"
+    },
+    "lu_xiufu": {
+      "id": "lu_xiufu",
+      "name": "陆秀夫",
+      "alias": "字君实，楚州盐城人，南宋忠臣",
+      "dynasty": "song",
+      "born": 1236,
+      "died": 1279,
+      "role": "政治家",
+      "short": "南宋忠臣，崖山海战负帝昺投海殉国。"
+    },
+    "zhang_zeduan": {
+      "id": "zhang_zeduan",
+      "name": "张择端",
+      "alias": "字正道，东武人，北宋画家",
+      "dynasty": "song",
+      "born": 1085,
+      "died": 1145,
+      "role": "画家",
+      "short": "北宋画家，代表作《清明上河图》，描绘汴京繁华。"
+    },
+    "liu_yong": {
+      "id": "liu_yong",
+      "name": "柳永",
+      "alias": "原名三变，字景庄，崇安人，北宋词人",
+      "dynasty": "song",
+      "born": 984,
+      "died": 1053,
+      "role": "词人",
+      "short": "北宋词人，婉约派代表，「凡有井水处，皆能歌柳词」。"
+    },
+    "tie_muzhen": {
+      "id": "tie_muzhen",
+      "name": "铁木真",
+      "alias": "成吉思汗，蒙古帝国奠基者",
+      "dynasty": "yuan",
+      "born": 1162,
+      "died": 1227,
+      "role": "蒙古大汗",
+      "short": "成吉思汗，统一蒙古各部，建立蒙古帝国，发动大规模西征。"
+    },
+    "wo_kuotai": {
+      "id": "wo_kuotai",
+      "name": "窝阔台",
+      "alias": "蒙古帝国第二代大汗",
+      "dynasty": "yuan",
+      "born": 1186,
+      "died": 1241,
+      "role": "蒙古大汗",
+      "short": "窝阔台汗，灭金朝，建立驿站制度，蒙古帝国鼎盛时期。"
+    },
+    "hubilie": {
+      "id": "hubilie",
+      "name": "忽必烈",
+      "alias": "元世祖，大蒙古国末代大汗，元朝开国皇帝",
+      "dynasty": "yuan",
+      "born": 1215,
+      "died": 1294,
+      "role": "元朝皇帝",
+      "short": "元世祖，建立元朝，灭南宋，统一中国，开创至元之治。"
+    },
+    "yelv_chucai": {
+      "id": "yelv_chucai",
+      "name": "耶律楚材",
+      "alias": "字晋卿，契丹人，蒙古帝国政治家",
+      "dynasty": "yuan",
+      "born": 1190,
+      "died": 1244,
+      "role": "政治家",
+      "short": "蒙古帝国重臣，主张以儒治国，保护中原文化。"
+    },
+    "tuotuo": {
+      "id": "tuotuo",
+      "name": "脱脱",
+      "alias": "字大用，蒙古蔑儿乞人，元朝宰相",
+      "dynasty": "yuan",
+      "born": 1314,
+      "died": 1356,
+      "role": "政治家",
+      "short": "元朝宰相，主修宋辽金三史，镇压红巾军。"
+    },
+    "guan_hanqing": {
+      "id": "guan_hanqing",
+      "name": "关汉卿",
+      "alias": "号已斋，解州人，元曲四大家之首",
+      "dynasty": "yuan",
+      "born": 1234,
+      "died": 1300,
+      "role": "戏剧家",
+      "short": "元曲四大家之首，代表作《窦娥冤》，被称为「曲圣」。"
+    },
+    "ma_zhiyuan": {
+      "id": "ma_zhiyuan",
+      "name": "马致远",
+      "alias": "号东篱，大都人，元曲作家",
+      "dynasty": "yuan",
+      "born": 1250,
+      "died": 1321,
+      "role": "戏剧家",
+      "short": "元曲四大家之一，代表作《汉宫秋》《天净沙·秋思》。"
+    },
+    "wang_shipu": {
+      "id": "wang_shipu",
+      "name": "王实甫",
+      "alias": "名德信，大都人，元曲作家",
+      "dynasty": "yuan",
+      "born": 1260,
+      "died": 1336,
+      "role": "戏剧家",
+      "short": "元曲大家，代表作《西厢记》，天下夺魁。"
+    },
+    "bai_pu": {
+      "id": "bai_pu",
+      "name": "白朴",
+      "alias": "字仁甫，号兰谷，隩州人，元曲四大家之一",
+      "dynasty": "yuan",
+      "born": 1226,
+      "died": 1306,
+      "role": "戏剧家",
+      "short": "元曲四大家之一，代表作《墙头马上》《梧桐雨》。"
+    },
+    "zheng_guangzu": {
+      "id": "zheng_guangzu",
+      "name": "郑光祖",
+      "alias": "字德辉，平阳襄陵人，元曲四大家之一",
+      "dynasty": "yuan",
+      "born": 1264,
+      "died": 1330,
+      "role": "戏剧家",
+      "short": "元曲四大家之一，代表作《倩女离魂》。"
+    },
+    "zhao_mengfu": {
+      "id": "zhao_mengfu",
+      "name": "赵孟頫",
+      "alias": "字子昂，号松雪道人，吴兴人，元代书画家",
+      "dynasty": "yuan",
+      "born": 1254,
+      "died": 1322,
+      "role": "书画家",
+      "short": "元代书画大家，楷书四大家之一，开创元代文人画风。"
+    },
+    "guo_shoujing": {
+      "id": "guo_shoujing",
+      "name": "郭守敬",
+      "alias": "字若思，顺德邢台人，元代科学家",
+      "dynasty": "yuan",
+      "born": 1231,
+      "died": 1316,
+      "role": "科学家",
+      "short": "元代科学家，编《授时历》，主持天文观测与大运河工程。"
+    },
+    "huang_daopo": {
+      "id": "huang_daopo",
+      "name": "黄道婆",
+      "alias": "松江府乌泥泾人，元代纺织家",
+      "dynasty": "yuan",
+      "born": 1245,
+      "died": 1330,
+      "role": "发明家",
+      "short": "元代纺织家，改进棉纺织技术，被尊为衣被天下。"
+    },
+    "ni_zan": {
+      "id": "ni_zan",
+      "name": "倪瓒",
+      "alias": "字元镇，号云林，无锡人，元代画家",
+      "dynasty": "yuan",
+      "born": 1301,
+      "died": 1374,
+      "role": "画家",
+      "short": "元四家之一，山水画极简风格，影响明清文人画。"
+    },
+    "huang_gongwang": {
+      "id": "huang_gongwang",
+      "name": "黄公望",
+      "alias": "字子久，号一峰，平江常熟人，元代画家",
+      "dynasty": "yuan",
+      "born": 1269,
+      "died": 1354,
+      "role": "画家",
+      "short": "元四家之首，代表作《富春山居图》，山水画宗师。"
+    },
+    "wu_zhen": {
+      "id": "wu_zhen",
+      "name": "吴镇",
+      "alias": "字仲圭，号梅花道人，嘉兴人，元代画家",
+      "dynasty": "yuan",
+      "born": 1280,
+      "died": 1354,
+      "role": "画家",
+      "short": "元四家之一，善画墨竹，山水画沉郁苍润。"
+    },
+    "wang_meng": {
+      "id": "wang_meng",
+      "name": "王蒙",
+      "alias": "字叔明，号黄鹤山樵，湖州人，元代画家",
+      "dynasty": "yuan",
+      "born": 1308,
+      "died": 1385,
+      "role": "画家",
+      "short": "元四家之一，山水画繁密深邃，赵孟頫外孙。"
+    },
+    "liu_bingzhong": {
+      "id": "liu_bingzhong",
+      "name": "刘秉忠",
+      "alias": "字仲晦，邢州人，元代政治家",
+      "dynasty": "yuan",
+      "born": 1216,
+      "died": 1274,
+      "role": "政治家",
+      "short": "忽必烈重要谋士，规划元大都，制定元朝制度。"
+    },
+    "bo_yan": {
+      "id": "bo_yan",
+      "name": "伯颜",
+      "alias": "蒙古八邻部人，元朝名将",
+      "dynasty": "yuan",
+      "born": 1236,
+      "died": 1295,
+      "role": "将领",
+      "short": "元朝名将，率军灭南宋，俘虏宋恭帝。"
+    },
+    "hong_fuchu": {
+      "id": "hong_fuchu",
+      "name": "洪福源",
+      "alias": "高丽王朝将领，后归附蒙古",
+      "dynasty": "yuan",
+      "born": 1200,
+      "died": 1258,
+      "role": "将领",
+      "short": "高丽将领，归附蒙古，助蒙古攻高丽。"
+    },
+    "zhu_yuanzhang": {
+      "id": "zhu_yuanzhang",
+      "name": "朱元璋",
+      "alias": "字国瑞，濠州钟离人，明朝开国皇帝",
+      "dynasty": "ming",
+      "born": 1328,
+      "died": 1398,
+      "role": "明朝皇帝",
+      "short": "明太祖，推翻元朝建立明朝，洪武之治，废除丞相制。"
+    },
+    "zhu_di": {
+      "id": "zhu_di",
+      "name": "朱棣",
+      "alias": "明朝第三位皇帝，年号永乐",
+      "dynasty": "ming",
+      "born": 1360,
+      "died": 1424,
+      "role": "明朝皇帝",
+      "short": "明成祖，靖难之役夺位，迁都北京，派郑和下西洋。"
+    },
+    "zhu_yunwen": {
+      "id": "zhu_yunwen",
+      "name": "朱允炆",
+      "alias": "明朝第二位皇帝，年号建文",
+      "dynasty": "ming",
+      "born": 1377,
+      "died": 1402,
+      "role": "明朝皇帝",
+      "short": "建文帝，削藩引发靖难之役，下落不明。"
+    },
+    "zhu_gaozhi": {
+      "id": "zhu_gaozhi",
+      "name": "朱高炽",
+      "alias": "明朝第四位皇帝，年号洪熙",
+      "dynasty": "ming",
+      "born": 1378,
+      "died": 1425,
+      "role": "明朝皇帝",
+      "short": "明仁宗，在位十月而崩，与儿子宣宗共创仁宣之治。"
+    },
+    "zhu_zhanyi": {
+      "id": "zhu_zhanyi",
+      "name": "朱瞻基",
+      "alias": "明朝第五位皇帝，年号宣德",
+      "dynasty": "ming",
+      "born": 1398,
+      "died": 1435,
+      "role": "明朝皇帝",
+      "short": "明宣宗，仁宣之治，爱好书画，促织天子。"
+    },
+    "zhu_qizhen": {
+      "id": "zhu_qizhen",
+      "name": "朱祁镇",
+      "alias": "明朝第六位皇帝，年号正统/天顺",
+      "dynasty": "ming",
+      "born": 1427,
+      "died": 1464,
+      "role": "明朝皇帝",
+      "short": "明英宗，土木堡之变被俘，夺门之变复辟。"
+    },
+    "zhu_houzhao": {
+      "id": "zhu_houzhao",
+      "name": "朱厚照",
+      "alias": "明朝第十位皇帝，年号正德",
+      "dynasty": "ming",
+      "born": 1491,
+      "died": 1521,
+      "role": "明朝皇帝",
+      "short": "明武宗，性格叛逆，设立豹房，落水驾崩。"
+    },
+    "zhu_houzong": {
+      "id": "zhu_houzong",
+      "name": "朱厚熜",
+      "alias": "明朝第十一位皇帝，年号嘉靖",
+      "dynasty": "ming",
+      "born": 1507,
+      "died": 1567,
+      "role": "明朝皇帝",
+      "short": "明世宗，大礼议之争，崇信道教，海瑞上疏。"
+    },
+    "zhu_yijun": {
+      "id": "zhu_yijun",
+      "name": "朱翊钧",
+      "alias": "明朝第十三位皇帝，年号万历",
+      "dynasty": "ming",
+      "born": 1563,
+      "died": 1620,
+      "role": "明朝皇帝",
+      "short": "明神宗，万历三大征，三十年不上朝。"
+    },
+    "zhu_youjian": {
+      "id": "zhu_youjian",
+      "name": "朱由检",
+      "alias": "明朝末代皇帝，年号崇祯",
+      "dynasty": "ming",
+      "born": 1611,
+      "died": 1644,
+      "role": "明朝皇帝",
+      "short": "明思宗，励精图治但无力回天，煤山自缢，明朝灭亡。"
+    },
+    "liu_ji": {
+      "id": "liu_ji",
+      "name": "刘基",
+      "alias": "字伯温，处州青田人，明初谋士",
+      "dynasty": "ming",
+      "born": 1311,
+      "died": 1375,
+      "role": "政治家",
+      "short": "明初开国功臣，朱元璋谋士，神机妙算，与诸葛亮并称。"
+    },
+    "xu_da": {
+      "id": "xu_da",
+      "name": "徐达",
+      "alias": "字天德，濠州人，明朝开国名将",
+      "dynasty": "ming",
+      "born": 1332,
+      "died": 1385,
+      "role": "将领",
+      "short": "明朝开国第一功臣，北伐灭元，六王之首。"
+    },
+    "chang_yuchun": {
+      "id": "chang_yuchun",
+      "name": "常遇春",
+      "alias": "字伯仁，濠州怀远人，明初名将",
+      "dynasty": "ming",
+      "born": 1330,
+      "died": 1369,
+      "role": "将领",
+      "short": "明初名将，北伐先锋，勇猛过人，追封开平王。"
+    },
+    "yu_qian": {
+      "id": "yu_qian",
+      "name": "于谦",
+      "alias": "字廷益，号节庵，钱塘人，明朝忠臣",
+      "dynasty": "ming",
+      "born": 1398,
+      "died": 1457,
+      "role": "政治家",
+      "short": "明朝忠臣，北京保卫战击败瓦剌，后被害，追谥忠肃。"
+    },
+    "wang_yangming": {
+      "id": "wang_yangming",
+      "name": "王阳明",
+      "alias": "名守仁，字伯安，号阳明，余姚人，明代思想家",
+      "dynasty": "ming",
+      "born": 1472,
+      "died": 1529,
+      "role": "思想家",
+      "short": "明代心学集大成者，知行合一，平定宁王之乱。"
+    },
+    "zhang_juzheng": {
+      "id": "zhang_juzheng",
+      "name": "张居正",
+      "alias": "字叔大，号太岳，湖广江陵人，明朝政治家",
+      "dynasty": "ming",
+      "born": 1525,
+      "died": 1582,
+      "role": "政治家",
+      "short": "明朝首辅，推行一条鞭法改革，万历新政主导者。"
+    },
+    "hai_rui": {
+      "id": "hai_rui",
+      "name": "海瑞",
+      "alias": "字汝贤，号刚峰，广东琼山人，明朝清官",
+      "dynasty": "ming",
+      "born": 1514,
+      "died": 1587,
+      "role": "政治家",
+      "short": "明朝著名清官，上疏骂嘉靖帝，被后世称为海青天。"
+    },
+    "qi_jiguang": {
+      "id": "qi_jiguang",
+      "name": "戚继光",
+      "alias": "字元敬，号南塘，登州人，明朝抗倭名将",
+      "dynasty": "ming",
+      "born": 1528,
+      "died": 1588,
+      "role": "将领",
+      "short": "明朝抗倭名将，创造戚家军，平定东南倭患。"
+    },
+    "zheng_he": {
+      "id": "zheng_he",
+      "name": "郑和",
+      "alias": "原名马三宝，云南昆阳人，明代航海家",
+      "dynasty": "ming",
+      "born": 1371,
+      "died": 1433,
+      "role": "航海家",
+      "short": "明代航海家，七下西洋，远航至东非，世界航海先驱。"
+    },
+    "li_shizhen": {
+      "id": "li_shizhen",
+      "name": "李时珍",
+      "alias": "字东璧，号濒湖，蕲州人，明代医学家",
+      "dynasty": "ming",
+      "born": 1518,
+      "died": 1593,
+      "role": "医学家",
+      "short": "明代医学家，著《本草纲目》，集中国药学之大成。"
+    },
+    "song_yingxing": {
+      "id": "song_yingxing",
+      "name": "宋应星",
+      "alias": "字长庚，奉新人，明代科学家",
+      "dynasty": "ming",
+      "born": 1587,
+      "died": 1666,
+      "role": "科学家",
+      "short": "明代科学家，著《天工开物》，中国17世纪工艺百科全书。"
+    },
+    "xu_xiake": {
+      "id": "xu_xiake",
+      "name": "徐霞客",
+      "alias": "名弘祖，字振之，江阴人，明代旅行家",
+      "dynasty": "ming",
+      "born": 1587,
+      "died": 1641,
+      "role": "旅行家",
+      "short": "明代旅行家，著《徐霞客游记》，考察喀斯特地貌先驱。"
+    },
+    "tang_yin": {
+      "id": "tang_yin",
+      "name": "唐寅",
+      "alias": "字伯虎，号六如居士，吴县人，明代画家",
+      "dynasty": "ming",
+      "born": 1470,
+      "died": 1524,
+      "role": "画家",
+      "short": "吴门四家之一，才子画家，诗书画三绝。"
+    },
+    "wen_zhengming": {
+      "id": "wen_zhengming",
+      "name": "文徵明",
+      "alias": "名璧，字徵明，长洲人，明代画家",
+      "dynasty": "ming",
+      "born": 1470,
+      "died": 1559,
+      "role": "画家",
+      "short": "吴门四家之一，诗书画皆精，明代文人画代表。"
+    },
+    "zhu_yunming": {
+      "id": "zhu_yunming",
+      "name": "祝允明",
+      "alias": "字希哲，号枝山，长洲人，明代书法家",
+      "dynasty": "ming",
+      "born": 1461,
+      "died": 1527,
+      "role": "书法家",
+      "short": "吴中四才子之一，狂草书法大家，与唐寅齐名。"
+    },
+    "dong_qichang": {
+      "id": "dong_qichang",
+      "name": "董其昌",
+      "alias": "字玄宰，号思白，华亭人，明代书画家",
+      "dynasty": "ming",
+      "born": 1555,
+      "died": 1636,
+      "role": "书画家",
+      "short": "明代书画大家，提出南北宗论，影响明清画坛。"
+    },
+    "zheng_chenggong": {
+      "id": "zheng_chenggong",
+      "name": "郑成功",
+      "alias": "本名森，字明俨，南安人，明末民族英雄",
+      "dynasty": "ming",
+      "born": 1624,
+      "died": 1662,
+      "role": "将领",
+      "short": "明末民族英雄，收复台湾，驱逐荷兰殖民者。"
+    },
+    "yuan_chonghuan": {
+      "id": "yuan_chonghuan",
+      "name": "袁崇焕",
+      "alias": "字元素，号自如，东莞人，明末名将",
+      "dynasty": "ming",
+      "born": 1584,
+      "died": 1630,
+      "role": "将领",
+      "short": "明末抗清名将，宁远大捷击败努尔哈赤，被崇祯冤杀。"
+    },
+    "shi_kefa": {
+      "id": "shi_kefa",
+      "name": "史可法",
+      "alias": "字宪之，号道邻，祥符人，明末忠臣",
+      "dynasty": "ming",
+      "born": 1602,
+      "died": 1645,
+      "role": "政治家",
+      "short": "明末忠臣，扬州督师，清军破城后殉国。"
+    },
+    "li_zhi": {
+      "id": "li_zhi",
+      "name": "李贽",
+      "alias": "字卓吾，号温陵居士，泉州人，明代思想家",
+      "dynasty": "ming",
+      "born": 1527,
+      "died": 1602,
+      "role": "思想家",
+      "short": "明代思想家，反儒学正统，离经叛道，自刎于狱中。"
+    },
+    "zhao_yun_song": {
+      "id": "zhao_yun_song",
+      "name": "赵昀",
+      "alias": "字宋道，南宋第五位皇帝",
+      "dynasty": "song",
+      "born": 1205,
+      "died": 1264,
+      "role": "南宋皇帝",
+      "short": "宋理宗，联蒙灭金，端平入洛失败，宋蒙战争开始。"
+    },
+    "zhao_yun": {
+      "id": "zhao_yun",
+      "name": "赵云",
+      "alias": "字子龙，常山真定人，蜀汉名将",
+      "dynasty": "sanguo",
+      "born": 168,
+      "died": 229,
+      "role": "将领",
+      "short": "蜀汉五虎将之一，常胜将军，长坂坡单骑救主。"
     }
   },
   "meta": {
-    "personCount": 416,
+    "personCount": 496,
     "eventCount": 125,
     "dynastyList": [
       "shanggu",
@@ -4181,6 +4981,6 @@
       "ming",
       "qing"
     ],
-    "generated": "2026-06-29T16:30:07.371Z"
+    "generated": "2026-06-30T00:00:00.000Z"
   }
 }

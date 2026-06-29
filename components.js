@@ -451,11 +451,11 @@ function EventCard({
   }, /*#__PURE__*/React.createElement(Icon, {
     name: "person",
     size: 13
-  }), /*#__PURE__*/React.createElement("span", null, e.persons.length, " \u4EBA\u7269"), /*#__PURE__*/React.createElement("span", {
+  }), /*#__PURE__*/React.createElement("span", null, (e.persons || []).length, " \u4EBA\u7269"), /*#__PURE__*/React.createElement("span", {
     style: {
       color: "var(--line-2)"
     }
-  }, "\xB7"), /*#__PURE__*/React.createElement("span", null, "\u4E8B\u4EF6\u94FE ", e.chain.length, " \u8282\u70B9")));
+  }, "\xB7"), /*#__PURE__*/React.createElement("span", null, "\u4E8B\u4EF6\u94FE ", (e.chain || []).length, " \u8282\u70B9")));
 }
 
 /* ---- relation legend ---- */

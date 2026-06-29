@@ -360,6 +360,7 @@ function App() {
     case "search":
       view = /*#__PURE__*/React.createElement(SearchPage, {
         query: route.params.q,
+        dynasty: route.params.dynasty,
         nav: nav
       });
       break;
