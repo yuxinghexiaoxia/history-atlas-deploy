@@ -412,8 +412,17 @@ function App() {
   }));
 }
 const _rootEl = document.getElementById("root");
-if (ReactDOM.createRoot) {
-  ReactDOM.createRoot(_rootEl).render(/*#__PURE__*/React.createElement(App, null));
+
+function mountApp() {
+  if (ReactDOM.createRoot) {
+    ReactDOM.createRoot(_rootEl).render(/*#__PURE__*/React.createElement(App, null));
+  } else {
+    ReactDOM.render(/*#__PURE__*/React.createElement(App, null), _rootEl);
+  }
+}
+
+if (window.DB && Object.keys(window.DB.persons || {}).length > 0) {
+  mountApp();
 } else {
-  ReactDOM.render(/*#__PURE__*/React.createElement(App, null), _rootEl);
+  window.addEventListener('db-ready', mountApp, { once: true });
 }
