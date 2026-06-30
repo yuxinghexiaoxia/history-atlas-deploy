@@ -4959,10 +4959,310 @@
       "died": 229,
       "role": "将领",
       "short": "蜀汉五虎将之一，常胜将军，长坂坡单骑救主。"
+    },
+    "nuerhachi": {
+      "id": "nuerhachi",
+      "name": "努尔哈赤",
+      "alias": "爱新觉罗氏，后金开国皇帝，清朝奠基者",
+      "dynasty": "qing",
+      "born": 1559,
+      "died": 1626,
+      "role": "后金大汗",
+      "short": "清太祖，统一女真各部，建立后金政权，定八旗制度。"
+    },
+    "huang_taiji": {
+      "id": "huang_taiji",
+      "name": "皇太极",
+      "alias": "爱新觉罗氏，清朝开国皇帝",
+      "dynasty": "qing",
+      "born": 1592,
+      "died": 1643,
+      "role": "清朝皇帝",
+      "short": "清太宗，改国号为清，征服朝鲜和漠南蒙古，奠定入关基础。"
+    },
+    "shunzhi": {
+      "id": "shunzhi",
+      "name": "福临",
+      "alias": "年号顺治，清朝入关第一位皇帝",
+      "dynasty": "qing",
+      "born": 1638,
+      "died": 1661,
+      "role": "清朝皇帝",
+      "short": "清世祖，六岁即位，多尔衮摄政，清军入关定都北京。"
+    },
+    "kangxi": {
+      "id": "kangxi",
+      "name": "玄烨",
+      "alias": "年号康熙，清朝第四位皇帝",
+      "dynasty": "qing",
+      "born": 1654,
+      "died": 1722,
+      "role": "清朝皇帝",
+      "short": "清圣祖，平三藩、收台湾、抗击沙俄，开创康乾盛世，在位61年。"
+    },
+    "yongzheng": {
+      "id": "yongzheng",
+      "name": "胤禛",
+      "alias": "年号雍正，清朝第五位皇帝",
+      "dynasty": "qing",
+      "born": 1678,
+      "died": 1735,
+      "role": "清朝皇帝",
+      "short": "清世宗，推行摊丁入亩、火耗归公、改土归流，设立军机处。"
+    },
+    "qianlong": {
+      "id": "qianlong",
+      "name": "弘历",
+      "alias": "年号乾隆，清朝第六位皇帝",
+      "dynasty": "qing",
+      "born": 1711,
+      "died": 1799,
+      "role": "清朝皇帝",
+      "short": "清高宗，十全老人，编纂《四库全书》，晚年闭关锁国。"
+    },
+    "jiaqing": {
+      "id": "jiaqing",
+      "name": "颙琰",
+      "alias": "年号嘉庆，清朝第七位皇帝",
+      "dynasty": "qing",
+      "born": 1760,
+      "died": 1820,
+      "role": "清朝皇帝",
+      "short": "清仁宗，诛和珅，整顿吏治，但未能扭转清朝衰落的趋势。"
+    },
+    "daoguang": {
+      "id": "daoguang",
+      "name": "旻宁",
+      "alias": "年号道光，清朝第八位皇帝",
+      "dynasty": "qing",
+      "born": 1782,
+      "died": 1850,
+      "role": "清朝皇帝",
+      "short": "清宣宗，鸦片战争爆发，签订《南京条约》，中国近代史开端。"
+    },
+    "xianfeng": {
+      "id": "xianfeng",
+      "name": "奕詝",
+      "alias": "年号咸丰，清朝第九位皇帝",
+      "dynasty": "qing",
+      "born": 1831,
+      "died": 1861,
+      "role": "清朝皇帝",
+      "short": "清文宗，太平天国运动、第二次鸦片战争，英法联军火烧圆明园。"
+    },
+    "tongzhi": {
+      "id": "tongzhi",
+      "name": "载淳",
+      "alias": "年号同治，清朝第十位皇帝",
+      "dynasty": "qing",
+      "born": 1856,
+      "died": 1875,
+      "role": "清朝皇帝",
+      "short": "清穆宗，同治中兴，洋务运动，十九岁亲政，早逝无子。"
+    },
+    "guangxu": {
+      "id": "guangxu",
+      "name": "载湉",
+      "alias": "年号光绪，清朝第十一位皇帝",
+      "dynasty": "qing",
+      "born": 1871,
+      "died": 1908,
+      "role": "清朝皇帝",
+      "short": "清德宗，戊戌变法，甲午战争，被慈禧囚禁于瀛台。"
+    },
+    "panyi": {
+      "id": "panyi",
+      "name": "溥仪",
+      "alias": "年号宣统，清朝末代皇帝",
+      "dynasty": "qing",
+      "born": 1906,
+      "died": 1967,
+      "role": "清朝皇帝",
+      "short": "清逊帝，三岁即位，辛亥革命后退位，后成为伪满洲国执政。"
+    },
+    "cixi": {
+      "id": "cixi",
+      "name": "慈禧",
+      "alias": "叶赫那拉氏，咸丰帝妃嫔，同治帝生母",
+      "dynasty": "qing",
+      "born": 1835,
+      "died": 1908,
+      "role": "太后",
+      "short": "慈禧太后，实际统治清朝近半个世纪，支持洋务运动，镇压戊戌变法。"
+    },
+    "duoergun": {
+      "id": "duoergun",
+      "name": "多尔衮",
+      "alias": "爱新觉罗氏，努尔哈赤第十四子，清初摄政王",
+      "dynasty": "qing",
+      "born": 1612,
+      "died": 1650,
+      "role": "摄政王",
+      "short": "清初摄政王，率清军入关，定鼎中原，追尊为成宗义皇帝。"
+    },
+    "aobai": {
+      "id": "aobai",
+      "name": "鳌拜",
+      "alias": "瓜尔佳氏，清初权臣",
+      "dynasty": "qing",
+      "born": null,
+      "died": 1669,
+      "role": "权臣",
+      "short": "康熙初年四大辅政大臣之一，专权跋扈，被康熙智擒。"
+    },
+    "suoni": {
+      "id": "suoni",
+      "name": "索尼",
+      "alias": "赫舍里氏，清初大臣",
+      "dynasty": "qing",
+      "born": 1601,
+      "died": 1667,
+      "role": "政治家",
+      "short": "康熙初年四大辅政大臣之首，孙女为康熙皇后。"
+    },
+    "mingzhu": {
+      "id": "mingzhu",
+      "name": "明珠",
+      "alias": "纳喇氏，康熙朝权臣",
+      "dynasty": "qing",
+      "born": 1635,
+      "died": 1708,
+      "role": "权臣",
+      "short": "康熙朝重臣，权倾朝野，主持平定三藩、收复台湾后勤。"
+    },
+    "zhang_tingyu": {
+      "id": "zhang_tingyu",
+      "name": "张廷玉",
+      "alias": "字衡臣，安徽桐城人，清朝名臣",
+      "dynasty": "qing",
+      "born": 1672,
+      "died": 1755,
+      "role": "政治家",
+      "short": "雍正、乾隆朝名臣，配享太庙，编修《明史》《清圣祖实录》。"
+    },
+    "heshen": {
+      "id": "heshen",
+      "name": "和珅",
+      "alias": "钮祜禄氏，乾隆朝权臣",
+      "dynasty": "qing",
+      "born": 1750,
+      "died": 1799,
+      "role": "权臣",
+      "short": "乾隆朝宠臣，巨贪，嘉庆即位后被赐死，抄没家产。"
+    },
+    "ji_xiaolan": {
+      "id": "ji_xiaolan",
+      "name": "纪晓岚",
+      "alias": "名昀，字晓岚，直隶献县人，清朝学者",
+      "dynasty": "qing",
+      "born": 1724,
+      "died": 1805,
+      "role": "学者",
+      "short": "乾隆朝学者，主编《四库全书》，著有《阅微草堂笔记》。"
+    },
+    "liu_yong_qing": {
+      "id": "liu_yong_qing",
+      "name": "刘墉",
+      "alias": "字崇如，号石庵，山东诸城人，清朝政治家",
+      "dynasty": "qing",
+      "born": 1719,
+      "died": 1804,
+      "role": "政治家",
+      "short": "乾隆、嘉庆朝大臣，书法家，以清廉正直著称，民间称「刘罗锅」。"
+    },
+    "lin_zexu": {
+      "id": "lin_zexu",
+      "name": "林则徐",
+      "alias": "字元抚，福建侯官人，清朝民族英雄",
+      "dynasty": "qing",
+      "born": 1785,
+      "died": 1850,
+      "role": "政治家",
+      "short": "虎门销烟，鸦片战争时期的民族英雄，近代中国开眼看世界第一人。"
+    },
+    "zeng_guofan": {
+      "id": "zeng_guofan",
+      "name": "曾国藩",
+      "alias": "字伯涵，号涤生，湖南湘乡人，晚清重臣",
+      "dynasty": "qing",
+      "born": 1811,
+      "died": 1872,
+      "role": "政治家",
+      "short": "湘军创始人，平定太平天国，洋务运动领袖，晚清中兴名臣。"
+    },
+    "li_hongzhang": {
+      "id": "li_hongzhang",
+      "name": "李鸿章",
+      "alias": "字少荃，安徽合肥人，晚清重臣",
+      "dynasty": "qing",
+      "born": 1823,
+      "died": 1901,
+      "role": "政治家",
+      "short": "淮军领袖，洋务运动核心人物，代表清政府签订多项不平等条约。"
+    },
+    "zuo_zongtang": {
+      "id": "zuo_zongtang",
+      "name": "左宗棠",
+      "alias": "字季高，湖南湘阴人，晚清名将",
+      "dynasty": "qing",
+      "born": 1812,
+      "died": 1885,
+      "role": "将领",
+      "short": "晚清名将，收复新疆，洋务派代表，与曾、李并称晚清中兴三名臣。"
+    },
+    "zhang_zhidong": {
+      "id": "zhang_zhidong",
+      "name": "张之洞",
+      "alias": "字孝达，号香涛，直隶南皮人，晚清名臣",
+      "dynasty": "qing",
+      "born": 1837,
+      "died": 1909,
+      "role": "政治家",
+      "short": "洋务派领袖，创办汉阳铁厂、湖北织布局，提出「中学为体，西学为用」。"
+    },
+    "yuan_shikai": {
+      "id": "yuan_shikai",
+      "name": "袁世凯",
+      "alias": "字慰亭，河南项城人，清末民初政治家",
+      "dynasty": "qing",
+      "born": 1859,
+      "died": 1916,
+      "role": "政治家",
+      "short": "清末北洋新军领袖，逼迫清帝退位，后任中华民国大总统，复辟帝制失败。"
+    },
+    "cao_xueqin": {
+      "id": "cao_xueqin",
+      "name": "曹雪芹",
+      "alias": "名霑，字梦阮，号雪芹，清朝小说家",
+      "dynasty": "qing",
+      "born": 1715,
+      "died": 1763,
+      "role": "文学家",
+      "short": "《红楼梦》作者，中国古典小说巅峰，刻画封建社会百科全书式巨著。"
+    },
+    "nalan_xingde": {
+      "id": "nalan_xingde",
+      "name": "纳兰性德",
+      "alias": "字容若，满洲正黄旗人，清朝词人",
+      "dynasty": "qing",
+      "born": 1655,
+      "died": 1685,
+      "role": "词人",
+      "short": "康熙朝词人，词风哀婉清丽，代表作《饮水词》，与朱彝尊、陈维崧并称清词三大家。"
+    },
+    "pu_songling": {
+      "id": "pu_songling",
+      "name": "蒲松龄",
+      "alias": "字留仙，号柳泉居士，山东淄川人，清朝小说家",
+      "dynasty": "qing",
+      "born": 1640,
+      "died": 1715,
+      "role": "文学家",
+      "short": "《聊斋志异》作者，短篇小说集，借鬼狐花妖讽刺社会现实。"
     }
   },
   "meta": {
-    "personCount": 496,
+    "personCount": 526,
     "eventCount": 125,
     "dynastyList": [
       "shanggu",
