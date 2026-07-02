@@ -3,7 +3,7 @@
 
 (function () {
   const CDN_BASE = 'https://cdn.jsdelivr.net/gh/yuxinghexiaoxia/history-atlas-deploy@main';
-  const CACHE_VERSION = 'v=25';
+  const CACHE_VERSION = 'v=26';
   const detailCache = {}; // 已加载的朝代完整数据缓存
 
   async function loadJSON(path) {
