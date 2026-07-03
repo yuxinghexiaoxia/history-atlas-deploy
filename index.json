@@ -84,6 +84,48 @@
         "evt_sanguo_0004",
         "evt_sanguo_0006",
         "evt_sanguo_0007"
+      ],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "rival",
+          "desc": "一生之敌，煮酒论英雄"
+        },
+        {
+          "to": "sun_quan",
+          "type": "rival",
+          "desc": "赤壁之战对手"
+        },
+        {
+          "to": "sima_yi",
+          "type": "monarch",
+          "desc": "君臣关系，司马懿为曹操部下"
+        },
+        {
+          "to": "guan_yu",
+          "type": "enemy",
+          "desc": "华容道放曹之恩"
+        },
+        {
+          "to": "guo_jia",
+          "type": "monarch",
+          "desc": "君臣相知，郭嘉为曹操谋士"
+        },
+        {
+          "to": "xun_yu",
+          "type": "monarch",
+          "desc": "君臣关系，荀彧为曹操谋士"
+        },
+        {
+          "to": "zhang_liao",
+          "type": "monarch",
+          "desc": "君臣关系，张辽为曹操大将"
+        },
+        {
+          "to": "pi_cao",
+          "type": "parent",
+          "desc": "父子关系，曹丕为曹操之子"
+        }
       ]
     },
     "liu_bei": {
@@ -178,6 +220,38 @@
         "evt_sanguo_0006",
         "evt_sanguo_0009",
         "evt_sanguo_0010"
+      ],
+      "relations": [
+        {
+          "to": "guan_yu",
+          "type": "friend",
+          "desc": "桃园结义，生死之交"
+        },
+        {
+          "to": "zhang_fei",
+          "type": "friend",
+          "desc": "桃园结义，生死之交"
+        },
+        {
+          "to": "zhu_ge_liang",
+          "type": "monarch",
+          "desc": "君臣相得，三顾茅庐"
+        },
+        {
+          "to": "zhao_yun",
+          "type": "monarch",
+          "desc": "君臣之义，长坂坡救主"
+        },
+        {
+          "to": "cao_cao",
+          "type": "rival",
+          "desc": "一生之敌，赤壁之战"
+        },
+        {
+          "to": "sun_quan",
+          "type": "ally",
+          "desc": "赤壁联盟，后成对手"
+        }
       ]
     },
     "sun_quan": {
@@ -242,6 +316,33 @@
       ],
       "events": [
         "evt_sanguo_0004"
+      ],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "ally",
+          "desc": "赤壁联盟，后成对手"
+        },
+        {
+          "to": "cao_cao",
+          "type": "rival",
+          "desc": "赤壁之战对手"
+        },
+        {
+          "to": "zhou_yu",
+          "type": "monarch",
+          "desc": "君臣相得，赤壁大捷"
+        },
+        {
+          "to": "lu_xun",
+          "type": "monarch",
+          "desc": "君臣关系，夷陵之战"
+        },
+        {
+          "to": "ce_sun",
+          "type": "sibling",
+          "desc": "兄弟关系，孙策为孙权之兄"
+        }
       ]
     },
     "zhu_ge_liang": {
@@ -313,6 +414,33 @@
         "evt_sanguo_0011",
         "evt_sanguo_0012",
         "evt_sanguo_0013"
+      ],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "colleague",
+          "desc": "同为sanguo朝人物，共同参与历史事件"
+        },
+        {
+          "to": "liu_bei",
+          "type": "colleague",
+          "desc": "同为sanguo朝人物，共同参与历史事件"
+        },
+        {
+          "to": "sun_quan",
+          "type": "colleague",
+          "desc": "同为sanguo朝人物，共同参与历史事件"
+        },
+        {
+          "to": "zhou_yu",
+          "type": "colleague",
+          "desc": "同为sanguo朝人物，共同参与历史事件"
+        },
+        {
+          "to": "si_ma_yi",
+          "type": "colleague",
+          "desc": "同为sanguo朝人物，共同参与历史事件"
+        }
       ]
     },
     "guan_yu": {
@@ -377,6 +505,28 @@
       ],
       "events": [
         "evt_sanguo_0007"
+      ],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "friend",
+          "desc": "桃园结义，生死之交"
+        },
+        {
+          "to": "zhang_fei",
+          "type": "friend",
+          "desc": "桃园结义，生死之交"
+        },
+        {
+          "to": "cao_cao",
+          "type": "enemy",
+          "desc": "降曹不降汉，华容道放曹"
+        },
+        {
+          "to": "zhu_ge_liang",
+          "type": "colleague",
+          "desc": "共辅刘备，镇守荆州"
+        }
       ]
     },
     "zhang_fei": {
@@ -433,7 +583,24 @@
           "s": "被部将范强、张达刺杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "friend",
+          "desc": "桃园结义，生死之交"
+        },
+        {
+          "to": "guan_yu",
+          "type": "friend",
+          "desc": "桃园结义，生死之交"
+        },
+        {
+          "to": "zhu_ge_liang",
+          "type": "colleague",
+          "desc": "共辅刘备"
+        }
+      ]
     },
     "zhou_yu": {
       "id": "zhou_yu",
@@ -491,6 +658,23 @@
       ],
       "events": [
         "evt_sanguo_0004"
+      ],
+      "relations": [
+        {
+          "to": "sun_quan",
+          "type": "subject",
+          "desc": "辅佐孙氏，赤壁大捷"
+        },
+        {
+          "to": "ce_sun",
+          "type": "friend",
+          "desc": "总角之交，孙策好友"
+        },
+        {
+          "to": "cao_cao",
+          "type": "enemy",
+          "desc": "赤壁之战击败曹操"
+        }
       ]
     },
     "si_ma_yi": {
@@ -557,6 +741,13 @@
         "evt_sanguo_0012",
         "evt_sanguo_0014",
         "evt_sanguo_0015"
+      ],
+      "relations": [
+        {
+          "to": "zhu_ge_liang",
+          "type": "colleague",
+          "desc": "同为sanguo朝人物，共同参与历史事件"
+        }
       ]
     },
     "guo_jia": {
@@ -609,6 +800,13 @@
       ],
       "events": [
         "evt_sanguo_0002"
+      ],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "曹操谋士，算无遗策"
+        }
       ]
     },
     "dian_wei": {
@@ -647,7 +845,19 @@
           "s": "为护曹操力战而死"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "曹操帐下猛将，宛城战死"
+        },
+        {
+          "to": "xu_chu",
+          "type": "colleague",
+          "desc": "同为曹操帐下猛将"
+        }
+      ]
     },
     "xu_chu": {
       "id": "xu_chu",
@@ -697,7 +907,19 @@
           "s": "谥壮侯"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "曹操帐下猛将，号虎痴"
+        },
+        {
+          "to": "dian_wei",
+          "type": "colleague",
+          "desc": "同为曹操帐下猛将"
+        }
+      ]
     },
     "zhang_liao": {
       "id": "zhang_liao",
@@ -747,7 +969,14 @@
           "s": "年五十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "曹操大将，威震逍遥津"
+        }
+      ]
     },
     "lu_xun": {
       "id": "lu_xun",
@@ -805,6 +1034,18 @@
       ],
       "events": [
         "evt_sanguo_0009"
+      ],
+      "relations": [
+        {
+          "to": "sun_quan",
+          "type": "subject",
+          "desc": "辅佐孙氏，夷陵大捷"
+        },
+        {
+          "to": "liu_bei",
+          "type": "enemy",
+          "desc": "夷陵之战击败刘备"
+        }
       ]
     },
     "jiang_wei": {
@@ -864,6 +1105,13 @@
       "events": [
         "evt_sanguo_0016",
         "evt_sanguo_0018"
+      ],
+      "relations": [
+        {
+          "to": "zhu_ge_liang",
+          "type": "student",
+          "desc": "师徒关系，继承遗志"
+        }
       ]
     },
     "shi_chong": {
@@ -910,6 +1158,13 @@
       ],
       "events": [
         "evt_jin_0004"
+      ],
+      "relations": [
+        {
+          "to": "sima_yan",
+          "type": "subject",
+          "desc": "石崇"
+        }
       ]
     },
     "jia_nanfeng": {
@@ -963,6 +1218,13 @@
       "events": [
         "evt_jin_0006",
         "evt_jin_0007"
+      ],
+      "relations": [
+        {
+          "to": "sima_lun",
+          "type": "colleague",
+          "desc": "同为jin朝人物，共同参与历史事件"
+        }
       ]
     },
     "wang_dao": {
@@ -1022,6 +1284,13 @@
       "events": [
         "evt_jin_0010",
         "evt_jin_0011"
+      ],
+      "relations": [
+        {
+          "to": "sima_rui",
+          "type": "colleague",
+          "desc": "同为jin朝人物，共同参与历史事件"
+        }
       ]
     },
     "xie_xuan": {
@@ -1068,6 +1337,13 @@
       ],
       "events": [
         "evt_jin_0014"
+      ],
+      "relations": [
+        {
+          "to": "xie_an",
+          "type": "colleague",
+          "desc": "同为jin朝人物，共同参与历史事件"
+        }
       ]
     },
     "huangdi": {
@@ -1109,6 +1385,13 @@
       "events": [
         "evt_shanggu_0001",
         "evt_shanggu_0002"
+      ],
+      "relations": [
+        {
+          "to": "yandi",
+          "type": "colleague",
+          "desc": "同为shanggu朝人物，共同参与历史事件"
+        }
       ]
     },
     "yandi": {
@@ -1150,6 +1433,13 @@
       "events": [
         "evt_shanggu_0001",
         "evt_shanggu_0002"
+      ],
+      "relations": [
+        {
+          "to": "huangdi",
+          "type": "colleague",
+          "desc": "同为shanggu朝人物，共同参与历史事件"
+        }
       ]
     },
     "zhuanxu": {
@@ -1182,7 +1472,24 @@
           "s": "在位七十八年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "huangdi",
+          "type": "child",
+          "desc": "黄帝之孙"
+        },
+        {
+          "to": "di_ku",
+          "type": "child",
+          "desc": "帝喾之祖父"
+        },
+        {
+          "to": "yao",
+          "type": "colleague",
+          "desc": "尧之先祖"
+        }
+      ]
     },
     "di_ku": {
       "id": "di_ku",
@@ -1214,7 +1521,24 @@
           "s": "在位七十年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhuanxu",
+          "type": "child",
+          "desc": "颛顼之孙"
+        },
+        {
+          "to": "yao",
+          "type": "parent",
+          "desc": "尧之父"
+        },
+        {
+          "to": "shun",
+          "type": "colleague",
+          "desc": "舜之先祖"
+        }
+      ]
     },
     "yao": {
       "id": "yao",
@@ -1255,6 +1579,13 @@
       "events": [
         "evt_shanggu_0003",
         "evt_shanggu_0004"
+      ],
+      "relations": [
+        {
+          "to": "shun",
+          "type": "colleague",
+          "desc": "同为shanggu朝人物，共同参与历史事件"
+        }
       ]
     },
     "shun": {
@@ -1296,6 +1627,13 @@
       "events": [
         "evt_shanggu_0003",
         "evt_shanggu_0004"
+      ],
+      "relations": [
+        {
+          "to": "yao",
+          "type": "colleague",
+          "desc": "同为shanggu朝人物，共同参与历史事件"
+        }
       ]
     },
     "yu": {
@@ -1342,6 +1680,13 @@
       ],
       "events": [
         "evt_xia_0006"
+      ],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "colleague",
+          "desc": "同为xia朝人物，共同参与历史事件"
+        }
       ]
     },
     "guan_zhong": {
@@ -1377,6 +1722,13 @@
       "events": [
         "evt_chunqiu_0003",
         "evt_chunqiu_0004"
+      ],
+      "relations": [
+        {
+          "to": "qi_huanong",
+          "type": "subject",
+          "desc": "辅佐齐桓公"
+        }
       ]
     },
     "yan_ying": {
@@ -1411,6 +1763,13 @@
       ],
       "events": [
         "evt_chunqiu_0014"
+      ],
+      "relations": [
+        {
+          "to": "qi_huanong",
+          "type": "subject",
+          "desc": "齐国名相"
+        }
       ]
     },
     "shang_yang": {
@@ -1457,6 +1816,13 @@
       ],
       "events": [
         "evt_zhanguo_0004"
+      ],
+      "relations": [
+        {
+          "to": "xiao_gong",
+          "type": "subject",
+          "desc": "辅佐秦孝公变法"
+        }
       ]
     },
     "sun_wu": {
@@ -1498,6 +1864,13 @@
       "events": [
         "evt_chunqiu_0016",
         "evt_chunqiu_0017"
+      ],
+      "relations": [
+        {
+          "to": "wu_zixu",
+          "type": "colleague",
+          "desc": "同为chunqiu朝人物，共同参与历史事件"
+        }
       ]
     },
     "wu_zixu": {
@@ -1539,6 +1912,13 @@
       "events": [
         "evt_chunqiu_0015",
         "evt_chunqiu_0017"
+      ],
+      "relations": [
+        {
+          "to": "sun_wu",
+          "type": "colleague",
+          "desc": "同为chunqiu朝人物，共同参与历史事件"
+        }
       ]
     },
     "qu_yuan": {
@@ -1579,6 +1959,13 @@
       ],
       "events": [
         "evt_zhanguo_0024"
+      ],
+      "relations": [
+        {
+          "to": "chu_huaiwang",
+          "type": "subject",
+          "desc": "楚怀王左徒"
+        }
       ]
     },
     "jing_ke": {
@@ -1613,6 +2000,13 @@
       ],
       "events": [
         "evt_zhanguo_0020"
+      ],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "enemy",
+          "desc": "刺秦王"
+        }
       ]
     },
     "king_wen": {
@@ -1651,7 +2045,19 @@
           "s": "追尊为文王"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "king_wu",
+          "type": "parent",
+          "desc": "周武王之父"
+        },
+        {
+          "to": "zhou_dan",
+          "type": "parent",
+          "desc": "周公之父"
+        }
+      ]
     },
     "king_wu": {
       "id": "king_wu",
@@ -1689,7 +2095,19 @@
           "s": "在位四年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "king_wen",
+          "type": "child",
+          "desc": "周文王之子"
+        },
+        {
+          "to": "zhou_dan",
+          "type": "sibling",
+          "desc": "周公之兄"
+        }
+      ]
     },
     "zhou_dan": {
       "id": "zhou_dan",
@@ -1738,6 +2156,18 @@
         "evt_zhou_0027",
         "evt_zhou_0030",
         "evt_zhou_0031"
+      ],
+      "relations": [
+        {
+          "to": "king_wen",
+          "type": "child",
+          "desc": "周文王之子"
+        },
+        {
+          "to": "king_wu",
+          "type": "sibling",
+          "desc": "周武王之弟"
+        }
       ]
     },
     "gun": {
@@ -1776,7 +2206,19 @@
           "s": "舜继位后"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yu",
+          "type": "parent",
+          "desc": "大禹之父"
+        },
+        {
+          "to": "shun",
+          "type": "subject",
+          "desc": "舜之臣"
+        }
+      ]
     },
     "qi": {
       "id": "qi",
@@ -1817,6 +2259,13 @@
       "events": [
         "evt_xia_0006",
         "evt_xia_0007"
+      ],
+      "relations": [
+        {
+          "to": "yu",
+          "type": "colleague",
+          "desc": "同为xia朝人物，共同参与历史事件"
+        }
       ]
     },
     "shang_tang": {
@@ -1852,6 +2301,13 @@
       "events": [
         "evt_shang_0011",
         "evt_shang_0012"
+      ],
+      "relations": [
+        {
+          "to": "yi_yin",
+          "type": "colleague",
+          "desc": "同为shang朝人物，共同参与历史事件"
+        }
       ]
     },
     "yi_yin": {
@@ -1887,6 +2343,18 @@
       "events": [
         "evt_shang_0012",
         "evt_shang_0013"
+      ],
+      "relations": [
+        {
+          "to": "shang_tang",
+          "type": "colleague",
+          "desc": "同为shang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "tai_jia",
+          "type": "colleague",
+          "desc": "同为shang朝人物，共同参与历史事件"
+        }
       ]
     },
     "zhou_xin": {
@@ -1925,6 +2393,13 @@
         "evt_shang_0021",
         "evt_shang_0022",
         "evt_shang_0023"
+      ],
+      "relations": [
+        {
+          "to": "bi_gan",
+          "type": "colleague",
+          "desc": "同为shang朝人物，共同参与历史事件"
+        }
       ]
     },
     "bi_gan": {
@@ -1953,6 +2428,13 @@
       ],
       "events": [
         "evt_shang_0021"
+      ],
+      "relations": [
+        {
+          "to": "zhou_xin",
+          "type": "colleague",
+          "desc": "同为shang朝人物，共同参与历史事件"
+        }
       ]
     },
     "mengchang": {
@@ -1991,7 +2473,14 @@
           "s": "齐国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi_weiwang",
+          "type": "subject",
+          "desc": "齐国公子"
+        }
+      ]
     },
     "pingyuan": {
       "id": "pingyuan",
@@ -2037,6 +2526,13 @@
       ],
       "events": [
         "evt_zhanguo_0018"
+      ],
+      "relations": [
+        {
+          "to": "mao_sui",
+          "type": "colleague",
+          "desc": "同为zhanguo朝人物，共同参与历史事件"
+        }
       ]
     },
     "xinling": {
@@ -2075,7 +2571,14 @@
           "s": "饮酒过度"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "wei_wuji",
+          "type": "sibling",
+          "desc": "信陵君"
+        }
+      ]
     },
     "chunshen": {
       "id": "chunshen",
@@ -2113,7 +2616,14 @@
           "s": "李园所杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "chu_huaiwang",
+          "type": "subject",
+          "desc": "楚国令尹"
+        }
+      ]
     },
     "bai_qi": {
       "id": "bai_qi",
@@ -2160,6 +2670,13 @@
       "events": [
         "evt_zhanguo_0015",
         "evt_zhanguo_0017"
+      ],
+      "relations": [
+        {
+          "to": "lian_po",
+          "type": "colleague",
+          "desc": "同为zhanguo朝人物，共同参与历史事件"
+        }
       ]
     },
     "lian_po": {
@@ -2201,6 +2718,13 @@
       "events": [
         "evt_zhanguo_0014",
         "evt_zhanguo_0017"
+      ],
+      "relations": [
+        {
+          "to": "bai_qi",
+          "type": "colleague",
+          "desc": "同为zhanguo朝人物，共同参与历史事件"
+        }
       ]
     },
     "lin_xiangru": {
@@ -2245,7 +2769,14 @@
           "s": "赵国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_wulingwang",
+          "type": "subject",
+          "desc": "赵国上卿"
+        }
+      ]
     },
     "yue_yi": {
       "id": "yue_yi",
@@ -2285,6 +2816,13 @@
       ],
       "events": [
         "evt_zhanguo_0010"
+      ],
+      "relations": [
+        {
+          "to": "yan_zhaowang",
+          "type": "subject",
+          "desc": "燕国大将"
+        }
       ]
     },
     "liu_yilong": {
@@ -2338,6 +2876,13 @@
       "events": [
         "evt_nanbei_0004",
         "evt_nanbei_0005"
+      ],
+      "relations": [
+        {
+          "to": "liu_yu",
+          "type": "child",
+          "desc": "刘义隆"
+        }
       ]
     },
     "xiao_daocheng": {
@@ -2384,6 +2929,13 @@
       ],
       "events": [
         "evt_nanbei_0006"
+      ],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "subject",
+          "desc": "萧道成"
+        }
       ]
     },
     "xiao_yan": {
@@ -2438,6 +2990,13 @@
         "evt_nanbei_0008",
         "evt_nanbei_0009",
         "evt_nanbei_0010"
+      ],
+      "relations": [
+        {
+          "to": "hou_jing",
+          "type": "colleague",
+          "desc": "同为nanbei朝人物，共同参与历史事件"
+        }
       ]
     },
     "chen_baxian": {
@@ -2478,6 +3037,13 @@
       ],
       "events": [
         "evt_nanbei_0011"
+      ],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "subject",
+          "desc": "陈霸先"
+        }
       ]
     },
     "tuoba_hong": {
@@ -2530,6 +3096,13 @@
       ],
       "events": [
         "evt_nanbei_0007"
+      ],
+      "relations": [
+        {
+          "to": "yuwen_tai",
+          "type": "subject",
+          "desc": "拓跋宏"
+        }
       ]
     },
     "yuwen_tai": {
@@ -2571,6 +3144,13 @@
       "events": [
         "evt_nanbei_0012",
         "evt_nanbei_0014"
+      ],
+      "relations": [
+        {
+          "to": "gao_huan",
+          "type": "colleague",
+          "desc": "同为nanbei朝人物，共同参与历史事件"
+        }
       ]
     },
     "gao_huan": {
@@ -2612,6 +3192,18 @@
       "events": [
         "evt_nanbei_0012",
         "evt_nanbei_0017"
+      ],
+      "relations": [
+        {
+          "to": "yuwen_tai",
+          "type": "colleague",
+          "desc": "同为nanbei朝人物，共同参与历史事件"
+        },
+        {
+          "to": "wei_xiaokuan",
+          "type": "colleague",
+          "desc": "同为nanbei朝人物，共同参与历史事件"
+        }
       ]
     },
     "fan_ye": {
@@ -2644,7 +3236,14 @@
           "s": "卷入谋反案"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_yu",
+          "type": "subject",
+          "desc": "范晔"
+        }
+      ]
     },
     "shen_yue": {
       "id": "shen_yue",
@@ -2676,7 +3275,14 @@
           "s": "年七十三"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "subject",
+          "desc": "沈约"
+        }
+      ]
     },
     "yu_xin": {
       "id": "yu_xin",
@@ -2708,7 +3314,14 @@
           "s": "年六十九"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yuwen_tai",
+          "type": "subject",
+          "desc": "庾信"
+        }
+      ]
     },
     "sima_yan": {
       "id": "sima_yan",
@@ -2750,6 +3363,13 @@
         "evt_jin_0001",
         "evt_jin_0002",
         "evt_jin_0003"
+      ],
+      "relations": [
+        {
+          "to": "du_yu",
+          "type": "colleague",
+          "desc": "同为jin朝人物，共同参与历史事件"
+        }
       ]
     },
     "zu_ti": {
@@ -2794,7 +3414,14 @@
           "s": "年五十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_rui",
+          "type": "subject",
+          "desc": "祖逖"
+        }
+      ]
     },
     "xie_an": {
       "id": "xie_an",
@@ -2840,6 +3467,13 @@
       ],
       "events": [
         "evt_jin_0014"
+      ],
+      "relations": [
+        {
+          "to": "xie_xuan",
+          "type": "colleague",
+          "desc": "同为jin朝人物，共同参与历史事件"
+        }
       ]
     },
     "wang_xizhi": {
@@ -2884,7 +3518,14 @@
           "s": "年五十九"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "wang_dao",
+          "type": "subject",
+          "desc": "王羲之"
+        }
+      ]
     },
     "tao_yuanming": {
       "id": "tao_yuanming",
@@ -2934,7 +3575,14 @@
           "s": "年六十三"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_rui",
+          "type": "subject",
+          "desc": "陶渊明"
+        }
+      ]
     },
     "huan_wen": {
       "id": "huan_wen",
@@ -2990,7 +3638,14 @@
           "s": "年六十二"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_rui",
+          "type": "subject",
+          "desc": "桓温"
+        }
+      ]
     },
     "liu_yu": {
       "id": "liu_yu",
@@ -3044,6 +3699,13 @@
         "evt_nanbei_0001",
         "evt_nanbei_0002",
         "evt_nanbei_0003"
+      ],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "subject",
+          "desc": "刘裕"
+        }
       ]
     },
     "ji_kang": {
@@ -3088,7 +3750,14 @@
           "s": "从容弹奏《广陵散》"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_zhao",
+          "type": "subject",
+          "desc": "嵇康"
+        }
+      ]
     },
     "ruan_ji": {
       "id": "ruan_ji",
@@ -3132,7 +3801,14 @@
           "s": "年五十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_zhao",
+          "type": "subject",
+          "desc": "阮籍"
+        }
+      ]
     },
     "chen_sheng": {
       "id": "chen_sheng",
@@ -3173,6 +3849,13 @@
       "events": [
         "evt_qin_0007",
         "evt_qin_0008"
+      ],
+      "relations": [
+        {
+          "to": "wu_guang",
+          "type": "colleague",
+          "desc": "同为qin朝人物，共同参与历史事件"
+        }
       ]
     },
     "wu_guang": {
@@ -3214,6 +3897,13 @@
       "events": [
         "evt_qin_0007",
         "evt_qin_0008"
+      ],
+      "relations": [
+        {
+          "to": "chen_sheng",
+          "type": "colleague",
+          "desc": "同为qin朝人物，共同参与历史事件"
+        }
       ]
     },
     "xiao_he": {
@@ -3268,6 +3958,23 @@
         "evt_han_0002",
         "evt_han_0004",
         "evt_han_0005"
+      ],
+      "relations": [
+        {
+          "to": "liu_bang",
+          "type": "subject",
+          "desc": "丞相，镇国家抚百姓"
+        },
+        {
+          "to": "han_xin",
+          "type": "colleague",
+          "desc": "汉初三杰，月下追韩信"
+        },
+        {
+          "to": "zhang_liang",
+          "type": "colleague",
+          "desc": "汉初三杰"
+        }
       ]
     },
     "cao_shen": {
@@ -3312,7 +4019,19 @@
           "s": "谥懿侯"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bang",
+          "type": "subject",
+          "desc": "曹参"
+        },
+        {
+          "to": "xiao_he",
+          "type": "colleague",
+          "desc": "萧何"
+        }
+      ]
     },
     "zhang_liang": {
       "id": "zhang_liang",
@@ -3371,6 +4090,23 @@
       "events": [
         "evt_han_0001",
         "evt_han_0002"
+      ],
+      "relations": [
+        {
+          "to": "liu_bang",
+          "type": "subject",
+          "desc": "谋臣，运筹帷幄"
+        },
+        {
+          "to": "han_xin",
+          "type": "colleague",
+          "desc": "汉初三杰"
+        },
+        {
+          "to": "xiao_he",
+          "type": "colleague",
+          "desc": "汉初三杰"
+        }
       ]
     },
     "han_xin": {
@@ -3437,6 +4173,23 @@
         "evt_han_0001",
         "evt_han_0005",
         "evt_han_0006"
+      ],
+      "relations": [
+        {
+          "to": "liu_bang",
+          "type": "subject",
+          "desc": "大将，功高震主被诛"
+        },
+        {
+          "to": "zhang_liang",
+          "type": "colleague",
+          "desc": "汉初三杰"
+        },
+        {
+          "to": "xiao_he",
+          "type": "colleague",
+          "desc": "汉初三杰，萧何月下追韩信"
+        }
       ]
     },
     "qin_shihuang": {
@@ -3493,7 +4246,29 @@
           "s": "年四十九"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_si",
+          "type": "monarch",
+          "desc": "秦始皇"
+        },
+        {
+          "to": "meng_tian",
+          "type": "monarch",
+          "desc": "秦始皇"
+        },
+        {
+          "to": "wang_jian_qin",
+          "type": "monarch",
+          "desc": "秦始皇"
+        },
+        {
+          "to": "lü_buwei",
+          "type": "monarch",
+          "desc": "秦始皇"
+        }
+      ]
     },
     "li_si": {
       "id": "li_si",
@@ -3541,6 +4316,13 @@
         "evt_qin_0001",
         "evt_qin_0002",
         "evt_qin_0004"
+      ],
+      "relations": [
+        {
+          "to": "meng_tian",
+          "type": "colleague",
+          "desc": "同为qin朝人物，共同参与历史事件"
+        }
       ]
     },
     "meng_tian": {
@@ -3582,6 +4364,13 @@
       "events": [
         "evt_qin_0001",
         "evt_qin_0005"
+      ],
+      "relations": [
+        {
+          "to": "li_si",
+          "type": "colleague",
+          "desc": "同为qin朝人物，共同参与历史事件"
+        }
       ]
     },
     "lv_zhi": {
@@ -3628,6 +4417,18 @@
       ],
       "events": [
         "evt_han_0007"
+      ],
+      "relations": [
+        {
+          "to": "liu_bang",
+          "type": "spouse",
+          "desc": "夫妻，汉高祖皇后"
+        },
+        {
+          "to": "fan_kuai",
+          "type": "sibling",
+          "desc": "吕雉之妹嫁樊哙"
+        }
       ]
     },
     "han_wen": {
@@ -3666,7 +4467,14 @@
           "s": "年四十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_jing",
+          "type": "parent",
+          "desc": "汉文帝"
+        }
+      ]
     },
     "han_jing": {
       "id": "han_jing",
@@ -3704,7 +4512,19 @@
           "s": "年四十八"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wen",
+          "type": "child",
+          "desc": "汉景帝"
+        },
+        {
+          "to": "han_wu",
+          "type": "parent",
+          "desc": "汉武帝之父"
+        }
+      ]
     },
     "han_wu": {
       "id": "han_wu",
@@ -3760,7 +4580,34 @@
           "s": "年七十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_jing",
+          "type": "child",
+          "desc": "汉武帝"
+        },
+        {
+          "to": "wei_qing",
+          "type": "monarch",
+          "desc": "汉武帝"
+        },
+        {
+          "to": "huo_qu",
+          "type": "monarch",
+          "desc": "汉武帝"
+        },
+        {
+          "to": "zhang_qian",
+          "type": "monarch",
+          "desc": "汉武帝"
+        },
+        {
+          "to": "dong_zhongshu",
+          "type": "monarch",
+          "desc": "汉武帝"
+        }
+      ]
     },
     "wei_qing": {
       "id": "wei_qing",
@@ -3812,7 +4659,8 @@
       ],
       "events": [
         "evt_han_0014"
-      ]
+      ],
+      "relations": []
     },
     "huo_qu": {
       "id": "huo_qu",
@@ -3856,7 +4704,14 @@
           "s": "年仅二十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "霍去病"
+        }
+      ]
     },
     "zhang_qian": {
       "id": "zhang_qian",
@@ -3902,7 +4757,8 @@
       ],
       "events": [
         "evt_han_0016"
-      ]
+      ],
+      "relations": []
     },
     "dong_zhongshu": {
       "id": "dong_zhongshu",
@@ -3952,7 +4808,8 @@
           "s": "年约七十五"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": []
     },
     "hu_hai": {
       "id": "hu_hai",
@@ -3992,6 +4849,13 @@
       ],
       "events": [
         "evt_qin_0010"
+      ],
+      "relations": [
+        {
+          "to": "zhao_gao",
+          "type": "colleague",
+          "desc": "同为qin朝人物，共同参与历史事件"
+        }
       ]
     },
     "zhao_gao": {
@@ -4032,6 +4896,13 @@
       ],
       "events": [
         "evt_qin_0010"
+      ],
+      "relations": [
+        {
+          "to": "hu_hai",
+          "type": "colleague",
+          "desc": "同为qin朝人物，共同参与历史事件"
+        }
       ]
     },
     "peng_yue": {
@@ -4082,7 +4953,14 @@
           "s": "诬谋反，夷三族"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bang",
+          "type": "subject",
+          "desc": "彭越"
+        }
+      ]
     },
     "qing_bu": {
       "id": "qing_bu",
@@ -4132,7 +5010,14 @@
           "s": "被长沙王吴臣诱杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bang",
+          "type": "subject",
+          "desc": "英布"
+        }
+      ]
     },
     "fan_kuai": {
       "id": "fan_kuai",
@@ -4176,7 +5061,19 @@
           "s": "谥武侯"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bang",
+          "type": "friend",
+          "desc": "沛县旧交，鸿门宴救主"
+        },
+        {
+          "to": "lv_zhi",
+          "type": "sibling",
+          "desc": "连襟，樊哙娶吕雉之妹"
+        }
+      ]
     },
     "zhou_bo": {
       "id": "zhou_bo",
@@ -4228,6 +5125,13 @@
       ],
       "events": [
         "evt_han_0008"
+      ],
+      "relations": [
+        {
+          "to": "chen_ping",
+          "type": "colleague",
+          "desc": "同为han朝人物，共同参与历史事件"
+        }
       ]
     },
     "chen_ping": {
@@ -4287,6 +5191,13 @@
       "events": [
         "evt_han_0003",
         "evt_han_0008"
+      ],
+      "relations": [
+        {
+          "to": "liu_bang",
+          "type": "subject",
+          "desc": "谋士，六出奇计"
+        }
       ]
     },
     "zhou_yafu": {
@@ -4331,7 +5242,14 @@
           "s": "被诬谋反"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wen",
+          "type": "subject",
+          "desc": "周亚夫"
+        }
+      ]
     },
     "li_guang": {
       "id": "li_guang",
@@ -4381,7 +5299,8 @@
           "s": "不愿受辱"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": []
     },
     "xiang_yu": {
       "id": "xiang_yu",
@@ -4439,6 +5358,18 @@
       ],
       "events": [
         "evt_han_0001"
+      ],
+      "relations": [
+        {
+          "to": "liu_bang",
+          "type": "rival",
+          "desc": "楚汉争霸，乌江自刎"
+        },
+        {
+          "to": "fan_zeng",
+          "type": "subject",
+          "desc": "亚父范增，谋士"
+        }
       ]
     },
     "liu_bang": {
@@ -4500,6 +5431,43 @@
         "evt_han_0002",
         "evt_han_0003",
         "evt_han_0005"
+      ],
+      "relations": [
+        {
+          "to": "xiang_yu",
+          "type": "rival",
+          "desc": "楚汉争霸，最终击败项羽"
+        },
+        {
+          "to": "han_xin",
+          "type": "monarch",
+          "desc": "君臣关系，韩信为大将"
+        },
+        {
+          "to": "zhang_liang",
+          "type": "monarch",
+          "desc": "君臣关系，张良为谋臣"
+        },
+        {
+          "to": "xiao_he",
+          "type": "monarch",
+          "desc": "君臣关系，萧何为丞相"
+        },
+        {
+          "to": "chen_ping",
+          "type": "monarch",
+          "desc": "君臣关系，陈平为谋士"
+        },
+        {
+          "to": "fan_kuai",
+          "type": "friend",
+          "desc": "沛县旧交，连襟关系"
+        },
+        {
+          "to": "lv_zhi",
+          "type": "spouse",
+          "desc": "夫妻关系，吕雉为刘邦之妻"
+        }
       ]
     },
     "fan_zeng": {
@@ -4544,7 +5512,14 @@
           "s": "背疽发作"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiang_yu",
+          "type": "subject",
+          "desc": "亚父，谋士"
+        }
+      ]
     },
     "liu_xiu": {
       "id": "liu_xiu",
@@ -4598,6 +5573,13 @@
         "evt_han_0024",
         "evt_han_0025",
         "evt_han_0026"
+      ],
+      "relations": [
+        {
+          "to": "wang_mang",
+          "type": "colleague",
+          "desc": "同为han朝人物，共同参与历史事件"
+        }
       ]
     },
     "deng_yu": {
@@ -4648,7 +5630,14 @@
           "s": "年五十七"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_xiu",
+          "type": "subject",
+          "desc": "邓禹"
+        }
+      ]
     },
     "geng_yan": {
       "id": "geng_yan",
@@ -4692,7 +5681,14 @@
           "s": "年五十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_xiu",
+          "type": "subject",
+          "desc": "耿弇"
+        }
+      ]
     },
     "ma_yuan": {
       "id": "ma_yuan",
@@ -4736,7 +5732,14 @@
           "s": "南征五溪蛮，马革裹尸"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_xiu",
+          "type": "subject",
+          "desc": "马援"
+        }
+      ]
     },
     "dou_xian": {
       "id": "dou_xian",
@@ -4768,7 +5771,14 @@
           "s": "和帝与宦官合谋"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_xiu",
+          "type": "subject",
+          "desc": "窦宪"
+        }
+      ]
     },
     "ban_gu": {
       "id": "ban_gu",
@@ -4812,7 +5822,14 @@
           "s": "受窦宪牵连"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "dou_xian",
+          "type": "colleague",
+          "desc": "班固"
+        }
+      ]
     },
     "ban_chao": {
       "id": "ban_chao",
@@ -4858,6 +5875,13 @@
       ],
       "events": [
         "evt_han_0027"
+      ],
+      "relations": [
+        {
+          "to": "ban_gu",
+          "type": "sibling",
+          "desc": "班超"
+        }
       ]
     },
     "cai_lun": {
@@ -4910,6 +5934,13 @@
       ],
       "events": [
         "evt_han_0028"
+      ],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "蔡伦"
+        }
       ]
     },
     "zhang_heng": {
@@ -4960,7 +5991,14 @@
           "s": "年六十二"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "张衡"
+        }
+      ]
     },
     "xu_shen": {
       "id": "xu_shen",
@@ -5004,7 +6042,14 @@
           "s": "年约八十九"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "许慎"
+        }
+      ]
     },
     "liang_ji": {
       "id": "liang_ji",
@@ -5042,7 +6087,14 @@
           "s": "桓帝与宦官合谋"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "梁冀"
+        }
+      ]
     },
     "jia_yi": {
       "id": "jia_yi",
@@ -5092,7 +6144,14 @@
           "s": "年三十三"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wen",
+          "type": "subject",
+          "desc": "贾谊"
+        }
+      ]
     },
     "chao_cuo": {
       "id": "chao_cuo",
@@ -5132,6 +6191,13 @@
       ],
       "events": [
         "evt_han_0010"
+      ],
+      "relations": [
+        {
+          "to": "han_jing",
+          "type": "subject",
+          "desc": "晁错"
+        }
       ]
     },
     "dongfang_shuo": {
@@ -5170,7 +6236,14 @@
           "s": "年约六十八"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "东方朔"
+        }
+      ]
     },
     "sima_xiangru": {
       "id": "sima_xiangru",
@@ -5214,7 +6287,14 @@
           "s": "作封禅文"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "司马相如"
+        }
+      ]
     },
     "su_wu": {
       "id": "su_wu",
@@ -5260,6 +6340,13 @@
       ],
       "events": [
         "evt_han_0017"
+      ],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "苏武"
+        }
       ]
     },
     "li_ling": {
@@ -5298,7 +6385,14 @@
           "s": "在匈奴二十余年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "李陵"
+        }
+      ]
     },
     "huo_guang": {
       "id": "huo_guang",
@@ -5350,6 +6444,13 @@
       ],
       "events": [
         "evt_han_0020"
+      ],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "霍光"
+        }
       ]
     },
     "wang_mang": {
@@ -5403,6 +6504,13 @@
       "events": [
         "evt_han_0022",
         "evt_han_0024"
+      ],
+      "relations": [
+        {
+          "to": "liu_xiu",
+          "type": "colleague",
+          "desc": "同为han朝人物，共同参与历史事件"
+        }
       ]
     },
     "yang_jian": {
@@ -5465,6 +6573,13 @@
         "evt_sui_0003",
         "evt_sui_0004",
         "evt_sui_0013"
+      ],
+      "relations": [
+        {
+          "to": "yang_guang",
+          "type": "colleague",
+          "desc": "同为sui朝人物，共同参与历史事件"
+        }
       ]
     },
     "yang_guang": {
@@ -5536,6 +6651,13 @@
         "evt_sui_0011",
         "evt_sui_0012",
         "evt_sui_0014"
+      ],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "colleague",
+          "desc": "同为sui朝人物，共同参与历史事件"
+        }
       ]
     },
     "li_shimin": {
@@ -5624,6 +6746,73 @@
         "evt_tang_0005",
         "evt_tang_0006",
         "evt_tang_0007"
+      ],
+      "relations": [
+        {
+          "to": "li_yuan",
+          "type": "child",
+          "desc": "父子，李世民为李渊次子"
+        },
+        {
+          "to": "li_zhi",
+          "type": "parent",
+          "desc": "父子，李治为李世民之子"
+        },
+        {
+          "to": "wei_zheng",
+          "type": "monarch",
+          "desc": "君臣，魏征为谏臣"
+        },
+        {
+          "to": "li_jing",
+          "type": "monarch",
+          "desc": "君臣，李靖为名将"
+        },
+        {
+          "to": "chang_yuchun",
+          "type": "monarch",
+          "desc": "君臣"
+        },
+        {
+          "to": "fang_xuanling",
+          "type": "monarch",
+          "desc": "君臣，房玄龄为相"
+        },
+        {
+          "to": "du_ruhui",
+          "type": "monarch",
+          "desc": "君臣，杜如晦为相"
+        },
+        {
+          "to": "chang_sun_wuji",
+          "type": "monarch",
+          "desc": "君臣，长孙无忌为辅臣"
+        },
+        {
+          "to": "yu_chi_jingde",
+          "type": "monarch",
+          "desc": "君臣"
+        },
+        {
+          "to": "qin_qiong",
+          "type": "monarch",
+          "desc": "君臣"
+        },
+        {
+          "to": "cheng_yaojin",
+          "type": "monarch",
+          "desc": "君臣"
+        },
+        {
+          "to": "li_ji",
+          "type": "monarch",
+          "desc": "君臣"
+        },
+        {
+          "to": "wu_zetian",
+          "type": "spouse",
+          "desc": "夫妻，武则天为李世民才人"
+        }
       ]
     },
     "wu_zetian": {
@@ -5691,6 +6880,23 @@
         "evt_tang_0010",
         "evt_tang_0011",
         "evt_tang_0012"
+      ],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "spouse",
+          "desc": "才人"
+        },
+        {
+          "to": "li_zhi",
+          "type": "spouse",
+          "desc": "皇后"
+        },
+        {
+          "to": "di_renjie",
+          "type": "monarch",
+          "desc": "君臣，狄仁杰为宰相"
+        }
       ]
     },
     "li_longji": {
@@ -5765,6 +6971,33 @@
         "evt_tang_0015",
         "evt_tang_0016",
         "evt_tang_0018"
+      ],
+      "relations": [
+        {
+          "to": "guo_ziyi",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "an_lushan",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "yao_chong",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "song_jing",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "yang_guifei",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        }
       ]
     },
     "wei_zheng": {
@@ -5823,6 +7056,18 @@
       ],
       "events": [
         "evt_tang_0004"
+      ],
+      "relations": [
+        {
+          "to": "li_yuan",
+          "type": "subject",
+          "desc": "旧部"
+        },
+        {
+          "to": "li_shimin",
+          "type": "subject",
+          "desc": "谏臣，贞观之治"
+        }
       ]
     },
     "li_jing": {
@@ -5882,6 +7127,13 @@
       "events": [
         "evt_tang_0005",
         "evt_tang_0007"
+      ],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "subject",
+          "desc": "名将，灭东突厥"
+        }
       ]
     },
     "guo_ziyi": {
@@ -5941,6 +7193,28 @@
       "events": [
         "evt_tang_0015",
         "evt_tang_0017"
+      ],
+      "relations": [
+        {
+          "to": "li_longji",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "an_lushan",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "li_guangbi",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "yang_guifei",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        }
       ]
     },
     "an_lushan": {
@@ -5993,6 +7267,23 @@
       ],
       "events": [
         "evt_tang_0015"
+      ],
+      "relations": [
+        {
+          "to": "li_longji",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "guo_ziyi",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "yang_guifei",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        }
       ]
     },
     "li_bai": {
@@ -6067,7 +7358,24 @@
           "s": "享年六十二岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_longji",
+          "type": "subject",
+          "desc": "李白供奉翰林"
+        },
+        {
+          "to": "du_fu",
+          "type": "friend",
+          "desc": "李杜"
+        },
+        {
+          "to": "wang_wei",
+          "type": "colleague",
+          "desc": "盛唐诗人"
+        }
+      ]
     },
     "du_gu_jialuo": {
       "id": "du_gu_jialuo",
@@ -6111,7 +7419,14 @@
           "s": "享年五十九岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "spouse",
+          "desc": "独孤伽罗"
+        }
+      ]
     },
     "yang_su": {
       "id": "yang_su",
@@ -6163,6 +7478,13 @@
       ],
       "events": [
         "evt_sui_0015"
+      ],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "杨素"
+        }
       ]
     },
     "han_qinhu": {
@@ -6201,7 +7523,14 @@
           "s": "享年五十五岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "韩擒虎"
+        }
+      ]
     },
     "gao_jiong": {
       "id": "gao_jiong",
@@ -6245,7 +7574,14 @@
           "s": "隋炀帝迫害"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "高颎"
+        }
+      ]
     },
     "he_ruobi": {
       "id": "he_ruobi",
@@ -6283,7 +7619,14 @@
           "s": "隋炀帝所杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "贺若弼"
+        }
+      ]
     },
     "shi_wansui": {
       "id": "shi_wansui",
@@ -6327,7 +7670,14 @@
           "s": "被杨素诬陷"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "史万岁"
+        }
+      ]
     },
     "yuwen_kai": {
       "id": "yuwen_kai",
@@ -6365,7 +7715,14 @@
           "s": "隋朝建筑巨匠"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "宇文恺"
+        }
+      ]
     },
     "zhang_sun_sheng": {
       "id": "zhang_sun_sheng",
@@ -6403,7 +7760,14 @@
           "s": "隋朝外交家"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "长孙晟"
+        }
+      ]
     },
     "li_mu": {
       "id": "li_mu",
@@ -6441,7 +7805,14 @@
           "s": "享年七十七岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "李穆"
+        }
+      ]
     },
     "wang_tong": {
       "id": "wang_tong",
@@ -6479,7 +7850,14 @@
           "s": "享年三十四岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "王通"
+        }
+      ]
     },
     "xue_daoheng": {
       "id": "xue_daoheng",
@@ -6517,7 +7895,14 @@
           "s": "隋炀帝所害"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "薛道衡"
+        }
+      ]
     },
     "yu_shiji": {
       "id": "yu_shiji",
@@ -6555,7 +7940,14 @@
           "s": "江都兵变"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "虞世基"
+        }
+      ]
     },
     "yuwen_huaji": {
       "id": "yuwen_huaji",
@@ -6593,7 +7985,14 @@
           "s": "窦建德擒杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "宇文化及"
+        }
+      ]
     },
     "wang_shichong": {
       "id": "wang_shichong",
@@ -6637,7 +8036,14 @@
           "s": "被李世民击败"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_guang",
+          "type": "subject",
+          "desc": "王世充"
+        }
+      ]
     },
     "dou_jiande": {
       "id": "dou_jiande",
@@ -6675,7 +8081,14 @@
           "s": "被李世民击败，被杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_guang",
+          "type": "enemy",
+          "desc": "窦建德"
+        }
+      ]
     },
     "li_mi": {
       "id": "li_mi",
@@ -6721,6 +8134,13 @@
       ],
       "events": [
         "evt_sui_0008"
+      ],
+      "relations": [
+        {
+          "to": "yang_guang",
+          "type": "enemy",
+          "desc": "李密"
+        }
       ]
     },
     "zai_rang": {
@@ -6759,7 +8179,14 @@
           "s": "被李密设计杀害"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "宰让"
+        }
+      ]
     },
     "xiao_xian": {
       "id": "xiao_xian",
@@ -6791,7 +8218,14 @@
           "s": "被李靖击败"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_guang",
+          "type": "subject",
+          "desc": "萧铣"
+        }
+      ]
     },
     "du_fuwei": {
       "id": "du_fuwei",
@@ -6835,7 +8269,14 @@
           "s": "辅公祏叛乱牵连"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_guang",
+          "type": "enemy",
+          "desc": "杜伏威"
+        }
+      ]
     },
     "fu_gongshi": {
       "id": "fu_gongshi",
@@ -6879,7 +8320,14 @@
           "s": "被李靖击败"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_guang",
+          "type": "enemy",
+          "desc": "辅公祏"
+        }
+      ]
     },
     "yang_xuangan": {
       "id": "yang_xuangan",
@@ -6917,7 +8365,14 @@
           "s": "围攻洛阳失败"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_guang",
+          "type": "subject",
+          "desc": "杨玄感"
+        }
+      ]
     },
     "liu_chao": {
       "id": "liu_chao",
@@ -6955,7 +8410,14 @@
           "s": "享年六十六岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "刘焯"
+        }
+      ]
     },
     "liu_xuan": {
       "id": "liu_xuan",
@@ -6993,7 +8455,14 @@
           "s": "卷入杨玄感之乱"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "刘炫"
+        }
+      ]
     },
     "li_xiong": {
       "id": "li_xiong",
@@ -7019,7 +8488,14 @@
           "s": "兵败被杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "李雄"
+        }
+      ]
     },
     "zhang_lihua": {
       "id": "zhang_lihua",
@@ -7051,7 +8527,14 @@
           "s": "隋军灭陈"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "chen_shubao",
+          "type": "spouse",
+          "desc": "张丽华"
+        }
+      ]
     },
     "chen_shubao": {
       "id": "chen_shubao",
@@ -7089,7 +8572,14 @@
           "s": "年五十二"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "chen_baxian",
+          "type": "child",
+          "desc": "陈叔宝"
+        }
+      ]
     },
     "wei_ding": {
       "id": "wei_ding",
@@ -7121,7 +8611,14 @@
           "s": "卷入杨玄感之乱"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "韦鼎"
+        }
+      ]
     },
     "yang_yichen": {
       "id": "yang_yichen",
@@ -7159,7 +8656,14 @@
           "s": "被剥夺兵权"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_jian",
+          "type": "subject",
+          "desc": "杨义臣"
+        }
+      ]
     },
     "li_yuan": {
       "id": "li_yuan",
@@ -7225,6 +8729,23 @@
         "evt_tang_0001",
         "evt_tang_0002",
         "evt_tang_0003"
+      ],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "parent",
+          "desc": "父子，李世民为李渊次子"
+        },
+        {
+          "to": "li_zhi",
+          "type": "parent",
+          "desc": "父子，李治为李渊之孙"
+        },
+        {
+          "to": "wei_zheng",
+          "type": "monarch",
+          "desc": "君臣，魏征为李渊旧部"
+        }
       ]
     },
     "fang_xuanling": {
@@ -7283,6 +8804,18 @@
       ],
       "events": [
         "evt_tang_0004"
+      ],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "subject",
+          "desc": "宰相，房谋杜断"
+        },
+        {
+          "to": "du_ruhui",
+          "type": "colleague",
+          "desc": "房谋杜断"
+        }
       ]
     },
     "du_ruhui": {
@@ -7329,6 +8862,18 @@
       ],
       "events": [
         "evt_tang_0004"
+      ],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "subject",
+          "desc": "宰相，房谋杜断"
+        },
+        {
+          "to": "fang_xuanling",
+          "type": "colleague",
+          "desc": "房谋杜断"
+        }
       ]
     },
     "chang_sun_wuji": {
@@ -7388,6 +8933,13 @@
       "events": [
         "evt_tang_0003",
         "evt_tang_0007"
+      ],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "subject",
+          "desc": "辅臣，凌烟阁第一"
+        }
       ]
     },
     "yu_chi_jingde": {
@@ -7446,6 +8998,23 @@
       ],
       "events": [
         "evt_tang_0007"
+      ],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "li_jing",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "chang_sun_wuji",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        }
       ]
     },
     "qin_qiong": {
@@ -7496,7 +9065,19 @@
           "s": "陪葬昭陵"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "subject",
+          "desc": "秦叔宝"
+        },
+        {
+          "to": "yu_chi_jingde",
+          "type": "colleague",
+          "desc": "门神"
+        }
+      ]
     },
     "cheng_yaojin": {
       "id": "cheng_yaojin",
@@ -7552,7 +9133,14 @@
           "s": "享年七十七岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "subject",
+          "desc": "程咬金"
+        }
+      ]
     },
     "li_ji": {
       "id": "li_ji",
@@ -7608,7 +9196,19 @@
           "s": "享年七十六岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "subject",
+          "desc": "李绩"
+        },
+        {
+          "to": "li_jing",
+          "type": "colleague",
+          "desc": "唐初名将"
+        }
+      ]
     },
     "su_dingfang": {
       "id": "su_dingfang",
@@ -7658,7 +9258,14 @@
           "s": "享年七十六岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "subject",
+          "desc": "苏定方"
+        }
+      ]
     },
     "xue_rengui": {
       "id": "xue_rengui",
@@ -7702,7 +9309,19 @@
           "s": "享年七十岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "subject",
+          "desc": "薛仁贵"
+        },
+        {
+          "to": "li_zhi",
+          "type": "subject",
+          "desc": "薛仁贵"
+        }
+      ]
     },
     "li_guangbi": {
       "id": "li_guangbi",
@@ -7748,6 +9367,13 @@
       ],
       "events": [
         "evt_tang_0017"
+      ],
+      "relations": [
+        {
+          "to": "guo_ziyi",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        }
       ]
     },
     "du_fu": {
@@ -7810,7 +9436,19 @@
           "s": "享年五十九岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_bai",
+          "type": "friend",
+          "desc": "李杜"
+        },
+        {
+          "to": "li_longji",
+          "type": "subject",
+          "desc": "杜甫"
+        }
+      ]
     },
     "bai_juyi": {
       "id": "bai_juyi",
@@ -7872,7 +9510,19 @@
           "s": "享年七十五岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_bai",
+          "type": "colleague",
+          "desc": "唐代诗人"
+        },
+        {
+          "to": "du_fu",
+          "type": "colleague",
+          "desc": "唐代诗人"
+        }
+      ]
     },
     "wang_wei": {
       "id": "wang_wei",
@@ -7922,7 +9572,19 @@
           "s": "享年六十一岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_bai",
+          "type": "colleague",
+          "desc": "盛唐诗人"
+        },
+        {
+          "to": "du_fu",
+          "type": "colleague",
+          "desc": "盛唐诗人"
+        }
+      ]
     },
     "di_renjie": {
       "id": "di_renjie",
@@ -7980,6 +9642,13 @@
       ],
       "events": [
         "evt_tang_0011"
+      ],
+      "relations": [
+        {
+          "to": "wu_zetian",
+          "type": "subject",
+          "desc": "宰相，名相"
+        }
       ]
     },
     "yao_chong": {
@@ -8038,6 +9707,18 @@
       ],
       "events": [
         "evt_tang_0014"
+      ],
+      "relations": [
+        {
+          "to": "li_longji",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "song_jing",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        }
       ]
     },
     "song_jing": {
@@ -8096,6 +9777,18 @@
       ],
       "events": [
         "evt_tang_0014"
+      ],
+      "relations": [
+        {
+          "to": "li_longji",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "yao_chong",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        }
       ]
     },
     "han_yu": {
@@ -8155,6 +9848,13 @@
       "events": [
         "evt_tang_0019",
         "evt_tang_0020"
+      ],
+      "relations": [
+        {
+          "to": "liu_zongyuan",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        }
       ]
     },
     "liu_zongyuan": {
@@ -8207,6 +9907,13 @@
       ],
       "events": [
         "evt_tang_0019"
+      ],
+      "relations": [
+        {
+          "to": "han_yu",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        }
       ]
     },
     "shi_siming": {
@@ -8251,7 +9958,19 @@
           "s": "为子史朝义所杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "an_lushan",
+          "type": "colleague",
+          "desc": "安史之乱"
+        },
+        {
+          "to": "guo_ziyi",
+          "type": "enemy",
+          "desc": "叛军"
+        }
+      ]
     },
     "huang_chao": {
       "id": "huang_chao",
@@ -8298,6 +10017,13 @@
       "events": [
         "evt_tang_0021",
         "evt_tang_0022"
+      ],
+      "relations": [
+        {
+          "to": "li_longji",
+          "type": "enemy",
+          "desc": "黄巢起义"
+        }
       ]
     },
     "yang_guifei": {
@@ -8351,6 +10077,23 @@
       "events": [
         "evt_tang_0015",
         "evt_tang_0016"
+      ],
+      "relations": [
+        {
+          "to": "li_longji",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "guo_ziyi",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        },
+        {
+          "to": "an_lushan",
+          "type": "colleague",
+          "desc": "同为tang朝人物，共同参与历史事件"
+        }
       ]
     },
     "zhu_wen": {
@@ -8398,6 +10141,13 @@
       "events": [
         "evt_wudai_0001",
         "evt_wudai_0002"
+      ],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "colleague",
+          "desc": "同为wudai朝人物，共同参与历史事件"
+        }
       ]
     },
     "jing_xiang": {
@@ -8436,7 +10186,14 @@
           "s": "自杀殉国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "敬翔"
+        }
+      ]
     },
     "wang_yanzhang": {
       "id": "wang_yanzhang",
@@ -8468,7 +10225,14 @@
           "s": "被斩"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "王彦章"
+        }
+      ]
     },
     "li_cunxu": {
       "id": "li_cunxu",
@@ -8510,6 +10274,13 @@
         "evt_wudai_0002",
         "evt_wudai_0003",
         "evt_wudai_0004"
+      ],
+      "relations": [
+        {
+          "to": "zhu_wen",
+          "type": "colleague",
+          "desc": "同为wudai朝人物，共同参与历史事件"
+        }
       ]
     },
     "li_siyuan": {
@@ -8548,7 +10319,14 @@
           "s": "年六十七"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "李嗣源"
+        }
+      ]
     },
     "li_congke": {
       "id": "li_congke",
@@ -8580,7 +10358,14 @@
           "s": "后唐灭亡"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_siyuan",
+          "type": "child",
+          "desc": "李从珂"
+        }
+      ]
     },
     "li_cunxiao": {
       "id": "li_cunxiao",
@@ -8612,7 +10397,14 @@
           "s": "年三十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "李存孝"
+        }
+      ]
     },
     "zhou_dewei": {
       "id": "zhou_dewei",
@@ -8638,7 +10430,14 @@
           "s": "战败被俘不屈"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "周德威"
+        }
+      ]
     },
     "feng_dao": {
       "id": "feng_dao",
@@ -8672,6 +10471,13 @@
       ],
       "events": [
         "evt_wudai_0015"
+      ],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "冯道"
+        }
       ]
     },
     "shi_jingtang": {
@@ -8704,7 +10510,14 @@
           "s": "年五十一"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "石敬瑭"
+        }
+      ]
     },
     "sang_weihan": {
       "id": "sang_weihan",
@@ -8736,7 +10549,14 @@
           "s": "不屈而死"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shi_jingtang",
+          "type": "subject",
+          "desc": "桑维翰"
+        }
+      ]
     },
     "shi_chonggui": {
       "id": "shi_chonggui",
@@ -8774,7 +10594,14 @@
           "s": "年六十一"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shi_jingtang",
+          "type": "child",
+          "desc": "石重贵"
+        }
+      ]
     },
     "liu_zhiyuan": {
       "id": "liu_zhiyuan",
@@ -8806,7 +10633,14 @@
           "s": "年五十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "刘知远"
+        }
+      ]
     },
     "guo_wei": {
       "id": "guo_wei",
@@ -8840,6 +10674,13 @@
       ],
       "events": [
         "evt_wudai_0009"
+      ],
+      "relations": [
+        {
+          "to": "liu_zhiyuan",
+          "type": "subject",
+          "desc": "郭威"
+        }
       ]
     },
     "chai_rong": {
@@ -8888,6 +10729,13 @@
         "evt_wudai_0010",
         "evt_wudai_0011",
         "evt_wudai_0012"
+      ],
+      "relations": [
+        {
+          "to": "guo_wei",
+          "type": "child",
+          "desc": "柴荣"
+        }
       ]
     },
     "wang_pu": {
@@ -8920,7 +10768,14 @@
           "s": "年五十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "chai_rong",
+          "type": "subject",
+          "desc": "王朴"
+        }
+      ]
     },
     "yang_xingmi": {
       "id": "yang_xingmi",
@@ -8952,7 +10807,14 @@
           "s": "年五十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "enemy",
+          "desc": "杨行密"
+        }
+      ]
     },
     "xu_wen": {
       "id": "xu_wen",
@@ -8984,7 +10846,14 @@
           "s": "年六十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yang_xingmi",
+          "type": "subject",
+          "desc": "徐温"
+        }
+      ]
     },
     "li_bian": {
       "id": "li_bian",
@@ -9016,7 +10885,14 @@
           "s": "年五十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xu_wen",
+          "type": "child",
+          "desc": "李昪"
+        }
+      ]
     },
     "li_yu": {
       "id": "li_yu",
@@ -9054,7 +10930,14 @@
           "s": "年四十二"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_bian",
+          "type": "child",
+          "desc": "李煜"
+        }
+      ]
     },
     "qian_liu": {
       "id": "qian_liu",
@@ -9086,7 +10969,14 @@
           "s": "年八十一"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "钱镠"
+        }
+      ]
     },
     "wang_jian": {
       "id": "wang_jian",
@@ -9118,7 +11008,14 @@
           "s": "年七十二"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "王建"
+        }
+      ]
     },
     "meng_zhixiang": {
       "id": "meng_zhixiang",
@@ -9150,7 +11047,14 @@
           "s": "年六十一"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "孟知祥"
+        }
+      ]
     },
     "wang_shenzhi": {
       "id": "wang_shenzhi",
@@ -9182,7 +11086,14 @@
           "s": "年六十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "王审知"
+        }
+      ]
     },
     "ma_yin": {
       "id": "ma_yin",
@@ -9214,7 +11125,14 @@
           "s": "年七十九"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "马殷"
+        }
+      ]
     },
     "liu_yan": {
       "id": "liu_yan",
@@ -9246,7 +11164,14 @@
           "s": "年五十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "刘岩"
+        }
+      ]
     },
     "gao_jixing": {
       "id": "gao_jixing",
@@ -9278,7 +11203,14 @@
           "s": "年七十一"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "高季兴"
+        }
+      ]
     },
     "liu_chong": {
       "id": "liu_chong",
@@ -9310,7 +11242,14 @@
           "s": "年六十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_zhiyuan",
+          "type": "child",
+          "desc": "刘崇"
+        }
+      ]
     },
     "li_zhen": {
       "id": "li_zhen",
@@ -9348,7 +11287,14 @@
           "s": "后唐灭梁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_cunxu",
+          "type": "subject",
+          "desc": "李振"
+        }
+      ]
     },
     "zhao_hongyin": {
       "id": "zhao_hongyin",
@@ -9374,7 +11320,14 @@
           "s": "年五十七"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_kuangyin",
+          "type": "parent",
+          "desc": "赵弘殷"
+        }
+      ]
     },
     "li_jing_nantang": {
       "id": "li_jing_nantang",
@@ -9412,7 +11365,14 @@
           "s": "年四十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_yu",
+          "type": "parent",
+          "desc": "李璟"
+        }
+      ]
     },
     "tuoba_gui": {
       "id": "tuoba_gui",
@@ -9450,7 +11410,14 @@
           "s": "年三十九"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "tuoba_hong",
+          "type": "child",
+          "desc": "拓跋圭"
+        }
+      ]
     },
     "tuoba_tao": {
       "id": "tuoba_tao",
@@ -9500,7 +11467,14 @@
           "s": "年四十五"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "tuoba_gui",
+          "type": "child",
+          "desc": "拓跋焘"
+        }
+      ]
     },
     "xiao_ze": {
       "id": "xiao_ze",
@@ -9532,7 +11506,14 @@
           "s": "年五十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "subject",
+          "desc": "萧赜"
+        }
+      ]
     },
     "xiao_tong": {
       "id": "xiao_tong",
@@ -9570,7 +11551,14 @@
           "s": "年三十一"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "child",
+          "desc": "萧统"
+        }
+      ]
     },
     "xiao_gang": {
       "id": "xiao_gang",
@@ -9608,7 +11596,14 @@
           "s": "年四十九"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "child",
+          "desc": "萧纲"
+        }
+      ]
     },
     "xiao_yi": {
       "id": "xiao_yi",
@@ -9640,7 +11635,14 @@
           "s": "被俘遇害"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "child",
+          "desc": "萧绎"
+        }
+      ]
     },
     "gao_yang": {
       "id": "gao_yang",
@@ -9672,7 +11674,14 @@
           "s": "年三十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "gao_huan",
+          "type": "child",
+          "desc": "高洋"
+        }
+      ]
     },
     "gao_zhan": {
       "id": "gao_zhan",
@@ -9710,7 +11719,14 @@
           "s": "年三十二"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "gao_huan",
+          "type": "child",
+          "desc": "高湛"
+        }
+      ]
     },
     "gao_changgong": {
       "id": "gao_changgong",
@@ -9742,7 +11758,14 @@
           "s": "年三十三"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "gao_huan",
+          "type": "child",
+          "desc": "高长恭"
+        }
+      ]
     },
     "yuwen_yong": {
       "id": "yuwen_yong",
@@ -9783,6 +11806,13 @@
       "events": [
         "evt_nanbei_0015",
         "evt_nanbei_0018"
+      ],
+      "relations": [
+        {
+          "to": "yuwen_tai",
+          "type": "child",
+          "desc": "宇文邕"
+        }
       ]
     },
     "yuwen_hu": {
@@ -9821,7 +11851,14 @@
           "s": "年六十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yuwen_tai",
+          "type": "subject",
+          "desc": "宇文护"
+        }
+      ]
     },
     "erzhu_rong": {
       "id": "erzhu_rong",
@@ -9855,6 +11892,13 @@
       ],
       "events": [
         "evt_nanbei_0013"
+      ],
+      "relations": [
+        {
+          "to": "gao_huan",
+          "type": "subject",
+          "desc": "尔朱荣"
+        }
       ]
     },
     "hou_jing": {
@@ -9901,6 +11945,13 @@
       ],
       "events": [
         "evt_nanbei_0010"
+      ],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "colleague",
+          "desc": "同为nanbei朝人物，共同参与历史事件"
+        }
       ]
     },
     "hulu_guang": {
@@ -9933,7 +11984,14 @@
           "s": "年五十八"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "gao_huan",
+          "type": "subject",
+          "desc": "斛律光"
+        }
+      ]
     },
     "wei_xiaokuan": {
       "id": "wei_xiaokuan",
@@ -9973,6 +12031,13 @@
       ],
       "events": [
         "evt_nanbei_0017"
+      ],
+      "relations": [
+        {
+          "to": "gao_huan",
+          "type": "colleague",
+          "desc": "同为nanbei朝人物，共同参与历史事件"
+        }
       ]
     },
     "zu_chongzhi": {
@@ -10011,7 +12076,14 @@
           "s": "年七十二"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_yu",
+          "type": "subject",
+          "desc": "祖冲之"
+        }
+      ]
     },
     "li_daoyuan": {
       "id": "li_daoyuan",
@@ -10043,7 +12115,14 @@
           "s": "年约五十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "tuoba_hong",
+          "type": "subject",
+          "desc": "郦道元"
+        }
+      ]
     },
     "tao_hongjing": {
       "id": "tao_hongjing",
@@ -10081,7 +12160,14 @@
           "s": "年八十一"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "subject",
+          "desc": "陶弘景"
+        }
+      ]
     },
     "fan_zhen": {
       "id": "fan_zhen",
@@ -10113,7 +12199,14 @@
           "s": "年约六十五"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "subject",
+          "desc": "范缜"
+        }
+      ]
     },
     "jiang_yan": {
       "id": "jiang_yan",
@@ -10151,7 +12244,14 @@
           "s": "年六十二"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "subject",
+          "desc": "江淹"
+        }
+      ]
     },
     "xie_tiao": {
       "id": "xie_tiao",
@@ -10183,7 +12283,14 @@
           "s": "卷入谋反案"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "subject",
+          "desc": "谢朓"
+        }
+      ]
     },
     "bao_zhao": {
       "id": "bao_zhao",
@@ -10215,7 +12322,14 @@
           "s": "年约五十三"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_yu",
+          "type": "subject",
+          "desc": "鲍照"
+        }
+      ]
     },
     "liu_xie": {
       "id": "liu_xie",
@@ -10247,7 +12361,14 @@
           "s": "年约六十一"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "subject",
+          "desc": "刘勰"
+        }
+      ]
     },
     "zhong_rong": {
       "id": "zhong_rong",
@@ -10279,7 +12400,14 @@
           "s": "年约五十一"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiao_yan",
+          "type": "subject",
+          "desc": "钟嵘"
+        }
+      ]
     },
     "wen_zisheng": {
       "id": "wen_zisheng",
@@ -10311,7 +12439,14 @@
           "s": "年约五十三"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "gao_huan",
+          "type": "subject",
+          "desc": "温子昇"
+        }
+      ]
     },
     "wei_shou": {
       "id": "wei_shou",
@@ -10343,7 +12478,14 @@
           "s": "年六十七"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "gao_huan",
+          "type": "subject",
+          "desc": "魏收"
+        }
+      ]
     },
     "xiao_ziliang": {
       "id": "xiao_ziliang",
@@ -10375,7 +12517,14 @@
           "s": "年三十五"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiao_daocheng",
+          "type": "child",
+          "desc": "萧子良"
+        }
+      ]
     },
     "xing_shao": {
       "id": "xing_shao",
@@ -10407,7 +12556,14 @@
           "s": "年约七十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "gao_huan",
+          "type": "subject",
+          "desc": "邢邵"
+        }
+      ]
     },
     "yin_keng": {
       "id": "yin_keng",
@@ -10439,7 +12595,14 @@
           "s": "年约五十三"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yuwen_tai",
+          "type": "subject",
+          "desc": "阴铿"
+        }
+      ]
     },
     "li_zu": {
       "id": "li_zu",
@@ -10477,7 +12640,14 @@
           "s": "隋初去世"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "tuoba_hong",
+          "type": "subject",
+          "desc": "李祖"
+        }
+      ]
     },
     "hu_taihou": {
       "id": "hu_taihou",
@@ -10515,7 +12685,14 @@
           "s": "河阴之变"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "tuoba_hong",
+          "type": "spouse",
+          "desc": "胡太后"
+        }
+      ]
     },
     "mu_lan": {
       "id": "mu_lan",
@@ -10547,7 +12724,14 @@
           "s": "凯旋辞官"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "tuoba_hong",
+          "type": "subject",
+          "desc": "花木兰"
+        }
+      ]
     },
     "sima_yi": {
       "id": "sima_yi",
@@ -10609,7 +12793,24 @@
           "s": "年七十三"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "侍奉曹氏三代"
+        },
+        {
+          "to": "zhu_ge_liang",
+          "type": "rival",
+          "desc": "棋逢对手，祁山对峙"
+        },
+        {
+          "to": "sima_zhao",
+          "type": "parent",
+          "desc": "父子关系，司马昭为司马懿之子"
+        }
+      ]
     },
     "sima_zhao": {
       "id": "sima_zhao",
@@ -10653,7 +12854,19 @@
           "s": "年五十五"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_yi",
+          "type": "child",
+          "desc": "父子关系，司马昭为司马懿之子"
+        },
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "司马氏篡魏"
+        }
+      ]
     },
     "sima_zhong": {
       "id": "sima_zhong",
@@ -10703,7 +12916,14 @@
           "s": "年四十八"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_yan",
+          "type": "child",
+          "desc": "晋惠帝"
+        }
+      ]
     },
     "sima_rui": {
       "id": "sima_rui",
@@ -10757,6 +12977,18 @@
         "evt_jin_0010",
         "evt_jin_0011",
         "evt_jin_0012"
+      ],
+      "relations": [
+        {
+          "to": "wang_dao",
+          "type": "colleague",
+          "desc": "同为jin朝人物，共同参与历史事件"
+        },
+        {
+          "to": "wang_dun",
+          "type": "colleague",
+          "desc": "同为jin朝人物，共同参与历史事件"
+        }
       ]
     },
     "wang_dun": {
@@ -10803,6 +13035,13 @@
       ],
       "events": [
         "evt_jin_0012"
+      ],
+      "relations": [
+        {
+          "to": "sima_rui",
+          "type": "colleague",
+          "desc": "同为jin朝人物，共同参与历史事件"
+        }
       ]
     },
     "liu_kun": {
@@ -10853,7 +13092,14 @@
           "s": "年四十八"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_rui",
+          "type": "subject",
+          "desc": "刘琨"
+        }
+      ]
     },
     "wen_jiao": {
       "id": "wen_jiao",
@@ -10897,7 +13143,14 @@
           "s": "年四十二"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_rui",
+          "type": "subject",
+          "desc": "温峤"
+        }
+      ]
     },
     "tao_kan": {
       "id": "tao_kan",
@@ -10941,7 +13194,14 @@
           "s": "年七十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_rui",
+          "type": "subject",
+          "desc": "陶侃"
+        }
+      ]
     },
     "huan_xuan": {
       "id": "huan_xuan",
@@ -10993,6 +13253,13 @@
       ],
       "events": [
         "evt_jin_0015"
+      ],
+      "relations": [
+        {
+          "to": "sima_rui",
+          "type": "subject",
+          "desc": "桓玄"
+        }
       ]
     },
     "wang_xianzhi": {
@@ -11037,7 +13304,14 @@
           "s": "年四十三"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "wang_xizhi",
+          "type": "child",
+          "desc": "王献之"
+        }
+      ]
     },
     "gu_kaizhi": {
       "id": "gu_kaizhi",
@@ -11081,7 +13355,14 @@
           "s": "年约六十二"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_rui",
+          "type": "subject",
+          "desc": "顾恺之"
+        }
+      ]
     },
     "xie_lingyun": {
       "id": "xie_lingyun",
@@ -11125,7 +13406,14 @@
           "s": "年四十九"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_rui",
+          "type": "subject",
+          "desc": "谢灵运"
+        }
+      ]
     },
     "shan_tao": {
       "id": "shan_tao",
@@ -11169,7 +13457,14 @@
           "s": "年七十九"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_zhao",
+          "type": "subject",
+          "desc": "山涛"
+        }
+      ]
     },
     "xie_yao": {
       "id": "xie_yao",
@@ -11213,7 +13508,14 @@
           "s": "以诗书终老"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xie_an",
+          "type": "subject",
+          "desc": "谢瑶"
+        }
+      ]
     },
     "sima_liang": {
       "id": "sima_liang",
@@ -11251,7 +13553,14 @@
           "s": "楚王司马玮所为"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_zhong",
+          "type": "subject",
+          "desc": "司马亮"
+        }
+      ]
     },
     "sima_lun": {
       "id": "sima_lun",
@@ -11297,6 +13606,13 @@
       ],
       "events": [
         "evt_jin_0007"
+      ],
+      "relations": [
+        {
+          "to": "jia_nanfeng",
+          "type": "colleague",
+          "desc": "同为jin朝人物，共同参与历史事件"
+        }
       ]
     },
     "pan_yue": {
@@ -11341,7 +13657,14 @@
           "s": "年五十三"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_yan",
+          "type": "subject",
+          "desc": "潘岳"
+        }
+      ]
     },
     "zuo_si": {
       "id": "zuo_si",
@@ -11385,7 +13708,14 @@
           "s": "年约五十五"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_yan",
+          "type": "subject",
+          "desc": "左思"
+        }
+      ]
     },
     "lu_ji": {
       "id": "lu_ji",
@@ -11429,7 +13759,14 @@
           "s": "年四十三"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_yan",
+          "type": "subject",
+          "desc": "陆机"
+        }
+      ]
     },
     "liu_ling": {
       "id": "liu_ling",
@@ -11473,7 +13810,14 @@
           "s": "年约八十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_zhao",
+          "type": "subject",
+          "desc": "刘伶"
+        }
+      ]
     },
     "du_yu": {
       "id": "du_yu",
@@ -11519,6 +13863,13 @@
       ],
       "events": [
         "evt_jin_0002"
+      ],
+      "relations": [
+        {
+          "to": "sima_yan",
+          "type": "colleague",
+          "desc": "同为jin朝人物，共同参与历史事件"
+        }
       ]
     },
     "pi_cao": {
@@ -11539,7 +13890,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "child",
+          "desc": "曹操之子"
+        }
+      ]
     },
     "zhi_cao": {
       "id": "zhi_cao",
@@ -11601,7 +13959,14 @@
           "s": "年六十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "child",
+          "desc": "曹操之子"
+        }
+      ]
     },
     "yu_xun": {
       "id": "yu_xun",
@@ -11621,7 +13986,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "曹操谋士"
+        }
+      ]
     },
     "you_xun": {
       "id": "you_xun",
@@ -11641,7 +14013,19 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "曹操谋士"
+        },
+        {
+          "to": "yu_xun",
+          "type": "sibling",
+          "desc": "荀彧之弟"
+        }
+      ]
     },
     "xu_jia": {
       "id": "xu_jia",
@@ -11697,7 +14081,14 @@
           "s": "谥壮侯"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "曹操谋士"
+        }
+      ]
     },
     "he_zhang": {
       "id": "he_zhang",
@@ -11717,7 +14108,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "曹操谋士"
+        }
+      ]
     },
     "huang_xu": {
       "id": "huang_xu",
@@ -11737,7 +14135,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备谋士"
+        }
+      ]
     },
     "jin_yue": {
       "id": "jin_yue",
@@ -11757,7 +14162,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备帐下将领"
+        }
+      ]
     },
     "jin_yu": {
       "id": "jin_yu",
@@ -11777,7 +14189,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备帐下将领"
+        }
+      ]
     },
     "ai_deng": {
       "id": "ai_deng",
@@ -11797,7 +14216,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备帐下将领"
+        }
+      ]
     },
     "hui_zhong": {
       "id": "hui_zhong",
@@ -11817,7 +14243,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备帐下将领"
+        }
+      ]
     },
     "dun_xiahou": {
       "id": "dun_xiahou",
@@ -11861,7 +14294,19 @@
           "s": "谥忠侯"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "曹操大将，夏侯惇"
+        },
+        {
+          "to": "yuan_xiahou",
+          "type": "sibling",
+          "desc": "夏侯渊之兄"
+        }
+      ]
     },
     "yuan_xiahou": {
       "id": "yuan_xiahou",
@@ -11905,7 +14350,19 @@
           "s": "被黄忠斩杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "曹操大将，夏侯渊"
+        },
+        {
+          "to": "dun_xiahou",
+          "type": "sibling",
+          "desc": "夏侯惇之弟"
+        }
+      ]
     },
     "huai_guo": {
       "id": "huai_guo",
@@ -11925,7 +14382,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "曹操谋士，郭淮"
+        }
+      ]
     },
     "zhao_sima": {
       "id": "zhao_sima",
@@ -11945,7 +14409,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_yi",
+          "type": "child",
+          "desc": "司马懿之子"
+        }
+      ]
     },
     "tong_pang": {
       "id": "tong_pang",
@@ -11989,7 +14460,14 @@
           "s": "身亡，年三十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备谋士，庞统"
+        }
+      ]
     },
     "zhong_huang": {
       "id": "zhong_huang",
@@ -12009,7 +14487,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备大将，黄忠"
+        }
+      ]
     },
     "chao_ma": {
       "id": "chao_ma",
@@ -12053,7 +14538,14 @@
           "s": "年四十七"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备大将，马超"
+        }
+      ]
     },
     "yan_wei": {
       "id": "yan_wei",
@@ -12073,7 +14565,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备谋士，法正"
+        }
+      ]
     },
     "su_ma": {
       "id": "su_ma",
@@ -12093,7 +14592,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备谋士，司马徽"
+        }
+      ]
     },
     "zheng_fa": {
       "id": "zheng_fa",
@@ -12113,7 +14619,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备谋士"
+        }
+      ]
     },
     "yan_li": {
       "id": "yan_li",
@@ -12157,7 +14670,14 @@
           "s": "诸葛亮弹劾"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备谋士，李严"
+        }
+      ]
     },
     "yi_fei": {
       "id": "yi_fei",
@@ -12177,7 +14697,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备谋士，费祎"
+        }
+      ]
     },
     "yun_dong": {
       "id": "yun_dong",
@@ -12197,7 +14724,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "刘备谋士，董允"
+        }
+      ]
     },
     "yueying_huang": {
       "id": "yueying_huang",
@@ -12235,7 +14769,14 @@
           "s": "遗孀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_ge_liang",
+          "type": "spouse",
+          "desc": "诸葛亮之妻，黄月英"
+        }
+      ]
     },
     "ce_sun": {
       "id": "ce_sun",
@@ -12279,7 +14820,19 @@
           "s": "被许贡门客刺杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sun_quan",
+          "type": "sibling",
+          "desc": "孙权之兄，孙策"
+        },
+        {
+          "to": "zhou_yu",
+          "type": "friend",
+          "desc": "孙策好友，周瑜"
+        }
+      ]
     },
     "jian_sun": {
       "id": "jian_sun",
@@ -12317,7 +14870,14 @@
           "s": "被黄祖伏兵所杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sun_quan",
+          "type": "parent",
+          "desc": "孙权之父，孙坚"
+        }
+      ]
     },
     "su_lu": {
       "id": "su_lu",
@@ -12337,7 +14897,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sun_quan",
+          "type": "subject",
+          "desc": "东吴谋士，鲁肃"
+        }
+      ]
     },
     "meng_lv": {
       "id": "meng_lv",
@@ -12357,7 +14924,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sun_quan",
+          "type": "subject",
+          "desc": "东吴大将，吕蒙"
+        }
+      ]
     },
     "ning_gan": {
       "id": "ning_gan",
@@ -12377,7 +14951,14 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sun_quan",
+          "type": "subject",
+          "desc": "东吴大将，甘宁"
+        }
+      ]
     },
     "ci_taishi": {
       "id": "ci_taishi",
@@ -12421,7 +15002,14 @@
           "s": "年四十一"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sun_quan",
+          "type": "subject",
+          "desc": "东吴大将，太史慈"
+        }
+      ]
     },
     "kang_lu": {
       "id": "kang_lu",
@@ -12441,7 +15029,19 @@
           "s": "人物"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sun_quan",
+          "type": "subject",
+          "desc": "东吴大将，陆抗"
+        },
+        {
+          "to": "lu_xun",
+          "type": "parent",
+          "desc": "陆逊之子"
+        }
+      ]
     },
     "jin_zhuge": {
       "id": "jin_zhuge",
@@ -12491,7 +15091,14 @@
           "s": "年六十八"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_ge_liang",
+          "type": "sibling",
+          "desc": "诸葛亮之兄，诸葛瑾"
+        }
+      ]
     },
     "gai_huang": {
       "id": "gai_huang",
@@ -12535,7 +15142,14 @@
           "s": "年约七十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sun_quan",
+          "type": "subject",
+          "desc": "东吴大将，黄盖"
+        }
+      ]
     },
     "pu_cheng": {
       "id": "pu_cheng",
@@ -12585,7 +15199,14 @@
           "s": "年约六十五"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sun_quan",
+          "type": "subject",
+          "desc": "东吴谋士，程普"
+        }
+      ]
     },
     "sima_qian": {
       "id": "sima_qian",
@@ -12635,7 +15256,8 @@
           "s": "年约六十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": []
     },
     "wang_zhaojun": {
       "id": "wang_zhaojun",
@@ -12679,7 +15301,14 @@
           "s": "于匈奴"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "王昭君"
+        }
+      ]
     },
     "ban_zhao": {
       "id": "ban_zhao",
@@ -12723,7 +15352,14 @@
           "s": "年约七十三"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "ban_gu",
+          "type": "sibling",
+          "desc": "班昭"
+        }
+      ]
     },
     "cai_yong": {
       "id": "cai_yong",
@@ -12767,7 +15403,14 @@
           "s": "年六十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "蔡邕"
+        }
+      ]
     },
     "hua_tuo": {
       "id": "hua_tuo",
@@ -12811,7 +15454,14 @@
           "s": "医书焚毁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "华佗"
+        }
+      ]
     },
     "zhang_zhongjing": {
       "id": "zhang_zhongjing",
@@ -12855,7 +15505,14 @@
           "s": "年约七十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "张仲景"
+        }
+      ]
     },
     "zhang_jiao": {
       "id": "zhang_jiao",
@@ -12895,6 +15552,13 @@
       ],
       "events": [
         "evt_han_0030"
+      ],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "enemy",
+          "desc": "张角"
+        }
       ]
     },
     "dong_zhuo": {
@@ -12941,6 +15605,13 @@
       ],
       "events": [
         "evt_han_0031"
+      ],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "enemy",
+          "desc": "董卓"
+        }
       ]
     },
     "yuan_shao": {
@@ -12985,7 +15656,14 @@
           "s": "年约四十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "rival",
+          "desc": "袁绍"
+        }
+      ]
     },
     "lu_bu": {
       "id": "lu_bu",
@@ -13035,7 +15713,14 @@
           "s": "白门楼"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "enemy",
+          "desc": "吕布"
+        }
+      ]
     },
     "zheng_xuan": {
       "id": "zheng_xuan",
@@ -13079,7 +15764,14 @@
           "s": "年七十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "郑玄"
+        }
+      ]
     },
     "sang_hongyang": {
       "id": "sang_hongyang",
@@ -13129,7 +15821,14 @@
           "s": "因参与燕王旦谋反"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "桑弘羊"
+        }
+      ]
     },
     "zhufu_yan": {
       "id": "zhufu_yan",
@@ -13167,7 +15866,14 @@
           "s": "因受贿被告发"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "主父偃"
+        }
+      ]
     },
     "li_guangli": {
       "id": "li_guangli",
@@ -13211,7 +15917,14 @@
           "s": "卫律设计"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "李广利"
+        }
+      ]
     },
     "shangguan_jie": {
       "id": "shangguan_jie",
@@ -13249,7 +15962,14 @@
           "s": "事泄被杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "上官桀"
+        }
+      ]
     },
     "jin_midi": {
       "id": "jin_midi",
@@ -13293,7 +16013,14 @@
           "s": "年四十九"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "金日磾"
+        }
+      ]
     },
     "sima_tan": {
       "id": "sima_tan",
@@ -13325,7 +16052,14 @@
           "s": "命司马迁完成通史"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "sima_qian",
+          "type": "parent",
+          "desc": "司马谈"
+        }
+      ]
     },
     "chen_yu": {
       "id": "chen_yu",
@@ -13363,7 +16097,14 @@
           "s": "韩信破赵"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bang",
+          "type": "subject",
+          "desc": "陈馀"
+        }
+      ]
     },
     "zhang_er": {
       "id": "zhang_er",
@@ -13401,7 +16142,14 @@
           "s": "汉高祖时"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bang",
+          "type": "subject",
+          "desc": "张耳"
+        }
+      ]
     },
     "tian_rong": {
       "id": "tian_rong",
@@ -13439,7 +16187,14 @@
           "s": "被平原百姓所杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiang_yu",
+          "type": "subject",
+          "desc": "田荣"
+        }
+      ]
     },
     "zang_tu": {
       "id": "zang_tu",
@@ -13471,7 +16226,14 @@
           "s": "刘邦亲征"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xiang_yu",
+          "type": "subject",
+          "desc": "臧荼"
+        }
+      ]
     },
     "liu_biao": {
       "id": "liu_biao",
@@ -13509,7 +16271,14 @@
           "s": "荆州归曹操"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "刘表"
+        }
+      ]
     },
     "gongsun_zan": {
       "id": "gongsun_zan",
@@ -13553,7 +16322,14 @@
           "s": "先杀妻子儿女"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "enemy",
+          "desc": "公孙瓒"
+        }
+      ]
     },
     "xun_yu": {
       "id": "xun_yu",
@@ -13603,7 +16379,14 @@
           "s": "年五十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cao_cao",
+          "type": "subject",
+          "desc": "曹操谋士，王佐之才"
+        }
+      ]
     },
     "gongsun_hong": {
       "id": "gongsun_hong",
@@ -13641,7 +16424,14 @@
           "s": "年约八十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "公孙弘"
+        }
+      ]
     },
     "liu_an": {
       "id": "liu_an",
@@ -13679,7 +16469,14 @@
           "s": "被告谋反"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "刘安"
+        }
+      ]
     },
     "liu_xiang": {
       "id": "liu_xiang",
@@ -13717,7 +16514,14 @@
           "s": "年约七十一"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "刘向"
+        }
+      ]
     },
     "liu_xin": {
       "id": "liu_xin",
@@ -13761,7 +16565,14 @@
           "s": "谋诛王莽事泄"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_xiang",
+          "type": "child",
+          "desc": "刘歆"
+        }
+      ]
     },
     "bing_ji": {
       "id": "bing_ji",
@@ -13805,7 +16616,14 @@
           "s": "年七十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "丙吉"
+        }
+      ]
     },
     "huang_ba": {
       "id": "huang_ba",
@@ -13849,7 +16667,14 @@
           "s": "年八十二"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_wu",
+          "type": "subject",
+          "desc": "黄霸"
+        }
+      ]
     },
     "lü_buwei": {
       "id": "lü_buwei",
@@ -13887,7 +16712,14 @@
           "s": "被放逐蜀地"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "秦相"
+        }
+      ]
     },
     "wang_jian_qin": {
       "id": "wang_jian_qin",
@@ -13931,7 +16763,14 @@
           "s": "善终"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "秦国大将"
+        }
+      ]
     },
     "wang_ben_qin": {
       "id": "wang_ben_qin",
@@ -13975,7 +16814,14 @@
           "s": "秦始皇时"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "王贲"
+        }
+      ]
     },
     "meng_wu": {
       "id": "meng_wu",
@@ -14007,7 +16853,19 @@
           "s": "秦国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "秦国大将"
+        },
+        {
+          "to": "meng_yi",
+          "type": "parent",
+          "desc": "蒙恬之父"
+        }
+      ]
     },
     "meng_yi": {
       "id": "meng_yi",
@@ -14045,7 +16903,19 @@
           "s": "赵高伪造遗诏"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "meng_wu",
+          "type": "child",
+          "desc": "蒙恬之子"
+        },
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "秦国大将"
+        }
+      ]
     },
     "zheng_guo": {
       "id": "zheng_guo",
@@ -14073,6 +16943,13 @@
       ],
       "events": [
         "evt_zhanguo_0021"
+      ],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "郑国渠"
+        }
       ]
     },
     "han_fei": {
@@ -14113,6 +16990,13 @@
       ],
       "events": [
         "evt_zhanguo_0023"
+      ],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "韩非入秦"
+        }
       ]
     },
     "li_you": {
@@ -14145,7 +17029,14 @@
           "s": "雍丘之战"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "李由"
+        }
+      ]
     },
     "zhang_han": {
       "id": "zhang_han",
@@ -14191,6 +17082,13 @@
       ],
       "events": [
         "evt_qin_0009"
+      ],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "章邯"
+        }
       ]
     },
     "feng_quji": {
@@ -14229,7 +17127,14 @@
           "s": "以示不屈"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "冯去疾"
+        }
+      ]
     },
     "feng_jie": {
       "id": "feng_jie",
@@ -14267,7 +17172,14 @@
           "s": "与冯去疾同死"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "冯劫"
+        }
+      ]
     },
     "zi_ying": {
       "id": "zi_ying",
@@ -14313,6 +17225,13 @@
       ],
       "events": [
         "evt_qin_0011"
+      ],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "child",
+          "desc": "子婴"
+        }
       ]
     },
     "zhao_ji": {
@@ -14357,7 +17276,14 @@
           "s": "与庄襄王合葬"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "parent",
+          "desc": "赵姬"
+        }
+      ]
     },
     "lao_ai": {
       "id": "lao_ai",
@@ -14395,7 +17321,14 @@
           "s": "灭三族"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_ji",
+          "type": "spouse",
+          "desc": "嫪毐"
+        }
+      ]
     },
     "cheng_xiao": {
       "id": "cheng_xiao",
@@ -14427,7 +17360,14 @@
           "s": "部众被处死"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "成蟜"
+        }
+      ]
     },
     "li_xin": {
       "id": "li_xin",
@@ -14465,7 +17405,14 @@
           "s": "灭楚"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "李信伐楚"
+        }
+      ]
     },
     "huan_yi": {
       "id": "huan_yi",
@@ -14497,7 +17444,14 @@
           "s": "去向不明"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "桓齮伐赵"
+        }
+      ]
     },
     "nei_sheng_teng": {
       "id": "nei_sheng_teng",
@@ -14523,7 +17477,14 @@
           "s": "俘虏韩王安"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "内史腾"
+        }
+      ]
     },
     "yang_duanhe": {
       "id": "yang_duanhe",
@@ -14549,7 +17510,14 @@
           "s": "参与统一战争"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "杨端和"
+        }
+      ]
     },
     "wang_ling": {
       "id": "wang_ling",
@@ -14593,7 +17561,14 @@
           "s": "反对吕后被免相"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "王陵"
+        }
+      ]
     },
     "fan_ju": {
       "id": "fan_ju",
@@ -14633,6 +17608,13 @@
       ],
       "events": [
         "evt_zhanguo_0016"
+      ],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "范雎"
+        }
       ]
     },
     "wei_liao": {
@@ -14665,7 +17647,14 @@
           "s": "国尉"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "尉缭"
+        }
+      ]
     },
     "gan_mao": {
       "id": "gan_mao",
@@ -14697,7 +17686,14 @@
           "s": "魏国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "甘茂"
+        }
+      ]
     },
     "bai_li_xi": {
       "id": "bai_li_xi",
@@ -14729,7 +17725,14 @@
           "s": "秦国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "mu_gong",
+          "type": "subject",
+          "desc": "辅佐秦穆公"
+        }
+      ]
     },
     "jian_shu": {
       "id": "jian_shu",
@@ -14761,7 +17764,14 @@
           "s": "秦国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "mu_gong",
+          "type": "subject",
+          "desc": "辅佐秦穆公"
+        }
+      ]
     },
     "mu_gong": {
       "id": "mu_gong",
@@ -14793,7 +17803,19 @@
           "s": "秦国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "bai_li_xi",
+          "type": "monarch",
+          "desc": "秦穆公"
+        },
+        {
+          "to": "jian_shu",
+          "type": "monarch",
+          "desc": "秦穆公"
+        }
+      ]
     },
     "xiao_gong": {
       "id": "xiao_gong",
@@ -14831,7 +17853,14 @@
           "s": "在位二十四年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shang_yang",
+          "type": "monarch",
+          "desc": "秦孝公"
+        }
+      ]
     },
     "hui_wen": {
       "id": "hui_wen",
@@ -14869,7 +17898,14 @@
           "s": "在位二十七年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shang_yang",
+          "type": "monarch",
+          "desc": "秦惠文王"
+        }
+      ]
     },
     "wu_wang": {
       "id": "wu_wang",
@@ -14901,7 +17937,14 @@
           "s": "洛阳，年仅二十三岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "monarch",
+          "desc": "秦武王"
+        }
+      ]
     },
     "zhao_wang": {
       "id": "zhao_wang",
@@ -14945,7 +17988,14 @@
           "s": "在位五十六年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "monarch",
+          "desc": "秦昭襄王"
+        }
+      ]
     },
     "king_cheng": {
       "id": "king_cheng",
@@ -14983,7 +18033,14 @@
           "s": "在位二十二年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "king_wu",
+          "type": "child",
+          "desc": "周武王之子"
+        }
+      ]
     },
     "king_kang": {
       "id": "king_kang",
@@ -15015,7 +18072,14 @@
           "s": "在位二十五年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "king_cheng",
+          "type": "child",
+          "desc": "周成王之子"
+        }
+      ]
     },
     "king_mu": {
       "id": "king_mu",
@@ -15047,7 +18111,14 @@
           "s": "在位五十五年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "king_kang",
+          "type": "child",
+          "desc": "周康王之子"
+        }
+      ]
     },
     "king_li": {
       "id": "king_li",
@@ -15079,7 +18150,14 @@
           "s": "共和行政结束"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "king_mu",
+          "type": "child",
+          "desc": "周穆王之子"
+        }
+      ]
     },
     "king_xuan": {
       "id": "king_xuan",
@@ -15111,7 +18189,14 @@
           "s": "在位四十六年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "king_li",
+          "type": "child",
+          "desc": "周厉王之子"
+        }
+      ]
     },
     "king_you": {
       "id": "king_you",
@@ -15149,7 +18234,14 @@
           "s": "平王东迁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "king_xuan",
+          "type": "child",
+          "desc": "周宣王之子"
+        }
+      ]
     },
     "king_ping": {
       "id": "king_ping",
@@ -15175,7 +18267,14 @@
           "s": "东周"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "king_you",
+          "type": "child",
+          "desc": "周幽王之子"
+        }
+      ]
     },
     "confucius": {
       "id": "confucius",
@@ -15213,7 +18312,39 @@
           "s": "鲁国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "laozi",
+          "type": "teacher",
+          "desc": "向老子问礼"
+        },
+        {
+          "to": "yan_hui",
+          "type": "teacher",
+          "desc": "颜回之师"
+        },
+        {
+          "to": "zi_gong",
+          "type": "teacher",
+          "desc": "子贡之师"
+        },
+        {
+          "to": "zi_lu",
+          "type": "teacher",
+          "desc": "子路之师"
+        },
+        {
+          "to": "zi_xia",
+          "type": "teacher",
+          "desc": "子夏之师"
+        },
+        {
+          "to": "zengzi",
+          "type": "teacher",
+          "desc": "曾子之师"
+        }
+      ]
     },
     "laozi": {
       "id": "laozi",
@@ -15251,7 +18382,14 @@
           "s": "不详"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "confucius",
+          "type": "teacher",
+          "desc": "孔子问礼于老子"
+        }
+      ]
     },
     "mozi": {
       "id": "mozi",
@@ -15289,7 +18427,14 @@
           "s": "墨家学派"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "confucius",
+          "type": "colleague",
+          "desc": "百家争鸣"
+        }
+      ]
     },
     "mencius": {
       "id": "mencius",
@@ -15333,7 +18478,14 @@
           "s": "年约八十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "confucius",
+          "type": "colleague",
+          "desc": "儒家"
+        }
+      ]
     },
     "zhuangzi": {
       "id": "zhuangzi",
@@ -15371,7 +18523,14 @@
           "s": "著《庄子》"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "laozi",
+          "type": "colleague",
+          "desc": "道家"
+        }
+      ]
     },
     "xunzi": {
       "id": "xunzi",
@@ -15409,7 +18568,14 @@
           "s": "著《荀子》"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "confucius",
+          "type": "colleague",
+          "desc": "儒家"
+        }
+      ]
     },
     "bao_shuya": {
       "id": "bao_shuya",
@@ -15441,7 +18607,14 @@
           "s": "齐国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "guan_zhong",
+          "type": "friend",
+          "desc": "管仲好友，荐管仲于齐桓公"
+        }
+      ]
     },
     "zi_chan": {
       "id": "zi_chan",
@@ -15479,7 +18652,14 @@
           "s": "郑国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zheng_zhuanggong",
+          "type": "subject",
+          "desc": "郑国名相"
+        }
+      ]
     },
     "sun_bin": {
       "id": "sun_bin",
@@ -15520,6 +18700,18 @@
       "events": [
         "evt_zhanguo_0005",
         "evt_zhanguo_0006"
+      ],
+      "relations": [
+        {
+          "to": "pang_juan",
+          "type": "colleague",
+          "desc": "同为zhanguo朝人物，共同参与历史事件"
+        },
+        {
+          "to": "tian_ji",
+          "type": "colleague",
+          "desc": "同为zhanguo朝人物，共同参与历史事件"
+        }
       ]
     },
     "wu_qi": {
@@ -15560,6 +18752,13 @@
       ],
       "events": [
         "evt_zhanguo_0003"
+      ],
+      "relations": [
+        {
+          "to": "wei_wenhou",
+          "type": "subject",
+          "desc": "吴起"
+        }
       ]
     },
     "tian_dan": {
@@ -15600,6 +18799,13 @@
       ],
       "events": [
         "evt_zhanguo_0011"
+      ],
+      "relations": [
+        {
+          "to": "qi_weiwang",
+          "type": "subject",
+          "desc": "田单"
+        }
       ]
     },
     "shen_buhai": {
@@ -15632,7 +18838,14 @@
           "s": "韩国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "han_zhaohou",
+          "type": "subject",
+          "desc": "申不害"
+        }
+      ]
     },
     "li_kui": {
       "id": "li_kui",
@@ -15672,6 +18885,13 @@
       ],
       "events": [
         "evt_zhanguo_0002"
+      ],
+      "relations": [
+        {
+          "to": "wei_wenhou",
+          "type": "subject",
+          "desc": "李悝"
+        }
       ]
     },
     "zou_yan": {
@@ -15704,7 +18924,14 @@
           "s": "齐国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi_weiwang",
+          "type": "subject",
+          "desc": "邹衍"
+        }
+      ]
     },
     "gongsun_long": {
       "id": "gongsun_long",
@@ -15736,7 +18963,14 @@
           "s": "赵国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zou_yan",
+          "type": "colleague",
+          "desc": "名家"
+        }
+      ]
     },
     "hui_shi": {
       "id": "hui_shi",
@@ -15768,7 +19002,14 @@
           "s": "宋国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhuangzi",
+          "type": "friend",
+          "desc": "惠施"
+        }
+      ]
     },
     "yang_zhu": {
       "id": "yang_zhu",
@@ -15800,7 +19041,14 @@
           "s": "魏国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "mozi",
+          "type": "colleague",
+          "desc": "杨朱"
+        }
+      ]
     },
     "zengzi": {
       "id": "zengzi",
@@ -15832,7 +19080,14 @@
           "s": "鲁国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "confucius",
+          "type": "student",
+          "desc": "孔子弟子"
+        }
+      ]
     },
     "zisi": {
       "id": "zisi",
@@ -15870,7 +19125,14 @@
           "s": "述圣"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "confucius",
+          "type": "colleague",
+          "desc": "子思"
+        }
+      ]
     },
     "yan_hui": {
       "id": "yan_hui",
@@ -15902,7 +19164,14 @@
           "s": "孔子悲痛"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "confucius",
+          "type": "student",
+          "desc": "孔子最得意弟子"
+        }
+      ]
     },
     "zi_gong": {
       "id": "zi_gong",
@@ -15934,7 +19203,14 @@
           "s": "鲁国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "confucius",
+          "type": "student",
+          "desc": "孔子弟子"
+        }
+      ]
     },
     "zi_lu": {
       "id": "zi_lu",
@@ -15966,7 +19242,14 @@
           "s": "卫国内乱"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "confucius",
+          "type": "student",
+          "desc": "孔子弟子"
+        }
+      ]
     },
     "zi_xia": {
       "id": "zi_xia",
@@ -16010,7 +19293,14 @@
           "s": "晚年失明"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "confucius",
+          "type": "student",
+          "desc": "孔子弟子"
+        }
+      ]
     },
     "tai_jia": {
       "id": "tai_jia",
@@ -16044,6 +19334,13 @@
       ],
       "events": [
         "evt_shang_0013"
+      ],
+      "relations": [
+        {
+          "to": "yi_yin",
+          "type": "colleague",
+          "desc": "同为shang朝人物，共同参与历史事件"
+        }
       ]
     },
     "wo_ding": {
@@ -16076,7 +19373,14 @@
           "s": "在位约二十九年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "tai_geng": {
       "id": "tai_geng",
@@ -16102,7 +19406,14 @@
           "s": "在位约二十五年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "xiao_jia": {
       "id": "xiao_jia",
@@ -16128,7 +19439,14 @@
           "s": "在位约二十七年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "yong_ji": {
       "id": "yong_ji",
@@ -16154,7 +19472,14 @@
           "s": "在位约十二年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "tai_wu": {
       "id": "tai_wu",
@@ -16180,7 +19505,14 @@
           "s": "在位约七十五年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "zhong_ding": {
       "id": "zhong_ding",
@@ -16206,7 +19538,14 @@
           "s": "引发九世之乱"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "wai_ren": {
       "id": "wai_ren",
@@ -16232,7 +19571,14 @@
           "s": "在位约十年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "he_dan_jia": {
       "id": "he_dan_jia",
@@ -16258,7 +19604,14 @@
           "s": "试图复兴商朝"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "zu_yi": {
       "id": "zu_yi",
@@ -16290,7 +19643,14 @@
           "s": "在位约十九年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "zu_xin": {
       "id": "zu_xin",
@@ -16316,7 +19676,14 @@
           "s": "在位约十六年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "wo_jia": {
       "id": "wo_jia",
@@ -16342,7 +19709,14 @@
           "s": "在位约八年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "zu_ding": {
       "id": "zu_ding",
@@ -16368,7 +19742,14 @@
           "s": "在位约十七年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "nan_geng": {
       "id": "nan_geng",
@@ -16394,7 +19775,14 @@
           "s": "在位约六年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "yang_jia": {
       "id": "yang_jia",
@@ -16420,7 +19808,14 @@
           "s": "在位约十七年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi",
+          "type": "monarch",
+          "desc": "夏朝君主"
+        }
+      ]
     },
     "pan_geng_shang": {
       "id": "pan_geng_shang",
@@ -16452,7 +19847,14 @@
           "s": "在位约二十八年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shang_tang",
+          "type": "monarch",
+          "desc": "商朝君主"
+        }
+      ]
     },
     "xiao_xin": {
       "id": "xiao_xin",
@@ -16478,7 +19880,14 @@
           "s": "在位约二十一年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shang_tang",
+          "type": "monarch",
+          "desc": "商朝君主"
+        }
+      ]
     },
     "wu_ding": {
       "id": "wu_ding",
@@ -16514,6 +19923,13 @@
         "evt_shang_0015",
         "evt_shang_0016",
         "evt_shang_0017"
+      ],
+      "relations": [
+        {
+          "to": "fu_hao",
+          "type": "colleague",
+          "desc": "同为shang朝人物，共同参与历史事件"
+        }
       ]
     },
     "zu_geng": {
@@ -16540,7 +19956,14 @@
           "s": "在位约十一年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shang_tang",
+          "type": "monarch",
+          "desc": "商朝君主"
+        }
+      ]
     },
     "zu_jia": {
       "id": "zu_jia",
@@ -16566,7 +19989,14 @@
           "s": "在位约三十三年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shang_tang",
+          "type": "monarch",
+          "desc": "商朝君主"
+        }
+      ]
     },
     "lin_xin": {
       "id": "lin_xin",
@@ -16592,7 +20022,14 @@
           "s": "在位约十年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shang_tang",
+          "type": "monarch",
+          "desc": "商朝君主"
+        }
+      ]
     },
     "kang_ding": {
       "id": "kang_ding",
@@ -16618,7 +20055,14 @@
           "s": "在位约八年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shang_tang",
+          "type": "monarch",
+          "desc": "商朝君主"
+        }
+      ]
     },
     "wu_yi": {
       "id": "wu_yi",
@@ -16644,7 +20088,14 @@
           "s": "在位约三十五年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shang_tang",
+          "type": "monarch",
+          "desc": "商朝君主"
+        }
+      ]
     },
     "wen_ding": {
       "id": "wen_ding",
@@ -16676,7 +20127,14 @@
           "s": "在位约十一年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shang_tang",
+          "type": "monarch",
+          "desc": "商朝君主"
+        }
+      ]
     },
     "di_yi": {
       "id": "di_yi",
@@ -16704,6 +20162,13 @@
       ],
       "events": [
         "evt_shang_0018"
+      ],
+      "relations": [
+        {
+          "to": "shang_tang",
+          "type": "monarch",
+          "desc": "商朝君主"
+        }
       ]
     },
     "fu_hao": {
@@ -16738,6 +20203,13 @@
       ],
       "events": [
         "evt_shang_0016"
+      ],
+      "relations": [
+        {
+          "to": "wu_ding",
+          "type": "colleague",
+          "desc": "同为shang朝人物，共同参与历史事件"
+        }
       ]
     },
     "wei_zi": {
@@ -16770,7 +20242,14 @@
           "s": "宋国始祖"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhou_xin",
+          "type": "sibling",
+          "desc": "纣王之兄"
+        }
+      ]
     },
     "jizi": {
       "id": "jizi",
@@ -16802,7 +20281,14 @@
           "s": "箕子朝鲜始祖"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhou_xin",
+          "type": "sibling",
+          "desc": "纣王之叔"
+        }
+      ]
     },
     "fei_lian": {
       "id": "fei_lian",
@@ -16834,7 +20320,14 @@
           "s": "年约六十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhou_xin",
+          "type": "subject",
+          "desc": "纣王宠臣"
+        }
+      ]
     },
     "e_lai": {
       "id": "e_lai",
@@ -16866,7 +20359,14 @@
           "s": "秦之先祖"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhou_xin",
+          "type": "subject",
+          "desc": "纣王宠臣"
+        }
+      ]
     },
     "zhao_kuangyin": {
       "id": "zhao_kuangyin",
@@ -16924,6 +20424,13 @@
       ],
       "events": [
         "evt_song_0001"
+      ],
+      "relations": [
+        {
+          "to": "zhao_kuangyi",
+          "type": "sibling",
+          "desc": "兄弟，赵光义为赵匡胤之弟"
+        }
       ]
     },
     "zhao_kuangyi": {
@@ -16976,6 +20483,13 @@
       ],
       "events": [
         "evt_song_0002"
+      ],
+      "relations": [
+        {
+          "to": "zhao_kuangyin",
+          "type": "sibling",
+          "desc": "兄弟，烛影斧声"
+        }
       ]
     },
     "zhao_hen": {
@@ -17016,6 +20530,13 @@
       ],
       "events": [
         "evt_song_0003"
+      ],
+      "relations": [
+        {
+          "to": "kou_zhun",
+          "type": "colleague",
+          "desc": "同为song朝人物，共同参与历史事件"
+        }
       ]
     },
     "zhao_zhen": {
@@ -17056,6 +20577,13 @@
       ],
       "events": [
         "evt_song_0004"
+      ],
+      "relations": [
+        {
+          "to": "zhao_kuangyin",
+          "type": "child",
+          "desc": "宋仁宗"
+        }
       ]
     },
     "zhao_xu": {
@@ -17096,6 +20624,13 @@
       ],
       "events": [
         "evt_song_0006"
+      ],
+      "relations": [
+        {
+          "to": "zhao_zhen",
+          "type": "child",
+          "desc": "宋神宗"
+        }
       ]
     },
     "zhao_gou": {
@@ -17151,6 +20686,18 @@
         "evt_song_0013",
         "evt_song_0014",
         "evt_song_0015"
+      ],
+      "relations": [
+        {
+          "to": "qin_hui",
+          "type": "monarch",
+          "desc": "君臣，秦桧为相"
+        },
+        {
+          "to": "yue_fei",
+          "type": "monarch",
+          "desc": "君臣，杀害岳飞"
+        }
       ]
     },
     "zhao_kuo": {
@@ -17195,7 +20742,14 @@
           "s": "五国城，享年五十四岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_xu",
+          "type": "child",
+          "desc": "宋哲宗"
+        }
+      ]
     },
     "zhao_huan": {
       "id": "zhao_huan",
@@ -17241,6 +20795,13 @@
       ],
       "events": [
         "evt_song_0010"
+      ],
+      "relations": [
+        {
+          "to": "zhao_kuo",
+          "type": "child",
+          "desc": "宋徽宗"
+        }
       ]
     },
     "zhao_shi": {
@@ -17273,7 +20834,14 @@
           "s": "陆秀夫背之殉国，宋朝灭亡"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_huan",
+          "type": "child",
+          "desc": "宋钦宗"
+        }
+      ]
     },
     "kou_zhun": {
       "id": "kou_zhun",
@@ -17319,6 +20887,13 @@
       ],
       "events": [
         "evt_song_0003"
+      ],
+      "relations": [
+        {
+          "to": "zhao_hen",
+          "type": "colleague",
+          "desc": "同为song朝人物，共同参与历史事件"
+        }
       ]
     },
     "fan_zhongyan": {
@@ -17363,7 +20938,14 @@
           "s": "享年六十四岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_zhen",
+          "type": "subject",
+          "desc": "范仲淹"
+        }
+      ]
     },
     "wang_anshi": {
       "id": "wang_anshi",
@@ -17407,7 +20989,14 @@
           "s": "享年六十六岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_xu",
+          "type": "subject",
+          "desc": "王安石"
+        }
+      ]
     },
     "sima_guang": {
       "id": "sima_guang",
@@ -17451,7 +21040,14 @@
           "s": "享年六十八岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_xu",
+          "type": "subject",
+          "desc": "司马光"
+        }
+      ]
     },
     "ouyang_xiu": {
       "id": "ouyang_xiu",
@@ -17489,7 +21085,14 @@
           "s": "享年六十六岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_zhen",
+          "type": "subject",
+          "desc": "欧阳修"
+        }
+      ]
     },
     "su_shi": {
       "id": "su_shi",
@@ -17535,6 +21138,13 @@
       ],
       "events": [
         "evt_song_0007"
+      ],
+      "relations": [
+        {
+          "to": "zhao_xu",
+          "type": "subject",
+          "desc": "苏轼"
+        }
       ]
     },
     "su_zhe": {
@@ -17573,7 +21183,14 @@
           "s": "享年七十四岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "su_shi",
+          "type": "sibling",
+          "desc": "苏辙"
+        }
+      ]
     },
     "li_qingzhao": {
       "id": "li_qingzhao",
@@ -17617,7 +21234,14 @@
           "s": "享年约七十二岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_huan",
+          "type": "subject",
+          "desc": "李清照"
+        }
+      ]
     },
     "xin_qiji": {
       "id": "xin_qiji",
@@ -17655,7 +21279,14 @@
           "s": "享年六十八岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_huan",
+          "type": "subject",
+          "desc": "辛弃疾"
+        }
+      ]
     },
     "yue_fei": {
       "id": "yue_fei",
@@ -17709,6 +21340,18 @@
         "evt_song_0012",
         "evt_song_0013",
         "evt_song_0014"
+      ],
+      "relations": [
+        {
+          "to": "zhao_gou",
+          "type": "subject",
+          "desc": "大将，被秦桧所害"
+        },
+        {
+          "to": "qin_hui",
+          "type": "enemy",
+          "desc": "被秦桧以莫须有罪名杀害"
+        }
       ]
     },
     "han_shizhong": {
@@ -17753,7 +21396,14 @@
           "s": "享年六十三岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_gou",
+          "type": "subject",
+          "desc": "韩世忠"
+        }
+      ]
     },
     "wen_tianxiang": {
       "id": "wen_tianxiang",
@@ -17803,7 +21453,14 @@
           "s": "元大都，享年四十七岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_gou",
+          "type": "subject",
+          "desc": "文天祥"
+        }
+      ]
     },
     "bao_zheng": {
       "id": "bao_zheng",
@@ -17843,6 +21500,13 @@
       ],
       "events": [
         "evt_song_0005"
+      ],
+      "relations": [
+        {
+          "to": "zhao_zhen",
+          "type": "subject",
+          "desc": "包拯"
+        }
       ]
     },
     "shen_kuo": {
@@ -17887,7 +21551,14 @@
           "s": "享年六十五岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_xu",
+          "type": "subject",
+          "desc": "沈括"
+        }
+      ]
     },
     "bi_sheng": {
       "id": "bi_sheng",
@@ -17919,7 +21590,14 @@
           "s": "享年约七十九岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_xu",
+          "type": "subject",
+          "desc": "毕昇"
+        }
+      ]
     },
     "qin_hui": {
       "id": "qin_hui",
@@ -17974,6 +21652,13 @@
         "evt_song_0013",
         "evt_song_0014",
         "evt_song_0015"
+      ],
+      "relations": [
+        {
+          "to": "zhao_gou",
+          "type": "subject",
+          "desc": "宰相，害岳飞"
+        }
       ]
     },
     "cai_jing": {
@@ -18012,7 +21697,14 @@
           "s": "流放途中，六贼之首"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_huan",
+          "type": "subject",
+          "desc": "蔡京"
+        }
+      ]
     },
     "lu_xiufu": {
       "id": "lu_xiufu",
@@ -18050,7 +21742,14 @@
           "s": "背负帝昺殉国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_gou",
+          "type": "subject",
+          "desc": "陆秀夫"
+        }
+      ]
     },
     "zhang_zeduan": {
       "id": "zhang_zeduan",
@@ -18088,7 +21787,14 @@
           "s": "享年约六十岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_huan",
+          "type": "subject",
+          "desc": "张择端"
+        }
+      ]
     },
     "liu_yong": {
       "id": "liu_yong",
@@ -18126,7 +21832,14 @@
           "s": "享年约七十岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_zhen",
+          "type": "subject",
+          "desc": "柳永"
+        }
+      ]
     },
     "tie_muzhen": {
       "id": "tie_muzhen",
@@ -18179,6 +21892,13 @@
       "events": [
         "evt_yuan_0001",
         "evt_yuan_0002"
+      ],
+      "relations": [
+        {
+          "to": "wo_kuotai",
+          "type": "parent",
+          "desc": "铁木真"
+        }
       ]
     },
     "wo_kuotai": {
@@ -18225,6 +21945,13 @@
       ],
       "events": [
         "evt_yuan_0003"
+      ],
+      "relations": [
+        {
+          "to": "tie_muzhen",
+          "type": "child",
+          "desc": "窝阔台"
+        }
       ]
     },
     "hubilie": {
@@ -18281,6 +22008,13 @@
         "evt_yuan_0007",
         "evt_yuan_0008",
         "evt_yuan_0009"
+      ],
+      "relations": [
+        {
+          "to": "wo_kuotai",
+          "type": "child",
+          "desc": "忽必烈"
+        }
       ]
     },
     "yelv_chucai": {
@@ -18325,7 +22059,14 @@
           "s": "遭乃马真氏猜忌"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "耶律楚材"
+        }
+      ]
     },
     "tuotuo": {
       "id": "tuotuo",
@@ -18377,6 +22118,13 @@
       ],
       "events": [
         "evt_yuan_0012"
+      ],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "脱脱"
+        }
       ]
     },
     "guan_hanqing": {
@@ -18421,7 +22169,14 @@
           "s": "年约六十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "关汉卿"
+        }
+      ]
     },
     "ma_zhiyuan": {
       "id": "ma_zhiyuan",
@@ -18471,7 +22226,14 @@
           "s": "年约七十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "马致远"
+        }
+      ]
     },
     "wang_shipu": {
       "id": "wang_shipu",
@@ -18503,7 +22265,14 @@
           "s": "约大德年间"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "王实甫"
+        }
+      ]
     },
     "bai_pu": {
       "id": "bai_pu",
@@ -18547,7 +22316,14 @@
           "s": "年约八十"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "白朴"
+        }
+      ]
     },
     "zheng_guangzu": {
       "id": "zheng_guangzu",
@@ -18585,7 +22361,14 @@
           "s": "火葬西湖"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "郑光祖"
+        }
+      ]
     },
     "zhao_mengfu": {
       "id": "zhao_mengfu",
@@ -18629,7 +22412,14 @@
           "s": "年六十九"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "赵孟頫"
+        }
+      ]
     },
     "guo_shoujing": {
       "id": "guo_shoujing",
@@ -18679,7 +22469,14 @@
           "s": "年八十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "郭守敬"
+        }
+      ]
     },
     "huang_daopo": {
       "id": "huang_daopo",
@@ -18723,7 +22520,14 @@
           "s": "乡人立祠祭祀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "黄道婆"
+        }
+      ]
     },
     "ni_zan": {
       "id": "ni_zan",
@@ -18767,7 +22571,14 @@
           "s": "年七十四"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "倪瓒"
+        }
+      ]
     },
     "huang_gongwang": {
       "id": "huang_gongwang",
@@ -18805,7 +22616,14 @@
           "s": "年八十六"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "黄公望"
+        }
+      ]
     },
     "wu_zhen": {
       "id": "wu_zhen",
@@ -18843,7 +22661,14 @@
           "s": "年七十五"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "吴镇"
+        }
+      ]
     },
     "wang_meng": {
       "id": "wang_meng",
@@ -18887,7 +22712,14 @@
           "s": "胡惟庸案牵连"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "王蒙"
+        }
+      ]
     },
     "liu_bingzhong": {
       "id": "liu_bingzhong",
@@ -18937,7 +22769,14 @@
           "s": "年五十九"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "刘秉忠"
+        }
+      ]
     },
     "bo_yan": {
       "id": "bo_yan",
@@ -18981,7 +22820,14 @@
           "s": "忽必烈崩后"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "伯颜"
+        }
+      ]
     },
     "hong_fuchu": {
       "id": "hong_fuchu",
@@ -19019,7 +22865,14 @@
           "s": "元朝初年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "hubilie",
+          "type": "subject",
+          "desc": "洪福处"
+        }
+      ]
     },
     "zhu_yuanzhang": {
       "id": "zhu_yuanzhang",
@@ -19079,6 +22932,28 @@
         "evt_ming_0001",
         "evt_ming_0002",
         "evt_ming_0003"
+      ],
+      "relations": [
+        {
+          "to": "zhu_di",
+          "type": "parent",
+          "desc": "父子，朱棣为朱元璋四子"
+        },
+        {
+          "to": "liu_ji",
+          "type": "monarch",
+          "desc": "君臣，刘基为谋士"
+        },
+        {
+          "to": "xu_da",
+          "type": "monarch",
+          "desc": "君臣，徐达为大将"
+        },
+        {
+          "to": "chang_yuchun",
+          "type": "monarch",
+          "desc": "君臣"
+        }
       ]
     },
     "zhu_di": {
@@ -19134,6 +23009,18 @@
         "evt_ming_0005",
         "evt_ming_0006",
         "evt_ming_0007"
+      ],
+      "relations": [
+        {
+          "to": "zhu_yuanzhang",
+          "type": "child",
+          "desc": "父子，靖难之役"
+        },
+        {
+          "to": "zheng_he",
+          "type": "monarch",
+          "desc": "君臣，派郑和下西洋"
+        }
       ]
     },
     "zhu_yunwen": {
@@ -19174,6 +23061,13 @@
       ],
       "events": [
         "evt_ming_0004"
+      ],
+      "relations": [
+        {
+          "to": "zhu_di",
+          "type": "colleague",
+          "desc": "同为ming朝人物，共同参与历史事件"
+        }
       ]
     },
     "zhu_gaozhi": {
@@ -19208,6 +23102,13 @@
       ],
       "events": [
         "evt_ming_0008"
+      ],
+      "relations": [
+        {
+          "to": "zhu_zhanyi",
+          "type": "colleague",
+          "desc": "同为ming朝人物，共同参与历史事件"
+        }
       ]
     },
     "zhu_zhanyi": {
@@ -19248,6 +23149,13 @@
       ],
       "events": [
         "evt_ming_0008"
+      ],
+      "relations": [
+        {
+          "to": "zhu_gaozhi",
+          "type": "colleague",
+          "desc": "同为ming朝人物，共同参与历史事件"
+        }
       ]
     },
     "zhu_qizhen": {
@@ -19295,6 +23203,13 @@
       "events": [
         "evt_ming_0009",
         "evt_ming_0011"
+      ],
+      "relations": [
+        {
+          "to": "yu_qian",
+          "type": "colleague",
+          "desc": "同为ming朝人物，共同参与历史事件"
+        }
       ]
     },
     "zhu_houzhao": {
@@ -19335,6 +23250,13 @@
       ],
       "events": [
         "evt_ming_0013"
+      ],
+      "relations": [
+        {
+          "to": "zhu_di",
+          "type": "child",
+          "desc": "明武宗"
+        }
       ]
     },
     "zhu_houzong": {
@@ -19376,6 +23298,13 @@
       "events": [
         "evt_ming_0014",
         "evt_ming_0016"
+      ],
+      "relations": [
+        {
+          "to": "hai_rui",
+          "type": "colleague",
+          "desc": "同为ming朝人物，共同参与历史事件"
+        }
       ]
     },
     "zhu_yijun": {
@@ -19417,6 +23346,13 @@
       "events": [
         "evt_ming_0017",
         "evt_ming_0018"
+      ],
+      "relations": [
+        {
+          "to": "zhu_houzhao",
+          "type": "child",
+          "desc": "明神宗"
+        }
       ]
     },
     "zhu_youjian": {
@@ -19451,6 +23387,13 @@
       ],
       "events": [
         "evt_ming_0020"
+      ],
+      "relations": [
+        {
+          "to": "zhu_yijun",
+          "type": "child",
+          "desc": "崇祯帝"
+        }
       ]
     },
     "liu_ji": {
@@ -19489,7 +23432,14 @@
           "s": "享年六十五岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_yuanzhang",
+          "type": "subject",
+          "desc": "刘伯温"
+        }
+      ]
     },
     "xu_da": {
       "id": "xu_da",
@@ -19529,6 +23479,13 @@
       ],
       "events": [
         "evt_ming_0002"
+      ],
+      "relations": [
+        {
+          "to": "zhu_yuanzhang",
+          "type": "colleague",
+          "desc": "同为ming朝人物，共同参与历史事件"
+        }
       ]
     },
     "chang_yuchun": {
@@ -19567,7 +23524,14 @@
           "s": "凯旋途中，享年四十岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_yuanzhang",
+          "type": "subject",
+          "desc": "常遇春"
+        }
+      ]
     },
     "yu_qian": {
       "id": "yu_qian",
@@ -19608,6 +23572,13 @@
       "events": [
         "evt_ming_0010",
         "evt_ming_0011"
+      ],
+      "relations": [
+        {
+          "to": "zhu_qizhen",
+          "type": "colleague",
+          "desc": "同为ming朝人物，共同参与历史事件"
+        }
       ]
     },
     "wang_yangming": {
@@ -19652,7 +23623,14 @@
           "s": "享年五十七岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_houzhao",
+          "type": "subject",
+          "desc": "王阳明"
+        }
+      ]
     },
     "zhang_juzheng": {
       "id": "zhang_juzheng",
@@ -19690,7 +23668,14 @@
           "s": "享年五十八岁，后被抄家"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_yijun",
+          "type": "subject",
+          "desc": "张居正"
+        }
+      ]
     },
     "hai_rui": {
       "id": "hai_rui",
@@ -19730,6 +23715,13 @@
       ],
       "events": [
         "evt_ming_0016"
+      ],
+      "relations": [
+        {
+          "to": "zhu_houzong",
+          "type": "colleague",
+          "desc": "同为ming朝人物，共同参与历史事件"
+        }
       ]
     },
     "qi_jiguang": {
@@ -19774,7 +23766,14 @@
           "s": "享年六十岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_yijun",
+          "type": "subject",
+          "desc": "戚继光"
+        }
+      ]
     },
     "zheng_he": {
       "id": "zheng_he",
@@ -19820,6 +23819,13 @@
       ],
       "events": [
         "evt_ming_0006"
+      ],
+      "relations": [
+        {
+          "to": "zhu_di",
+          "type": "subject",
+          "desc": "太监，七下西洋"
+        }
       ]
     },
     "li_shizhen": {
@@ -19864,7 +23870,14 @@
           "s": "享年七十五岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_yijun",
+          "type": "subject",
+          "desc": "李时珍"
+        }
+      ]
     },
     "song_yingxing": {
       "id": "song_yingxing",
@@ -19902,7 +23915,14 @@
           "s": "隐居不仕"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_yijun",
+          "type": "subject",
+          "desc": "宋应星"
+        }
+      ]
     },
     "xu_xiake": {
       "id": "xu_xiake",
@@ -19940,7 +23960,14 @@
           "s": "享年五十四岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_yijun",
+          "type": "subject",
+          "desc": "徐霞客"
+        }
+      ]
     },
     "tang_yin": {
       "id": "tang_yin",
@@ -19978,7 +24005,14 @@
           "s": "享年五十四岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_houzhao",
+          "type": "subject",
+          "desc": "唐寅"
+        }
+      ]
     },
     "wen_zhengming": {
       "id": "wen_zhengming",
@@ -20010,7 +24044,14 @@
           "s": "享年九十岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_houzhao",
+          "type": "subject",
+          "desc": "文徵明"
+        }
+      ]
     },
     "zhu_yunming": {
       "id": "zhu_yunming",
@@ -20036,7 +24077,14 @@
           "s": "享年六十七岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_houzhao",
+          "type": "subject",
+          "desc": "祝允明"
+        }
+      ]
     },
     "dong_qichang": {
       "id": "dong_qichang",
@@ -20068,7 +24116,14 @@
           "s": "享年八十二岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_yijun",
+          "type": "subject",
+          "desc": "董其昌"
+        }
+      ]
     },
     "zheng_chenggong": {
       "id": "zheng_chenggong",
@@ -20106,7 +24161,14 @@
           "s": "台湾，享年三十九岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_youjian",
+          "type": "subject",
+          "desc": "郑成功"
+        }
+      ]
     },
     "yuan_chonghuan": {
       "id": "yuan_chonghuan",
@@ -20144,7 +24206,14 @@
           "s": "崇祯凌迟处死"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_youjian",
+          "type": "subject",
+          "desc": "袁崇焕"
+        }
+      ]
     },
     "shi_kefa": {
       "id": "shi_kefa",
@@ -20176,7 +24245,14 @@
           "s": "拒降遇害"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhu_youjian",
+          "type": "subject",
+          "desc": "史可法"
+        }
+      ]
     },
     "li_zhi": {
       "id": "li_zhi",
@@ -20214,7 +24290,19 @@
           "s": "狱中，享年七十六岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_shimin",
+          "type": "child",
+          "desc": "父子，李治为李世民之子"
+        },
+        {
+          "to": "wu_zetian",
+          "type": "spouse",
+          "desc": "夫妻，武则天为李治皇后"
+        }
+      ]
     },
     "zhao_yun_song": {
       "id": "zhao_yun_song",
@@ -20258,7 +24346,14 @@
           "s": "享年六十岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_kuangyin",
+          "type": "subject",
+          "desc": "赵普"
+        }
+      ]
     },
     "zhao_yun": {
       "id": "zhao_yun",
@@ -20320,7 +24415,29 @@
           "s": "享年约七十一"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "liu_bei",
+          "type": "subject",
+          "desc": "长坂坡救主，忠义两全"
+        },
+        {
+          "to": "zhu_ge_liang",
+          "type": "colleague",
+          "desc": "共辅刘备"
+        },
+        {
+          "to": "guan_yu",
+          "type": "colleague",
+          "desc": "五虎上将"
+        },
+        {
+          "to": "zhang_fei",
+          "type": "colleague",
+          "desc": "五虎上将"
+        }
+      ]
     },
     "nuerhachi": {
       "id": "nuerhachi",
@@ -20364,7 +24481,14 @@
           "s": "被袁崇焕击败，病逝"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "huang_taiji",
+          "type": "parent",
+          "desc": "父子，皇太极为努尔哈赤第八子"
+        }
+      ]
     },
     "huang_taiji": {
       "id": "huang_taiji",
@@ -20408,7 +24532,19 @@
           "s": "享年五十二岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "nuerhachi",
+          "type": "child",
+          "desc": "父子"
+        },
+        {
+          "to": "shunzhi",
+          "type": "parent",
+          "desc": "父子，顺治为皇太极之子"
+        }
+      ]
     },
     "shunzhi": {
       "id": "shunzhi",
@@ -20456,6 +24592,18 @@
         "evt_qing_0001",
         "evt_qing_0002",
         "evt_qing_0003"
+      ],
+      "relations": [
+        {
+          "to": "huang_taiji",
+          "type": "child",
+          "desc": "父子"
+        },
+        {
+          "to": "kangxi",
+          "type": "parent",
+          "desc": "父子，康熙为顺治之子"
+        }
       ]
     },
     "kangxi": {
@@ -20518,6 +24666,18 @@
         "evt_qing_0008",
         "evt_qing_0009",
         "evt_qing_0010"
+      ],
+      "relations": [
+        {
+          "to": "shunzhi",
+          "type": "child",
+          "desc": "父子"
+        },
+        {
+          "to": "yongzheng",
+          "type": "parent",
+          "desc": "父子，雍正为康熙之子"
+        }
       ]
     },
     "yongzheng": {
@@ -20566,6 +24726,18 @@
         "evt_qing_0011",
         "evt_qing_0012",
         "evt_qing_0013"
+      ],
+      "relations": [
+        {
+          "to": "kangxi",
+          "type": "child",
+          "desc": "父子"
+        },
+        {
+          "to": "qianlong",
+          "type": "parent",
+          "desc": "父子，乾隆为雍正之子"
+        }
       ]
     },
     "qianlong": {
@@ -20615,6 +24787,18 @@
         "evt_qing_0015",
         "evt_qing_0016",
         "evt_qing_0017"
+      ],
+      "relations": [
+        {
+          "to": "yongzheng",
+          "type": "child",
+          "desc": "父子"
+        },
+        {
+          "to": "jiaqing",
+          "type": "parent",
+          "desc": "父子，嘉庆为乾隆之子"
+        }
       ]
     },
     "jiaqing": {
@@ -20661,6 +24845,18 @@
       ],
       "events": [
         "evt_qing_0018"
+      ],
+      "relations": [
+        {
+          "to": "qianlong",
+          "type": "child",
+          "desc": "父子"
+        },
+        {
+          "to": "daoguang",
+          "type": "parent",
+          "desc": "父子"
+        }
       ]
     },
     "daoguang": {
@@ -20705,7 +24901,19 @@
           "s": "享年六十九岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "jiaqing",
+          "type": "child",
+          "desc": "父子"
+        },
+        {
+          "to": "xianfeng",
+          "type": "parent",
+          "desc": "父子"
+        }
+      ]
     },
     "xianfeng": {
       "id": "xianfeng",
@@ -20749,7 +24957,24 @@
           "s": "承德避暑山庄"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "daoguang",
+          "type": "child",
+          "desc": "父子"
+        },
+        {
+          "to": "tongzhi",
+          "type": "parent",
+          "desc": "父子"
+        },
+        {
+          "to": "cixi",
+          "type": "spouse",
+          "desc": "夫妻，慈禧为咸丰妃嫔"
+        }
+      ]
     },
     "tongzhi": {
       "id": "tongzhi",
@@ -20787,7 +25012,19 @@
           "s": "享年十九岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xianfeng",
+          "type": "child",
+          "desc": "父子"
+        },
+        {
+          "to": "cixi",
+          "type": "parent",
+          "desc": "母子，慈禧为同治生母"
+        }
+      ]
     },
     "guangxu": {
       "id": "guangxu",
@@ -20825,7 +25062,14 @@
           "s": "享年三十八岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cixi",
+          "type": "subject",
+          "desc": "被慈禧囚禁"
+        }
+      ]
     },
     "panyi": {
       "id": "panyi",
@@ -20875,7 +25119,14 @@
           "s": "享年六十一岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shunzhi",
+          "type": "subject",
+          "desc": "顺治帝"
+        }
+      ]
     },
     "cixi": {
       "id": "cixi",
@@ -20925,7 +25176,24 @@
           "s": "享年七十四岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xianfeng",
+          "type": "spouse",
+          "desc": "咸丰妃嫔"
+        },
+        {
+          "to": "tongzhi",
+          "type": "parent",
+          "desc": "母子"
+        },
+        {
+          "to": "guangxu",
+          "type": "monarch",
+          "desc": "垂帘听政，囚禁光绪"
+        }
+      ]
     },
     "duoergun": {
       "id": "duoergun",
@@ -20963,7 +25231,14 @@
           "s": "坠马受伤"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shunzhi",
+          "type": "subject",
+          "desc": "多尔衮"
+        }
+      ]
     },
     "aobai": {
       "id": "aobai",
@@ -20995,7 +25270,14 @@
           "s": "康熙智擒鳌拜"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "kangxi",
+          "type": "subject",
+          "desc": "鳌拜"
+        }
+      ]
     },
     "suoni": {
       "id": "suoni",
@@ -21027,7 +25309,14 @@
           "s": "享年六十七岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "kangxi",
+          "type": "subject",
+          "desc": "索尼"
+        }
+      ]
     },
     "mingzhu": {
       "id": "mingzhu",
@@ -21065,7 +25354,14 @@
           "s": "享年七十三岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "kangxi",
+          "type": "subject",
+          "desc": "明珠"
+        }
+      ]
     },
     "zhang_tingyu": {
       "id": "zhang_tingyu",
@@ -21103,7 +25399,14 @@
           "s": "享年八十四岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "kangxi",
+          "type": "subject",
+          "desc": "张廷玉"
+        }
+      ]
     },
     "heshen": {
       "id": "heshen",
@@ -21141,7 +25444,14 @@
           "s": "嘉庆帝查办"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qianlong",
+          "type": "subject",
+          "desc": "和珅"
+        }
+      ]
     },
     "ji_xiaolan": {
       "id": "ji_xiaolan",
@@ -21179,7 +25489,14 @@
           "s": "享年八十二岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qianlong",
+          "type": "subject",
+          "desc": "纪晓岚"
+        }
+      ]
     },
     "liu_yong_qing": {
       "id": "liu_yong_qing",
@@ -21211,7 +25528,14 @@
           "s": "享年八十六岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qianlong",
+          "type": "subject",
+          "desc": "刘墉"
+        }
+      ]
     },
     "lin_zexu": {
       "id": "lin_zexu",
@@ -21255,7 +25579,14 @@
           "s": "享年六十六岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "daoguang",
+          "type": "subject",
+          "desc": "林则徐"
+        }
+      ]
     },
     "zeng_guofan": {
       "id": "zeng_guofan",
@@ -21299,7 +25630,14 @@
           "s": "享年六十一岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xianfeng",
+          "type": "subject",
+          "desc": "曾国藩"
+        }
+      ]
     },
     "li_hongzhang": {
       "id": "li_hongzhang",
@@ -21343,7 +25681,14 @@
           "s": "签订《辛丑条约》后"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "tongzhi",
+          "type": "subject",
+          "desc": "李鸿章"
+        }
+      ]
     },
     "zuo_zongtang": {
       "id": "zuo_zongtang",
@@ -21387,7 +25732,14 @@
           "s": "享年七十四岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "tongzhi",
+          "type": "subject",
+          "desc": "左宗棠"
+        }
+      ]
     },
     "zhang_zhidong": {
       "id": "zhang_zhidong",
@@ -21425,7 +25777,14 @@
           "s": "享年七十二岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "guangxu",
+          "type": "subject",
+          "desc": "张之洞"
+        }
+      ]
     },
     "yuan_shikai": {
       "id": "yuan_shikai",
@@ -21475,7 +25834,14 @@
           "s": "享年五十七岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "guangxu",
+          "type": "subject",
+          "desc": "袁世凯"
+        }
+      ]
     },
     "cao_xueqin": {
       "id": "cao_xueqin",
@@ -21513,7 +25879,14 @@
           "s": "享年约四十八岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qianlong",
+          "type": "subject",
+          "desc": "曹雪芹"
+        }
+      ]
     },
     "nalan_xingde": {
       "id": "nalan_xingde",
@@ -21545,7 +25918,14 @@
           "s": "享年三十一岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "kangxi",
+          "type": "subject",
+          "desc": "纳兰性德"
+        }
+      ]
     },
     "pu_songling": {
       "id": "pu_songling",
@@ -21577,7 +25957,14 @@
           "s": "享年七十六岁"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "kangxi",
+          "type": "subject",
+          "desc": "蒲松龄"
+        }
+      ]
     },
     "qi_huanong": {
       "id": "qi_huanong",
@@ -21615,7 +26002,14 @@
           "s": "齐国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "guan_zhong",
+          "type": "monarch",
+          "desc": "齐桓公"
+        }
+      ]
     },
     "jin_wengong": {
       "id": "jin_wengong",
@@ -21653,7 +26047,14 @@
           "s": "晋国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "jie_zitui",
+          "type": "monarch",
+          "desc": "晋文公"
+        }
+      ]
     },
     "chu_zhuangwang": {
       "id": "chu_zhuangwang",
@@ -21691,7 +26092,14 @@
           "s": "楚国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "confucius",
+          "type": "colleague",
+          "desc": "春秋五霸之一"
+        }
+      ]
     },
     "yue_goujian": {
       "id": "yue_goujian",
@@ -21735,7 +26143,24 @@
           "s": "越国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "wu_fuchai",
+          "type": "rival",
+          "desc": "吴越争霸"
+        },
+        {
+          "to": "fan_li",
+          "type": "subject",
+          "desc": "越王勾践"
+        },
+        {
+          "to": "wen_zhong",
+          "type": "subject",
+          "desc": "越王勾践"
+        }
+      ]
     },
     "wu_fuchai": {
       "id": "wu_fuchai",
@@ -21767,7 +26192,14 @@
           "s": "自杀"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yue_goujian",
+          "type": "rival",
+          "desc": "吴越争霸"
+        }
+      ]
     },
     "xi_shi": {
       "id": "xi_shi",
@@ -21799,7 +26231,14 @@
           "s": "与范蠡隐居"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "fan_li",
+          "type": "spouse",
+          "desc": "范蠡之妻"
+        }
+      ]
     },
     "fan_li": {
       "id": "fan_li",
@@ -21839,6 +26278,18 @@
       ],
       "events": [
         "evt_chunqiu_0018"
+      ],
+      "relations": [
+        {
+          "to": "yue_goujian",
+          "type": "subject",
+          "desc": "辅佐越王勾践"
+        },
+        {
+          "to": "xi_shi",
+          "type": "spouse",
+          "desc": "西施之夫"
+        }
       ]
     },
     "wen_zhong": {
@@ -21877,7 +26328,14 @@
           "s": "勾践赐死"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yue_goujian",
+          "type": "subject",
+          "desc": "辅佐越王勾践"
+        }
+      ]
     },
     "jie_zitui": {
       "id": "jie_zitui",
@@ -21909,7 +26367,14 @@
           "s": "绵山"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "jin_wengong",
+          "type": "subject",
+          "desc": "晋文公臣子"
+        }
+      ]
     },
     "zheng_zhuanggong": {
       "id": "zheng_zhuanggong",
@@ -21941,7 +26406,14 @@
           "s": "郑国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zi_chan",
+          "type": "monarch",
+          "desc": "郑庄公"
+        }
+      ]
     },
     "song_xianggong": {
       "id": "song_xianggong",
@@ -21973,7 +26445,14 @@
           "s": "宋国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi_huanong",
+          "type": "colleague",
+          "desc": "春秋五霸之一"
+        }
+      ]
     },
     "yu_rang": {
       "id": "yu_rang",
@@ -22005,7 +26484,24 @@
           "s": "士为知己者死"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "guan_zhong",
+          "type": "colleague",
+          "desc": "同为chunqiu朝人物"
+        },
+        {
+          "to": "yan_ying",
+          "type": "colleague",
+          "desc": "同为chunqiu朝人物"
+        },
+        {
+          "to": "sun_wu",
+          "type": "colleague",
+          "desc": "同为chunqiu朝人物"
+        }
+      ]
     },
     "zhuan_zhu": {
       "id": "zhuan_zhu",
@@ -22037,7 +26533,14 @@
           "s": "吴王侍卫"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "wu_guang",
+          "type": "friend",
+          "desc": "为吴公子光刺王僚"
+        }
+      ]
     },
     "cao_gui": {
       "id": "cao_gui",
@@ -22069,7 +26572,14 @@
           "s": "鲁国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi_huanong",
+          "type": "subject",
+          "desc": "齐鲁长勺之战"
+        }
+      ]
     },
     "xian_gao": {
       "id": "xian_gao",
@@ -22095,7 +26605,14 @@
           "s": "十二头牛犒师"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "mu_gong",
+          "type": "subject",
+          "desc": "秦穆公"
+        }
+      ]
     },
     "zhu_zhiwu": {
       "id": "zhu_zhiwu",
@@ -22121,7 +26638,14 @@
           "s": "夜缒而出"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zheng_zhuanggong",
+          "type": "subject",
+          "desc": "郑国大夫"
+        }
+      ]
     },
     "yu_boya": {
       "id": "yu_boya",
@@ -22153,7 +26677,14 @@
           "s": "摔琴绝弦"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhong_ziqi",
+          "type": "friend",
+          "desc": "知音之交"
+        }
+      ]
     },
     "zhong_ziqi": {
       "id": "zhong_ziqi",
@@ -22185,7 +26716,14 @@
           "s": "俞伯牙摔琴"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yu_boya",
+          "type": "friend",
+          "desc": "知音之交"
+        }
+      ]
     },
     "hu_yan": {
       "id": "hu_yan",
@@ -22223,7 +26761,14 @@
           "s": "晋国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "jin_wengong",
+          "type": "subject",
+          "desc": "晋国大夫"
+        }
+      ]
     },
     "zhao_cui": {
       "id": "zhao_cui",
@@ -22255,7 +26800,14 @@
           "s": "晋国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "jin_wengong",
+          "type": "subject",
+          "desc": "晋国大夫"
+        }
+      ]
     },
     "xian_zhen": {
       "id": "xian_zhen",
@@ -22293,7 +26845,14 @@
           "s": "谢罪"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "jin_wengong",
+          "type": "subject",
+          "desc": "晋国大将"
+        }
+      ]
     },
     "shu_xiang": {
       "id": "shu_xiang",
@@ -22325,7 +26884,14 @@
           "s": "晋国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "jin_wengong",
+          "type": "subject",
+          "desc": "晋国大夫"
+        }
+      ]
     },
     "cheng_ying": {
       "id": "cheng_ying",
@@ -22357,7 +26923,14 @@
           "s": "晋国"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "gongsun_chujiu",
+          "type": "colleague",
+          "desc": "赵氏孤儿"
+        }
+      ]
     },
     "gongsun_chujiu": {
       "id": "gongsun_chujiu",
@@ -22383,7 +26956,14 @@
           "s": "保全赵氏孤儿"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "cheng_ying",
+          "type": "colleague",
+          "desc": "赵氏孤儿"
+        }
+      ]
     },
     "wei_wenhou": {
       "id": "wei_wenhou",
@@ -22421,7 +27001,14 @@
           "s": "魏国强盛"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "li_kui",
+          "type": "monarch",
+          "desc": "魏文侯"
+        }
+      ]
     },
     "zhao_wulingwang": {
       "id": "zhao_wulingwang",
@@ -22465,7 +27052,14 @@
           "s": "长子争位"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "lin_xiangru",
+          "type": "monarch",
+          "desc": "赵武灵王"
+        }
+      ]
     },
     "yan_zhaowang": {
       "id": "yan_zhaowang",
@@ -22503,7 +27097,14 @@
           "s": "燕国强盛"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "yue_yi",
+          "type": "monarch",
+          "desc": "燕昭王"
+        }
+      ]
     },
     "qi_weiwang": {
       "id": "qi_weiwang",
@@ -22547,7 +27148,14 @@
           "s": "在位三十七年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "mengchang",
+          "type": "monarch",
+          "desc": "齐威王"
+        }
+      ]
     },
     "han_zhaohou": {
       "id": "han_zhaohou",
@@ -22585,7 +27193,14 @@
           "s": "在位三十年"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "shen_buhai",
+          "type": "monarch",
+          "desc": "韩昭侯"
+        }
+      ]
     },
     "chu_huaiwang": {
       "id": "chu_huaiwang",
@@ -22623,7 +27238,14 @@
           "s": "楚国由盛转衰"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qu_yuan",
+          "type": "monarch",
+          "desc": "楚怀王"
+        }
+      ]
     },
     "pang_juan": {
       "id": "pang_juan",
@@ -22658,6 +27280,18 @@
       "events": [
         "evt_zhanguo_0005",
         "evt_zhanguo_0006"
+      ],
+      "relations": [
+        {
+          "to": "sun_bin",
+          "type": "colleague",
+          "desc": "同为zhanguo朝人物，共同参与历史事件"
+        },
+        {
+          "to": "tian_ji",
+          "type": "colleague",
+          "desc": "同为zhanguo朝人物，共同参与历史事件"
+        }
       ]
     },
     "tian_ji": {
@@ -22705,6 +27339,18 @@
       "events": [
         "evt_zhanguo_0005",
         "evt_zhanguo_0006"
+      ],
+      "relations": [
+        {
+          "to": "sun_bin",
+          "type": "colleague",
+          "desc": "同为zhanguo朝人物，共同参与历史事件"
+        },
+        {
+          "to": "pang_juan",
+          "type": "colleague",
+          "desc": "同为zhanguo朝人物，共同参与历史事件"
+        }
       ]
     },
     "zou_ji": {
@@ -22743,7 +27389,14 @@
           "s": "田忌出奔"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi_weiwang",
+          "type": "subject",
+          "desc": "邹忌"
+        }
+      ]
     },
     "li_mu_zg": {
       "id": "li_mu_zg",
@@ -22781,7 +27434,14 @@
           "s": "赵王中反间计"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "李牧"
+        }
+      ]
     },
     "xiang_yan": {
       "id": "xiang_yan",
@@ -22813,7 +27473,14 @@
           "s": "王翦六十万大军"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "项燕"
+        }
+      ]
     },
     "feng_huan": {
       "id": "feng_huan",
@@ -22845,7 +27512,14 @@
           "s": "孟尝君复相位"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "mengchang",
+          "type": "subject",
+          "desc": "冯谖"
+        }
+      ]
     },
     "mao_sui": {
       "id": "mao_sui",
@@ -22879,6 +27553,13 @@
       ],
       "events": [
         "evt_zhanguo_0018"
+      ],
+      "relations": [
+        {
+          "to": "pingyuan",
+          "type": "colleague",
+          "desc": "同为zhanguo朝人物，共同参与历史事件"
+        }
       ]
     },
     "tang_ju": {
@@ -22911,7 +27592,14 @@
           "s": "勿以功高自傲"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "唐雎"
+        }
+      ]
     },
     "gan_luo": {
       "id": "gan_luo",
@@ -22943,7 +27631,14 @@
           "s": "十二为相"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "甘罗"
+        }
+      ]
     },
     "cai_ze": {
       "id": "cai_ze",
@@ -22981,7 +27676,14 @@
           "s": "秦统一后"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "蔡泽"
+        }
+      ]
     },
     "feng_ting": {
       "id": "feng_ting",
@@ -23013,7 +27715,14 @@
           "s": "与赵括同死"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qin_shihuang",
+          "type": "subject",
+          "desc": "冯亭"
+        }
+      ]
     },
     "yu_qing": {
       "id": "yu_qing",
@@ -23051,7 +27760,14 @@
           "s": "著《虞氏春秋》"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "xinling",
+          "type": "subject",
+          "desc": "虞卿"
+        }
+      ]
     },
     "chu_long": {
       "id": "chu_long",
@@ -23083,7 +27799,14 @@
           "s": "赵国大臣"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_wulingwang",
+          "type": "subject",
+          "desc": "触龙"
+        }
+      ]
     },
     "zhao_she": {
       "id": "zhao_she",
@@ -23115,7 +27838,14 @@
           "s": "赵国名将"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_wulingwang",
+          "type": "subject",
+          "desc": "赵奢"
+        }
+      ]
     },
     "zhao_kuo_zg": {
       "id": "zhao_kuo_zg",
@@ -23147,7 +27877,14 @@
           "s": "赵军大败"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_she",
+          "type": "child",
+          "desc": "赵括"
+        }
+      ]
     },
     "huang_xie": {
       "id": "huang_xie",
@@ -23185,7 +27922,14 @@
           "s": "楚国政变"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "chu_huaiwang",
+          "type": "subject",
+          "desc": "黄歇"
+        }
+      ]
     },
     "tian_wen": {
       "id": "tian_wen",
@@ -23223,7 +27967,14 @@
           "s": "诸子争立"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "qi_weiwang",
+          "type": "subject",
+          "desc": "田文"
+        }
+      ]
     },
     "zhao_sheng": {
       "id": "zhao_sheng",
@@ -23261,7 +28012,14 @@
           "s": "封于东武城"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "zhao_wulingwang",
+          "type": "subject",
+          "desc": "赵胜"
+        }
+      ]
     },
     "wei_wuji": {
       "id": "wei_wuji",
@@ -23299,7 +28057,14 @@
           "s": "遭魏王猜忌"
         }
       ],
-      "events": []
+      "events": [],
+      "relations": [
+        {
+          "to": "wei_wenhou",
+          "type": "subject",
+          "desc": "魏无忌"
+        }
+      ]
     }
   },
   "meta": {
