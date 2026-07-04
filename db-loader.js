@@ -3,7 +3,7 @@
 
 (function () {
   const CDN_BASE = 'https://cdn.jsdelivr.net/gh/yuxinghexiaoxia/history-atlas-deploy@main';
-  const CACHE_VERSION = 'v=29';
+  const CACHE_VERSION = 'v=30';
   const detailCache = {}; // 已加载的朝代完整数据缓存
 
   async function loadJSON(path) {
@@ -24,6 +24,46 @@
         loadJSON('/data/relMeta.json').catch(() => ({ relMeta: {} })),
       ]);
 
+      // 生成 timeline 数据（从 events 和 persons.life 聚合）
+      const timeline = [];
+      
+      // 从 events 提取
+      Object.entries(eventsData.events || {}).forEach(([id, ev]) => {
+        if (ev.year !== undefined && ev.year !== null) {
+          timeline.push({
+            y: ev.year,
+            t: ev.name || '',
+            s: (ev.description || '').slice(0, 80),
+            type: ev.type === 'war' ? 'war' : 'event',
+            key: ev.type === 'war' || ev.type === 'foundation' || ev.type === 'reform',
+            ev: id,
+            dynasty: ev.dynasty || ''
+          });
+        }
+      });
+      
+      // 从 persons.life 提取
+      Object.entries(index.persons || {}).forEach(([pid, p]) => {
+        if (p.life && Array.isArray(p.life)) {
+          p.life.forEach(node => {
+            if (node.y !== undefined && node.y !== null) {
+              timeline.push({
+                y: node.y,
+                t: node.t || '',
+                s: node.s || '',
+                type: 'person',
+                key: !!node.key,
+                pr: pid,
+                dynasty: p.dynasty || ''
+              });
+            }
+          });
+        }
+      });
+      
+      // 按年份排序
+      timeline.sort((a, b) => a.y - b.y);
+
       // 设置全局 DB
       window.DB = {
         persons: index.persons || {},
@@ -32,7 +72,7 @@
         dynasties: dynastiesData.dynasties || [],
         dynastyInfo: dynastiesData.dynastyInfo || {},
         relMeta: relMetaData.relMeta || {},
-        timeline: [],
+        timeline: timeline,
         hotPersons: Object.keys(index.persons || {}).slice(0, 8),
         hotEvents: Object.keys(eventsData.events || {}).slice(0, 8),
 
