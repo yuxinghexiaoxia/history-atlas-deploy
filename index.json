@@ -42099,5 +42099,711 @@
       ],
       "coords": null
     }
+  },
+  "dynasties": {
+    "shanggu": {
+      "id": "shanggu",
+      "name": "上古",
+      "shortName": "上古",
+      "period": "约前3000-前2070",
+      "startYear": -3000,
+      "endYear": -2070,
+      "capital": "无固定都城",
+      "modernLocation": "黄河流域",
+      "description": "上古时代是中华民族文明的起源与奠基时期，涵盖了三皇五帝的传说时代。黄帝与炎帝在阪泉之战后结盟，被后世尊为华夏民族的人文始祖，开创了部落联盟的政治格局。此后颛顼、帝喾、尧、舜相继为帝，实行以德才为标准的禅让制，推举贤能治理天下。大禹治理洪水，划定九州，奠定了早期国家的疆域基础。这一时期形成了原始农耕文明，创造了早期文字符号、天文历法与祭祀制度，是中华文明的文化认同源头，对后世政治制度与伦理思想产生了不可磨灭的深远影响。",
+      "founder": "huangdi",
+      "lastRuler": "shun",
+      "keyEvents": [
+        "evt_shanggu_0001",
+        "evt_shanggu_0002",
+        "evt_shanggu_0003",
+        "evt_shanggu_0004"
+      ],
+      "keyPersons": [
+        "huangdi",
+        "yandi",
+        "zhuanxu",
+        "di_ku",
+        "yao",
+        "shun",
+        "gun"
+      ],
+      "keyLocations": [
+        "loc_shanggu_zhuolu",
+        "loc_shanggu_banquan",
+        "loc_shanggu_shouqiu",
+        "loc_shanggu_pingyang",
+        "loc_shanggu_puyang"
+      ]
+    },
+    "xia": {
+      "id": "xia",
+      "name": "夏",
+      "shortName": "夏",
+      "period": "约前2070-前1600",
+      "startYear": -2070,
+      "endYear": -1600,
+      "capital": "阳城、斟鄩",
+      "modernLocation": "河南登封、偃师一带",
+      "description": "夏朝是中国传统史书记载的第一个世袭制王朝，由大禹之子启建立，标志着原始社会禅让制向奴隶社会世袭制的历史性转变。夏朝共传十四代、十七后，延续约四百七十年。夏朝确立了初步的国家制度，建立了常备军队、刑法和监狱，铸造了早期青铜礼器。二里头遗址被认为是夏代晚期都城，出土了青铜爵、铃、牌饰和大型宫殿建筑基址，证实了夏代文明的存在。夏桀暴虐无道，宠信妹喜，残害忠良，商汤奉天命起兵伐桀，夏朝灭亡，商朝建立。夏朝虽然史料有限，但二里头文化的考古发现为研究夏代历史提供了重要实物依据。",
+      "founder": "yu",
+      "lastRuler": "qi",
+      "keyEvents": [
+        "evt_xia_0006",
+        "evt_xia_0007",
+        "evt_xia_0008",
+        "evt_xia_0009"
+      ],
+      "keyPersons": [
+        "yu",
+        "qi"
+      ],
+      "keyLocations": [
+        "loc_xia_yangcheng",
+        "loc_xia_zhenxun",
+        "loc_xia_hua",
+        "loc_xia_juntai",
+        "loc_xia_xia"
+      ]
+    },
+    "shang": {
+      "id": "shang",
+      "name": "商",
+      "shortName": "商",
+      "period": "约前1600-前1046",
+      "startYear": -1600,
+      "endYear": -1046,
+      "capital": "亳、殷",
+      "modernLocation": "河南商丘、安阳一带",
+      "description": "商朝是中国历史上第一个有直接考古文字证实的王朝，因甲骨文与殷墟考古发现而得到确凿证实。商汤灭夏后建立商朝，历经多次迁都，盘庚迁殷后国都稳定下来。商朝青铜铸造工艺高度发达，司母戊鼎、四羊方尊举世闻名。甲骨文是目前发现的中国最早成体系的文字，记录了商王的占卜与祭祀活动。商朝建立了内外服制度，武丁时期国力强盛，妇好率军征战四方。商纣王沉湎酒色、重刑厚敛，宠信妲己，周武王伐纣，商朝灭亡。商朝在政治制度、宗教信仰、青铜文化等方面都达到了相当高的水平，为后世文明发展奠定了重要基础。",
+      "founder": "shang_tang",
+      "lastRuler": "zhou_xin",
+      "keyEvents": [
+        "evt_shang_0011",
+        "evt_shang_0012",
+        "evt_shang_0013",
+        "evt_shang_0014",
+        "evt_shang_0015"
+      ],
+      "keyPersons": [
+        "shang_tang",
+        "yi_yin",
+        "zhou_xin",
+        "bi_gan",
+        "tai_jia",
+        "wo_ding",
+        "tai_geng",
+        "xiao_jia",
+        "yong_ji",
+        "tai_wu"
+      ],
+      "keyLocations": [
+        "loc_shang_yinxu",
+        "loc_shang_chaoge",
+        "loc_shang_bo",
+        "loc_shang_xingtai",
+        "loc_shang_yang"
+      ]
+    },
+    "zhou": {
+      "id": "zhou",
+      "name": "周",
+      "shortName": "周",
+      "period": "前1046-前256",
+      "startYear": -1046,
+      "endYear": -256,
+      "capital": "镐京、洛邑",
+      "modernLocation": "陕西西安、河南洛阳一带",
+      "description": "周朝是中国历史上存续时间最长的王朝，分为西周和东周两个时期。周武王灭商建立西周，实行分封制与宗法制，确立了以血缘关系为纽带的政治体系，奠定了中国封建社会的基础。周公制礼作乐，确立了周代的礼乐文明与道德规范。周平王东迁洛邑后进入东周时期，王室衰微，诸侯争霸。周朝创造了灿烂的文化，产生了《诗经》《尚书》《周易》等经典，孔子推崇的周礼对中华文明产生了极为深远的影响，塑造了儒家思想的核心内容与价值取向。周朝所确立的宗法观念与礼乐制度，深刻影响了此后三千年中国社会的政治伦理与文化传统。",
+      "founder": "king_wu",
+      "lastRuler": "king_you",
+      "keyEvents": [
+        "evt_zhou_0026",
+        "evt_zhou_0027",
+        "evt_zhou_0028",
+        "evt_zhou_0029",
+        "evt_zhou_0030"
+      ],
+      "keyPersons": [
+        "king_wen",
+        "king_wu",
+        "zhou_dan",
+        "king_cheng",
+        "king_kang",
+        "king_mu",
+        "king_li",
+        "king_xuan",
+        "king_you"
+      ],
+      "keyLocations": [
+        "loc_zhou_haojing",
+        "loc_zhou_luoyi",
+        "loc_zhou_qishan",
+        "loc_zhou_feng",
+        "loc_zhou_chengzhou"
+      ]
+    },
+    "chunqiu": {
+      "id": "chunqiu",
+      "name": "春秋",
+      "shortName": "春秋",
+      "period": "前770-前476",
+      "startYear": -770,
+      "endYear": -476,
+      "capital": "洛邑（东周）",
+      "modernLocation": "河南洛阳",
+      "description": "春秋时期因孔子修订鲁国编年史《春秋》而得名。周平王东迁洛邑后，周王室日益衰微，诸侯不再尊奉天子，列国争霸称雄。齐桓公、晋文公、楚庄王、秦穆公、宋襄公相继称霸中原，史称「春秋五霸」。这一时期社会剧烈变革，铁制农具开始普及，井田制逐步瓦解，私田大量开垦，商业逐渐发展。孔子、老子等伟大思想家创立儒家与道家学说，百家争鸣的序幕由此拉开，奠定了中国传统思想文化的根基，影响延续至今，成为东亚文化圈的精神源泉。",
+      "founder": "king_ping",
+      "lastRuler": "yue_goujian",
+      "keyEvents": [
+        "evt_chunqiu_0001",
+        "evt_chunqiu_0002",
+        "evt_chunqiu_0003",
+        "evt_chunqiu_0004",
+        "evt_chunqiu_0005"
+      ],
+      "keyPersons": [
+        "guan_zhong",
+        "yan_ying",
+        "sun_wu",
+        "wu_zixu",
+        "bai_li_xi",
+        "jian_shu",
+        "mu_gong",
+        "king_ping",
+        "confucius",
+        "laozi"
+      ],
+      "keyLocations": [
+        "loc_chunqiu_linzi",
+        "loc_chunqiu_qufu",
+        "loc_chunqiu_yingqiu",
+        "loc_chunqiu_handan",
+        "loc_chunqiu_xinzheng"
+      ]
+    },
+    "zhanguo": {
+      "id": "zhanguo",
+      "name": "战国",
+      "shortName": "战国",
+      "period": "前475-前221",
+      "startYear": -475,
+      "endYear": -221,
+      "capital": "洛邑（东周）",
+      "modernLocation": "河南洛阳",
+      "description": "战国时期是中国从奴隶社会向封建社会大变革的关键时代。韩赵魏三家分晋后，齐楚燕韩赵魏秦七雄并立，兼并战争日趋激烈。各国相继变法图强，李悝变法、吴起变法、商鞅变法次第展开，尤以商鞅变法使秦国迅速崛起。铁器广泛使用，牛耕推广，生产力大幅提升，城市繁荣，货币经济活跃。百家争鸣达到顶峰，孟子、庄子、荀子、韩非子等思想家辈出，形成了儒道墨法等诸子百家。长平之战后秦国独大，最终秦王嬴政统一六国，建立秦朝。战国七雄之间的合纵连横策略与兼并战争，深刻改变了中国古代的政治格局与历史走向。",
+      "founder": "shang_yang",
+      "lastRuler": "wang_jian_qin",
+      "keyEvents": [
+        "evt_zhanguo_0001",
+        "evt_zhanguo_0002",
+        "evt_zhanguo_0003",
+        "evt_zhanguo_0004",
+        "evt_zhanguo_0005"
+      ],
+      "keyPersons": [
+        "shang_yang",
+        "qu_yuan",
+        "jing_ke",
+        "mengchang",
+        "pingyuan",
+        "xinling",
+        "chunshen",
+        "bai_qi",
+        "lian_po",
+        "lin_xiangru",
+        "yue_yi",
+        "lü_buwei"
+      ],
+      "keyLocations": [
+        "loc_zhanguo_xianyang",
+        "loc_zhanguo_handan",
+        "loc_zhanguo_linzi",
+        "loc_zhanguo_daliang",
+        "loc_zhanguo_ying"
+      ]
+    },
+    "qin": {
+      "id": "qin",
+      "name": "秦",
+      "shortName": "秦",
+      "period": "前221-前206",
+      "startYear": -221,
+      "endYear": -206,
+      "capital": "咸阳",
+      "modernLocation": "陕西咸阳",
+      "description": "秦朝是中国历史上第一个大一统的中央集权王朝，结束了春秋战国以来五百多年的分裂局面。秦始皇嬴政灭六国后，创立皇帝制度，全面推行郡县制，统一文字、货币、度量衡与车轨标准。修筑万里长城抵御匈奴，开凿灵渠沟通长江与珠江水系。秦始皇陵兵马俑举世闻名，展现了秦代高超的雕塑与军阵艺术。然而秦朝严刑峻法、赋役繁重，大兴土木耗尽民力。陈胜吴广揭竿而起，项羽巨鹿之战击败秦军主力，刘邦入关灭秦，建立汉朝。秦朝虽然国祚短暂，但其创立的大一统政治模式与中央集权制度，为后世历代王朝所继承。",
+      "founder": "qin_shihuang",
+      "lastRuler": "zi_ying",
+      "keyEvents": [
+        "evt_qin_0001",
+        "evt_qin_0002",
+        "evt_qin_0003",
+        "evt_qin_0004",
+        "evt_qin_0005"
+      ],
+      "keyPersons": [
+        "chen_sheng",
+        "wu_guang",
+        "qin_shihuang",
+        "li_si",
+        "meng_tian",
+        "hu_hai",
+        "zhao_gao",
+        "wang_ben_qin",
+        "meng_yi",
+        "li_you"
+      ],
+      "keyLocations": [
+        "loc_qin_xianyang",
+        "loc_qin_epanggong",
+        "loc_qin_great_wall",
+        "loc_qin_lingqu",
+        "loc_qin_daze"
+      ]
+    },
+    "han": {
+      "id": "han",
+      "name": "汉",
+      "shortName": "汉",
+      "period": "前206-220",
+      "startYear": -206,
+      "endYear": 220,
+      "capital": "长安、洛阳",
+      "modernLocation": "陕西西安、河南洛阳",
+      "description": "汉朝分为西汉和东汉两个时期，是中国历史上最强盛、对后世影响最深远的王朝之一。汉高祖刘邦击败项羽建立西汉，文帝、景帝实行轻徭薄赋、与民休息的政策，开创「文景之治」。汉武帝北击匈奴，开辟丝绸之路，罢黜百家独尊儒术，确立儒家正统地位。司马迁忍辱著《史记》，班固撰《汉书》，开辟了纪传体史书先河。蔡伦改进造纸术，张衡发明地动仪。光武帝刘秀建立东汉，班超经营西域。汉朝确立了汉族的族称，汉人成为中华主体的代称。",
+      "founder": "liu_bang",
+      "lastRuler": "dong_zhuo",
+      "keyEvents": [
+        "evt_han_0001",
+        "evt_han_0002",
+        "evt_han_0003",
+        "evt_han_0004",
+        "evt_han_0005"
+      ],
+      "keyPersons": [
+        "xiao_he",
+        "cao_shen",
+        "zhang_liang",
+        "han_xin",
+        "lv_zhi",
+        "han_wen",
+        "han_jing",
+        "han_wu",
+        "wei_qing",
+        "huo_qu",
+        "zhang_qian",
+        "dong_zhongshu"
+      ],
+      "keyLocations": [
+        "loc_han_chang_an",
+        "loc_han_weiyang",
+        "loc_han_baideng",
+        "loc_han_hexi",
+        "loc_han_moling"
+      ]
+    },
+    "sanguo": {
+      "id": "sanguo",
+      "name": "三国",
+      "shortName": "三国",
+      "period": "220-280",
+      "startYear": 220,
+      "endYear": 280,
+      "capital": "洛阳、成都、建业",
+      "modernLocation": "河南洛阳、四川成都、江苏南京",
+      "description": "三国时期是东汉灭亡后魏、蜀、吴三个政权并立的分裂时期，是中国历史上英雄辈出的传奇时代。曹操挟天子以令诸侯，统一北方，实行屯田制恢复农业生产。刘备三顾茅庐请诸葛亮出山，建立蜀汉政权，以汉室正统自居。孙权继承父兄基业，据守江东，赤壁之战联合刘备大破曹操，奠定三国鼎立格局。诸葛亮辅佐后主刘禅，鞠躬尽瘁，六出祁山北伐中原。司马懿家族逐步掌控曹魏大权，司马炎代魏建晋，先后灭蜀、吴，重新统一全国。三国故事经《三国演义》演绎后广为流传，成为中国家喻户晓的历史传奇。",
+      "founder": "cao_cao",
+      "lastRuler": "hui_zhong",
+      "keyEvents": [
+        "evt_sanguo_0001",
+        "evt_sanguo_0002",
+        "evt_sanguo_0003",
+        "evt_sanguo_0004",
+        "evt_sanguo_0005"
+      ],
+      "keyPersons": [
+        "cao_cao",
+        "liu_bei",
+        "sun_quan",
+        "zhu_ge_liang",
+        "guan_yu",
+        "zhang_fei",
+        "zhou_yu",
+        "si_ma_yi",
+        "guo_jia",
+        "dian_wei",
+        "xu_chu",
+        "zhang_liao"
+      ],
+      "keyLocations": [
+        "loc_sanguo_chibi",
+        "loc_sanguo_guandu",
+        "loc_sanguo_yiling",
+        "loc_sanguo_wuzhangyuan",
+        "loc_sanguo_changan"
+      ]
+    },
+    "jin": {
+      "id": "jin",
+      "name": "晋",
+      "shortName": "晋",
+      "period": "265-420",
+      "startYear": 265,
+      "endYear": 420,
+      "capital": "洛阳、建康",
+      "modernLocation": "河南洛阳、江苏南京",
+      "description": "晋朝分为西晋和东晋两个时期，上承三国下启南北朝。司马炎代魏建立西晋，灭吴统一全国，但很快陷入宗室争权的八王之乱。匈奴、鲜卑、羯、氐、羌等少数民族内迁，五胡乱华，西晋灭亡。司马睿在建康建立东晋，依靠南渡士族与本地豪强维持统治。淝水之战中东晋以少胜多，击败前秦苻坚大军，保全了江南半壁。王羲之书法冠绝古今，陶渊明开创田园诗派，顾恺之绘画精妙。士族门阀制度盛行，玄学清谈风靡士林。晋朝时期玄学兴盛，文学艺术繁荣，为后来的隋唐盛世在文化上做了充分的积累与准备。",
+      "founder": "sima_yan",
+      "lastRuler": "sima_rui",
+      "keyEvents": [
+        "evt_jin_0001",
+        "evt_jin_0002",
+        "evt_jin_0003",
+        "evt_jin_0004",
+        "evt_jin_0005"
+      ],
+      "keyPersons": [
+        "shi_chong",
+        "jia_nanfeng",
+        "wang_dao",
+        "xie_xuan",
+        "sima_yan",
+        "zu_ti",
+        "xie_an",
+        "wang_xizhi",
+        "tao_yuanming",
+        "huan_wen"
+      ],
+      "keyLocations": [
+        "loc_jin_luoyang",
+        "loc_jin_jiankang",
+        "loc_jin_xuchang",
+        "loc_jin_ye",
+        "loc_jin_shouchun"
+      ]
+    },
+    "nanbei": {
+      "id": "nanbei",
+      "name": "南北朝",
+      "shortName": "南北朝",
+      "period": "420-589",
+      "startYear": 420,
+      "endYear": 589,
+      "capital": "建康、平城、洛阳",
+      "modernLocation": "江苏南京、山西大同、河南洛阳",
+      "description": "南北朝时期是中国历史上南北分裂对峙长达一百七十年的特殊时期。南朝依次经历宋、齐、梁、陈四个朝代，均以建康为都城。北朝包括北魏、东魏、西魏、北齐、北周。北魏孝文帝迁都洛阳，全面推行汉化改革，改姓氏、穿汉服、说汉语、与汉族通婚，促进了民族大融合。祖冲之将圆周率精确到小数点后七位，贾思勰著《齐民要术》。佛教在这一时期极为兴盛，云冈石窟、龙门石窟等艺术瑰宝应运而生。南北朝时期的民族大融合与文化交流，为隋唐大一统帝国的建立奠定了坚实的社会基础。",
+      "founder": "liu_yu",
+      "lastRuler": "chen_shubao",
+      "keyEvents": [
+        "evt_nanbei_0001",
+        "evt_nanbei_0002",
+        "evt_nanbei_0003",
+        "evt_nanbei_0004",
+        "evt_nanbei_0005"
+      ],
+      "keyPersons": [
+        "liu_yilong",
+        "xiao_daocheng",
+        "xiao_yan",
+        "chen_baxian",
+        "tuoba_hong",
+        "yuwen_tai",
+        "gao_huan",
+        "fan_ye",
+        "shen_yue",
+        "yu_xin",
+        "liu_yu",
+        "chen_shubao"
+      ],
+      "keyLocations": [
+        "loc_nanbei_jiankang",
+        "loc_nanbei_pingcheng",
+        "loc_nanbei_luoyang",
+        "loc_nanbei_yubi",
+        "loc_nanbei_chang_an"
+      ]
+    },
+    "sui": {
+      "id": "sui",
+      "name": "隋",
+      "shortName": "隋",
+      "period": "581-618",
+      "startYear": 581,
+      "endYear": 618,
+      "capital": "大兴（长安）",
+      "modernLocation": "陕西西安",
+      "description": "隋朝结束了自西晋灭亡以来近三百年的分裂局面，重新统一全国。隋文帝杨坚建立隋朝，推行三省六部制，开创科举制度选拔人才，颁布《开皇律》减轻刑罚。隋炀帝杨广开凿以洛阳为中心的大运河，贯通南北五大水系，极大促进了经济文化交流。然而炀帝三征高丽惨败、修建东都、巡游江都，耗费巨大民力，导致天下大乱。李渊在太原起兵，攻入长安建立唐朝，隋朝二世而亡，但其制度多为唐朝所继承发展。隋朝创立的三省六部制与科举制度，成为此后中国政治制度的基本框架，影响深远。",
+      "founder": "yang_jian",
+      "lastRuler": "yang_guang",
+      "keyEvents": [
+        "evt_sui_0001",
+        "evt_sui_0002",
+        "evt_sui_0003",
+        "evt_sui_0004",
+        "evt_sui_0005"
+      ],
+      "keyPersons": [
+        "yang_jian",
+        "yang_guang",
+        "du_gu_jialuo",
+        "yang_su",
+        "han_qinhu",
+        "gao_jiong",
+        "he_ruobi",
+        "shi_wansui",
+        "yuwen_kai",
+        "zhang_sun_sheng"
+      ],
+      "keyLocations": [
+        "loc_sui_daxing",
+        "loc_sui_luoyang",
+        "loc_sui_jiangdu",
+        "loc_sui_dayunhe",
+        "loc_sui_chang_an"
+      ]
+    },
+    "tang": {
+      "id": "tang",
+      "name": "唐",
+      "shortName": "唐",
+      "period": "618-907",
+      "startYear": 618,
+      "endYear": 907,
+      "capital": "长安",
+      "modernLocation": "陕西西安",
+      "description": "唐朝是中国历史上最辉煌、最具世界影响力的朝代之一，政治开明、经济繁荣、文化灿烂。唐太宗李世民开创贞观之治，被周边各族尊为天可汗。武则天成为中国历史上唯一正统女皇帝，首创殿试与武举。唐玄宗开元盛世达到顶峰，长安成为国际性大都市。安史之乱后唐朝由盛转衰，藩镇割据、宦官专权日益严重。唐朝诗歌成就最高，李白、杜甫、白居易等伟大诗人辈出。开放包容的唐朝对东亚日本、朝鲜等国影响深远。唐朝的诗歌、书法、绘画等艺术成就达到巅峰，成为中华文明史上最为辉煌灿烂的一页。",
+      "founder": "li_yuan",
+      "lastRuler": "huang_chao",
+      "keyEvents": [
+        "evt_tang_0001",
+        "evt_tang_0002",
+        "evt_tang_0003",
+        "evt_tang_0004",
+        "evt_tang_0005"
+      ],
+      "keyPersons": [
+        "li_shimin",
+        "wu_zetian",
+        "li_longji",
+        "wei_zheng",
+        "li_jing",
+        "guo_ziyi",
+        "an_lushan",
+        "li_bai",
+        "li_yuan",
+        "fang_xuanling",
+        "du_ruhui",
+        "chang_sun_wuji"
+      ],
+      "keyLocations": [
+        "loc_tang_chang_an",
+        "loc_tang_daming",
+        "loc_tang_luoyang",
+        "loc_tang_anxi",
+        "loc_tang_tongguan"
+      ]
+    },
+    "wudai": {
+      "id": "wudai",
+      "name": "五代",
+      "shortName": "五代",
+      "period": "907-960",
+      "startYear": 907,
+      "endYear": 960,
+      "capital": "开封、洛阳",
+      "modernLocation": "河南开封、洛阳",
+      "description": "五代十国是唐朝灭亡后中国再度陷入分裂的动荡时期。中原地区先后出现后梁、后唐、后晋、后汉、后周五个短命王朝，政权更迭频繁，战乱不止。与此同时南方存在吴越、南唐、前蜀、后蜀等十个割据政权。这一时期北方遭受契丹侵扰，后晋石敬瑭割让燕云十六州。后周世宗柴荣励精图治，整顿军政，为统一奠定基础。赵匡胤发动陈桥兵变，建立宋朝，逐步结束分裂局面。冯道历事四朝，成为这一特殊时代的政治象征。五代十国时期虽然战乱频繁，但南方各国经济持续发展，为宋朝的经济繁荣奠定了基础。",
+      "founder": "zhu_wen",
+      "lastRuler": "chai_rong",
+      "keyEvents": [
+        "evt_wudai_0001",
+        "evt_wudai_0002",
+        "evt_wudai_0003",
+        "evt_wudai_0004",
+        "evt_wudai_0005"
+      ],
+      "keyPersons": [
+        "zhu_wen",
+        "jing_xiang",
+        "wang_yanzhang",
+        "li_cunxu",
+        "li_siyuan",
+        "li_congke",
+        "li_cunxiao",
+        "zhou_dewei",
+        "feng_dao",
+        "shi_jingtang"
+      ],
+      "keyLocations": [
+        "loc_wudai_kaifeng",
+        "loc_wudai_luoyang",
+        "loc_wudai_youzhou",
+        "loc_wudai_yangzhou",
+        "loc_wudai_nanjing"
+      ]
+    },
+    "song": {
+      "id": "song",
+      "name": "宋",
+      "shortName": "宋",
+      "period": "960-1279",
+      "startYear": 960,
+      "endYear": 1279,
+      "capital": "开封、临安",
+      "modernLocation": "河南开封、浙江杭州",
+      "description": "宋朝分为北宋和南宋，是中国历史上经济文化最为繁荣的朝代之一。宋太祖赵匡胤杯酒释兵权，解除将领兵权，加强中央集权。北宋与辽、西夏长期对峙，王安石变法试图扭转积贫积弱局面。苏轼、欧阳修等文学家开创宋代文学新风，理学兴起。南宋偏安江南，岳飞精忠报国，陆游、辛弃疾等爱国词人留下大量名篇。宋朝科技高度发达，活字印刷、指南针、火药武器广泛应用。海外贸易兴盛，泉州成为世界大港。宋朝的理学思想、市民文化与科技进步，标志着中国古代文明进入了新的发展阶段。",
+      "founder": "zhao_kuangyin",
+      "lastRuler": "zhao_shi",
+      "keyEvents": [
+        "evt_song_0001",
+        "evt_song_0002",
+        "evt_song_0003",
+        "evt_song_0004",
+        "evt_song_0005"
+      ],
+      "keyPersons": [
+        "zhao_kuangyin",
+        "zhao_kuangyi",
+        "zhao_hen",
+        "zhao_zhen",
+        "zhao_xu",
+        "zhao_gou",
+        "zhao_kuo",
+        "zhao_huan",
+        "zhao_shi",
+        "kou_zhun",
+        "fan_zhongyan",
+        "wang_anshi"
+      ],
+      "keyLocations": [
+        "loc_song_dongjing",
+        "loc_song_lin_an",
+        "loc_song_yashan",
+        "loc_song_yangzhou",
+        "loc_song_suzhou"
+      ]
+    },
+    "yuan": {
+      "id": "yuan",
+      "name": "元",
+      "shortName": "元",
+      "period": "1271-1368",
+      "startYear": 1271,
+      "endYear": 1368,
+      "capital": "大都",
+      "modernLocation": "北京",
+      "description": "元朝是由蒙古族建立的中国历史上疆域最辽阔的大一统王朝。忽必烈定国号为元，灭南宋统一全国，结束了自唐末以来数百年的分裂。元朝设立行省制度，加强中央对辽阔疆域的有效管辖，这一制度为后世沿用。大都成为国际性大都市，马可·波罗曾游历中国并留下著名游记。郭守敬编制《授时历》，精确度极高。元曲兴盛，关汉卿、马致远等杂剧作家创作了大量优秀作品。元朝后期民族矛盾与阶级矛盾尖锐，红巾军起义后朱元璋建立明朝。元朝大一统的局面促进了各民族之间的交流融合，为中华文明的多元一体发展做出了贡献。",
+      "founder": "hubilie",
+      "lastRuler": "bo_yan",
+      "keyEvents": [
+        "evt_yuan_0001",
+        "evt_yuan_0002",
+        "evt_yuan_0003",
+        "evt_yuan_0004",
+        "evt_yuan_0005"
+      ],
+      "keyPersons": [
+        "tie_muzhen",
+        "wo_kuotai",
+        "hubilie",
+        "yelv_chucai",
+        "tuotuo",
+        "guan_hanqing",
+        "ma_zhiyuan",
+        "wang_shipu",
+        "bai_pu",
+        "zheng_guangzu"
+      ],
+      "keyLocations": [
+        "loc_yuan_dadu",
+        "loc_yuan_shangdu",
+        "loc_yuan_helan",
+        "loc_yuan_quanzhou",
+        "loc_yuan_guangzhou"
+      ]
+    },
+    "ming": {
+      "id": "ming",
+      "name": "明",
+      "shortName": "明",
+      "period": "1368-1644",
+      "startYear": 1368,
+      "endYear": 1644,
+      "capital": "南京、北京",
+      "modernLocation": "江苏南京、北京",
+      "description": "明朝是中国历史上最后一个由汉族建立的大一统王朝。明太祖朱元璋推翻元朝，建立明朝，废除丞相制度，权分六部，设锦衣卫等特务机构。明成祖朱棣迁都北京，派郑和七下西洋，宣扬国威，沟通中外。编纂《永乐大典》集古代典籍之大成。土木堡之变后明朝由盛转衰。王阳明创立心学，影响深远。李时珍著《本草纲目》，宋应星著《天工开物》。明朝中后期宦官专权、党争激烈，辽东女真崛起。李自成攻入北京，崇祯帝朱由检自缢殉国。明朝建立后恢复中华正统，加强了中央集权，其制度与文化对后世产生了深远的影响。",
+      "founder": "zhu_yuanzhang",
+      "lastRuler": "zhu_youjian",
+      "keyEvents": [
+        "evt_ming_0001",
+        "evt_ming_0002",
+        "evt_ming_0003",
+        "evt_ming_0004",
+        "evt_ming_0005"
+      ],
+      "keyPersons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "zhu_yunwen",
+        "zhu_gaozhi",
+        "zhu_zhanyi",
+        "zhu_qizhen",
+        "zhu_houzhao",
+        "zhu_houzong",
+        "zhu_yijun",
+        "zhu_youjian",
+        "liu_ji",
+        "xu_da"
+      ],
+      "keyLocations": [
+        "loc_ming_nanjing",
+        "loc_ming_beijing",
+        "loc_ming_zijin",
+        "loc_ming_taishan",
+        "loc_ming_huashan"
+      ]
+    },
+    "qing": {
+      "id": "qing",
+      "name": "清",
+      "shortName": "清",
+      "period": "1636-1912",
+      "startYear": 1636,
+      "endYear": 1912,
+      "capital": "北京",
+      "modernLocation": "北京",
+      "description": "清朝是中国历史上最后一个封建王朝，由满族建立。皇太极改国号为清，入关后定都北京。康熙帝平定三藩之乱、收复台湾、击败沙俄，乾隆时期疆域达到鼎盛。编纂《四库全书》集传统文化之大成，同时大兴文字狱。鸦片战争后中国逐步沦为半殖民地半封建社会。太平天国运动、甲午战争、八国联军侵华相继发生。洋务运动、戊戌变法、清末新政试图挽救危局。辛亥革命推翻清朝统治，末代皇帝溥仪退位，延续两千多年的封建帝制终结。清朝末期的改革尝试与革命运动，最终推动中国从封建帝制走向现代共和国家的转型。",
+      "founder": "nuerhachi",
+      "lastRuler": "panyi",
+      "keyEvents": [
+        "evt_qing_0001",
+        "evt_qing_0002",
+        "evt_qing_0003",
+        "evt_qing_0004",
+        "evt_qing_0005"
+      ],
+      "keyPersons": [
+        "nuerhachi",
+        "huang_taiji",
+        "shunzhi",
+        "kangxi",
+        "yongzheng",
+        "qianlong",
+        "jiaqing",
+        "daoguang",
+        "xianfeng",
+        "tongzhi",
+        "guangxu",
+        "panyi"
+      ],
+      "keyLocations": [
+        "loc_qing_beijing",
+        "loc_qing_shengjing",
+        "loc_qing_chengde",
+        "loc_qing_nanjing",
+        "loc_qing_yangzhou"
+      ]
+    }
   }
 }
