@@ -139,6 +139,13 @@
         "《龟虽寿》",
         "《短歌行》",
         "《观沧海》"
+      ],
+      "locations": [
+        "loc_sanguo_chibi",
+        "loc_sanguo_guandu",
+        "loc_sanguo_changan",
+        "loc_sanguo_luoyang",
+        "loc_sanguo_xuchang"
       ]
     },
     "liu_bei": {
@@ -274,7 +281,14 @@
       ],
       "quote": "勿以恶小而为之，勿以善小而不为。",
       "quoteSrc": "《三国志·蜀书》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_chibi",
+        "loc_sanguo_yiling",
+        "loc_sanguo_wuzhangyuan",
+        "loc_sanguo_chengdu",
+        "loc_sanguo_maicheng"
+      ]
     },
     "sun_quan": {
       "id": "sun_quan",
@@ -374,7 +388,14 @@
       ],
       "quote": "生子当如孙仲谋。",
       "quoteSrc": "《三国志·吴书》注引",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_chibi",
+        "loc_sanguo_yiling",
+        "loc_sanguo_jianye",
+        "loc_sanguo_jingzhou",
+        "loc_sanguo_hefei"
+      ]
     },
     "zhu_ge_liang": {
       "id": "zhu_ge_liang",
@@ -484,6 +505,13 @@
       "works": [
         "《出师表》",
         "《诫子书》"
+      ],
+      "locations": [
+        "loc_sanguo_chibi",
+        "loc_sanguo_yiling",
+        "loc_sanguo_wuzhangyuan",
+        "loc_sanguo_chengdu",
+        "loc_sanguo_maicheng"
       ]
     },
     "guan_yu": {
@@ -579,7 +607,13 @@
       ],
       "quote": "玉可碎而不可改其白，竹可焚而不可毁其节。",
       "quoteSrc": "《三国演义》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_chengdu",
+        "loc_sanguo_maicheng",
+        "loc_sanguo_hanzhong",
+        "loc_sanguo_jingzhou"
+      ]
     },
     "zhang_fei": {
       "id": "zhang_fei",
@@ -661,7 +695,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_yiling",
+        "loc_sanguo_chengdu",
+        "loc_sanguo_maicheng",
+        "loc_sanguo_hanzhong"
+      ]
     },
     "zhou_yu": {
       "id": "zhou_yu",
@@ -745,7 +785,13 @@
       ],
       "quote": "丈夫处世兮立功名，立功名兮慰平生。",
       "quoteSrc": "《三国演义》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_chibi",
+        "loc_sanguo_jianye",
+        "loc_sanguo_jingzhou",
+        "loc_sanguo_hefei"
+      ]
     },
     "si_ma_yi": {
       "id": "si_ma_yi",
@@ -827,7 +873,12 @@
       ],
       "quote": "夫将兵者，不战则守，不守则走。",
       "quoteSrc": "《晋书·宣帝纪》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_wuzhangyuan",
+        "loc_sanguo_luoyang",
+        "loc_sanguo_jiebi"
+      ]
     },
     "guo_jia": {
       "id": "guo_jia",
@@ -895,7 +946,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_guandu",
+        "loc_sanguo_changan",
+        "loc_sanguo_luoyang",
+        "loc_sanguo_xuchang"
+      ]
     },
     "dian_wei": {
       "id": "dian_wei",
@@ -954,7 +1011,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_changan",
+        "loc_sanguo_luoyang",
+        "loc_sanguo_xuchang",
+        "loc_sanguo_tongguan"
+      ]
     },
     "xu_chu": {
       "id": "xu_chu",
@@ -1025,7 +1088,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_xuchang",
+        "loc_sanguo_tongguan"
+      ]
     },
     "zhang_liao": {
       "id": "zhang_liao",
@@ -1091,7 +1158,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_guandu",
+        "loc_sanguo_changan",
+        "loc_sanguo_tongguan",
+        "loc_sanguo_hefei"
+      ]
     },
     "lu_xun": {
       "id": "lu_xun",
@@ -1170,7 +1243,12 @@
       ],
       "quote": "志行万里者，不中道而辍足。",
       "quoteSrc": "《三国志·吴书》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_yiling",
+        "loc_sanguo_jianye",
+        "loc_sanguo_jingzhou"
+      ]
     },
     "jiang_wei": {
       "id": "jiang_wei",
@@ -1245,7 +1323,13 @@
       ],
       "quote": "臣愿陛下忍数日之辱，臣欲使社稷危而复安。",
       "quoteSrc": "《三国志·蜀书》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_wuzhangyuan",
+        "loc_sanguo_chengdu",
+        "loc_sanguo_jiebi",
+        "loc_sanguo_hanzhong"
+      ]
     },
     "shi_chong": {
       "id": "shi_chong",
@@ -1306,7 +1390,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_ye"
+      ]
     },
     "jia_nanfeng": {
       "id": "jia_nanfeng",
@@ -1374,7 +1461,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_luoyang",
+        "loc_jin_xuchang"
+      ]
     },
     "wang_dao": {
       "id": "wang_dao",
@@ -1448,7 +1539,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_jiankang",
+        "loc_jin_shouchun",
+        "loc_jin_feishui",
+        "loc_jin_lanling",
+        "loc_jin_pengcheng"
+      ]
     },
     "xie_xuan": {
       "id": "xie_xuan",
@@ -1509,7 +1607,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_jiankang",
+        "loc_jin_shouchun",
+        "loc_jin_feishui",
+        "loc_jin_pengcheng",
+        "loc_jin_yangzhou"
+      ]
     },
     "huangdi": {
       "id": "huangdi",
@@ -1565,7 +1670,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shanggu_zhuolu",
+        "loc_shanggu_banquan",
+        "loc_shanggu_shouqiu"
+      ]
     },
     "yandi": {
       "id": "yandi",
@@ -1621,7 +1731,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shanggu_zhuolu",
+        "loc_shanggu_banquan"
+      ]
     },
     "zhuanxu": {
       "id": "zhuanxu",
@@ -1678,7 +1792,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shanggu_zhuolu"
+      ]
     },
     "di_ku": {
       "id": "di_ku",
@@ -1735,7 +1852,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shanggu_shouqiu"
+      ]
     },
     "yao": {
       "id": "yao",
@@ -1791,7 +1911,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shanggu_pingyang",
+        "loc_shanggu_puyang"
+      ]
     },
     "shun": {
       "id": "shun",
@@ -1847,7 +1971,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shanggu_pingyang",
+        "loc_shanggu_puyang"
+      ]
     },
     "yu": {
       "id": "yu",
@@ -1908,7 +2036,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_xia_yangcheng",
+        "loc_xia_zhenxun",
+        "loc_xia_hua",
+        "loc_xia_juntai",
+        "loc_xia_xia"
+      ]
     },
     "guan_zhong": {
       "id": "guan_zhong",
@@ -1958,7 +2093,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_linzi",
+        "loc_chunqiu_ji",
+        "loc_chunqiu_changshao"
+      ]
     },
     "yan_ying": {
       "id": "yan_ying",
@@ -2007,7 +2147,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_linzi",
+        "loc_chunqiu_wu",
+        "loc_chunqiu_yue",
+        "loc_chunqiu_helu",
+        "loc_chunqiu_gusu"
+      ]
     },
     "shang_yang": {
       "id": "shang_yang",
@@ -2069,7 +2216,14 @@
       ],
       "quote": "治世不一道，便国不法古。",
       "quoteSrc": "《史记·商君列传》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_xianyang",
+        "loc_zhanguo_yangzhai",
+        "loc_zhanguo_guandu",
+        "loc_zhanguo_hexi",
+        "loc_zhanguo_hangu"
+      ]
     },
     "sun_wu": {
       "id": "sun_wu",
@@ -2125,7 +2279,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_wu",
+        "loc_chunqiu_helu",
+        "loc_chunqiu_gusu",
+        "loc_chunqiu_boyang"
+      ]
     },
     "wu_zixu": {
       "id": "wu_zixu",
@@ -2181,7 +2341,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_yingqiu",
+        "loc_chunqiu_wu",
+        "loc_chunqiu_helu",
+        "loc_chunqiu_gusu",
+        "loc_chunqiu_jiangling"
+      ]
     },
     "qu_yuan": {
       "id": "qu_yuan",
@@ -2241,6 +2408,13 @@
         "《离骚》",
         "《九歌》",
         "《天问》"
+      ],
+      "locations": [
+        "loc_zhanguo_linzi",
+        "loc_zhanguo_ying",
+        "loc_zhanguo_jixia",
+        "loc_zhanguo_yi",
+        "loc_zhanguo_wuguan"
       ]
     },
     "jing_ke": {
@@ -2290,7 +2464,11 @@
       ],
       "quote": "风萧萧兮易水寒，壮士一去兮不复还。",
       "quoteSrc": "《战国策》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_yan",
+        "loc_zhanguo_hangu"
+      ]
     },
     "king_wen": {
       "id": "king_wen",
@@ -2348,7 +2526,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhou_qishan",
+        "loc_zhou_feng"
+      ]
     },
     "king_wu": {
       "id": "king_wu",
@@ -2406,7 +2588,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhou_haojing",
+        "loc_zhou_qishan",
+        "loc_zhou_feng",
+        "loc_zhou_muye",
+        "loc_zhou_shou"
+      ]
     },
     "zhou_dan": {
       "id": "zhou_dan",
@@ -2475,7 +2664,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhou_haojing",
+        "loc_zhou_luoyi",
+        "loc_zhou_qishan",
+        "loc_zhou_feng",
+        "loc_zhou_chengzhou"
+      ]
     },
     "gun": {
       "id": "gun",
@@ -2533,7 +2729,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shanggu_pingyang"
+      ]
     },
     "qi": {
       "id": "qi",
@@ -2589,7 +2788,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_xia_yangcheng",
+        "loc_xia_zhenxun",
+        "loc_xia_hua",
+        "loc_xia_juntai",
+        "loc_xia_xia"
+      ]
     },
     "shang_tang": {
       "id": "shang_tang",
@@ -2639,7 +2845,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_yinxu",
+        "loc_shang_bo",
+        "loc_shang_yang",
+        "loc_shang_tang_tomb"
+      ]
     },
     "yi_yin": {
       "id": "yi_yin",
@@ -2694,7 +2906,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_yinxu",
+        "loc_shang_bo",
+        "loc_shang_xingtai",
+        "loc_shang_yang",
+        "loc_shang_tang_tomb"
+      ]
     },
     "zhou_xin": {
       "id": "zhou_xin",
@@ -2747,7 +2966,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_yinxu",
+        "loc_shang_chaoge",
+        "loc_shang_xingtai"
+      ]
     },
     "bi_gan": {
       "id": "bi_gan",
@@ -2790,7 +3014,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_yinxu",
+        "loc_shang_chaoge"
+      ]
     },
     "mengchang": {
       "id": "mengchang",
@@ -2843,7 +3071,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_handan",
+        "loc_zhanguo_linzi",
+        "loc_zhanguo_daliang",
+        "loc_zhanguo_jixia",
+        "loc_zhanguo_guiling"
+      ]
     },
     "pingyuan": {
       "id": "pingyuan",
@@ -2904,7 +3139,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_daliang",
+        "loc_zhanguo_guiling"
+      ]
     },
     "xinling": {
       "id": "xinling",
@@ -2957,7 +3196,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_daliang",
+        "loc_zhanguo_maling"
+      ]
     },
     "chunshen": {
       "id": "chunshen",
@@ -3010,7 +3253,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_linzi",
+        "loc_zhanguo_ying",
+        "loc_zhanguo_yan",
+        "loc_zhanguo_yi",
+        "loc_zhanguo_wuguan"
+      ]
     },
     "bai_qi": {
       "id": "bai_qi",
@@ -3073,7 +3323,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_handan",
+        "loc_zhanguo_ying",
+        "loc_zhanguo_changping",
+        "loc_zhanguo_yi",
+        "loc_zhanguo_shang"
+      ]
     },
     "lian_po": {
       "id": "lian_po",
@@ -3129,7 +3386,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_handan",
+        "loc_zhanguo_changping",
+        "loc_zhanguo_shang",
+        "loc_zhanguo_yanmen"
+      ]
     },
     "lin_xiangru": {
       "id": "lin_xiangru",
@@ -3189,7 +3452,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_handan",
+        "loc_zhanguo_changping",
+        "loc_zhanguo_shang",
+        "loc_zhanguo_yanmen"
+      ]
     },
     "yue_yi": {
       "id": "yue_yi",
@@ -3243,7 +3512,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_ying",
+        "loc_zhanguo_yan"
+      ]
     },
     "liu_yilong": {
       "id": "liu_yilong",
@@ -3372,7 +3645,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_jiankang",
+        "loc_nanbei_guangling",
+        "loc_nanbei_hefei"
+      ]
     },
     "xiao_yan": {
       "id": "xiao_yan",
@@ -3441,7 +3719,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_jiankang",
+        "loc_nanbei_guangling",
+        "loc_nanbei_jiangling",
+        "loc_nanbei_xiangyang",
+        "loc_nanbei_hefei"
+      ]
     },
     "chen_baxian": {
       "id": "chen_baxian",
@@ -3496,7 +3781,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_jiankang",
+        "loc_nanbei_hefei"
+      ]
     },
     "tuoba_hong": {
       "id": "tuoba_hong",
@@ -3563,7 +3852,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_pingcheng",
+        "loc_nanbei_luoyang",
+        "loc_nanbei_yubi",
+        "loc_nanbei_chang_an",
+        "loc_nanbei_shouchun"
+      ]
     },
     "yuwen_tai": {
       "id": "yuwen_tai",
@@ -3619,7 +3915,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_pingcheng",
+        "loc_nanbei_luoyang",
+        "loc_nanbei_yubi",
+        "loc_nanbei_chang_an",
+        "loc_nanbei_ye"
+      ]
     },
     "gao_huan": {
       "id": "gao_huan",
@@ -3680,7 +3983,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_pingcheng",
+        "loc_nanbei_luoyang",
+        "loc_nanbei_yubi",
+        "loc_nanbei_chang_an",
+        "loc_nanbei_ye"
+      ]
     },
     "fan_ye": {
       "id": "fan_ye",
@@ -3774,7 +4084,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_jiankang",
+        "loc_nanbei_guangling"
+      ]
     },
     "yu_xin": {
       "id": "yu_xin",
@@ -3821,7 +4135,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_yubi",
+        "loc_nanbei_guangling",
+        "loc_nanbei_jiangling",
+        "loc_nanbei_dunhuang"
+      ]
     },
     "sima_yan": {
       "id": "sima_yan",
@@ -3878,7 +4198,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_luoyang",
+        "loc_jin_xuchang",
+        "loc_jin_ye"
+      ]
     },
     "zu_ti": {
       "id": "zu_ti",
@@ -3937,7 +4262,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_pengcheng"
+      ]
     },
     "xie_an": {
       "id": "xie_an",
@@ -3998,7 +4326,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_jiankang",
+        "loc_jin_shouchun",
+        "loc_jin_feishui",
+        "loc_jin_lanling",
+        "loc_jin_yangzhou"
+      ]
     },
     "wang_xizhi": {
       "id": "wang_xizhi",
@@ -4057,7 +4392,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_jiankang",
+        "loc_jin_lanling",
+        "loc_jin_yangzhou",
+        "loc_jin_shanyin"
+      ]
     },
     "tao_yuanming": {
       "id": "tao_yuanming",
@@ -4122,7 +4463,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_jiankang",
+        "loc_jin_lanling",
+        "loc_jin_shanyin"
+      ]
     },
     "huan_wen": {
       "id": "huan_wen",
@@ -4193,7 +4539,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_shouchun",
+        "loc_jin_feishui",
+        "loc_jin_pengcheng"
+      ]
     },
     "liu_yu": {
       "id": "liu_yu",
@@ -4262,7 +4613,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_jiankang",
+        "loc_nanbei_shouchun",
+        "loc_nanbei_jiangling",
+        "loc_nanbei_pengcheng",
+        "loc_nanbei_suizhou"
+      ]
     },
     "ji_kang": {
       "id": "ji_kang",
@@ -4436,7 +4794,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qin_daze",
+        "loc_qin_juzhong"
+      ]
     },
     "wu_guang": {
       "id": "wu_guang",
@@ -4492,7 +4854,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qin_daze",
+        "loc_qin_juzhong"
+      ]
     },
     "xiao_he": {
       "id": "xiao_he",
@@ -4574,6 +4940,13 @@
       "quoteSrc": "《史记·高祖本纪》",
       "works": [
         "《九章律》"
+      ],
+      "locations": [
+        "loc_han_chang_an",
+        "loc_han_weiyang",
+        "loc_han_baideng",
+        "loc_han_yangling",
+        "loc_han_changling"
       ]
     },
     "cao_shen": {
@@ -4639,7 +5012,14 @@
       ],
       "quote": "萧何为法，顜若画一；曹参代之，守而勿失。",
       "quoteSrc": "《史记·曹相国世家》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_han_yangling",
+        "loc_han_weishui",
+        "loc_han_danyang",
+        "loc_han_hefei",
+        "loc_han_guangling"
+      ]
     },
     "zhang_liang": {
       "id": "zhang_liang",
@@ -4724,7 +5104,14 @@
       ],
       "quote": "运筹策帷帐之中，决胜千里外。",
       "quoteSrc": "《史记·留侯世家》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_han_chang_an",
+        "loc_han_baideng",
+        "loc_han_changling",
+        "loc_han_baqiao",
+        "loc_han_pengcheng"
+      ]
     },
     "han_xin": {
       "id": "han_xin",
@@ -4816,7 +5203,11 @@
       ],
       "quote": "韩信点兵，多多益善。",
       "quoteSrc": "《史记·淮阴侯列传》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_han_chang_an",
+        "loc_han_pengcheng"
+      ]
     },
     "qin_shihuang": {
       "id": "qin_shihuang",
@@ -4902,7 +5293,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qin_xianyang",
+        "loc_qin_epanggong",
+        "loc_qin_great_wall",
+        "loc_qin_lingqu",
+        "loc_qin_xianyang_palace"
+      ]
     },
     "li_si": {
       "id": "li_si",
@@ -4968,6 +5366,13 @@
       "quoteSrc": "《谏逐客书》",
       "works": [
         "《谏逐客书》"
+      ],
+      "locations": [
+        "loc_qin_xianyang",
+        "loc_qin_epanggong",
+        "loc_qin_lingqu",
+        "loc_qin_xianyang_palace",
+        "loc_qin_lishan"
       ]
     },
     "meng_tian": {
@@ -5025,7 +5430,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qin_xianyang",
+        "loc_qin_epanggong",
+        "loc_qin_great_wall",
+        "loc_qin_lingqu",
+        "loc_qin_hangu"
+      ]
     },
     "lv_zhi": {
       "id": "lv_zhi",
@@ -5092,7 +5504,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_han_changling"
+      ]
     },
     "han_wen": {
       "id": "han_wen",
@@ -5146,7 +5561,14 @@
       ],
       "quote": "夫农，天下之本也。",
       "quoteSrc": "《汉书·文帝纪》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_han_chang_an",
+        "loc_han_weiyang",
+        "loc_han_changling",
+        "loc_han_weishui",
+        "loc_han_hefei"
+      ]
     },
     "han_jing": {
       "id": "han_jing",
@@ -5205,7 +5627,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_han_weiyang",
+        "loc_han_yangling",
+        "loc_han_hefei",
+        "loc_han_guangling",
+        "loc_han_xuchang"
+      ]
     },
     "han_wu": {
       "id": "han_wu",
@@ -5297,7 +5726,14 @@
       ],
       "quote": "犯强汉者，虽远必诛。",
       "quoteSrc": "《汉书·陈汤传》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_han_chang_an",
+        "loc_han_weiyang",
+        "loc_han_baideng",
+        "loc_han_hexi",
+        "loc_han_moling"
+      ]
     },
     "wei_qing": {
       "id": "wei_qing",
@@ -5359,7 +5795,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_han_hexi",
+        "loc_han_moling",
+        "loc_han_dingxiang",
+        "loc_han_yanmen",
+        "loc_han_yumen"
+      ]
     },
     "huo_qu": {
       "id": "huo_qu",
@@ -5419,7 +5862,14 @@
       ],
       "quote": "匈奴未灭，何以家为。",
       "quoteSrc": "《史记·卫将军骠骑列传》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_han_hexi",
+        "loc_han_moling",
+        "loc_han_dingxiang",
+        "loc_han_yanmen",
+        "loc_han_yumen"
+      ]
     },
     "zhang_qian": {
       "id": "zhang_qian",
@@ -5475,7 +5925,14 @@
       ],
       "quote": "臣在大夏时，见邛竹杖、蜀布。",
       "quoteSrc": "《史记·大宛列传》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_han_hexi",
+        "loc_han_dingxiang",
+        "loc_han_yanmen",
+        "loc_han_yumen",
+        "loc_han_yangguan"
+      ]
     },
     "dong_zhongshu": {
       "id": "dong_zhongshu",
@@ -5537,6 +5994,9 @@
       "quoteSrc": "《汉书·董仲舒传》",
       "works": [
         "《春秋繁露》"
+      ],
+      "locations": [
+        "loc_han_moling"
       ]
     },
     "hu_hai": {
@@ -5647,7 +6107,11 @@
       ],
       "quote": "指鹿为马。",
       "quoteSrc": "《史记》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qin_xianyang_palace",
+        "loc_qin_lishan"
+      ]
     },
     "peng_yue": {
       "id": "peng_yue",
@@ -5713,7 +6177,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_han_danyang",
+        "loc_han_pengcheng"
+      ]
     },
     "qing_bu": {
       "id": "qing_bu",
@@ -5779,7 +6247,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_han_danyang"
+      ]
     },
     "fan_kuai": {
       "id": "fan_kuai",
@@ -7620,7 +8091,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sui_daxing",
+        "loc_sui_luoyang",
+        "loc_sui_jiangdu",
+        "loc_sui_dayunhe",
+        "loc_sui_chang_an"
+      ]
     },
     "yang_guang": {
       "id": "yang_guang",
@@ -7706,7 +8184,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sui_daxing",
+        "loc_sui_luoyang",
+        "loc_sui_jiangdu",
+        "loc_sui_dayunhe",
+        "loc_sui_chang_an"
+      ]
     },
     "li_shimin": {
       "id": "li_shimin",
@@ -7870,7 +8355,14 @@
       ],
       "quote": "以铜为镜，可以正衣冠；以古为镜，可以知兴替；以人为镜，可以明得失。",
       "quoteSrc": "《旧唐书·魏征传》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_tang_chang_an",
+        "loc_tang_daming",
+        "loc_tang_luoyang",
+        "loc_tang_anxi",
+        "loc_tang_tongguan"
+      ]
     },
     "wu_zetian": {
       "id": "wu_zetian",
@@ -7966,6 +8458,11 @@
       "works": [
         "《臣轨》",
         "《垂拱集》"
+      ],
+      "locations": [
+        "loc_tang_chang_an",
+        "loc_tang_daming",
+        "loc_tang_luoyang"
       ]
     },
     "li_longji": {
@@ -8078,6 +8575,13 @@
       "quoteSrc": "杜甫《忆昔》",
       "works": [
         "《霓裳羽衣曲》"
+      ],
+      "locations": [
+        "loc_tang_chang_an",
+        "loc_tang_daming",
+        "loc_tang_luoyang",
+        "loc_tang_tongguan",
+        "loc_tang_maweipo"
       ]
     },
     "wei_zheng": {
@@ -8160,6 +8664,11 @@
       "works": [
         "《谏太宗十思疏》",
         "《隋书》"
+      ],
+      "locations": [
+        "loc_tang_chang_an",
+        "loc_tang_daming",
+        "loc_tang_lingyan"
       ]
     },
     "li_jing": {
@@ -8237,6 +8746,13 @@
       "quoteSrc": "《李卫公兵法》",
       "works": [
         "《李卫公兵法》"
+      ],
+      "locations": [
+        "loc_tang_anxi",
+        "loc_tang_dingxiang",
+        "loc_tang_yinshan",
+        "loc_tang_shule",
+        "loc_tang_khotan"
       ]
     },
     "guo_ziyi": {
@@ -8327,7 +8843,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_tang_anxi",
+        "loc_tang_tongguan",
+        "loc_tang_maweipo",
+        "loc_tang_dingxiang",
+        "loc_tang_yinshan"
+      ]
     },
     "an_lushan": {
       "id": "an_lushan",
@@ -8405,7 +8928,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_tang_tongguan",
+        "loc_tang_maweipo"
+      ]
     },
     "li_bai": {
       "id": "li_bai",
@@ -8510,6 +9037,13 @@
         "《蜀道难》",
         "《将进酒》",
         "《行路难》"
+      ],
+      "locations": [
+        "loc_tang_dunhuang",
+        "loc_tang_suiye",
+        "loc_tang_yangzhou",
+        "loc_tang_suzhou",
+        "loc_tang_hangzhou"
       ]
     },
     "du_gu_jialuo": {
@@ -8569,7 +9103,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sui_daxing",
+        "loc_sui_zhouzhi"
+      ]
     },
     "yang_su": {
       "id": "yang_su",
@@ -8689,7 +9227,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sui_luoyang",
+        "loc_sui_chang_an",
+        "loc_sui_zhuolu",
+        "loc_sui_lingqu",
+        "loc_sui_dunhuang"
+      ]
     },
     "gao_jiong": {
       "id": "gao_jiong",
@@ -8748,7 +9293,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sui_daxing",
+        "loc_sui_luoyang",
+        "loc_sui_dayunhe",
+        "loc_sui_chang_an",
+        "loc_sui_lingqu"
+      ]
     },
     "he_ruobi": {
       "id": "he_ruobi",
@@ -8913,7 +9465,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sui_daxing",
+        "loc_sui_luoyang",
+        "loc_sui_jiangdu",
+        "loc_sui_dayunhe",
+        "loc_sui_zhuolu"
+      ]
     },
     "zhang_sun_sheng": {
       "id": "zhang_sun_sheng",
@@ -9231,7 +9790,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sui_jiangdu"
+      ]
     },
     "wang_shichong": {
       "id": "wang_shichong",
@@ -10114,7 +10676,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_tang_chang_an",
+        "loc_tang_daming",
+        "loc_tang_luoyang",
+        "loc_tang_tongguan",
+        "loc_tang_chengde"
+      ]
     },
     "fang_xuanling": {
       "id": "fang_xuanling",
@@ -10421,7 +10990,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_tang_lingyan"
+      ]
     },
     "qin_qiong": {
       "id": "qin_qiong",
@@ -10834,7 +11406,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_tang_anxi",
+        "loc_tang_dingxiang",
+        "loc_tang_yinshan",
+        "loc_tang_shule",
+        "loc_tang_khotan"
+      ]
     },
     "du_fu": {
       "id": "du_fu",
@@ -10921,6 +11500,13 @@
         "《三吏》",
         "《三别》",
         "《茅屋为秋风所破歌》"
+      ],
+      "locations": [
+        "loc_tang_dunhuang",
+        "loc_tang_yangzhou",
+        "loc_tang_suzhou",
+        "loc_tang_hangzhou",
+        "loc_tang_chengdu"
       ]
     },
     "bai_juyi": {
@@ -11008,6 +11594,13 @@
         "《长恨歌》",
         "《琵琶行》",
         "《新乐府》"
+      ],
+      "locations": [
+        "loc_tang_dunhuang",
+        "loc_tang_yangzhou",
+        "loc_tang_suzhou",
+        "loc_tang_hangzhou",
+        "loc_tang_chengdu"
       ]
     },
     "wang_wei": {
@@ -11083,6 +11676,13 @@
         "《山居秋暝》",
         "《送元二使安西》",
         "《相思》"
+      ],
+      "locations": [
+        "loc_tang_dunhuang",
+        "loc_tang_yangzhou",
+        "loc_tang_suzhou",
+        "loc_tang_hangzhou",
+        "loc_tang_chengdu"
       ]
     },
     "di_renjie": {
@@ -11157,7 +11757,10 @@
       ],
       "quote": "以人为镜，可以明得失。",
       "quoteSrc": "《旧唐书·狄仁杰传》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_tang_luoyang"
+      ]
     },
     "yao_chong": {
       "id": "yao_chong",
@@ -11676,7 +12279,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_tang_maweipo"
+      ]
     },
     "zhu_wen": {
       "id": "zhu_wen",
@@ -11738,7 +12344,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_kaifeng",
+        "loc_wudai_bianzhou"
+      ]
     },
     "jing_xiang": {
       "id": "jing_xiang",
@@ -11791,7 +12401,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_luoyang",
+        "loc_wudai_yangzhou",
+        "loc_wudai_nanjing",
+        "loc_wudai_jinling"
+      ]
     },
     "wang_yanzhang": {
       "id": "wang_yanzhang",
@@ -11838,7 +12454,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_yangzhou"
+      ]
     },
     "li_cunxu": {
       "id": "li_cunxu",
@@ -11895,7 +12514,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_luoyang",
+        "loc_wudai_youzhou",
+        "loc_wudai_nanjing",
+        "loc_wudai_jinling",
+        "loc_wudai_daming"
+      ]
     },
     "li_siyuan": {
       "id": "li_siyuan",
@@ -11948,7 +12574,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_luoyang",
+        "loc_wudai_nanjing",
+        "loc_wudai_jinling",
+        "loc_wudai_taiyuan"
+      ]
     },
     "li_congke": {
       "id": "li_congke",
@@ -11995,7 +12627,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_luoyang",
+        "loc_wudai_taiyuan"
+      ]
     },
     "li_cunxiao": {
       "id": "li_cunxiao",
@@ -12042,7 +12678,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_yangzhou"
+      ]
     },
     "zhou_dewei": {
       "id": "zhou_dewei",
@@ -12083,7 +12722,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_xuchang"
+      ]
     },
     "feng_dao": {
       "id": "feng_dao",
@@ -12132,7 +12774,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_luoyang",
+        "loc_wudai_yangzhou",
+        "loc_wudai_nanjing",
+        "loc_wudai_jinling",
+        "loc_wudai_xuchang"
+      ]
     },
     "shi_jingtang": {
       "id": "shi_jingtang",
@@ -12179,7 +12828,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_kaifeng",
+        "loc_wudai_youzhou",
+        "loc_wudai_bianzhou",
+        "loc_wudai_daming",
+        "loc_wudai_taiyuan"
+      ]
     },
     "sang_weihan": {
       "id": "sang_weihan",
@@ -12226,7 +12882,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_youzhou"
+      ]
     },
     "shi_chonggui": {
       "id": "shi_chonggui",
@@ -12326,7 +12985,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_kaifeng",
+        "loc_wudai_bianzhou",
+        "loc_wudai_taiyuan"
+      ]
     },
     "guo_wei": {
       "id": "guo_wei",
@@ -12375,7 +13039,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_kaifeng",
+        "loc_wudai_youzhou",
+        "loc_wudai_bianzhou",
+        "loc_wudai_xuchang",
+        "loc_wudai_daming"
+      ]
     },
     "chai_rong": {
       "id": "chai_rong",
@@ -12438,7 +13109,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_wudai_kaifeng",
+        "loc_wudai_youzhou",
+        "loc_wudai_xuchang",
+        "loc_wudai_daming"
+      ]
     },
     "wang_pu": {
       "id": "wang_pu",
@@ -13255,7 +13932,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_pingcheng",
+        "loc_nanbei_luoyang"
+      ]
     },
     "tuoba_tao": {
       "id": "tuoba_tao",
@@ -13320,7 +14001,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_pingcheng",
+        "loc_nanbei_luoyang",
+        "loc_nanbei_dunhuang"
+      ]
     },
     "xiao_ze": {
       "id": "xiao_ze",
@@ -13567,7 +14253,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_ye",
+        "loc_nanbei_jinyang"
+      ]
     },
     "gao_zhan": {
       "id": "gao_zhan",
@@ -13723,7 +14413,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_nanbei_chang_an",
+        "loc_nanbei_ye"
+      ]
     },
     "yuwen_hu": {
       "id": "yuwen_hu",
@@ -14904,7 +15598,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_luoyang",
+        "loc_jin_xuchang",
+        "loc_jin_ye"
+      ]
     },
     "sima_zhao": {
       "id": "sima_zhao",
@@ -14968,7 +15667,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_luoyang",
+        "loc_jin_xuchang",
+        "loc_jin_ye"
+      ]
     },
     "sima_zhong": {
       "id": "sima_zhong",
@@ -15033,7 +15737,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_jin_luoyang"
+      ]
     },
     "sima_rui": {
       "id": "sima_rui",
@@ -16163,6 +16870,9 @@
       "works": [
         "《典论·论文》",
         "《燕歌行》"
+      ],
+      "locations": [
+        "loc_sanguo_luoyang"
       ]
     },
     "zhi_cao": {
@@ -17327,7 +18037,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_sanguo_jianye"
+      ]
     },
     "jian_sun": {
       "id": "jian_sun",
@@ -19600,6 +20313,11 @@
       "quoteSrc": null,
       "works": [
         "《吕氏春秋》"
+      ],
+      "locations": [
+        "loc_zhanguo_xianyang",
+        "loc_zhanguo_jixia",
+        "loc_zhanguo_zheng"
       ]
     },
     "wang_jian_qin": {
@@ -19660,7 +20378,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_xianyang",
+        "loc_zhanguo_changping",
+        "loc_zhanguo_guandu",
+        "loc_zhanguo_shang",
+        "loc_zhanguo_hexi"
+      ]
     },
     "wang_ben_qin": {
       "id": "wang_ben_qin",
@@ -19719,7 +20444,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qin_xianyang",
+        "loc_qin_great_wall",
+        "loc_qin_hangu"
+      ]
     },
     "meng_wu": {
       "id": "meng_wu",
@@ -19771,7 +20501,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_xianyang",
+        "loc_zhanguo_guandu",
+        "loc_zhanguo_hexi",
+        "loc_zhanguo_hangu",
+        "loc_zhanguo_duling"
+      ]
     },
     "meng_yi": {
       "id": "meng_yi",
@@ -19872,7 +20609,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhanguo_zheng"
+      ]
     },
     "han_fei": {
       "id": "han_fei",
@@ -19929,6 +20669,9 @@
       "quoteSrc": "《韩非子》",
       "works": [
         "《韩非子》"
+      ],
+      "locations": [
+        "loc_zhanguo_yangzhai"
       ]
     },
     "li_you": {
@@ -20037,7 +20780,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qin_daze",
+        "loc_qin_wuguan",
+        "loc_qin_juzhong"
+      ]
     },
     "feng_quji": {
       "id": "feng_quji",
@@ -20797,7 +21545,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_handan",
+        "loc_chunqiu_shangqiu",
+        "loc_chunqiu_chengpu"
+      ]
     },
     "jian_shu": {
       "id": "jian_shu",
@@ -20844,7 +21597,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_yingqiu",
+        "loc_chunqiu_handan",
+        "loc_chunqiu_shangqiu",
+        "loc_chunqiu_chengpu",
+        "loc_chunqiu_jiangling"
+      ]
     },
     "mu_gong": {
       "id": "mu_gong",
@@ -20896,7 +21656,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_handan",
+        "loc_chunqiu_xinzheng",
+        "loc_chunqiu_shangqiu",
+        "loc_chunqiu_chengpu"
+      ]
     },
     "xiao_gong": {
       "id": "xiao_gong",
@@ -21162,7 +21928,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhou_haojing",
+        "loc_zhou_luoyi",
+        "loc_zhou_chengzhou",
+        "loc_zhou_muye",
+        "loc_zhou_shou"
+      ]
     },
     "king_kang": {
       "id": "king_kang",
@@ -21209,7 +21982,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhou_haojing",
+        "loc_zhou_luoyi",
+        "loc_zhou_chengzhou",
+        "loc_zhou_shou",
+        "loc_zhou_song"
+      ]
     },
     "king_mu": {
       "id": "king_mu",
@@ -21256,7 +22036,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhou_song",
+        "loc_zhou_wei"
+      ]
     },
     "king_li": {
       "id": "king_li",
@@ -21303,7 +22087,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhou_luoyi_west"
+      ]
     },
     "king_xuan": {
       "id": "king_xuan",
@@ -21350,7 +22137,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhou_luoyi",
+        "loc_zhou_luoyi_west"
+      ]
     },
     "king_you": {
       "id": "king_you",
@@ -21403,7 +22194,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_zhou_luoyi_west"
+      ]
     },
     "king_ping": {
       "id": "king_ping",
@@ -21444,7 +22238,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_yingqiu",
+        "loc_chunqiu_xinzheng",
+        "loc_chunqiu_jiangling"
+      ]
     },
     "confucius": {
       "id": "confucius",
@@ -21522,7 +22321,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_qufu"
+      ]
     },
     "laozi": {
       "id": "laozi",
@@ -21575,7 +22377,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_yue",
+        "loc_chunqiu_ji"
+      ]
     },
     "mozi": {
       "id": "mozi",
@@ -21840,7 +22646,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_linzi",
+        "loc_chunqiu_changshao"
+      ]
     },
     "zi_chan": {
       "id": "zi_chan",
@@ -21893,7 +22703,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_xinzheng",
+        "loc_chunqiu_yue"
+      ]
     },
     "sun_bin": {
       "id": "sun_bin",
@@ -22407,7 +23221,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_qufu"
+      ]
     },
     "zisi": {
       "id": "zisi",
@@ -22507,7 +23324,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_qufu"
+      ]
     },
     "zi_gong": {
       "id": "zi_gong",
@@ -22554,7 +23374,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_chunqiu_qufu"
+      ]
     },
     "zi_lu": {
       "id": "zi_lu",
@@ -22709,7 +23532,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_yinxu",
+        "loc_shang_chaoge",
+        "loc_shang_bo",
+        "loc_shang_tang_tomb"
+      ]
     },
     "wo_ding": {
       "id": "wo_ding",
@@ -22756,7 +23585,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_xingtai",
+        "loc_shang_geng"
+      ]
     },
     "tai_geng": {
       "id": "tai_geng",
@@ -22838,7 +23671,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_bing"
+      ]
     },
     "yong_ji": {
       "id": "yong_ji",
@@ -22879,7 +23715,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_bing"
+      ]
     },
     "tai_wu": {
       "id": "tai_wu",
@@ -22920,7 +23759,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_yang"
+      ]
     },
     "zhong_ding": {
       "id": "zhong_ding",
@@ -22961,7 +23803,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_xiao"
+      ]
     },
     "wai_ren": {
       "id": "wai_ren",
@@ -23002,7 +23847,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_xiao"
+      ]
     },
     "he_dan_jia": {
       "id": "he_dan_jia",
@@ -23043,7 +23891,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_xiao",
+        "loc_shang_xiang"
+      ]
     },
     "zu_yi": {
       "id": "zu_yi",
@@ -23090,7 +23942,12 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_xiang",
+        "loc_shang_geng",
+        "loc_shang_bing"
+      ]
     },
     "zu_xin": {
       "id": "zu_xin",
@@ -23131,7 +23988,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_shang_xiang",
+        "loc_shang_geng"
+      ]
     },
     "wo_jia": {
       "id": "wo_jia",
@@ -24040,7 +24901,14 @@
       ],
       "quote": "卧榻之侧，岂容他人鼾睡",
       "quoteSrc": "《续资治通鉴长编》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_song_dongjing",
+        "loc_song_yangzhou",
+        "loc_song_chengdu",
+        "loc_song_guangzhou",
+        "loc_song_quanzhou"
+      ]
     },
     "zhao_kuangyi": {
       "id": "zhao_kuangyi",
@@ -24108,7 +24976,12 @@
       ],
       "quote": "开卷有益",
       "quoteSrc": "《渑水燕谈录》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_song_dongjing",
+        "loc_song_taishan",
+        "loc_song_songshan"
+      ]
     },
     "zhao_hen": {
       "id": "zhao_hen",
@@ -24166,6 +25039,11 @@
       "quoteSrc": "《励学篇》",
       "works": [
         "《励学篇》"
+      ],
+      "locations": [
+        "loc_song_dongjing",
+        "loc_song_taishan",
+        "loc_song_songshan"
       ]
     },
     "zhao_zhen": {
@@ -24356,6 +25234,13 @@
       "quoteSrc": "《宋史·高宗本纪》",
       "works": [
         "《翰墨志》"
+      ],
+      "locations": [
+        "loc_song_lin_an",
+        "loc_song_yashan",
+        "loc_song_yangzhou",
+        "loc_song_suzhou",
+        "loc_song_chengdu"
       ]
     },
     "zhao_kuo": {
@@ -24420,6 +25305,13 @@
         "《大观茶论》",
         "《千字文卷》",
         "《瑞鹤图》"
+      ],
+      "locations": [
+        "loc_song_lin_an",
+        "loc_song_yashan",
+        "loc_song_hefei",
+        "loc_song_xiangyang",
+        "loc_song_changsha"
       ]
     },
     "zhao_huan": {
@@ -24482,7 +25374,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_song_lin_an",
+        "loc_song_yashan",
+        "loc_song_hefei",
+        "loc_song_xiangyang",
+        "loc_song_changsha"
+      ]
     },
     "zhao_shi": {
       "id": "zhao_shi",
@@ -24530,7 +25429,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_song_yashan"
+      ]
     },
     "kou_zhun": {
       "id": "kou_zhun",
@@ -24594,6 +25496,9 @@
       "quoteSrc": "《宋史·寇准传》",
       "works": [
         "《寇莱公集》"
+      ],
+      "locations": [
+        "loc_song_dongjing"
       ]
     },
     "fan_zhongyan": {
@@ -24658,6 +25563,13 @@
         "《岳阳楼记》",
         "《渔家傲·秋思》",
         "《范文正公集》"
+      ],
+      "locations": [
+        "loc_song_dongjing",
+        "loc_song_yangzhou",
+        "loc_song_suzhou",
+        "loc_song_chengdu",
+        "loc_song_guangzhou"
       ]
     },
     "wang_anshi": {
@@ -24722,6 +25634,13 @@
         "《临川先生文集》",
         "《答司马谏议书》",
         "《泊船瓜洲》"
+      ],
+      "locations": [
+        "loc_song_yangzhou",
+        "loc_song_suzhou",
+        "loc_song_chengdu",
+        "loc_song_guangzhou",
+        "loc_song_quanzhou"
       ]
     },
     "sima_guang": {
@@ -24845,6 +25764,9 @@
         "《秋声赋》",
         "《新五代史》",
         "《欧阳文忠公集》"
+      ],
+      "locations": [
+        "loc_song_suzhou"
       ]
     },
     "su_shi": {
@@ -24912,6 +25834,13 @@
         "《赤壁赋》",
         "《念奴娇·赤壁怀古》",
         "《水调歌头·明月几时有》"
+      ],
+      "locations": [
+        "loc_song_yangzhou",
+        "loc_song_suzhou",
+        "loc_song_chengdu",
+        "loc_song_guangzhou",
+        "loc_song_quanzhou"
       ]
     },
     "su_zhe": {
@@ -25172,6 +26101,13 @@
         "《满江红》",
         "《小重山》",
         "《岳忠武王文集》"
+      ],
+      "locations": [
+        "loc_song_lin_an",
+        "loc_song_hefei",
+        "loc_song_xiangyang",
+        "loc_song_changsha",
+        "loc_song_nanchang"
       ]
     },
     "han_shizhong": {
@@ -25303,6 +26239,9 @@
         "《正气歌》",
         "《过零丁洋》",
         "《指南录》"
+      ],
+      "locations": [
+        "loc_song_yashan"
       ]
     },
     "bao_zheng": {
@@ -25544,7 +26483,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_song_lin_an",
+        "loc_song_hefei",
+        "loc_song_xiangyang",
+        "loc_song_changsha",
+        "loc_song_nanchang"
+      ]
     },
     "cai_jing": {
       "id": "cai_jing",
@@ -25834,7 +26780,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_yuan_dadu",
+        "loc_yuan_shangdu",
+        "loc_yuan_helan",
+        "loc_yuan_quanzhou",
+        "loc_yuan_guangzhou"
+      ]
     },
     "wo_kuotai": {
       "id": "wo_kuotai",
@@ -25895,7 +26848,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_yuan_dadu",
+        "loc_yuan_shangdu",
+        "loc_yuan_helan",
+        "loc_yuan_quanzhou",
+        "loc_yuan_guangzhou"
+      ]
     },
     "hubilie": {
       "id": "hubilie",
@@ -25966,7 +26926,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_yuan_dadu",
+        "loc_yuan_shangdu",
+        "loc_yuan_helan",
+        "loc_yuan_quanzhou",
+        "loc_yuan_guangzhou"
+      ]
     },
     "yelv_chucai": {
       "id": "yelv_chucai",
@@ -26025,7 +26992,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_yuan_dadu",
+        "loc_yuan_shangdu",
+        "loc_yuan_helan",
+        "loc_yuan_khanbaliq",
+        "loc_yuan_xanadu"
+      ]
     },
     "tuotuo": {
       "id": "tuotuo",
@@ -26092,7 +27066,11 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_yuan_dadu",
+        "loc_yuan_khanbaliq"
+      ]
     },
     "guan_hanqing": {
       "id": "guan_hanqing",
@@ -26434,7 +27412,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_yuan_quanzhou",
+        "loc_yuan_guangzhou",
+        "loc_yuan_dunhuang",
+        "loc_yuan_taishan",
+        "loc_yuan_yangzhou"
+      ]
     },
     "guo_shoujing": {
       "id": "guo_shoujing",
@@ -26499,7 +27484,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_yuan_quanzhou",
+        "loc_yuan_guangzhou",
+        "loc_yuan_dunhuang",
+        "loc_yuan_taishan",
+        "loc_yuan_yangzhou"
+      ]
     },
     "huang_daopo": {
       "id": "huang_daopo",
@@ -27050,7 +28042,14 @@
       ],
       "quote": "驱逐胡虏，恢复中华",
       "quoteSrc": "《谕中原檄》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_ming_nanjing",
+        "loc_ming_beijing",
+        "loc_ming_zijin",
+        "loc_ming_taishan",
+        "loc_ming_huashan"
+      ]
     },
     "zhu_di": {
       "id": "zhu_di",
@@ -27126,7 +28125,14 @@
       ],
       "quote": "朕为天下主，华夷一家",
       "quoteSrc": "《明太宗实录》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_ming_beijing",
+        "loc_ming_zijin",
+        "loc_ming_taishan",
+        "loc_ming_huashan",
+        "loc_ming_great_wall"
+      ]
     },
     "zhu_yunwen": {
       "id": "zhu_yunwen",
@@ -27182,7 +28188,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_ming_beijing",
+        "loc_ming_zijin",
+        "loc_ming_taishan",
+        "loc_ming_huashan",
+        "loc_ming_yangzhou"
+      ]
     },
     "zhu_gaozhi": {
       "id": "zhu_gaozhi",
@@ -27232,7 +28245,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_ming_beijing",
+        "loc_ming_zijin",
+        "loc_ming_taishan",
+        "loc_ming_huashan",
+        "loc_ming_yangzhou"
+      ]
     },
     "zhu_zhanyi": {
       "id": "zhu_zhanyi",
@@ -27631,6 +28651,9 @@
         "《诚意伯文集》",
         "《郁离子》",
         "《卖柑者言》"
+      ],
+      "locations": [
+        "loc_ming_nanjing"
       ]
     },
     "xu_da": {
@@ -27687,7 +28710,13 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_ming_nanjing",
+        "loc_ming_great_wall",
+        "loc_ming_tianjin",
+        "loc_ming_shanhaiguan"
+      ]
     },
     "chang_yuchun": {
       "id": "chang_yuchun",
@@ -27741,7 +28770,13 @@
       ],
       "quote": "摧锋陷阵，所向披靡",
       "quoteSrc": "《明史·常遇春传》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_ming_nanjing",
+        "loc_ming_great_wall",
+        "loc_ming_tianjin",
+        "loc_ming_shanhaiguan"
+      ]
     },
     "yu_qian": {
       "id": "yu_qian",
@@ -27801,6 +28836,12 @@
       "works": [
         "《于忠肃集》",
         "《石灰吟》"
+      ],
+      "locations": [
+        "loc_ming_nanjing",
+        "loc_ming_great_wall",
+        "loc_ming_tianjin",
+        "loc_ming_shanhaiguan"
       ]
     },
     "wang_yangming": {
@@ -27865,6 +28906,13 @@
         "《传习录》",
         "《大学问》",
         "《王文成公全书》"
+      ],
+      "locations": [
+        "loc_ming_beijing",
+        "loc_ming_zijin",
+        "loc_ming_taishan",
+        "loc_ming_huashan",
+        "loc_ming_yangzhou"
       ]
     },
     "zhang_juzheng": {
@@ -28928,7 +29976,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qing_shengjing"
+      ]
     },
     "huang_taiji": {
       "id": "huang_taiji",
@@ -28993,7 +30044,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qing_shengjing"
+      ]
     },
     "shunzhi": {
       "id": "shunzhi",
@@ -29062,7 +30116,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qing_beijing",
+        "loc_qing_shengjing",
+        "loc_qing_chengde",
+        "loc_qing_nanjing",
+        "loc_qing_yangzhou"
+      ]
     },
     "kangxi": {
       "id": "kangxi",
@@ -29145,7 +30206,14 @@
       ],
       "quote": "天下未有过不去之事",
       "quoteSrc": "《清圣祖实录》",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qing_beijing",
+        "loc_qing_chengde",
+        "loc_qing_nanjing",
+        "loc_qing_yangzhou",
+        "loc_qing_suzhou"
+      ]
     },
     "yongzheng": {
       "id": "yongzheng",
@@ -29217,6 +30285,13 @@
       "works": [
         "《朱批谕旨》",
         "《大义觉迷录》"
+      ],
+      "locations": [
+        "loc_qing_beijing",
+        "loc_qing_chengde",
+        "loc_qing_nanjing",
+        "loc_qing_yangzhou",
+        "loc_qing_suzhou"
       ]
     },
     "qianlong": {
@@ -29290,6 +30365,13 @@
       "works": [
         "《御制诗集》",
         "《十全记》"
+      ],
+      "locations": [
+        "loc_qing_beijing",
+        "loc_qing_chengde",
+        "loc_qing_nanjing",
+        "loc_qing_yangzhou",
+        "loc_qing_suzhou"
       ]
     },
     "jiaqing": {
@@ -29357,7 +30439,14 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qing_chengde",
+        "loc_qing_nanjing",
+        "loc_qing_yangzhou",
+        "loc_qing_suzhou",
+        "loc_qing_hangzhou"
+      ]
     },
     "daoguang": {
       "id": "daoguang",
@@ -29749,7 +30838,11 @@
       ],
       "quote": "量中华之物力，结与国之欢心",
       "quoteSrc": "《辛丑条约》谕旨",
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qing_beijing",
+        "loc_qing_shanhaiguan"
+      ]
     },
     "duoergun": {
       "id": "duoergun",
@@ -29803,7 +30896,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qing_shengjing"
+      ]
     },
     "aobai": {
       "id": "aobai",
@@ -29851,7 +30947,10 @@
       ],
       "quote": null,
       "quoteSrc": null,
-      "works": null
+      "works": null,
+      "locations": [
+        "loc_qing_shengjing"
+      ]
     },
     "suoni": {
       "id": "suoni",
@@ -36980,6 +38079,4025 @@
       "description": "秦王政统一六国，建立秦朝，战国时代结束。战国时期是中国社会大变革时期，铁器普及，商业繁荣，百家争鸣，为秦统一奠定了文化基础。",
       "persons": [],
       "chain": []
+    }
+  },
+  "locations": {
+    "loc_shanggu_zhuolu": {
+      "id": "loc_shanggu_zhuolu",
+      "name": "涿鹿",
+      "modernName": "河北涿鹿",
+      "type": "battlefield",
+      "description": "黄帝与蚩尤大战之地，史称「涿鹿之战」，是中华文明形成的重要战役。",
+      "dynasty": "shanggu",
+      "persons": [
+        "huangdi",
+        "yandi",
+        "zhuanxu"
+      ],
+      "coords": [
+        115.2,
+        40.4
+      ]
+    },
+    "loc_shanggu_banquan": {
+      "id": "loc_shanggu_banquan",
+      "name": "阪泉",
+      "modernName": "河北涿鹿东南",
+      "type": "battlefield",
+      "description": "黄帝与炎帝阪泉之战的发生地，此战后炎黄部落融合，奠定华夏民族基础。",
+      "dynasty": "shanggu",
+      "persons": [
+        "huangdi",
+        "yandi"
+      ],
+      "coords": [
+        115.0,
+        40.5
+      ]
+    },
+    "loc_shanggu_shouqiu": {
+      "id": "loc_shanggu_shouqiu",
+      "name": "寿丘",
+      "modernName": "山东曲阜",
+      "type": "birthplace",
+      "description": "黄帝生于寿丘，是上古帝王的重要出生地，后世建有祭祀黄帝的庙宇。",
+      "dynasty": "shanggu",
+      "persons": [
+        "huangdi",
+        "di_ku"
+      ],
+      "coords": [
+        116.99,
+        35.6
+      ]
+    },
+    "loc_shanggu_pingyang": {
+      "id": "loc_shanggu_pingyang",
+      "name": "平阳",
+      "modernName": "山西临汾",
+      "type": "capital",
+      "description": "尧都平阳，是上古时期重要的政治中心，尧在此实行禅让制，舜于此继位。",
+      "dynasty": "shanggu",
+      "persons": [
+        "yao",
+        "shun",
+        "gun"
+      ],
+      "coords": [
+        112.55,
+        37.87
+      ]
+    },
+    "loc_shanggu_puyang": {
+      "id": "loc_shanggu_puyang",
+      "name": "蒲阪",
+      "modernName": "山西永济",
+      "type": "capital",
+      "description": "舜都蒲阪，是舜帝统治时期的都城，舜在此推行德政，被后世尊为圣王。",
+      "dynasty": "shanggu",
+      "persons": [
+        "shun",
+        "yao"
+      ],
+      "coords": [
+        110.3,
+        34.8
+      ]
+    },
+    "loc_xia_yangcheng": {
+      "id": "loc_xia_yangcheng",
+      "name": "阳城",
+      "modernName": "河南登封",
+      "type": "capital",
+      "description": "夏禹的都城，禹在此建立夏朝，开启了中国历史上第一个世袭王朝。",
+      "dynasty": "xia",
+      "persons": [
+        "yu",
+        "qi"
+      ],
+      "coords": [
+        113.0,
+        34.5
+      ]
+    },
+    "loc_xia_zhenxun": {
+      "id": "loc_xia_zhenxun",
+      "name": "斟鄩",
+      "modernName": "河南偃师",
+      "type": "capital",
+      "description": "夏朝中后期都城，太康失国后少康中兴之地，是夏代政治中心之一。",
+      "dynasty": "xia",
+      "persons": [
+        "yu",
+        "qi"
+      ],
+      "coords": [
+        112.5,
+        34.7
+      ]
+    },
+    "loc_xia_hua": {
+      "id": "loc_xia_hua",
+      "name": "华阳",
+      "modernName": "河南新郑",
+      "type": "region",
+      "description": "夏朝重要的活动区域，与夏族早期发展密切相关，是华夏文明的重要发源地。",
+      "dynasty": "xia",
+      "persons": [
+        "yu",
+        "qi"
+      ],
+      "coords": [
+        113.6,
+        34.4
+      ]
+    },
+    "loc_xia_juntai": {
+      "id": "loc_xia_juntai",
+      "name": "钧台",
+      "modernName": "河南禹州",
+      "type": "temple",
+      "description": "夏朝祭祀之地，禹会诸侯于钧台，是夏代重要的礼仪场所。",
+      "dynasty": "xia",
+      "persons": [
+        "yu",
+        "qi"
+      ],
+      "coords": null
+    },
+    "loc_xia_xia": {
+      "id": "loc_xia_xia",
+      "name": "夏",
+      "modernName": "河南禹州",
+      "type": "region",
+      "description": "夏族的发源地和早期活动中心，夏朝国号的来源。",
+      "dynasty": "xia",
+      "persons": [
+        "yu",
+        "qi"
+      ],
+      "coords": null
+    },
+    "loc_shang_yinxu": {
+      "id": "loc_shang_yinxu",
+      "name": "殷墟",
+      "modernName": "河南安阳",
+      "type": "capital",
+      "description": "商朝晚期都城遗址，盘庚迁殷后商朝政治中心，出土大量甲骨文和青铜器。",
+      "dynasty": "shang",
+      "persons": [
+        "shang_tang",
+        "yi_yin",
+        "zhou_xin",
+        "bi_gan",
+        "tai_jia"
+      ],
+      "coords": [
+        114.39,
+        36.1
+      ]
+    },
+    "loc_shang_chaoge": {
+      "id": "loc_shang_chaoge",
+      "name": "朝歌",
+      "modernName": "河南淇县",
+      "type": "capital",
+      "description": "商朝晚期重要都城，纣王的统治中心，是商朝最繁华的城市之一。",
+      "dynasty": "shang",
+      "persons": [
+        "zhou_xin",
+        "bi_gan",
+        "tai_jia"
+      ],
+      "coords": [
+        114.11,
+        35.92
+      ]
+    },
+    "loc_shang_bo": {
+      "id": "loc_shang_bo",
+      "name": "亳",
+      "modernName": "河南商丘",
+      "type": "capital",
+      "description": "商朝早期都城，商汤灭夏后建都于此，是商朝开国的重要政治中心。",
+      "dynasty": "shang",
+      "persons": [
+        "shang_tang",
+        "yi_yin",
+        "tai_jia"
+      ],
+      "coords": [
+        115.65,
+        34.45
+      ]
+    },
+    "loc_shang_xingtai": {
+      "id": "loc_shang_xingtai",
+      "name": "邢",
+      "modernName": "河北邢台",
+      "type": "city",
+      "description": "商朝重要的方国城市，是商朝北方的军事重镇和交通枢纽。",
+      "dynasty": "shang",
+      "persons": [
+        "zhou_xin",
+        "yi_yin",
+        "wo_ding"
+      ],
+      "coords": [
+        114.07,
+        32.13
+      ]
+    },
+    "loc_shang_yang": {
+      "id": "loc_shang_yang",
+      "name": "阳",
+      "modernName": "山东曹县",
+      "type": "city",
+      "description": "商朝重要城邑，与商朝东部的统治密切相关，是商朝文化的重要传播地。",
+      "dynasty": "shang",
+      "persons": [
+        "shang_tang",
+        "yi_yin",
+        "tai_wu"
+      ],
+      "coords": [
+        115.48,
+        35.23
+      ]
+    },
+    "loc_shang_xiao": {
+      "id": "loc_shang_xiao",
+      "name": "嚣",
+      "modernName": "河南荥阳",
+      "type": "city",
+      "description": "商朝中期都城，仲丁迁于此，是商朝九世之乱后的重要政治中心。",
+      "dynasty": "shang",
+      "persons": [
+        "zhong_ding",
+        "wai_ren",
+        "he_dan_jia"
+      ],
+      "coords": [
+        113.38,
+        34.79
+      ]
+    },
+    "loc_shang_xiang": {
+      "id": "loc_shang_xiang",
+      "name": "相",
+      "modernName": "河南内黄",
+      "type": "city",
+      "description": "商朝中期都城，河亶甲迁于此，是商朝中后期的重要城市。",
+      "dynasty": "shang",
+      "persons": [
+        "he_dan_jia",
+        "zu_yi",
+        "zu_xin"
+      ],
+      "coords": [
+        114.9,
+        35.95
+      ]
+    },
+    "loc_shang_geng": {
+      "id": "loc_shang_geng",
+      "name": "耿",
+      "modernName": "山西河津",
+      "type": "city",
+      "description": "商朝中期都城，祖乙曾迁于此，后因河患再迁，是商朝重要历史遗址。",
+      "dynasty": "shang",
+      "persons": [
+        "zu_yi",
+        "zu_xin",
+        "wo_ding"
+      ],
+      "coords": [
+        110.71,
+        35.6
+      ]
+    },
+    "loc_shang_bing": {
+      "id": "loc_shang_bing",
+      "name": "丙",
+      "modernName": "山西垣曲",
+      "type": "city",
+      "description": "商朝重要城邑，与商朝在晋南的统治密切相关，是商朝的西方屏障。",
+      "dynasty": "shang",
+      "persons": [
+        "zu_yi",
+        "xiao_jia",
+        "yong_ji"
+      ],
+      "coords": [
+        111.57,
+        35.3
+      ]
+    },
+    "loc_shang_tang_tomb": {
+      "id": "loc_shang_tang_tomb",
+      "name": "汤陵",
+      "modernName": "河南商丘",
+      "type": "tomb",
+      "description": "商汤王陵，是商朝开国君主的重要墓葬，历代多有祭祀。",
+      "dynasty": "shang",
+      "persons": [
+        "shang_tang",
+        "yi_yin",
+        "tai_jia"
+      ],
+      "coords": [
+        115.65,
+        34.45
+      ]
+    },
+    "loc_zhou_haojing": {
+      "id": "loc_zhou_haojing",
+      "name": "镐京",
+      "modernName": "陕西西安",
+      "type": "capital",
+      "description": "西周都城，周武王灭商后建都于此，是西周政治、经济、文化中心。",
+      "dynasty": "zhou",
+      "persons": [
+        "king_wu",
+        "zhou_dan",
+        "king_cheng",
+        "king_kang"
+      ],
+      "coords": [
+        108.95,
+        34.27
+      ]
+    },
+    "loc_zhou_luoyi": {
+      "id": "loc_zhou_luoyi",
+      "name": "洛邑",
+      "modernName": "河南洛阳",
+      "type": "capital",
+      "description": "西周东都，周公营建，是周朝统治东方的重要政治中心，后成为东周都城。",
+      "dynasty": "zhou",
+      "persons": [
+        "zhou_dan",
+        "king_cheng",
+        "king_kang",
+        "king_xuan"
+      ],
+      "coords": [
+        112.45,
+        34.62
+      ]
+    },
+    "loc_zhou_qishan": {
+      "id": "loc_zhou_qishan",
+      "name": "岐山",
+      "modernName": "陕西岐山",
+      "type": "birthplace",
+      "description": "周朝发源地，周文王在此发展壮大，为灭商奠定基础，是周文化的摇篮。",
+      "dynasty": "zhou",
+      "persons": [
+        "king_wen",
+        "king_wu",
+        "zhou_dan"
+      ],
+      "coords": [
+        107.62,
+        34.3
+      ]
+    },
+    "loc_zhou_feng": {
+      "id": "loc_zhou_feng",
+      "name": "丰",
+      "modernName": "陕西西安",
+      "type": "capital",
+      "description": "西周早期都城，周文王营建，是周朝崛起的重要基地。",
+      "dynasty": "zhou",
+      "persons": [
+        "king_wen",
+        "king_wu",
+        "zhou_dan"
+      ],
+      "coords": [
+        107.8,
+        34.3
+      ]
+    },
+    "loc_zhou_chengzhou": {
+      "id": "loc_zhou_chengzhou",
+      "name": "成周",
+      "modernName": "河南洛阳",
+      "type": "capital",
+      "description": "周公营建的东都，是周朝控制东方诸侯的重要军事政治中心。",
+      "dynasty": "zhou",
+      "persons": [
+        "zhou_dan",
+        "king_cheng",
+        "king_kang"
+      ],
+      "coords": [
+        113.0,
+        34.5
+      ]
+    },
+    "loc_zhou_muye": {
+      "id": "loc_zhou_muye",
+      "name": "牧野",
+      "modernName": "河南新乡",
+      "type": "battlefield",
+      "description": "武王伐纣的牧野之战发生地，此战决定商周更替，是中国历史重要转折点。",
+      "dynasty": "zhou",
+      "persons": [
+        "king_wu",
+        "zhou_dan",
+        "king_cheng"
+      ],
+      "coords": [
+        113.87,
+        35.3
+      ]
+    },
+    "loc_zhou_shou": {
+      "id": "loc_zhou_shou",
+      "name": "首阳",
+      "modernName": "河南偃师",
+      "type": "mountain",
+      "description": "伯夷叔齐饿死之地，是商周之际忠义精神的象征，后世多有题咏。",
+      "dynasty": "zhou",
+      "persons": [
+        "king_wu",
+        "king_cheng",
+        "king_kang"
+      ],
+      "coords": [
+        112.8,
+        34.7
+      ]
+    },
+    "loc_zhou_luoyi_west": {
+      "id": "loc_zhou_luoyi_west",
+      "name": "王城",
+      "modernName": "河南洛阳",
+      "type": "capital",
+      "description": "东周都城，平王东迁后建都于此，是春秋战国时期重要的政治中心。",
+      "dynasty": "zhou",
+      "persons": [
+        "king_li",
+        "king_xuan",
+        "king_you"
+      ],
+      "coords": [
+        112.45,
+        34.62
+      ]
+    },
+    "loc_zhou_song": {
+      "id": "loc_zhou_song",
+      "name": "宋",
+      "modernName": "河南商丘",
+      "type": "region",
+      "description": "周朝分封的宋国，是商朝后裔的封地，保存商文化的重要区域。",
+      "dynasty": "zhou",
+      "persons": [
+        "king_cheng",
+        "king_kang",
+        "king_mu"
+      ],
+      "coords": [
+        115.65,
+        34.45
+      ]
+    },
+    "loc_zhou_wei": {
+      "id": "loc_zhou_wei",
+      "name": "卫",
+      "modernName": "河南淇县",
+      "type": "region",
+      "description": "周朝分封的卫国，是周朝在东方的重要诸侯国，文化发达。",
+      "dynasty": "zhou",
+      "persons": [
+        "king_cheng",
+        "king_kang",
+        "king_mu"
+      ],
+      "coords": [
+        114.11,
+        35.92
+      ]
+    },
+    "loc_chunqiu_linzi": {
+      "id": "loc_chunqiu_linzi",
+      "name": "临淄",
+      "modernName": "山东淄博",
+      "type": "capital",
+      "description": "齐国都城，春秋时期最繁华的城市之一，是东方经济文化中心。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "guan_zhong",
+        "yan_ying",
+        "bao_shuya"
+      ],
+      "coords": [
+        118.3,
+        36.88
+      ]
+    },
+    "loc_chunqiu_qufu": {
+      "id": "loc_chunqiu_qufu",
+      "name": "曲阜",
+      "modernName": "山东曲阜",
+      "type": "capital",
+      "description": "鲁国都城，孔子故乡，儒家文化发源地，是春秋时期重要的文化中心。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "confucius",
+        "yan_hui",
+        "zengzi",
+        "zi_gong"
+      ],
+      "coords": [
+        116.99,
+        35.6
+      ]
+    },
+    "loc_chunqiu_yingqiu": {
+      "id": "loc_chunqiu_yingqiu",
+      "name": "郢",
+      "modernName": "湖北荆州",
+      "type": "capital",
+      "description": "楚国都城，春秋时期南方最大城市，是楚文化的重要中心。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "wu_zixu",
+        "jian_shu",
+        "king_ping"
+      ],
+      "coords": [
+        112.2,
+        30.4
+      ]
+    },
+    "loc_chunqiu_handan": {
+      "id": "loc_chunqiu_handan",
+      "name": "邯郸",
+      "modernName": "河北邯郸",
+      "type": "city",
+      "description": "赵国都城，春秋战国时期北方重要城市，文化繁荣，商业发达。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "mu_gong",
+        "bai_li_xi",
+        "jian_shu"
+      ],
+      "coords": [
+        114.49,
+        36.61
+      ]
+    },
+    "loc_chunqiu_xinzheng": {
+      "id": "loc_chunqiu_xinzheng",
+      "name": "新郑",
+      "modernName": "河南新郑",
+      "type": "capital",
+      "description": "郑国都城，春秋时期中原交通要道，商业繁荣，文化发达。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "zi_chan",
+        "mu_gong",
+        "king_ping"
+      ],
+      "coords": [
+        113.63,
+        34.75
+      ]
+    },
+    "loc_chunqiu_shangqiu": {
+      "id": "loc_chunqiu_shangqiu",
+      "name": "商丘",
+      "modernName": "河南商丘",
+      "type": "city",
+      "description": "宋国都城，春秋时期中原重要城市，是商文化的传承地。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "mu_gong",
+        "bai_li_xi",
+        "jian_shu"
+      ],
+      "coords": [
+        115.65,
+        34.45
+      ]
+    },
+    "loc_chunqiu_wu": {
+      "id": "loc_chunqiu_wu",
+      "name": "吴",
+      "modernName": "江苏苏州",
+      "type": "capital",
+      "description": "吴国都城，春秋后期崛起为南方霸主，是吴越文化的重要中心。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "sun_wu",
+        "wu_zixu",
+        "yan_ying"
+      ],
+      "coords": [
+        120.6,
+        31.3
+      ]
+    },
+    "loc_chunqiu_yue": {
+      "id": "loc_chunqiu_yue",
+      "name": "越",
+      "modernName": "浙江绍兴",
+      "type": "capital",
+      "description": "越国都城，春秋后期越王勾践卧薪尝胆之地，最终灭吴称霸。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "yan_ying",
+        "zi_chan",
+        "laozi"
+      ],
+      "coords": [
+        120.6,
+        30.3
+      ]
+    },
+    "loc_chunqiu_chengpu": {
+      "id": "loc_chunqiu_chengpu",
+      "name": "城濮",
+      "modernName": "山东鄄城",
+      "type": "battlefield",
+      "description": "城濮之战发生地，晋文公大败楚军，成为春秋霸主的重要战役。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "mu_gong",
+        "bai_li_xi",
+        "jian_shu"
+      ],
+      "coords": [
+        115.5,
+        35.57
+      ]
+    },
+    "loc_chunqiu_helu": {
+      "id": "loc_chunqiu_helu",
+      "name": "阖闾",
+      "modernName": "江苏苏州",
+      "type": "city",
+      "description": "吴王阖闾的都城，春秋后期吴国强盛时期的政治中心。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "sun_wu",
+        "wu_zixu",
+        "yan_ying"
+      ],
+      "coords": [
+        120.6,
+        31.3
+      ]
+    },
+    "loc_chunqiu_gusu": {
+      "id": "loc_chunqiu_gusu",
+      "name": "姑苏",
+      "modernName": "江苏苏州",
+      "type": "city",
+      "description": "吴国重要城邑，伍子胥营建，是春秋后期吴国最繁华的城市。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "wu_zixu",
+        "sun_wu",
+        "yan_ying"
+      ],
+      "coords": [
+        120.6,
+        31.3
+      ]
+    },
+    "loc_chunqiu_jiangling": {
+      "id": "loc_chunqiu_jiangling",
+      "name": "江陵",
+      "modernName": "湖北荆州",
+      "type": "city",
+      "description": "楚国重要城邑，是楚国北方的军事重镇和经济中心。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "jian_shu",
+        "king_ping",
+        "wu_zixu"
+      ],
+      "coords": [
+        112.2,
+        30.4
+      ]
+    },
+    "loc_chunqiu_ji": {
+      "id": "loc_chunqiu_ji",
+      "name": "蓟",
+      "modernName": "北京",
+      "type": "capital",
+      "description": "燕国都城，春秋战国时期北方重要诸侯国，是燕文化的发源地。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "yan_ying",
+        "guan_zhong",
+        "laozi"
+      ],
+      "coords": [
+        116.4,
+        39.9
+      ]
+    },
+    "loc_chunqiu_changshao": {
+      "id": "loc_chunqiu_changshao",
+      "name": "长勺",
+      "modernName": "山东莱芜",
+      "type": "battlefield",
+      "description": "长勺之战发生地，曹刿以「一鼓作气」大败齐军，是春秋著名战役。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "guan_zhong",
+        "bao_shuya",
+        "yan_ying"
+      ],
+      "coords": [
+        117.67,
+        36.2
+      ]
+    },
+    "loc_chunqiu_boyang": {
+      "id": "loc_chunqiu_boyang",
+      "name": "柏举",
+      "modernName": "湖北麻城",
+      "type": "battlefield",
+      "description": "柏举之战发生地，吴军大败楚军，是春秋时期著名战役。",
+      "dynasty": "chunqiu",
+      "persons": [
+        "sun_wu",
+        "wu_zixu",
+        "jian_shu"
+      ],
+      "coords": [
+        115.03,
+        31.18
+      ]
+    },
+    "loc_zhanguo_xianyang": {
+      "id": "loc_zhanguo_xianyang",
+      "name": "咸阳",
+      "modernName": "陕西咸阳",
+      "type": "capital",
+      "description": "秦国都城，商鞅变法后秦国政治中心，后统一六国成为秦朝首都。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "shang_yang",
+        "wang_jian_qin",
+        "meng_wu",
+        "lü_buwei"
+      ],
+      "coords": [
+        108.71,
+        34.33
+      ]
+    },
+    "loc_zhanguo_handan": {
+      "id": "loc_zhanguo_handan",
+      "name": "邯郸",
+      "modernName": "河北邯郸",
+      "type": "capital",
+      "description": "赵国都城，战国后期赵国政治中心，以胡服骑射改革闻名。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "lin_xiangru",
+        "lian_po",
+        "bai_qi",
+        "mengchang"
+      ],
+      "coords": [
+        114.49,
+        36.61
+      ]
+    },
+    "loc_zhanguo_linzi": {
+      "id": "loc_zhanguo_linzi",
+      "name": "临淄",
+      "modernName": "山东淄博",
+      "type": "capital",
+      "description": "齐国都城，战国时期最繁华的城市之一，稷下学宫所在地。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "mengchang",
+        "chunshen",
+        "qu_yuan"
+      ],
+      "coords": [
+        118.3,
+        36.88
+      ]
+    },
+    "loc_zhanguo_daliang": {
+      "id": "loc_zhanguo_daliang",
+      "name": "大梁",
+      "modernName": "河南开封",
+      "type": "capital",
+      "description": "魏国都城，战国时期中原重要政治经济中心，文化繁荣。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "xinling",
+        "pingyuan",
+        "mengchang"
+      ],
+      "coords": [
+        114.31,
+        34.8
+      ]
+    },
+    "loc_zhanguo_ying": {
+      "id": "loc_zhanguo_ying",
+      "name": "郢",
+      "modernName": "湖北荆州",
+      "type": "capital",
+      "description": "楚国都城，战国时期南方最大城市，楚文化的重要中心。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "qu_yuan",
+        "chunshen",
+        "bai_qi",
+        "yue_yi"
+      ],
+      "coords": [
+        112.2,
+        30.4
+      ]
+    },
+    "loc_zhanguo_yangzhai": {
+      "id": "loc_zhanguo_yangzhai",
+      "name": "阳翟",
+      "modernName": "河南禹州",
+      "type": "city",
+      "description": "韩国都城，战国时期中原重要城市，是法家思想的重要传播地。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "shang_yang",
+        "han_fei"
+      ],
+      "coords": [
+        113.48,
+        34.17
+      ]
+    },
+    "loc_zhanguo_jixia": {
+      "id": "loc_zhanguo_jixia",
+      "name": "稷下",
+      "modernName": "山东淄博",
+      "type": "city",
+      "description": "稷下学宫所在地，战国时期百家争鸣的重要学术中心，天下学子云集。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "mengchang",
+        "qu_yuan",
+        "lü_buwei"
+      ],
+      "coords": [
+        118.3,
+        36.88
+      ]
+    },
+    "loc_zhanguo_changping": {
+      "id": "loc_zhanguo_changping",
+      "name": "长平",
+      "modernName": "山西高平",
+      "type": "battlefield",
+      "description": "长平之战发生地，白起坑杀赵军四十万，是战国最惨烈战役。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "bai_qi",
+        "lin_xiangru",
+        "lian_po",
+        "wang_jian_qin"
+      ],
+      "coords": [
+        113.3,
+        35.7
+      ]
+    },
+    "loc_zhanguo_guandu": {
+      "id": "loc_zhanguo_guandu",
+      "name": "官渡",
+      "modernName": "河南中牟",
+      "type": "battlefield",
+      "description": "官渡之战发生地，曹操以少胜多大败袁绍，奠定统一北方基础。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "wang_jian_qin",
+        "meng_wu",
+        "shang_yang"
+      ],
+      "coords": [
+        113.68,
+        34.75
+      ]
+    },
+    "loc_zhanguo_guiling": {
+      "id": "loc_zhanguo_guiling",
+      "name": "桂陵",
+      "modernName": "河南长垣",
+      "type": "battlefield",
+      "description": "桂陵之战发生地，孙膑围魏救赵大败魏军，是战国著名战役。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "mengchang",
+        "pingyuan"
+      ],
+      "coords": [
+        114.67,
+        35.2
+      ]
+    },
+    "loc_zhanguo_maling": {
+      "id": "loc_zhanguo_maling",
+      "name": "马陵",
+      "modernName": "山东郯城",
+      "type": "battlefield",
+      "description": "马陵之战发生地，孙膑伏击庞涓，魏国从此衰落。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "mengchang",
+        "xinling"
+      ],
+      "coords": [
+        118.35,
+        34.62
+      ]
+    },
+    "loc_zhanguo_yan": {
+      "id": "loc_zhanguo_yan",
+      "name": "燕",
+      "modernName": "北京",
+      "type": "capital",
+      "description": "燕国都城，战国时期北方重要诸侯国，荆轲刺秦的出发地。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "jing_ke",
+        "yue_yi",
+        "chunshen"
+      ],
+      "coords": [
+        116.4,
+        39.9
+      ]
+    },
+    "loc_zhanguo_yi": {
+      "id": "loc_zhanguo_yi",
+      "name": "义",
+      "modernName": "河南泌阳",
+      "type": "city",
+      "description": "战国时期楚国北方重要城邑，是楚国防御中原的重要屏障。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "qu_yuan",
+        "chunshen",
+        "bai_qi"
+      ],
+      "coords": [
+        113.32,
+        32.72
+      ]
+    },
+    "loc_zhanguo_shang": {
+      "id": "loc_zhanguo_shang",
+      "name": "上党",
+      "modernName": "山西长治",
+      "type": "region",
+      "description": "战国时期战略要地，长平之战的导火索，秦赵争夺激烈。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "bai_qi",
+        "lin_xiangru",
+        "lian_po",
+        "wang_jian_qin"
+      ],
+      "coords": [
+        113.1,
+        36.2
+      ]
+    },
+    "loc_zhanguo_hexi": {
+      "id": "loc_zhanguo_hexi",
+      "name": "河西",
+      "modernName": "甘肃张掖",
+      "type": "region",
+      "description": "战国时期秦国与魏国争夺的河西走廊地区，是秦国的战略要地。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "shang_yang",
+        "wang_jian_qin",
+        "meng_wu"
+      ],
+      "coords": [
+        102.0,
+        38.0
+      ]
+    },
+    "loc_zhanguo_hangu": {
+      "id": "loc_zhanguo_hangu",
+      "name": "函谷关",
+      "modernName": "河南灵宝",
+      "type": "city",
+      "description": "战国时期重要关隘，秦国东进咽喉，六国的西方屏障。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "shang_yang",
+        "meng_wu",
+        "wang_jian_qin",
+        "jing_ke"
+      ],
+      "coords": [
+        110.8,
+        34.5
+      ]
+    },
+    "loc_zhanguo_wuguan": {
+      "id": "loc_zhanguo_wuguan",
+      "name": "武关",
+      "modernName": "陕西商洛",
+      "type": "city",
+      "description": "战国时期秦国南方重要关隘，是秦国通往楚国的交通要道。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "shang_yang",
+        "qu_yuan",
+        "chunshen",
+        "bai_qi"
+      ],
+      "coords": [
+        111.0,
+        33.8
+      ]
+    },
+    "loc_zhanguo_yanmen": {
+      "id": "loc_zhanguo_yanmen",
+      "name": "雁门",
+      "modernName": "山西代县",
+      "type": "city",
+      "description": "战国时期赵国北方重要关隘，李牧大败匈奴之地。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "lian_po",
+        "lin_xiangru",
+        "bai_qi"
+      ],
+      "coords": [
+        112.4,
+        39.2
+      ]
+    },
+    "loc_zhanguo_zheng": {
+      "id": "loc_zhanguo_zheng",
+      "name": "郑国渠",
+      "modernName": "陕西泾阳",
+      "type": "river",
+      "description": "战国时期韩国水工郑国为秦所修的大型灌溉工程，使关中成为沃野。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "zheng_guo",
+        "shang_yang",
+        "lü_buwei"
+      ],
+      "coords": [
+        108.84,
+        34.53
+      ]
+    },
+    "loc_zhanguo_duling": {
+      "id": "loc_zhanguo_duling",
+      "name": "杜陵",
+      "modernName": "陕西西安",
+      "type": "tomb",
+      "description": "秦昭襄王陵，是战国时期秦国重要君主的墓葬。",
+      "dynasty": "zhanguo",
+      "persons": [
+        "bai_qi",
+        "wang_jian_qin",
+        "meng_wu"
+      ],
+      "coords": [
+        108.95,
+        34.27
+      ]
+    },
+    "loc_qin_xianyang": {
+      "id": "loc_qin_xianyang",
+      "name": "咸阳",
+      "modernName": "陕西咸阳",
+      "type": "capital",
+      "description": "秦朝都城，秦始皇统一六国后建立，是中国历史上第一个大一统王朝的帝都。",
+      "dynasty": "qin",
+      "persons": [
+        "qin_shihuang",
+        "li_si",
+        "meng_tian",
+        "wang_ben_qin"
+      ],
+      "coords": [
+        108.71,
+        34.33
+      ]
+    },
+    "loc_qin_epanggong": {
+      "id": "loc_qin_epanggong",
+      "name": "阿房宫",
+      "modernName": "陕西西安",
+      "type": "temple",
+      "description": "秦始皇营建的巨大宫殿，被誉为「天下第一宫」，是秦朝暴政的象征。",
+      "dynasty": "qin",
+      "persons": [
+        "qin_shihuang",
+        "li_si",
+        "meng_tian"
+      ],
+      "coords": [
+        108.8,
+        34.4
+      ]
+    },
+    "loc_qin_great_wall": {
+      "id": "loc_qin_great_wall",
+      "name": "长城",
+      "modernName": "河北秦皇岛",
+      "type": "city",
+      "description": "秦始皇连接修筑的万里长城，是中国古代伟大的军事防御工程。",
+      "dynasty": "qin",
+      "persons": [
+        "qin_shihuang",
+        "meng_tian",
+        "wang_ben_qin"
+      ],
+      "coords": [
+        117.0,
+        40.5
+      ]
+    },
+    "loc_qin_lingqu": {
+      "id": "loc_qin_lingqu",
+      "name": "灵渠",
+      "modernName": "广西兴安县",
+      "type": "river",
+      "description": "秦始皇命史禄开凿的人工运河，沟通长江与珠江水系，是中国古代水利工程的杰作。",
+      "dynasty": "qin",
+      "persons": [
+        "qin_shihuang",
+        "li_si",
+        "meng_tian"
+      ],
+      "coords": [
+        110.3,
+        25.3
+      ]
+    },
+    "loc_qin_daze": {
+      "id": "loc_qin_daze",
+      "name": "大泽乡",
+      "modernName": "安徽宿州",
+      "type": "battlefield",
+      "description": "陈胜吴广起义发生地，是中国历史上第一次大规模农民起义的爆发点。",
+      "dynasty": "qin",
+      "persons": [
+        "chen_sheng",
+        "wu_guang",
+        "zhang_han"
+      ],
+      "coords": [
+        120.59,
+        31.3
+      ]
+    },
+    "loc_qin_xianyang_palace": {
+      "id": "loc_qin_xianyang_palace",
+      "name": "咸阳宫",
+      "modernName": "陕西咸阳",
+      "type": "capital",
+      "description": "秦朝皇宫，秦始皇处理朝政的地方，是秦朝的政治中枢。",
+      "dynasty": "qin",
+      "persons": [
+        "qin_shihuang",
+        "li_si",
+        "zhao_gao"
+      ],
+      "coords": [
+        108.71,
+        34.33
+      ]
+    },
+    "loc_qin_lishan": {
+      "id": "loc_qin_lishan",
+      "name": "骊山",
+      "modernName": "陕西西安",
+      "type": "mountain",
+      "description": "秦始皇陵所在地，兵马俑陪葬坑的发现震惊世界，是秦代文明的象征。",
+      "dynasty": "qin",
+      "persons": [
+        "qin_shihuang",
+        "li_si",
+        "zhao_gao"
+      ],
+      "coords": [
+        108.95,
+        34.27
+      ]
+    },
+    "loc_qin_hangu": {
+      "id": "loc_qin_hangu",
+      "name": "函谷关",
+      "modernName": "河南灵宝",
+      "type": "city",
+      "description": "秦朝东方重要关隘，是关中与中原的交通要道，秦统一战争中的战略要地。",
+      "dynasty": "qin",
+      "persons": [
+        "qin_shihuang",
+        "meng_tian",
+        "wang_ben_qin"
+      ],
+      "coords": [
+        110.8,
+        34.5
+      ]
+    },
+    "loc_qin_wuguan": {
+      "id": "loc_qin_wuguan",
+      "name": "武关",
+      "modernName": "陕西商洛",
+      "type": "city",
+      "description": "秦朝南方重要关隘，刘邦入关灭秦的通道，是秦末战争的重要战场。",
+      "dynasty": "qin",
+      "persons": [
+        "qin_shihuang",
+        "li_si",
+        "zhang_han"
+      ],
+      "coords": [
+        111.0,
+        33.8
+      ]
+    },
+    "loc_qin_juzhong": {
+      "id": "loc_qin_juzhong",
+      "name": "钜鹿",
+      "modernName": "河北邢台",
+      "type": "battlefield",
+      "description": "巨鹿之战发生地，项羽破釜沉舟大败秦军，是秦末决定性战役。",
+      "dynasty": "qin",
+      "persons": [
+        "chen_sheng",
+        "wu_guang",
+        "zhang_han"
+      ],
+      "coords": [
+        114.07,
+        32.13
+      ]
+    },
+    "loc_han_chang_an": {
+      "id": "loc_han_chang_an",
+      "name": "长安",
+      "modernName": "西安",
+      "type": "capital",
+      "description": "西汉都城，刘邦建立汉朝后定都于此，是中国历史上最重要的古都之一。",
+      "dynasty": "han",
+      "persons": [
+        "xiao_he",
+        "zhang_liang",
+        "han_xin",
+        "han_wu",
+        "han_wen"
+      ],
+      "coords": [
+        108.95,
+        34.27
+      ]
+    },
+    "loc_han_weiyang": {
+      "id": "loc_han_weiyang",
+      "name": "未央宫",
+      "modernName": "陕西西安",
+      "type": "capital",
+      "description": "西汉皇宫，萧何主持营建，是汉朝政治中枢，历时两百余年。",
+      "dynasty": "han",
+      "persons": [
+        "xiao_he",
+        "han_wu",
+        "han_wen",
+        "han_jing"
+      ],
+      "coords": [
+        108.95,
+        34.27
+      ]
+    },
+    "loc_han_baideng": {
+      "id": "loc_han_baideng",
+      "name": "白登山",
+      "modernName": "山西大同",
+      "type": "mountain",
+      "description": "白登之围发生地，汉高祖被匈奴围困七日，后开启汉匈和亲政策。",
+      "dynasty": "han",
+      "persons": [
+        "xiao_he",
+        "zhang_liang",
+        "han_wu"
+      ],
+      "coords": null
+    },
+    "loc_han_hexi": {
+      "id": "loc_han_hexi",
+      "name": "河西走廊",
+      "modernName": "甘肃张掖",
+      "type": "region",
+      "description": "汉朝打通西域的通道，霍去病两次河西之战后纳入汉朝版图，是丝绸之路的要道。",
+      "dynasty": "han",
+      "persons": [
+        "han_wu",
+        "wei_qing",
+        "huo_qu",
+        "zhang_qian"
+      ],
+      "coords": [
+        102.0,
+        38.0
+      ]
+    },
+    "loc_han_moling": {
+      "id": "loc_han_moling",
+      "name": "茂陵",
+      "modernName": "陕西兴平",
+      "type": "tomb",
+      "description": "汉武帝刘彻的陵墓，是西汉帝陵中规模最大的一座，陪葬有霍去病、卫青等名将。",
+      "dynasty": "han",
+      "persons": [
+        "han_wu",
+        "wei_qing",
+        "huo_qu",
+        "dong_zhongshu"
+      ],
+      "coords": [
+        108.4,
+        34.3
+      ]
+    },
+    "loc_han_yangling": {
+      "id": "loc_han_yangling",
+      "name": "阳陵",
+      "modernName": "陕西咸阳",
+      "type": "tomb",
+      "description": "汉景帝刘启的陵墓，陪葬有大量兵马俑，是研究西汉文明的重要遗址。",
+      "dynasty": "han",
+      "persons": [
+        "han_jing",
+        "xiao_he",
+        "cao_shen"
+      ],
+      "coords": [
+        108.5,
+        34.4
+      ]
+    },
+    "loc_han_changling": {
+      "id": "loc_han_changling",
+      "name": "长陵",
+      "modernName": "陕西咸阳",
+      "type": "tomb",
+      "description": "汉高祖刘邦的陵墓，是西汉第一座帝陵，陪葬有萧何、张良等开国功臣。",
+      "dynasty": "han",
+      "persons": [
+        "xiao_he",
+        "zhang_liang",
+        "han_wen",
+        "lv_zhi"
+      ],
+      "coords": [
+        108.9,
+        34.4
+      ]
+    },
+    "loc_han_baqiao": {
+      "id": "loc_han_baqiao",
+      "name": "灞桥",
+      "modernName": "陕西西安",
+      "type": "city",
+      "description": "长安东出的重要桥梁，古人送别之地，有「灞桥折柳」的传统，是汉代文化符号。",
+      "dynasty": "han",
+      "persons": [
+        "xiao_he",
+        "zhang_liang",
+        "han_wu"
+      ],
+      "coords": [
+        109.0,
+        34.3
+      ]
+    },
+    "loc_han_weishui": {
+      "id": "loc_han_weishui",
+      "name": "渭水",
+      "modernName": "陕西咸阳",
+      "type": "river",
+      "description": "流经长安的重要河流，是关中平原的母亲河，也是汉代水运和灌溉的重要水源。",
+      "dynasty": "han",
+      "persons": [
+        "xiao_he",
+        "han_wen",
+        "han_wu",
+        "cao_shen"
+      ],
+      "coords": [
+        108.9,
+        34.3
+      ]
+    },
+    "loc_han_dingxiang": {
+      "id": "loc_han_dingxiang",
+      "name": "定襄",
+      "modernName": "山西忻州",
+      "type": "city",
+      "description": "汉朝北方边郡，卫青、霍去病多次从此出兵北击匈奴，是汉匈战争的前线。",
+      "dynasty": "han",
+      "persons": [
+        "han_wu",
+        "wei_qing",
+        "huo_qu",
+        "zhang_qian"
+      ],
+      "coords": [
+        112.0,
+        39.0
+      ]
+    },
+    "loc_han_yanmen": {
+      "id": "loc_han_yanmen",
+      "name": "雁门",
+      "modernName": "山西代县",
+      "type": "city",
+      "description": "汉朝北方重要关隘，卫青、李广等名将多次在此与匈奴作战，是汉匈战争的重要战场。",
+      "dynasty": "han",
+      "persons": [
+        "han_wu",
+        "wei_qing",
+        "huo_qu",
+        "zhang_qian"
+      ],
+      "coords": [
+        112.4,
+        39.2
+      ]
+    },
+    "loc_han_yumen": {
+      "id": "loc_han_yumen",
+      "name": "玉门关",
+      "modernName": "甘肃敦煌",
+      "type": "city",
+      "description": "汉朝西域重要关隘，张骞通西域后成为丝绸之路的重要门户，有「春风不度玉门关」之说。",
+      "dynasty": "han",
+      "persons": [
+        "han_wu",
+        "zhang_qian",
+        "wei_qing",
+        "huo_qu"
+      ],
+      "coords": [
+        97.0,
+        40.3
+      ]
+    },
+    "loc_han_yangguan": {
+      "id": "loc_han_yangguan",
+      "name": "阳关",
+      "modernName": "甘肃敦煌",
+      "type": "city",
+      "description": "汉朝西域重要关隘，与玉门关同为丝绸之路的门户，是中原通往西域的咽喉。",
+      "dynasty": "han",
+      "persons": [
+        "han_wu",
+        "zhang_qian",
+        "wei_qing",
+        "huo_qu"
+      ],
+      "coords": [
+        94.0,
+        39.8
+      ]
+    },
+    "loc_han_dunhuang": {
+      "id": "loc_han_dunhuang",
+      "name": "敦煌",
+      "modernName": "甘肃敦煌",
+      "type": "city",
+      "description": "汉朝河西四郡之一，丝绸之路的重要节点，莫高窟的开凿奠定了其文化地位。",
+      "dynasty": "han",
+      "persons": [
+        "han_wu",
+        "zhang_qian",
+        "wei_qing",
+        "huo_qu"
+      ],
+      "coords": [
+        94.7,
+        40.1
+      ]
+    },
+    "loc_han_danyang": {
+      "id": "loc_han_danyang",
+      "name": "丹阳",
+      "modernName": "安徽宣城",
+      "type": "region",
+      "description": "汉朝南方重要地区，是汉朝向江南扩展统治的重要区域，也是兵源重地。",
+      "dynasty": "han",
+      "persons": [
+        "xiao_he",
+        "cao_shen",
+        "peng_yue",
+        "qing_bu"
+      ],
+      "coords": [
+        118.8,
+        30.9
+      ]
+    },
+    "loc_han_hefei": {
+      "id": "loc_han_hefei",
+      "name": "合肥",
+      "modernName": "安徽合肥",
+      "type": "city",
+      "description": "汉朝淮南国首府，汉初重要诸侯国，是江淮地区的政治经济中心。",
+      "dynasty": "han",
+      "persons": [
+        "xiao_he",
+        "cao_shen",
+        "han_wen",
+        "han_jing"
+      ],
+      "coords": [
+        117.23,
+        31.82
+      ]
+    },
+    "loc_han_pengcheng": {
+      "id": "loc_han_pengcheng",
+      "name": "彭城",
+      "modernName": "江苏徐州",
+      "type": "city",
+      "description": "汉朝重要城市，楚汉战争的焦点，项羽的都城，是汉初军事重镇。",
+      "dynasty": "han",
+      "persons": [
+        "xiao_he",
+        "zhang_liang",
+        "han_xin",
+        "peng_yue"
+      ],
+      "coords": [
+        117.2,
+        34.3
+      ]
+    },
+    "loc_han_guangling": {
+      "id": "loc_han_guangling",
+      "name": "广陵",
+      "modernName": "江苏扬州",
+      "type": "city",
+      "description": "汉朝吴王刘濞的封地，是汉初七国之乱的发源地，后成为江淮重要城市。",
+      "dynasty": "han",
+      "persons": [
+        "xiao_he",
+        "cao_shen",
+        "han_wen",
+        "han_jing"
+      ],
+      "coords": [
+        119.42,
+        32.4
+      ]
+    },
+    "loc_han_xuchang": {
+      "id": "loc_han_xuchang",
+      "name": "许昌",
+      "modernName": "河南许昌",
+      "type": "city",
+      "description": "汉末曹操迎汉献帝迁都于此，「挟天子以令诸侯」，成为汉末实际政治中心。",
+      "dynasty": "han",
+      "persons": [
+        "xiao_he",
+        "cao_shen",
+        "han_wen",
+        "han_jing"
+      ],
+      "coords": [
+        113.83,
+        34.03
+      ]
+    },
+    "loc_sanguo_chibi": {
+      "id": "loc_sanguo_chibi",
+      "name": "赤壁",
+      "modernName": "湖北赤壁",
+      "type": "battlefield",
+      "description": "赤壁之战发生地，孙刘联军火烧赤壁大破曹操，奠定三国鼎立格局。",
+      "dynasty": "sanguo",
+      "persons": [
+        "cao_cao",
+        "liu_bei",
+        "sun_quan",
+        "zhou_yu",
+        "zhu_ge_liang"
+      ],
+      "coords": [
+        113.88,
+        29.72
+      ]
+    },
+    "loc_sanguo_guandu": {
+      "id": "loc_sanguo_guandu",
+      "name": "官渡",
+      "modernName": "河南中牟",
+      "type": "battlefield",
+      "description": "官渡之战发生地，曹操以少胜多大败袁绍，统一北方。",
+      "dynasty": "sanguo",
+      "persons": [
+        "cao_cao",
+        "guo_jia",
+        "zhang_liao"
+      ],
+      "coords": [
+        113.68,
+        34.75
+      ]
+    },
+    "loc_sanguo_yiling": {
+      "id": "loc_sanguo_yiling",
+      "name": "夷陵",
+      "modernName": "湖北宜昌",
+      "type": "battlefield",
+      "description": "夷陵之战发生地，陆逊火烧连营大败刘备，是蜀汉由盛转衰的转折点。",
+      "dynasty": "sanguo",
+      "persons": [
+        "liu_bei",
+        "sun_quan",
+        "lu_xun",
+        "zhu_ge_liang",
+        "zhang_fei"
+      ],
+      "coords": [
+        111.3,
+        30.7
+      ]
+    },
+    "loc_sanguo_wuzhangyuan": {
+      "id": "loc_sanguo_wuzhangyuan",
+      "name": "五丈原",
+      "modernName": "陕西岐山",
+      "type": "battlefield",
+      "description": "诸葛亮北伐时病逝之地，是蜀汉北伐的终点，也是诸葛亮一生鞠躬尽瘁的象征。",
+      "dynasty": "sanguo",
+      "persons": [
+        "zhu_ge_liang",
+        "liu_bei",
+        "si_ma_yi",
+        "jiang_wei"
+      ],
+      "coords": [
+        107.0,
+        34.3
+      ]
+    },
+    "loc_sanguo_changan": {
+      "id": "loc_sanguo_changan",
+      "name": "长安",
+      "modernName": "西安",
+      "type": "capital",
+      "description": "曹魏和西晋的都城，曹操挟天子以令诸侯之地，是三国时期北方政治中心。",
+      "dynasty": "sanguo",
+      "persons": [
+        "cao_cao",
+        "guo_jia",
+        "zhang_liao",
+        "dian_wei"
+      ],
+      "coords": [
+        108.95,
+        34.27
+      ]
+    },
+    "loc_sanguo_luoyang": {
+      "id": "loc_sanguo_luoyang",
+      "name": "洛阳",
+      "modernName": "河南洛阳",
+      "type": "capital",
+      "description": "东汉都城，曹魏篡汉后仍都于此，是三国时期北方最重要的政治中心。",
+      "dynasty": "sanguo",
+      "persons": [
+        "cao_cao",
+        "si_ma_yi",
+        "guo_jia",
+        "pi_cao",
+        "dian_wei"
+      ],
+      "coords": [
+        112.45,
+        34.62
+      ]
+    },
+    "loc_sanguo_chengdu": {
+      "id": "loc_sanguo_chengdu",
+      "name": "成都",
+      "modernName": "四川成都",
+      "type": "capital",
+      "description": "蜀汉都城，刘备称帝后定都于此，是蜀汉政治经济文化中心。",
+      "dynasty": "sanguo",
+      "persons": [
+        "liu_bei",
+        "zhu_ge_liang",
+        "guan_yu",
+        "zhang_fei",
+        "jiang_wei"
+      ],
+      "coords": [
+        104.07,
+        30.67
+      ]
+    },
+    "loc_sanguo_jianye": {
+      "id": "loc_sanguo_jianye",
+      "name": "建业",
+      "modernName": "江苏南京",
+      "type": "capital",
+      "description": "东吴都城，孙权称帝后定都于此，是三国时期南方最重要的政治中心。",
+      "dynasty": "sanguo",
+      "persons": [
+        "sun_quan",
+        "zhou_yu",
+        "lu_xun",
+        "ce_sun"
+      ],
+      "coords": [
+        118.8,
+        32.06
+      ]
+    },
+    "loc_sanguo_xuchang": {
+      "id": "loc_sanguo_xuchang",
+      "name": "许昌",
+      "modernName": "河南许昌",
+      "type": "city",
+      "description": "曹操迎汉献帝都于此，挟天子以令诸侯，是汉末实际政治中心。",
+      "dynasty": "sanguo",
+      "persons": [
+        "cao_cao",
+        "guo_jia",
+        "dian_wei",
+        "xu_chu"
+      ],
+      "coords": [
+        113.83,
+        34.03
+      ]
+    },
+    "loc_sanguo_maicheng": {
+      "id": "loc_sanguo_maicheng",
+      "name": "麦城",
+      "modernName": "湖北当阳",
+      "type": "city",
+      "description": "关羽败走麦城被擒之地，是关羽一生的终点，也是荆州失守的标志。",
+      "dynasty": "sanguo",
+      "persons": [
+        "guan_yu",
+        "liu_bei",
+        "zhang_fei",
+        "zhu_ge_liang"
+      ],
+      "coords": [
+        112.2,
+        30.4
+      ]
+    },
+    "loc_sanguo_jiebi": {
+      "id": "loc_sanguo_jiebi",
+      "name": "街亭",
+      "modernName": "甘肃天水",
+      "type": "battlefield",
+      "description": "街亭之战发生地，马谡失街亭导致诸葛亮第一次北伐失败。",
+      "dynasty": "sanguo",
+      "persons": [
+        "zhu_ge_liang",
+        "jiang_wei",
+        "liu_bei",
+        "si_ma_yi"
+      ],
+      "coords": [
+        105.5,
+        34.8
+      ]
+    },
+    "loc_sanguo_tongguan": {
+      "id": "loc_sanguo_tongguan",
+      "name": "潼关",
+      "modernName": "陕西渭南",
+      "type": "city",
+      "description": "关中与中原的重要关隘，曹操与马超潼关之战的发生地，是西北战略要冲。",
+      "dynasty": "sanguo",
+      "persons": [
+        "cao_cao",
+        "xu_chu",
+        "zhang_liao",
+        "dian_wei"
+      ],
+      "coords": [
+        110.3,
+        34.6
+      ]
+    },
+    "loc_sanguo_hanzhong": {
+      "id": "loc_sanguo_hanzhong",
+      "name": "汉中",
+      "modernName": "陕西汉中",
+      "type": "city",
+      "description": "蜀汉北伐的重要基地，刘备称汉中王之地，是蜀汉北方的军事重镇。",
+      "dynasty": "sanguo",
+      "persons": [
+        "liu_bei",
+        "zhu_ge_liang",
+        "zhang_fei",
+        "jiang_wei",
+        "guan_yu"
+      ],
+      "coords": [
+        107.0,
+        33.1
+      ]
+    },
+    "loc_sanguo_jingzhou": {
+      "id": "loc_sanguo_jingzhou",
+      "name": "荆州",
+      "modernName": "湖北荆州",
+      "type": "city",
+      "description": "三国时期争夺最激烈的战略要地，「得荆州者得天下」，是兵家必争之地。",
+      "dynasty": "sanguo",
+      "persons": [
+        "guan_yu",
+        "liu_bei",
+        "sun_quan",
+        "zhou_yu",
+        "lu_xun"
+      ],
+      "coords": [
+        112.2,
+        30.4
+      ]
+    },
+    "loc_sanguo_hefei": {
+      "id": "loc_sanguo_hefei",
+      "name": "合肥",
+      "modernName": "安徽合肥",
+      "type": "city",
+      "description": "东吴与曹魏争夺的江淮重镇，孙权多次攻打未果，是三国时期著名战场。",
+      "dynasty": "sanguo",
+      "persons": [
+        "sun_quan",
+        "zhang_liao",
+        "cao_cao",
+        "zhou_yu"
+      ],
+      "coords": [
+        117.23,
+        31.82
+      ]
+    },
+    "loc_jin_luoyang": {
+      "id": "loc_jin_luoyang",
+      "name": "洛阳",
+      "modernName": "河南洛阳",
+      "type": "capital",
+      "description": "西晋都城，司马氏篡魏后定都于此，是晋朝政治文化中心。",
+      "dynasty": "jin",
+      "persons": [
+        "sima_yan",
+        "sima_yi",
+        "sima_zhao",
+        "sima_zhong",
+        "jia_nanfeng"
+      ],
+      "coords": [
+        112.45,
+        34.62
+      ]
+    },
+    "loc_jin_jiankang": {
+      "id": "loc_jin_jiankang",
+      "name": "建康",
+      "modernName": "江苏南京",
+      "type": "capital",
+      "description": "东晋都城，司马睿南渡后定都于此，是南朝政治文化中心。",
+      "dynasty": "jin",
+      "persons": [
+        "wang_dao",
+        "xie_xuan",
+        "wang_xizhi",
+        "tao_yuanming",
+        "xie_an"
+      ],
+      "coords": [
+        118.8,
+        32.06
+      ]
+    },
+    "loc_jin_xuchang": {
+      "id": "loc_jin_xuchang",
+      "name": "许昌",
+      "modernName": "河南许昌",
+      "type": "city",
+      "description": "西晋重要城市，八王之乱中多次成为战场，是汉末晋初的政治要地。",
+      "dynasty": "jin",
+      "persons": [
+        "sima_yan",
+        "sima_yi",
+        "sima_zhao",
+        "jia_nanfeng"
+      ],
+      "coords": [
+        113.83,
+        34.03
+      ]
+    },
+    "loc_jin_ye": {
+      "id": "loc_jin_ye",
+      "name": "邺",
+      "modernName": "河北临漳",
+      "type": "city",
+      "description": "西晋北方重要城市，后赵、前燕等政权也曾建都于此，是北方政治中心。",
+      "dynasty": "jin",
+      "persons": [
+        "sima_yan",
+        "shi_chong",
+        "sima_yi",
+        "sima_zhao"
+      ],
+      "coords": [
+        114.5,
+        36.3
+      ]
+    },
+    "loc_jin_shouchun": {
+      "id": "loc_jin_shouchun",
+      "name": "寿春",
+      "modernName": "安徽寿县",
+      "type": "city",
+      "description": "东晋北方重要军事重镇，淝水之战前秦军的集结地，是南北对峙的前线。",
+      "dynasty": "jin",
+      "persons": [
+        "xie_xuan",
+        "xie_an",
+        "wang_dao",
+        "huan_wen"
+      ],
+      "coords": null
+    },
+    "loc_jin_feishui": {
+      "id": "loc_jin_feishui",
+      "name": "淝水",
+      "modernName": "安徽寿县",
+      "type": "battlefield",
+      "description": "淝水之战发生地，谢玄以八万北府兵大败前秦八十万大军，是中国历史上以少胜多的经典战役。",
+      "dynasty": "jin",
+      "persons": [
+        "xie_xuan",
+        "xie_an",
+        "wang_dao",
+        "huan_wen"
+      ],
+      "coords": null
+    },
+    "loc_jin_lanling": {
+      "id": "loc_jin_lanling",
+      "name": "兰陵",
+      "modernName": "山东临沂",
+      "type": "city",
+      "description": "东晋南朝重要城市，以兰陵王高长恭闻名，是北方文化的重要传承地。",
+      "dynasty": "jin",
+      "persons": [
+        "wang_xizhi",
+        "wang_dao",
+        "tao_yuanming",
+        "xie_an"
+      ],
+      "coords": null
+    },
+    "loc_jin_pengcheng": {
+      "id": "loc_jin_pengcheng",
+      "name": "彭城",
+      "modernName": "江苏徐州",
+      "type": "city",
+      "description": "东晋北方重要军事重镇，多次成为南北争夺的焦点，是兵家必争之地。",
+      "dynasty": "jin",
+      "persons": [
+        "zu_ti",
+        "huan_wen",
+        "wang_dao",
+        "xie_xuan"
+      ],
+      "coords": [
+        117.2,
+        34.3
+      ]
+    },
+    "loc_jin_yangzhou": {
+      "id": "loc_jin_yangzhou",
+      "name": "扬州",
+      "modernName": "江苏扬州",
+      "type": "city",
+      "description": "东晋南朝重要城市，经济繁荣，文化发达，是江南重要的商业中心。",
+      "dynasty": "jin",
+      "persons": [
+        "wang_dao",
+        "xie_xuan",
+        "wang_xizhi",
+        "xie_an"
+      ],
+      "coords": [
+        119.42,
+        32.4
+      ]
+    },
+    "loc_jin_shanyin": {
+      "id": "loc_jin_shanyin",
+      "name": "山阴",
+      "modernName": "浙江绍兴",
+      "type": "city",
+      "description": "王羲之兰亭集会的所在地，是东晋南朝文化名士的聚居地，书法圣地。",
+      "dynasty": "jin",
+      "persons": [
+        "wang_xizhi",
+        "wang_dao",
+        "xie_xuan",
+        "tao_yuanming"
+      ],
+      "coords": [
+        120.6,
+        30.0
+      ]
+    },
+    "loc_nanbei_jiankang": {
+      "id": "loc_nanbei_jiankang",
+      "name": "建康",
+      "modernName": "江苏南京",
+      "type": "capital",
+      "description": "南朝宋齐梁陈四代都城，是南北朝时期南方政治经济文化中心。",
+      "dynasty": "nanbei",
+      "persons": [
+        "liu_yu",
+        "xiao_daocheng",
+        "xiao_yan",
+        "chen_baxian",
+        "shen_yue"
+      ],
+      "coords": [
+        118.8,
+        32.06
+      ]
+    },
+    "loc_nanbei_pingcheng": {
+      "id": "loc_nanbei_pingcheng",
+      "name": "平城",
+      "modernName": "山西大同",
+      "type": "capital",
+      "description": "北魏早期都城，道武帝迁都于此，是鲜卑汉化的重要基地。",
+      "dynasty": "nanbei",
+      "persons": [
+        "tuoba_hong",
+        "tuoba_gui",
+        "tuoba_tao",
+        "yuwen_tai",
+        "gao_huan"
+      ],
+      "coords": null
+    },
+    "loc_nanbei_luoyang": {
+      "id": "loc_nanbei_luoyang",
+      "name": "洛阳",
+      "modernName": "河南洛阳",
+      "type": "capital",
+      "description": "北魏孝文帝迁都后的都城，是南北朝时期北方政治文化中心，汉化改革的核心。",
+      "dynasty": "nanbei",
+      "persons": [
+        "tuoba_hong",
+        "tuoba_gui",
+        "tuoba_tao",
+        "yuwen_tai",
+        "gao_huan"
+      ],
+      "coords": [
+        112.45,
+        34.62
+      ]
+    },
+    "loc_nanbei_yubi": {
+      "id": "loc_nanbei_yubi",
+      "name": "玉璧",
+      "modernName": "山西稷山",
+      "type": "battlefield",
+      "description": "玉璧之战发生地，韦孝宽坚守玉璧，高欢久攻不下，是东魏西魏对峙的关键战役。",
+      "dynasty": "nanbei",
+      "persons": [
+        "yuwen_tai",
+        "gao_huan",
+        "tuoba_hong",
+        "yu_xin"
+      ],
+      "coords": null
+    },
+    "loc_nanbei_chang_an": {
+      "id": "loc_nanbei_chang_an",
+      "name": "长安",
+      "modernName": "陕西西安",
+      "type": "capital",
+      "description": "西魏、北周都城，宇文泰建立府兵制的地方，是隋唐制度的发源地。",
+      "dynasty": "nanbei",
+      "persons": [
+        "yuwen_tai",
+        "yuwen_yong",
+        "gao_huan",
+        "tuoba_hong"
+      ],
+      "coords": [
+        108.95,
+        34.27
+      ]
+    },
+    "loc_nanbei_ye": {
+      "id": "loc_nanbei_ye",
+      "name": "邺",
+      "modernName": "河北临漳",
+      "type": "capital",
+      "description": "东魏、北齐都城，高欢父子统治中心，是北方文化的重要中心。",
+      "dynasty": "nanbei",
+      "persons": [
+        "gao_huan",
+        "gao_yang",
+        "yuwen_tai",
+        "yuwen_yong"
+      ],
+      "coords": [
+        114.5,
+        36.3
+      ]
+    },
+    "loc_nanbei_shouchun": {
+      "id": "loc_nanbei_shouchun",
+      "name": "寿春",
+      "modernName": "安徽寿县",
+      "type": "city",
+      "description": "南北对峙前线，多次发生大战，是淮河防线的重要军事重镇。",
+      "dynasty": "nanbei",
+      "persons": [
+        "liu_yu",
+        "yuwen_tai",
+        "gao_huan",
+        "tuoba_hong"
+      ],
+      "coords": null
+    },
+    "loc_nanbei_guangling": {
+      "id": "loc_nanbei_guangling",
+      "name": "广陵",
+      "modernName": "江苏扬州",
+      "type": "city",
+      "description": "南朝重要军事重镇，是保卫建康的北方门户，经济文化繁荣。",
+      "dynasty": "nanbei",
+      "persons": [
+        "xiao_daocheng",
+        "xiao_yan",
+        "shen_yue",
+        "yu_xin"
+      ],
+      "coords": [
+        119.42,
+        32.4
+      ]
+    },
+    "loc_nanbei_jiangling": {
+      "id": "loc_nanbei_jiangling",
+      "name": "江陵",
+      "modernName": "湖北荆州",
+      "type": "city",
+      "description": "南朝西部重要城市，梁元帝曾都于此，是长江中游的军事重镇。",
+      "dynasty": "nanbei",
+      "persons": [
+        "xiao_yan",
+        "yu_xin",
+        "yuwen_tai",
+        "liu_yu"
+      ],
+      "coords": [
+        112.2,
+        30.4
+      ]
+    },
+    "loc_nanbei_pengcheng": {
+      "id": "loc_nanbei_pengcheng",
+      "name": "彭城",
+      "modernName": "江苏徐州",
+      "type": "city",
+      "description": "南北争夺的江淮重镇，多次成为南北大战的战场，是兵家必争之地。",
+      "dynasty": "nanbei",
+      "persons": [
+        "liu_yu",
+        "yuwen_tai",
+        "gao_huan",
+        "tuoba_hong"
+      ],
+      "coords": [
+        117.2,
+        34.3
+      ]
+    },
+    "loc_nanbei_suizhou": {
+      "id": "loc_nanbei_suizhou",
+      "name": "寿阳",
+      "modernName": "安徽寿县",
+      "type": "city",
+      "description": "南朝北方重要军事重镇，是淮河防线的重要据点，多次发生大战。",
+      "dynasty": "nanbei",
+      "persons": [
+        "liu_yu",
+        "yuwen_tai",
+        "gao_huan",
+        "tuoba_hong"
+      ],
+      "coords": null
+    },
+    "loc_nanbei_xiangyang": {
+      "id": "loc_nanbei_xiangyang",
+      "name": "襄阳",
+      "modernName": "湖北襄阳",
+      "type": "city",
+      "description": "南北对峙的重要军事重镇，是南北交通的咽喉，多次发生大战。",
+      "dynasty": "nanbei",
+      "persons": [
+        "yuwen_tai",
+        "gao_huan",
+        "liu_yu",
+        "xiao_yan"
+      ],
+      "coords": null
+    },
+    "loc_nanbei_hefei": {
+      "id": "loc_nanbei_hefei",
+      "name": "合肥",
+      "modernName": "安徽合肥",
+      "type": "city",
+      "description": "南北对峙的江淮重镇，是南方防御北方的重要军事据点。",
+      "dynasty": "nanbei",
+      "persons": [
+        "liu_yu",
+        "xiao_daocheng",
+        "xiao_yan",
+        "chen_baxian"
+      ],
+      "coords": [
+        117.23,
+        31.82
+      ]
+    },
+    "loc_nanbei_dunhuang": {
+      "id": "loc_nanbei_dunhuang",
+      "name": "敦煌",
+      "modernName": "甘肃敦煌",
+      "type": "city",
+      "description": "南北朝时期丝绸之路重要节点，莫高窟开凿于此时，是佛教艺术圣地。",
+      "dynasty": "nanbei",
+      "persons": [
+        "tuoba_hong",
+        "tuoba_tao",
+        "yuwen_tai",
+        "yu_xin"
+      ],
+      "coords": [
+        94.7,
+        40.1
+      ]
+    },
+    "loc_nanbei_jinyang": {
+      "id": "loc_nanbei_jinyang",
+      "name": "晋阳",
+      "modernName": "山西太原",
+      "type": "city",
+      "description": "东魏北齐的重要军事基地，高欢父子的大本营，是北方政治军事中心。",
+      "dynasty": "nanbei",
+      "persons": [
+        "gao_huan",
+        "gao_yang",
+        "yuwen_tai",
+        "tuoba_hong"
+      ],
+      "coords": [
+        112.55,
+        37.87
+      ]
+    },
+    "loc_sui_daxing": {
+      "id": "loc_sui_daxing",
+      "name": "大兴城",
+      "modernName": "陕西西安",
+      "type": "capital",
+      "description": "隋朝都城，宇文恺设计营建，是世界历史上最大的城市，后改名长安。",
+      "dynasty": "sui",
+      "persons": [
+        "yang_jian",
+        "yang_guang",
+        "du_gu_jialuo",
+        "gao_jiong",
+        "yuwen_kai"
+      ],
+      "coords": [
+        108.95,
+        34.27
+      ]
+    },
+    "loc_sui_luoyang": {
+      "id": "loc_sui_luoyang",
+      "name": "洛阳",
+      "modernName": "河南洛阳",
+      "type": "capital",
+      "description": "隋炀帝营建的东都，是隋朝大运河的中心，也是隋朝政治经济的重要中心。",
+      "dynasty": "sui",
+      "persons": [
+        "yang_guang",
+        "yang_jian",
+        "gao_jiong",
+        "yuwen_kai",
+        "han_qinhu"
+      ],
+      "coords": [
+        112.45,
+        34.62
+      ]
+    },
+    "loc_sui_jiangdu": {
+      "id": "loc_sui_jiangdu",
+      "name": "江都",
+      "modernName": "江苏扬州",
+      "type": "capital",
+      "description": "隋炀帝三巡江都，最终在此被杀，是隋朝南方最重要的政治中心。",
+      "dynasty": "sui",
+      "persons": [
+        "yang_guang",
+        "yang_jian",
+        "yuwen_huaji",
+        "yuwen_kai"
+      ],
+      "coords": [
+        119.42,
+        32.4
+      ]
+    },
+    "loc_sui_dayunhe": {
+      "id": "loc_sui_dayunhe",
+      "name": "大运河",
+      "modernName": "江苏扬州",
+      "type": "river",
+      "description": "隋炀帝下令开凿的人工运河，连接南北五大水系，是世界古代最伟大的水利工程之一。",
+      "dynasty": "sui",
+      "persons": [
+        "yang_guang",
+        "yang_jian",
+        "gao_jiong",
+        "yuwen_kai"
+      ],
+      "coords": [
+        119.42,
+        32.4
+      ]
+    },
+    "loc_sui_chang_an": {
+      "id": "loc_sui_chang_an",
+      "name": "长安",
+      "modernName": "陕西西安",
+      "type": "capital",
+      "description": "隋朝都城，大兴城的别称，是隋朝政治文化中心，也是隋朝统一后的首都。",
+      "dynasty": "sui",
+      "persons": [
+        "yang_jian",
+        "yang_guang",
+        "gao_jiong",
+        "han_qinhu"
+      ],
+      "coords": [
+        108.95,
+        34.27
+      ]
+    },
+    "loc_sui_zhuolu": {
+      "id": "loc_sui_zhuolu",
+      "name": "涿郡",
+      "modernName": "北京",
+      "type": "city",
+      "description": "隋朝北方重要城市，隋炀帝远征高句丽的出发地，是隋朝东北军事重镇。",
+      "dynasty": "sui",
+      "persons": [
+        "yang_guang",
+        "yang_jian",
+        "han_qinhu",
+        "yuwen_kai"
+      ],
+      "coords": [
+        116.41,
+        39.9
+      ]
+    },
+    "loc_sui_lingqu": {
+      "id": "loc_sui_lingqu",
+      "name": "灵渠",
+      "modernName": "广西兴安县",
+      "type": "river",
+      "description": "秦始皇开凿的运河，隋朝时继续使用，沟通长江与珠江水系，是南方重要交通要道。",
+      "dynasty": "sui",
+      "persons": [
+        "yang_jian",
+        "yang_guang",
+        "gao_jiong",
+        "han_qinhu"
+      ],
+      "coords": [
+        110.3,
+        25.3
+      ]
+    },
+    "loc_sui_dunhuang": {
+      "id": "loc_sui_dunhuang",
+      "name": "敦煌",
+      "modernName": "甘肃敦煌",
+      "type": "city",
+      "description": "隋朝西域重要城市，丝绸之路的重要节点，隋朝在此设置郡县，加强西域统治。",
+      "dynasty": "sui",
+      "persons": [
+        "yang_jian",
+        "yang_guang",
+        "han_qinhu",
+        "yuwen_kai"
+      ],
+      "coords": [
+        94.7,
+        40.1
+      ]
+    },
+    "loc_sui_zhouzhi": {
+      "id": "loc_sui_zhouzhi",
+      "name": "周至",
+      "modernName": "陕西周至",
+      "type": "city",
+      "description": "隋朝关中重要城市，是隋文帝杨坚的故乡，也是隋朝西北军事重镇。",
+      "dynasty": "sui",
+      "persons": [
+        "yang_jian",
+        "du_gu_jialuo",
+        "gao_jiong",
+        "yuwen_kai"
+      ],
+      "coords": [
+        108.2,
+        34.2
+      ]
+    },
+    "loc_sui_taiyuan": {
+      "id": "loc_sui_taiyuan",
+      "name": "太原",
+      "modernName": "山西太原",
+      "type": "city",
+      "description": "隋朝北方重要军事重镇，李渊起兵反隋的基地，是隋朝北方的战略要地。",
+      "dynasty": "sui",
+      "persons": [
+        "yang_jian",
+        "yang_guang",
+        "han_qinhu",
+        "yuwen_kai"
+      ],
+      "coords": [
+        112.55,
+        37.87
+      ]
+    },
+    "loc_tang_chang_an": {
+      "id": "loc_tang_chang_an",
+      "name": "长安",
+      "modernName": "陕西西安",
+      "type": "capital",
+      "description": "唐朝都城，世界历史上最大的城市，是唐朝政治经济文化中心，也是丝绸之路的起点。",
+      "dynasty": "tang",
+      "persons": [
+        "li_yuan",
+        "li_shimin",
+        "li_longji",
+        "wei_zheng",
+        "wu_zetian"
+      ],
+      "coords": [
+        108.95,
+        34.27
+      ]
+    },
+    "loc_tang_daming": {
+      "id": "loc_tang_daming",
+      "name": "大明宫",
+      "modernName": "陕西西安",
+      "type": "capital",
+      "description": "唐朝皇宫，唐太宗为李渊所建，后成为唐朝政治中枢，是唐朝皇权的象征。",
+      "dynasty": "tang",
+      "persons": [
+        "li_shimin",
+        "li_yuan",
+        "li_longji",
+        "wei_zheng",
+        "wu_zetian"
+      ],
+      "coords": [
+        108.95,
+        34.27
+      ]
+    },
+    "loc_tang_luoyang": {
+      "id": "loc_tang_luoyang",
+      "name": "洛阳",
+      "modernName": "河南洛阳",
+      "type": "capital",
+      "description": "唐朝东都，武则天称帝后长期驻跸于此，是唐朝重要的政治中心。",
+      "dynasty": "tang",
+      "persons": [
+        "li_longji",
+        "wu_zetian",
+        "li_yuan",
+        "li_shimin",
+        "di_renjie"
+      ],
+      "coords": [
+        112.45,
+        34.62
+      ]
+    },
+    "loc_tang_anxi": {
+      "id": "loc_tang_anxi",
+      "name": "安西四镇",
+      "modernName": "新疆喀什",
+      "type": "city",
+      "description": "唐朝西域四大军事重镇，是唐朝统治西域的重要基地，也是丝绸之路的要冲。",
+      "dynasty": "tang",
+      "persons": [
+        "li_shimin",
+        "li_jing",
+        "guo_ziyi",
+        "li_guangbi"
+      ],
+      "coords": [
+        75.9,
+        39.5
+      ]
+    },
+    "loc_tang_tongguan": {
+      "id": "loc_tang_tongguan",
+      "name": "潼关",
+      "modernName": "陕西渭南",
+      "type": "city",
+      "description": "唐朝东方重要关隘，是关中与中原的咽喉，安史之乱中多次成为战场。",
+      "dynasty": "tang",
+      "persons": [
+        "li_yuan",
+        "li_shimin",
+        "li_longji",
+        "guo_ziyi",
+        "an_lushan"
+      ],
+      "coords": [
+        110.3,
+        34.6
+      ]
+    },
+    "loc_tang_maweipo": {
+      "id": "loc_tang_maweipo",
+      "name": "马嵬坡",
+      "modernName": "陕西兴平",
+      "type": "battlefield",
+      "description": "马嵬坡兵变发生地，禁军诛杀杨国忠，逼唐玄宗赐死杨贵妃，是唐朝由盛转衰的转折点。",
+      "dynasty": "tang",
+      "persons": [
+        "li_longji",
+        "yang_guifei",
+        "guo_ziyi",
+        "an_lushan"
+      ],
+      "coords": [
+        108.5,
+        34.3
+      ]
+    },
+    "loc_tang_dingxiang": {
+      "id": "loc_tang_dingxiang",
+      "name": "定襄",
+      "modernName": "山西忻州",
+      "type": "city",
+      "description": "唐朝北方边郡，李靖夜袭定襄大破突厥，是唐朝灭东突厥的重要战场。",
+      "dynasty": "tang",
+      "persons": [
+        "li_shimin",
+        "li_jing",
+        "guo_ziyi",
+        "li_guangbi"
+      ],
+      "coords": [
+        112.0,
+        39.0
+      ]
+    },
+    "loc_tang_yinshan": {
+      "id": "loc_tang_yinshan",
+      "name": "阴山",
+      "modernName": "内蒙古包头",
+      "type": "mountain",
+      "description": "唐朝北方重要山脉，李靖率军穿越阴山大破突厥，是唐朝北疆的重要屏障。",
+      "dynasty": "tang",
+      "persons": [
+        "li_shimin",
+        "li_jing",
+        "guo_ziyi",
+        "li_guangbi"
+      ],
+      "coords": null
+    },
+    "loc_tang_dunhuang": {
+      "id": "loc_tang_dunhuang",
+      "name": "敦煌",
+      "modernName": "甘肃敦煌",
+      "type": "city",
+      "description": "唐朝西域重要城市，丝绸之路的重要节点，莫高窟在唐代达到鼎盛。",
+      "dynasty": "tang",
+      "persons": [
+        "li_longji",
+        "li_bai",
+        "du_fu",
+        "wang_wei",
+        "bai_juyi"
+      ],
+      "coords": [
+        94.7,
+        40.1
+      ]
+    },
+    "loc_tang_shule": {
+      "id": "loc_tang_shule",
+      "name": "疏勒",
+      "modernName": "新疆喀什",
+      "type": "city",
+      "description": "唐朝安西四镇之一，是唐朝统治西域的最西端，也是丝绸之路的重要节点。",
+      "dynasty": "tang",
+      "persons": [
+        "li_shimin",
+        "li_jing",
+        "guo_ziyi",
+        "li_guangbi"
+      ],
+      "coords": [
+        75.9,
+        39.5
+      ]
+    },
+    "loc_tang_khotan": {
+      "id": "loc_tang_khotan",
+      "name": "于阗",
+      "modernName": "新疆和田",
+      "type": "city",
+      "description": "唐朝安西四镇之一，是唐朝统治西域的重要基地，也是玉石贸易的中心。",
+      "dynasty": "tang",
+      "persons": [
+        "li_shimin",
+        "li_jing",
+        "guo_ziyi",
+        "li_guangbi"
+      ],
+      "coords": [
+        79.9,
+        37.1
+      ]
+    },
+    "loc_tang_kucha": {
+      "id": "loc_tang_kucha",
+      "name": "龟兹",
+      "modernName": "新疆库车",
+      "type": "city",
+      "description": "唐朝安西四镇之一，是唐朝统治西域的核心，也是佛教文化的重要中心。",
+      "dynasty": "tang",
+      "persons": [
+        "li_shimin",
+        "li_jing",
+        "guo_ziyi",
+        "li_guangbi"
+      ],
+      "coords": [
+        82.9,
+        41.7
+      ]
+    },
+    "loc_tang_suiye": {
+      "id": "loc_tang_suiye",
+      "name": "碎叶",
+      "modernName": "吉尔吉斯斯坦",
+      "type": "city",
+      "description": "唐朝安西四镇之一，李白的出生地，是唐朝统治西域的最西端。",
+      "dynasty": "tang",
+      "persons": [
+        "li_bai",
+        "li_shimin",
+        "li_jing",
+        "guo_ziyi"
+      ],
+      "coords": [
+        70.0,
+        42.8
+      ]
+    },
+    "loc_tang_chengde": {
+      "id": "loc_tang_chengde",
+      "name": "承德",
+      "modernName": "河北承德",
+      "type": "city",
+      "description": "唐朝北方重要军事重镇，是唐朝防御契丹和奚的前线基地。",
+      "dynasty": "tang",
+      "persons": [
+        "li_yuan",
+        "li_shimin",
+        "li_longji",
+        "guo_ziyi"
+      ],
+      "coords": [
+        117.93,
+        40.95
+      ]
+    },
+    "loc_tang_yangzhou": {
+      "id": "loc_tang_yangzhou",
+      "name": "扬州",
+      "modernName": "江苏扬州",
+      "type": "city",
+      "description": "唐朝南方最繁华的城市，经济繁荣，文化发达，有「扬一益二」之称。",
+      "dynasty": "tang",
+      "persons": [
+        "li_longji",
+        "li_bai",
+        "du_fu",
+        "bai_juyi",
+        "wang_wei"
+      ],
+      "coords": [
+        119.42,
+        32.4
+      ]
+    },
+    "loc_tang_suzhou": {
+      "id": "loc_tang_suzhou",
+      "name": "苏州",
+      "modernName": "江苏苏州",
+      "type": "city",
+      "description": "唐朝南方重要城市，经济繁荣，文化发达，是江南文化的代表。",
+      "dynasty": "tang",
+      "persons": [
+        "li_longji",
+        "li_bai",
+        "du_fu",
+        "bai_juyi",
+        "wang_wei"
+      ],
+      "coords": [
+        120.59,
+        31.3
+      ]
+    },
+    "loc_tang_hangzhou": {
+      "id": "loc_tang_hangzhou",
+      "name": "杭州",
+      "modernName": "浙江杭州",
+      "type": "city",
+      "description": "唐朝南方重要城市，白居易曾任杭州刺史，是江南文化的重要中心。",
+      "dynasty": "tang",
+      "persons": [
+        "li_longji",
+        "bai_juyi",
+        "li_bai",
+        "du_fu",
+        "wang_wei"
+      ],
+      "coords": [
+        120.16,
+        30.25
+      ]
+    },
+    "loc_tang_chengdu": {
+      "id": "loc_tang_chengdu",
+      "name": "成都",
+      "modernName": "四川成都",
+      "type": "city",
+      "description": "唐朝西南重要城市，有「天府之国」美誉，是安史之乱时唐玄宗的避难地。",
+      "dynasty": "tang",
+      "persons": [
+        "li_longji",
+        "li_bai",
+        "du_fu",
+        "wang_wei",
+        "bai_juyi"
+      ],
+      "coords": [
+        104.07,
+        30.67
+      ]
+    },
+    "loc_tang_tianshan": {
+      "id": "loc_tang_tianshan",
+      "name": "天山",
+      "modernName": "新疆乌鲁木齐",
+      "type": "mountain",
+      "description": "唐朝西域重要山脉，是李靖、苏定方等名将征战之地，也是丝绸之路的重要地理标志。",
+      "dynasty": "tang",
+      "persons": [
+        "li_shimin",
+        "li_jing",
+        "guo_ziyi",
+        "li_guangbi"
+      ],
+      "coords": [
+        87.6,
+        43.8
+      ]
+    },
+    "loc_tang_lingyan": {
+      "id": "loc_tang_lingyan",
+      "name": "凌烟阁",
+      "modernName": "陕西西安",
+      "type": "temple",
+      "description": "唐太宗为表彰功臣所建的阁楼，绘有二十四功臣画像，是唐朝功臣的最高荣誉。",
+      "dynasty": "tang",
+      "persons": [
+        "li_shimin",
+        "li_yuan",
+        "wei_zheng",
+        "li_jing",
+        "yu_chi_jingde"
+      ],
+      "coords": [
+        108.95,
+        34.27
+      ]
+    },
+    "loc_wudai_kaifeng": {
+      "id": "loc_wudai_kaifeng",
+      "name": "开封",
+      "modernName": "河南开封",
+      "type": "capital",
+      "description": "后梁、后晋、后汉、后周都城，北宋都城的前身，是五代时期北方最重要的政治中心。",
+      "dynasty": "wudai",
+      "persons": [
+        "zhu_wen",
+        "shi_jingtang",
+        "liu_zhiyuan",
+        "guo_wei",
+        "chai_rong"
+      ],
+      "coords": [
+        114.31,
+        34.8
+      ]
+    },
+    "loc_wudai_luoyang": {
+      "id": "loc_wudai_luoyang",
+      "name": "洛阳",
+      "modernName": "河南洛阳",
+      "type": "capital",
+      "description": "后唐都城，五代时期北方重要政治中心，是唐朝旧都的延续。",
+      "dynasty": "wudai",
+      "persons": [
+        "li_cunxu",
+        "li_siyuan",
+        "li_congke",
+        "feng_dao",
+        "jing_xiang"
+      ],
+      "coords": [
+        112.45,
+        34.62
+      ]
+    },
+    "loc_wudai_youzhou": {
+      "id": "loc_wudai_youzhou",
+      "name": "幽州",
+      "modernName": "北京",
+      "type": "city",
+      "description": "五代时期北方重要军事重镇，石敬瑭割让给契丹，是燕云十六州的核心。",
+      "dynasty": "wudai",
+      "persons": [
+        "shi_jingtang",
+        "li_cunxu",
+        "guo_wei",
+        "chai_rong",
+        "sang_weihan"
+      ],
+      "coords": [
+        116.41,
+        39.9
+      ]
+    },
+    "loc_wudai_yangzhou": {
+      "id": "loc_wudai_yangzhou",
+      "name": "扬州",
+      "modernName": "江苏扬州",
+      "type": "city",
+      "description": "五代时期南方重要城市，杨吴、南唐的都城，是南方经济文化中心。",
+      "dynasty": "wudai",
+      "persons": [
+        "feng_dao",
+        "jing_xiang",
+        "wang_yanzhang",
+        "li_cunxiao"
+      ],
+      "coords": [
+        119.42,
+        32.4
+      ]
+    },
+    "loc_wudai_nanjing": {
+      "id": "loc_wudai_nanjing",
+      "name": "金陵",
+      "modernName": "江苏南京",
+      "type": "city",
+      "description": "南唐都城，五代时期南方重要政治中心，文化繁荣，经济发达。",
+      "dynasty": "wudai",
+      "persons": [
+        "feng_dao",
+        "jing_xiang",
+        "li_cunxu",
+        "li_siyuan"
+      ],
+      "coords": [
+        118.8,
+        32.06
+      ]
+    },
+    "loc_wudai_jinling": {
+      "id": "loc_wudai_jinling",
+      "name": "江宁",
+      "modernName": "江苏南京",
+      "type": "city",
+      "description": "五代时期南方重要城市，是南唐的经济文化中心，也是江南文化的代表。",
+      "dynasty": "wudai",
+      "persons": [
+        "feng_dao",
+        "jing_xiang",
+        "li_cunxu",
+        "li_siyuan"
+      ],
+      "coords": [
+        118.8,
+        32.0
+      ]
+    },
+    "loc_wudai_bianzhou": {
+      "id": "loc_wudai_bianzhou",
+      "name": "汴州",
+      "modernName": "河南开封",
+      "type": "city",
+      "description": "五代时期北方重要城市，是开封的前身，后梁、后晋等政权的都城。",
+      "dynasty": "wudai",
+      "persons": [
+        "zhu_wen",
+        "shi_jingtang",
+        "liu_zhiyuan",
+        "guo_wei"
+      ],
+      "coords": [
+        114.31,
+        34.8
+      ]
+    },
+    "loc_wudai_xuchang": {
+      "id": "loc_wudai_xuchang",
+      "name": "许昌",
+      "modernName": "河南许昌",
+      "type": "city",
+      "description": "五代时期中原重要城市，是后周的重要军事重镇，也是赵匡胤发迹之地。",
+      "dynasty": "wudai",
+      "persons": [
+        "guo_wei",
+        "chai_rong",
+        "feng_dao",
+        "zhou_dewei"
+      ],
+      "coords": [
+        113.83,
+        34.03
+      ]
+    },
+    "loc_wudai_daming": {
+      "id": "loc_wudai_daming",
+      "name": "大名",
+      "modernName": "河北大名",
+      "type": "city",
+      "description": "五代时期北方重要军事重镇，是后晋、后汉等政权的重要城市。",
+      "dynasty": "wudai",
+      "persons": [
+        "shi_jingtang",
+        "li_cunxu",
+        "guo_wei",
+        "chai_rong"
+      ],
+      "coords": null
+    },
+    "loc_wudai_taiyuan": {
+      "id": "loc_wudai_taiyuan",
+      "name": "太原",
+      "modernName": "山西太原",
+      "type": "city",
+      "description": "五代时期北方重要军事重镇，是后唐、后晋、后汉的发源地，也是沙陀集团的基地。",
+      "dynasty": "wudai",
+      "persons": [
+        "li_cunxu",
+        "li_siyuan",
+        "li_congke",
+        "shi_jingtang",
+        "liu_zhiyuan"
+      ],
+      "coords": [
+        112.55,
+        37.87
+      ]
+    },
+    "loc_song_dongjing": {
+      "id": "loc_song_dongjing",
+      "name": "东京",
+      "modernName": "河南开封",
+      "type": "capital",
+      "description": "北宋都城，赵匡胤陈桥兵变后定都于此，是当时世界上最繁华的城市。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_kuangyin",
+        "zhao_kuangyi",
+        "zhao_hen",
+        "kou_zhun",
+        "fan_zhongyan"
+      ],
+      "coords": [
+        114.31,
+        34.8
+      ]
+    },
+    "loc_song_lin_an": {
+      "id": "loc_song_lin_an",
+      "name": "临安",
+      "modernName": "浙江杭州",
+      "type": "capital",
+      "description": "南宋都城，赵构南渡后定都于此，是南宋政治经济文化中心。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_gou",
+        "zhao_kuo",
+        "zhao_huan",
+        "yue_fei",
+        "qin_hui"
+      ],
+      "coords": [
+        120.16,
+        30.25
+      ]
+    },
+    "loc_song_yashan": {
+      "id": "loc_song_yashan",
+      "name": "崖山",
+      "modernName": "广东新会",
+      "type": "battlefield",
+      "description": "崖山海战发生地，陆秀夫背少帝赵昺投海，南宋灭亡，是宋朝最后的悲壮。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_gou",
+        "zhao_kuo",
+        "zhao_huan",
+        "zhao_shi",
+        "wen_tianxiang"
+      ],
+      "coords": [
+        113.0,
+        22.5
+      ]
+    },
+    "loc_song_yangzhou": {
+      "id": "loc_song_yangzhou",
+      "name": "扬州",
+      "modernName": "江苏扬州",
+      "type": "city",
+      "description": "宋朝重要城市，经济繁荣，文化发达，是江南重要的商业中心。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_kuangyin",
+        "zhao_gou",
+        "fan_zhongyan",
+        "wang_anshi",
+        "su_shi"
+      ],
+      "coords": [
+        119.42,
+        32.4
+      ]
+    },
+    "loc_song_suzhou": {
+      "id": "loc_song_suzhou",
+      "name": "苏州",
+      "modernName": "江苏苏州",
+      "type": "city",
+      "description": "宋朝重要城市，经济繁荣，文化发达，是江南文化的代表。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_gou",
+        "fan_zhongyan",
+        "wang_anshi",
+        "su_shi",
+        "ouyang_xiu"
+      ],
+      "coords": [
+        120.59,
+        31.3
+      ]
+    },
+    "loc_song_chengdu": {
+      "id": "loc_song_chengdu",
+      "name": "成都",
+      "modernName": "四川成都",
+      "type": "city",
+      "description": "宋朝西南重要城市，经济繁荣，文化发达，是西南地区的政治经济中心。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_kuangyin",
+        "zhao_gou",
+        "fan_zhongyan",
+        "wang_anshi",
+        "su_shi"
+      ],
+      "coords": [
+        104.07,
+        30.67
+      ]
+    },
+    "loc_song_guangzhou": {
+      "id": "loc_song_guangzhou",
+      "name": "广州",
+      "modernName": "广东广州",
+      "type": "city",
+      "description": "宋朝南方重要港口，海上丝绸之路的重要起点，是宋朝对外贸易的重要窗口。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_kuangyin",
+        "zhao_gou",
+        "fan_zhongyan",
+        "wang_anshi",
+        "su_shi"
+      ],
+      "coords": [
+        113.26,
+        23.13
+      ]
+    },
+    "loc_song_quanzhou": {
+      "id": "loc_song_quanzhou",
+      "name": "泉州",
+      "modernName": "福建泉州",
+      "type": "city",
+      "description": "宋朝南方重要港口，海上丝绸之路的重要起点，是宋朝对外贸易的重要窗口。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_kuangyin",
+        "zhao_gou",
+        "fan_zhongyan",
+        "wang_anshi",
+        "su_shi"
+      ],
+      "coords": null
+    },
+    "loc_song_taishan": {
+      "id": "loc_song_taishan",
+      "name": "泰山",
+      "modernName": "山东泰安",
+      "type": "mountain",
+      "description": "宋朝帝王封禅之地，是五岳之首，也是宋朝文化的重要象征。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_kuangyin",
+        "zhao_kuangyi",
+        "zhao_hen",
+        "fan_zhongyan",
+        "wang_anshi"
+      ],
+      "coords": null
+    },
+    "loc_song_huashan": {
+      "id": "loc_song_huashan",
+      "name": "华山",
+      "modernName": "陕西华阴",
+      "type": "mountain",
+      "description": "宋朝西岳，是五岳之一，也是宋朝道教文化的重要中心。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_kuangyin",
+        "zhao_gou",
+        "fan_zhongyan",
+        "wang_anshi",
+        "su_shi"
+      ],
+      "coords": null
+    },
+    "loc_song_songshan": {
+      "id": "loc_song_songshan",
+      "name": "嵩山",
+      "modernName": "河南登封",
+      "type": "mountain",
+      "description": "宋朝中岳，是五岳之一，也是宋朝佛教和道教文化的重要中心。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_kuangyin",
+        "zhao_kuangyi",
+        "zhao_hen",
+        "fan_zhongyan",
+        "wang_anshi"
+      ],
+      "coords": [
+        113.0,
+        34.5
+      ]
+    },
+    "loc_song_hefei": {
+      "id": "loc_song_hefei",
+      "name": "合肥",
+      "modernName": "安徽合肥",
+      "type": "city",
+      "description": "宋朝江淮重要军事重镇，是南宋防御金国和蒙古的重要前线。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_gou",
+        "zhao_kuo",
+        "zhao_huan",
+        "yue_fei",
+        "qin_hui"
+      ],
+      "coords": [
+        117.23,
+        31.82
+      ]
+    },
+    "loc_song_xiangyang": {
+      "id": "loc_song_xiangyang",
+      "name": "襄阳",
+      "modernName": "湖北襄阳",
+      "type": "city",
+      "description": "宋朝北方重要军事重镇，是南宋防御金国和蒙古的重要前线，宋元襄阳之战持续六年。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_gou",
+        "zhao_kuo",
+        "zhao_huan",
+        "yue_fei",
+        "qin_hui"
+      ],
+      "coords": null
+    },
+    "loc_song_changsha": {
+      "id": "loc_song_changsha",
+      "name": "长沙",
+      "modernName": "湖南长沙",
+      "type": "city",
+      "description": "宋朝南方重要城市，经济繁荣，文化发达，是南宋时期的重要文化中心。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_gou",
+        "zhao_kuo",
+        "zhao_huan",
+        "yue_fei",
+        "qin_hui"
+      ],
+      "coords": null
+    },
+    "loc_song_nanchang": {
+      "id": "loc_song_nanchang",
+      "name": "南昌",
+      "modernName": "江西南昌",
+      "type": "city",
+      "description": "宋朝南方重要城市，经济繁荣，文化发达，是江南文化的代表。",
+      "dynasty": "song",
+      "persons": [
+        "zhao_gou",
+        "zhao_kuo",
+        "zhao_huan",
+        "yue_fei",
+        "qin_hui"
+      ],
+      "coords": null
+    },
+    "loc_yuan_dadu": {
+      "id": "loc_yuan_dadu",
+      "name": "大都",
+      "modernName": "北京",
+      "type": "capital",
+      "description": "元朝都城，忽必烈建立，是世界历史上最大的城市之一，也是元朝政治经济文化中心。",
+      "dynasty": "yuan",
+      "persons": [
+        "hubilie",
+        "wo_kuotai",
+        "tie_muzhen",
+        "yelv_chucai",
+        "tuotuo"
+      ],
+      "coords": [
+        116.41,
+        39.9
+      ]
+    },
+    "loc_yuan_shangdu": {
+      "id": "loc_yuan_shangdu",
+      "name": "上都",
+      "modernName": "内蒙古正蓝旗",
+      "type": "capital",
+      "description": "元朝夏都，忽必烈建立，是元朝皇帝避暑和处理政务的地方，也是元朝政治的重要中心。",
+      "dynasty": "yuan",
+      "persons": [
+        "hubilie",
+        "wo_kuotai",
+        "tie_muzhen",
+        "yelv_chucai"
+      ],
+      "coords": [
+        122.0,
+        44.5
+      ]
+    },
+    "loc_yuan_helan": {
+      "id": "loc_yuan_helan",
+      "name": "和林",
+      "modernName": "蒙古国前杭爱省",
+      "type": "city",
+      "description": "蒙古帝国早期都城，窝阔台建立，是蒙古帝国政治中心，元朝建立后仍具重要地位。",
+      "dynasty": "yuan",
+      "persons": [
+        "wo_kuotai",
+        "tie_muzhen",
+        "hubilie",
+        "yelv_chucai"
+      ],
+      "coords": null
+    },
+    "loc_yuan_quanzhou": {
+      "id": "loc_yuan_quanzhou",
+      "name": "泉州",
+      "modernName": "福建泉州",
+      "type": "city",
+      "description": "元朝南方重要港口，海上丝绸之路的重要起点，是元朝对外贸易的重要窗口，被誉为东方第一大港。",
+      "dynasty": "yuan",
+      "persons": [
+        "hubilie",
+        "wo_kuotai",
+        "tie_muzhen",
+        "zhao_mengfu",
+        "guo_shoujing"
+      ],
+      "coords": null
+    },
+    "loc_yuan_guangzhou": {
+      "id": "loc_yuan_guangzhou",
+      "name": "广州",
+      "modernName": "广东广州",
+      "type": "city",
+      "description": "元朝南方重要港口，海上丝绸之路的重要起点，是元朝对外贸易的重要窗口。",
+      "dynasty": "yuan",
+      "persons": [
+        "hubilie",
+        "wo_kuotai",
+        "tie_muzhen",
+        "zhao_mengfu",
+        "guo_shoujing"
+      ],
+      "coords": [
+        113.26,
+        23.13
+      ]
+    },
+    "loc_yuan_dunhuang": {
+      "id": "loc_yuan_dunhuang",
+      "name": "敦煌",
+      "modernName": "甘肃敦煌",
+      "type": "city",
+      "description": "元朝西域重要城市，丝绸之路的重要节点，元朝在此设置郡县，加强西域统治。",
+      "dynasty": "yuan",
+      "persons": [
+        "hubilie",
+        "wo_kuotai",
+        "tie_muzhen",
+        "zhao_mengfu",
+        "guo_shoujing"
+      ],
+      "coords": [
+        94.7,
+        40.1
+      ]
+    },
+    "loc_yuan_taishan": {
+      "id": "loc_yuan_taishan",
+      "name": "泰山",
+      "modernName": "山东泰安",
+      "type": "mountain",
+      "description": "元朝帝王封禅之地，是五岳之首，也是元朝文化的重要象征。",
+      "dynasty": "yuan",
+      "persons": [
+        "hubilie",
+        "wo_kuotai",
+        "tie_muzhen",
+        "zhao_mengfu",
+        "guo_shoujing"
+      ],
+      "coords": null
+    },
+    "loc_yuan_khanbaliq": {
+      "id": "loc_yuan_khanbaliq",
+      "name": "汗八里",
+      "modernName": "北京",
+      "type": "city",
+      "description": "蒙古语「可汗的宫殿」，即大都，是元朝皇帝居住和理政的地方，也是元朝政治中心。",
+      "dynasty": "yuan",
+      "persons": [
+        "hubilie",
+        "wo_kuotai",
+        "tie_muzhen",
+        "yelv_chucai",
+        "tuotuo"
+      ],
+      "coords": [
+        116.41,
+        39.9
+      ]
+    },
+    "loc_yuan_xanadu": {
+      "id": "loc_yuan_xanadu",
+      "name": "仙那度",
+      "modernName": "内蒙古正蓝旗",
+      "type": "city",
+      "description": "马可·波罗记载的元朝夏都，即上都，是元朝皇帝避暑的宫殿。",
+      "dynasty": "yuan",
+      "persons": [
+        "hubilie",
+        "wo_kuotai",
+        "tie_muzhen",
+        "yelv_chucai"
+      ],
+      "coords": [
+        122.0,
+        44.5
+      ]
+    },
+    "loc_yuan_yangzhou": {
+      "id": "loc_yuan_yangzhou",
+      "name": "扬州",
+      "modernName": "江苏扬州",
+      "type": "city",
+      "description": "元朝南方重要城市，经济繁荣，文化发达，是江南重要的商业中心。",
+      "dynasty": "yuan",
+      "persons": [
+        "hubilie",
+        "wo_kuotai",
+        "tie_muzhen",
+        "zhao_mengfu",
+        "guo_shoujing"
+      ],
+      "coords": [
+        119.42,
+        32.4
+      ]
+    },
+    "loc_ming_nanjing": {
+      "id": "loc_ming_nanjing",
+      "name": "南京",
+      "modernName": "江苏南京",
+      "type": "capital",
+      "description": "明朝开国都城，朱元璋定都于此，后朱棣迁都北京，南京仍作为留都。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "liu_ji",
+        "xu_da",
+        "chang_yuchun",
+        "yu_qian"
+      ],
+      "coords": [
+        118.8,
+        32.06
+      ]
+    },
+    "loc_ming_beijing": {
+      "id": "loc_ming_beijing",
+      "name": "北京",
+      "modernName": "北京",
+      "type": "capital",
+      "description": "明朝永乐后都城，朱棣迁都于此，是明朝政治经济文化中心，也是明长城的防御核心。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_di",
+        "zhu_yuanzhang",
+        "zhu_yunwen",
+        "zhu_gaozhi",
+        "wang_yangming"
+      ],
+      "coords": [
+        116.41,
+        39.9
+      ]
+    },
+    "loc_ming_zijin": {
+      "id": "loc_ming_zijin",
+      "name": "紫禁城",
+      "modernName": "北京",
+      "type": "capital",
+      "description": "明朝皇宫，朱棣营建，是世界现存最大的宫殿建筑群，是明朝皇权的象征。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_di",
+        "zhu_yuanzhang",
+        "zhu_yunwen",
+        "zhu_gaozhi",
+        "wang_yangming"
+      ],
+      "coords": [
+        116.41,
+        39.9
+      ]
+    },
+    "loc_ming_taishan": {
+      "id": "loc_ming_taishan",
+      "name": "泰山",
+      "modernName": "山东泰安",
+      "type": "mountain",
+      "description": "明朝帝王封禅之地，是五岳之首，也是明朝文化的重要象征。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "zhu_yunwen",
+        "zhu_gaozhi",
+        "wang_yangming"
+      ],
+      "coords": null
+    },
+    "loc_ming_huashan": {
+      "id": "loc_ming_huashan",
+      "name": "华山",
+      "modernName": "陕西华阴",
+      "type": "mountain",
+      "description": "明朝西岳，是五岳之一，也是明朝道教文化的重要中心。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "zhu_yunwen",
+        "zhu_gaozhi",
+        "wang_yangming"
+      ],
+      "coords": null
+    },
+    "loc_ming_great_wall": {
+      "id": "loc_ming_great_wall",
+      "name": "长城",
+      "modernName": "北京",
+      "type": "city",
+      "description": "明朝大规模修缮的长城，是世界古代最伟大的军事防御工程，也是明朝北疆防御的核心。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "xu_da",
+        "chang_yuchun",
+        "yu_qian"
+      ],
+      "coords": [
+        117.0,
+        40.5
+      ]
+    },
+    "loc_ming_yangzhou": {
+      "id": "loc_ming_yangzhou",
+      "name": "扬州",
+      "modernName": "江苏扬州",
+      "type": "city",
+      "description": "明朝南方重要城市，经济繁荣，文化发达，是江南重要的商业中心。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "zhu_yunwen",
+        "zhu_gaozhi",
+        "wang_yangming"
+      ],
+      "coords": [
+        119.42,
+        32.4
+      ]
+    },
+    "loc_ming_suzhou": {
+      "id": "loc_ming_suzhou",
+      "name": "苏州",
+      "modernName": "江苏苏州",
+      "type": "city",
+      "description": "明朝南方重要城市，经济繁荣，文化发达，是江南文化的代表。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "zhu_yunwen",
+        "zhu_gaozhi",
+        "wang_yangming"
+      ],
+      "coords": [
+        120.59,
+        31.3
+      ]
+    },
+    "loc_ming_hangzhou": {
+      "id": "loc_ming_hangzhou",
+      "name": "杭州",
+      "modernName": "浙江杭州",
+      "type": "city",
+      "description": "明朝南方重要城市，经济繁荣，文化发达，是江南文化的重要中心。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "zhu_yunwen",
+        "zhu_gaozhi",
+        "wang_yangming"
+      ],
+      "coords": [
+        120.16,
+        30.25
+      ]
+    },
+    "loc_ming_guangzhou": {
+      "id": "loc_ming_guangzhou",
+      "name": "广州",
+      "modernName": "广东广州",
+      "type": "city",
+      "description": "明朝南方重要港口，海上丝绸之路的重要起点，是明朝对外贸易的重要窗口。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "zhu_yunwen",
+        "zhu_gaozhi",
+        "wang_yangming"
+      ],
+      "coords": [
+        113.26,
+        23.13
+      ]
+    },
+    "loc_ming_quanzhou": {
+      "id": "loc_ming_quanzhou",
+      "name": "泉州",
+      "modernName": "福建泉州",
+      "type": "city",
+      "description": "明朝南方重要港口，海上丝绸之路的重要起点，是明朝对外贸易的重要窗口。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "zhu_yunwen",
+        "zhu_gaozhi",
+        "wang_yangming"
+      ],
+      "coords": null
+    },
+    "loc_ming_changsha": {
+      "id": "loc_ming_changsha",
+      "name": "长沙",
+      "modernName": "湖南长沙",
+      "type": "city",
+      "description": "明朝南方重要城市，经济繁荣，文化发达，是明朝时期的重要文化中心。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "zhu_yunwen",
+        "zhu_gaozhi",
+        "wang_yangming"
+      ],
+      "coords": null
+    },
+    "loc_ming_nanchang": {
+      "id": "loc_ming_nanchang",
+      "name": "南昌",
+      "modernName": "江西南昌",
+      "type": "city",
+      "description": "明朝南方重要城市，经济繁荣，文化发达，是江南文化的代表。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "zhu_yunwen",
+        "zhu_gaozhi",
+        "wang_yangming"
+      ],
+      "coords": null
+    },
+    "loc_ming_tianjin": {
+      "id": "loc_ming_tianjin",
+      "name": "天津",
+      "modernName": "天津",
+      "type": "city",
+      "description": "明朝北方重要军事重镇，是明朝防御蒙古和女真的重要前线。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "xu_da",
+        "chang_yuchun",
+        "yu_qian"
+      ],
+      "coords": null
+    },
+    "loc_ming_shanhaiguan": {
+      "id": "loc_ming_shanhaiguan",
+      "name": "山海关",
+      "modernName": "河北秦皇岛",
+      "type": "city",
+      "description": "明朝长城重要关隘，是明朝防御女真的重要前线，也是明朝北疆防御的核心。",
+      "dynasty": "ming",
+      "persons": [
+        "zhu_yuanzhang",
+        "zhu_di",
+        "xu_da",
+        "chang_yuchun",
+        "yu_qian"
+      ],
+      "coords": null
+    },
+    "loc_qing_beijing": {
+      "id": "loc_qing_beijing",
+      "name": "北京",
+      "modernName": "北京",
+      "type": "capital",
+      "description": "清朝都城，顺治入关后定都于此，是清朝政治经济文化中心，也是清朝统治全国的核心。",
+      "dynasty": "qing",
+      "persons": [
+        "shunzhi",
+        "kangxi",
+        "yongzheng",
+        "qianlong",
+        "cixi"
+      ],
+      "coords": [
+        116.41,
+        39.9
+      ]
+    },
+    "loc_qing_shengjing": {
+      "id": "loc_qing_shengjing",
+      "name": "盛京",
+      "modernName": "辽宁沈阳",
+      "type": "capital",
+      "description": "清朝入关前都城，努尔哈赤建立后金后定都于此，是清朝龙兴之地。",
+      "dynasty": "qing",
+      "persons": [
+        "nuerhachi",
+        "huang_taiji",
+        "shunzhi",
+        "duoergun",
+        "aobai"
+      ],
+      "coords": [
+        123.43,
+        41.8
+      ]
+    },
+    "loc_qing_chengde": {
+      "id": "loc_qing_chengde",
+      "name": "承德",
+      "modernName": "河北承德",
+      "type": "city",
+      "description": "清朝夏都，康熙营建避暑山庄，是清朝皇帝避暑和处理政务的地方，也是清朝政治的重要中心。",
+      "dynasty": "qing",
+      "persons": [
+        "kangxi",
+        "qianlong",
+        "yongzheng",
+        "shunzhi",
+        "jiaqing"
+      ],
+      "coords": [
+        117.93,
+        40.95
+      ]
+    },
+    "loc_qing_nanjing": {
+      "id": "loc_qing_nanjing",
+      "name": "南京",
+      "modernName": "江苏南京",
+      "type": "city",
+      "description": "清朝南方重要城市，经济繁荣，文化发达，是江南重要的商业中心。",
+      "dynasty": "qing",
+      "persons": [
+        "kangxi",
+        "qianlong",
+        "yongzheng",
+        "shunzhi",
+        "jiaqing"
+      ],
+      "coords": [
+        118.8,
+        32.06
+      ]
+    },
+    "loc_qing_yangzhou": {
+      "id": "loc_qing_yangzhou",
+      "name": "扬州",
+      "modernName": "江苏扬州",
+      "type": "city",
+      "description": "清朝南方重要城市，经济繁荣，文化发达，是江南文化的代表。",
+      "dynasty": "qing",
+      "persons": [
+        "kangxi",
+        "qianlong",
+        "yongzheng",
+        "shunzhi",
+        "jiaqing"
+      ],
+      "coords": [
+        119.42,
+        32.4
+      ]
+    },
+    "loc_qing_suzhou": {
+      "id": "loc_qing_suzhou",
+      "name": "苏州",
+      "modernName": "江苏苏州",
+      "type": "city",
+      "description": "清朝南方重要城市，经济繁荣，文化发达，是江南文化的代表。",
+      "dynasty": "qing",
+      "persons": [
+        "kangxi",
+        "qianlong",
+        "yongzheng",
+        "shunzhi",
+        "jiaqing"
+      ],
+      "coords": [
+        120.59,
+        31.3
+      ]
+    },
+    "loc_qing_hangzhou": {
+      "id": "loc_qing_hangzhou",
+      "name": "杭州",
+      "modernName": "浙江杭州",
+      "type": "city",
+      "description": "清朝南方重要城市，经济繁荣，文化发达，是江南文化的重要中心。",
+      "dynasty": "qing",
+      "persons": [
+        "kangxi",
+        "qianlong",
+        "yongzheng",
+        "shunzhi",
+        "jiaqing"
+      ],
+      "coords": [
+        120.16,
+        30.25
+      ]
+    },
+    "loc_qing_guangzhou": {
+      "id": "loc_qing_guangzhou",
+      "name": "广州",
+      "modernName": "广东广州",
+      "type": "city",
+      "description": "清朝南方重要港口，海上丝绸之路的重要起点，是清朝对外贸易的重要窗口。",
+      "dynasty": "qing",
+      "persons": [
+        "kangxi",
+        "qianlong",
+        "yongzheng",
+        "shunzhi",
+        "jiaqing"
+      ],
+      "coords": [
+        113.26,
+        23.13
+      ]
+    },
+    "loc_qing_quanzhou": {
+      "id": "loc_qing_quanzhou",
+      "name": "泉州",
+      "modernName": "福建泉州",
+      "type": "city",
+      "description": "清朝南方重要港口，海上丝绸之路的重要起点，是清朝对外贸易的重要窗口。",
+      "dynasty": "qing",
+      "persons": [
+        "kangxi",
+        "qianlong",
+        "yongzheng",
+        "shunzhi",
+        "jiaqing"
+      ],
+      "coords": null
+    },
+    "loc_qing_changsha": {
+      "id": "loc_qing_changsha",
+      "name": "长沙",
+      "modernName": "湖南长沙",
+      "type": "city",
+      "description": "清朝南方重要城市，经济繁荣，文化发达，是清朝时期的重要文化中心。",
+      "dynasty": "qing",
+      "persons": [
+        "kangxi",
+        "qianlong",
+        "yongzheng",
+        "shunzhi",
+        "jiaqing"
+      ],
+      "coords": null
+    },
+    "loc_qing_nanchang": {
+      "id": "loc_qing_nanchang",
+      "name": "南昌",
+      "modernName": "江西南昌",
+      "type": "city",
+      "description": "清朝南方重要城市，经济繁荣，文化发达，是江南文化的代表。",
+      "dynasty": "qing",
+      "persons": [
+        "kangxi",
+        "qianlong",
+        "yongzheng",
+        "shunzhi",
+        "jiaqing"
+      ],
+      "coords": null
+    },
+    "loc_qing_tianjin": {
+      "id": "loc_qing_tianjin",
+      "name": "天津",
+      "modernName": "天津",
+      "type": "city",
+      "description": "清朝北方重要军事重镇，是清朝防御外国侵略的重要前线。",
+      "dynasty": "qing",
+      "persons": [
+        "kangxi",
+        "qianlong",
+        "yongzheng",
+        "shunzhi",
+        "jiaqing"
+      ],
+      "coords": null
+    },
+    "loc_qing_shanhaiguan": {
+      "id": "loc_qing_shanhaiguan",
+      "name": "山海关",
+      "modernName": "河北秦皇岛",
+      "type": "city",
+      "description": "清朝长城重要关隘，是清朝防御外国侵略的重要前线，也是清朝北疆防御的核心。",
+      "dynasty": "qing",
+      "persons": [
+        "shunzhi",
+        "kangxi",
+        "yongzheng",
+        "qianlong",
+        "cixi"
+      ],
+      "coords": null
+    },
+    "loc_qing_taishan": {
+      "id": "loc_qing_taishan",
+      "name": "泰山",
+      "modernName": "山东泰安",
+      "type": "mountain",
+      "description": "清朝帝王封禅之地，是五岳之首，也是清朝文化的重要象征。",
+      "dynasty": "qing",
+      "persons": [
+        "kangxi",
+        "qianlong",
+        "yongzheng",
+        "shunzhi",
+        "jiaqing"
+      ],
+      "coords": null
+    },
+    "loc_qing_huashan": {
+      "id": "loc_qing_huashan",
+      "name": "华山",
+      "modernName": "陕西华阴",
+      "type": "mountain",
+      "description": "清朝西岳，是五岳之一，也是清朝道教文化的重要中心。",
+      "dynasty": "qing",
+      "persons": [
+        "kangxi",
+        "qianlong",
+        "yongzheng",
+        "shunzhi",
+        "jiaqing"
+      ],
+      "coords": null
     }
   }
 }
