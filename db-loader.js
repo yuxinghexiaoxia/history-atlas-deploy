@@ -3,7 +3,7 @@
 
 (function () {
   const CDN_BASE = 'https://cdn.jsdelivr.net/gh/yuxinghexiaoxia/history-atlas-deploy@main';
-  const CACHE_VERSION = 'v=31';
+  const CACHE_VERSION = 'v=32';
   const detailCache = {}; // 已加载的朝代完整数据缓存
 
   async function loadJSON(path) {
@@ -83,16 +83,25 @@
 
         get: function (type, id) {
           if (id === undefined) { id = type; type = null; }
-          if (type === 'person') return this.persons[id];
-          if (type === 'event') return this.events[id];
-          if (type === 'dynasty') return this.dynastyInfo[id];
-          if (type === 'location') return this.locations[id];
-          // 自动推断类型
-          if (this.persons[id]) return this.persons[id];
-          if (this.events[id]) return this.events[id];
-          if (this.dynastyInfo[id]) return this.dynastyInfo[id];
-          if (this.locations[id]) return this.locations[id];
-          return null;
+          var result = null;
+          if (type === 'person') result = this.persons[id];
+          else if (type === 'event') result = this.events[id];
+          else if (type === 'dynasty') result = this.dynastyInfo[id];
+          else if (type === 'location') result = this.locations[id];
+          else {
+            if (this.persons[id]) result = this.persons[id];
+            else if (this.events[id]) result = this.events[id];
+            else if (this.dynastyInfo[id]) result = this.dynastyInfo[id];
+            else if (this.locations[id]) result = this.locations[id];
+          }
+          // 动态补全 type 字段（避免 CDN 缓存导致注入失效）
+          if (result && !result.type) {
+            if (this.persons[id]) result.type = 'person';
+            else if (this.events[id]) result.type = 'event';
+            else if (this.locations[id]) result.type = 'location';
+            else if (this.dynastyInfo[id]) result.type = 'dynasty';
+          }
+          return result;
         },
 
         getSimilarPersons: function () { return []; },
