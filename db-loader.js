@@ -3,7 +3,7 @@
 
 (function () {
   const CDN_BASE = 'https://cdn.jsdelivr.net/gh/yuxinghexiaoxia/history-atlas-deploy@main';
-  const CACHE_VERSION = 'v=32';
+  const CACHE_VERSION = 'v=34';
   const detailCache = {}; // 已加载的朝代完整数据缓存
 
   async function loadJSON(path) {
@@ -68,6 +68,13 @@
       Object.values(index.persons || {}).forEach(p => { p.type = 'person'; });
       Object.values(eventsData.events || {}).forEach(e => { if (!e.type) e.type = 'event'; });
       Object.values(locationsData.locations || {}).forEach(l => { if (!l.type) l.type = 'location'; });
+
+      // 规范化 person 数据格式（role 应为数组，sources 应为数组）
+      Object.values(index.persons || {}).forEach(p => {
+        if (typeof p.role === 'string') p.role = [p.role];
+        else if (!Array.isArray(p.role)) p.role = [];
+        if (!Array.isArray(p.sources)) p.sources = [];
+      });
 
       // 设置全局 DB
       window.DB = {
