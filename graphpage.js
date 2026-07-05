@@ -3,8 +3,8 @@ function GraphPage({
   id,
   nav
 }) {
-  const [center, setCenter] = useState(id || "zengguofan");
-  const [selected, setSelected] = useState(id || "zengguofan");
+  const [center, setCenter] = useState(id || "li_shimin");
+  const [selected, setSelected] = useState(id || "li_shimin");
   const [depth, setDepth] = useState(1);
   const [relFilter, setRelFilter] = useState(null);
   const [layoutKey, setLayoutKey] = useState(0);

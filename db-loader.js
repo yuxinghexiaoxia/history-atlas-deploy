@@ -3,7 +3,7 @@
 
 (function () {
   const CDN_BASE = 'https://cdn.jsdelivr.net/gh/yuxinghexiaoxia/history-atlas-deploy@main';
-  const CACHE_VERSION = 'v=30';
+  const CACHE_VERSION = 'v=31';
   const detailCache = {}; // 已加载的朝代完整数据缓存
 
   async function loadJSON(path) {
@@ -64,6 +64,11 @@
       // 按年份排序
       timeline.sort((a, b) => a.y - b.y);
 
+      // 为所有 persons 添加 type 字段（关系图谱需要）
+      Object.values(index.persons || {}).forEach(p => { p.type = 'person'; });
+      Object.values(eventsData.events || {}).forEach(e => { if (!e.type) e.type = 'event'; });
+      Object.values(locationsData.locations || {}).forEach(l => { if (!l.type) l.type = 'location'; });
+
       // 设置全局 DB
       window.DB = {
         persons: index.persons || {},
@@ -77,10 +82,16 @@
         hotEvents: Object.keys(eventsData.events || {}).slice(0, 8),
 
         get: function (type, id) {
-          if (id === undefined) { id = type; type = 'person'; }
+          if (id === undefined) { id = type; type = null; }
           if (type === 'person') return this.persons[id];
           if (type === 'event') return this.events[id];
           if (type === 'dynasty') return this.dynastyInfo[id];
+          if (type === 'location') return this.locations[id];
+          // 自动推断类型
+          if (this.persons[id]) return this.persons[id];
+          if (this.events[id]) return this.events[id];
+          if (this.dynastyInfo[id]) return this.dynastyInfo[id];
+          if (this.locations[id]) return this.locations[id];
           return null;
         },
 

@@ -254,7 +254,7 @@ function QuickEntries({
     ic: "network",
     t: "人物关系",
     s: "图谱探索",
-    go: () => nav("graph", "zengguofan")
+    go: () => nav("graph", "li_shimin")
   }, {
     ic: "event",
     t: "事件链",
@@ -505,7 +505,7 @@ function Home({
     size: 13
   }), "\u70ED\u95E8\u4EBA\u7269"), /*#__PURE__*/React.createElement("a", {
     className: "more",
-    onClick: () => nav("graph", "zengguofan")
+    onClick: () => nav("graph", "li_shimin")
   }, "\u67E5\u770B\u5173\u7CFB\u56FE\u8C31 \u2192")), /*#__PURE__*/React.createElement("div", {
     style: {
       display: "grid",

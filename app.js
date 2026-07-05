@@ -109,7 +109,7 @@ function TopNav({
   }, links.map(l => /*#__PURE__*/React.createElement("a", {
     key: l.p,
     className: route.page === l.p ? "active" : "",
-    onClick: () => nav(l.p, l.p === "graph" ? "zengguofan" : null)
+    onClick: () => nav(l.p, l.p === "graph" ? "li_shimin" : null)
   }, l.t))), /*#__PURE__*/React.createElement("div", {
     ref: ref,
     className: "nav-search",

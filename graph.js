@@ -31,7 +31,9 @@ function buildGraph(centerId, depth) {
   function expand(id, layer) {
     const o = DB.get(id);
     if (!o) return;
-    if (o.type === "person") {
+    const isPerson = o.type === "person" || DB.persons[id];
+    const isEvent = o.type && !isPerson && DB.events[id];
+    if (isPerson) {
       (o.relations || []).forEach(r => {
         if (!DB.get(r.to)) return;
         addNode(r.to, layer + 1);
@@ -42,13 +44,13 @@ function buildGraph(centerId, depth) {
         addNode(ev, layer + 1);
         addLink(id, ev, "PARTICIPATED_IN", "参与", DB.events[ev].name);
       });
-    } else if (o.type === "event") {
+    } else if (isEvent) {
       (o.persons || []).forEach(pid => {
         if (!DB.persons[pid]) return;
         addNode(pid, layer + 1);
         addLink(pid, id, "PARTICIPATED_IN", "参与", o.name);
       });
-      (o.related || []).forEach(rid => {
+      (o.chain || []).forEach(rid => {
         if (!DB.events[rid]) return;
         addNode(rid, layer + 1);
         addLink(id, rid, "CAUSES", "关联", rid);
