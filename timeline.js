@@ -47,6 +47,38 @@ function TimelinePage({
   function nodeColor(it) {
     return it.key ? "var(--gold)" : it.type === "war" ? "var(--src-d)" : "var(--blue)";
   }
+  const dynastyRanges = React.useMemo(() => {
+    const ranges = [];
+    const fmtYear = (y) => y < 0 ? "前" + Math.abs(y) : String(y);
+    Object.values(DB.dynastyInfo || {}).forEach(d => {
+      if (!d.span) return;
+      const parts = d.span.split('–');
+      if (parts.length !== 2) return;
+      const parseYear = (s) => {
+        s = s.trim();
+        if (s.startsWith('前')) return -parseInt(s.slice(1), 10);
+        return parseInt(s, 10);
+      };
+      const start = parseYear(parts[0]);
+      const end = parseYear(parts[1]);
+      ranges.push({
+        id: d.id,
+        name: d.name,
+        full: d.full || d.name,
+        start,
+        end,
+        startStr: fmtYear(start),
+        endStr: fmtYear(end)
+      });
+    });
+    return ranges.sort((a, b) => a.start - b.start);
+  }, []);
+  function getDynastyByYear(year) {
+    for (const d of dynastyRanges) {
+      if (year >= d.start && year <= d.end) return d;
+    }
+    return null;
+  }
   function goItem(it) {
     if (it.ev) nav("event", it.ev);else if (it.pr) nav("person", it.pr);
   }
@@ -394,6 +426,7 @@ function TimelinePage({
     }
   }, "\u5F53\u524D\u7B5B\u9009\u6761\u4EF6\u4E0B\u65E0\u65F6\u95F4\u7EBF\u8282\u70B9\u3002"), items.map((it, i) => {
     const color = nodeColor(it);
+    const dynasty = getDynastyByYear(it.y);
     return /*#__PURE__*/React.createElement("div", {
       key: i,
       style: {
@@ -438,7 +471,20 @@ function TimelinePage({
         width: 46,
         flex: "none"
       }
-    }, it.y), /*#__PURE__*/React.createElement("span", {
+    }, it.y), dynasty && /*#__PURE__*/React.createElement("span", {
+      title: dynasty.full + " (" + dynasty.startStr + " – " + dynasty.endStr + ")",
+      style: {
+        fontSize: 11,
+        color: "var(--text-3)",
+        background: "rgba(212,175,55,0.1)",
+        border: "1px solid rgba(212,175,55,0.2)",
+        borderRadius: 4,
+        padding: "1px 6px",
+        cursor: "help",
+        whiteSpace: "nowrap",
+        flex: "none"
+      }
+    }, dynasty.name), /*#__PURE__*/React.createElement("span", {
       style: {
         fontSize: 15.5,
         fontWeight: 600,
